@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SmoothScroll, PageTransition } from "@/components/animations";
 
 export const metadata: Metadata = {
-  title: "Soft Standards Inc. — The New Standard in Digital Marketing",
-  description: "A modern SaaS-powered agency delivering AI Automation, Branding, Digital Marketing, Web Development, and App Development — with precision, clarity, and purpose.",
+  title: "Soft Standards Inc. — AI-Powered Marketing Excellence",
+  description: "Where AI meets marketing excellence. We bridge cutting-edge technology with authentic brand storytelling to create digital experiences that convert strangers into loyal advocates.",
   icons: {
     icon: "/images/logo-icon.svg",
   },
@@ -24,9 +25,13 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body className="font-sans antialiased">
-        <Navbar />
-        {children}
-        <Footer />
+        <SmoothScroll>
+          <PageTransition>
+            <Navbar />
+            {children}
+            <Footer />
+          </PageTransition>
+        </SmoothScroll>
       </body>
     </html>
   );

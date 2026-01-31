@@ -1,5 +1,7 @@
+'use client';
+
 import Link from 'next/link';
-import Image from 'next/image';
+import SoftStandardsLogoIcon from './SoftStandardsLogoIcon';
 
 const quickLinks = [
   { href: '/services', label: 'Services' },
@@ -30,13 +32,7 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <Link href="/" className="inline-block">
-            <Image
-              src="/images/logo.svg"
-              alt="Soft Standards Inc."
-              width={128}
-              height={32}
-              className="h-8 w-auto brightness-0 invert"
-            />
+            <SoftStandardsLogoIcon className="h-8 w-auto" autoPlay={false} hoverEffect />
           </Link>
           <p className="text-gray-500 text-[0.9rem] leading-[1.7] mt-4 max-w-[300px]">
             The New Standard in Digital Marketing. AI Automation, Branding, Digital Marketing, Web & App Development.

@@ -1,9 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import SoftStandardsLogoIcon from './SoftStandardsLogoIcon';
 
 const navLinks = [
   { href: '/services', label: 'Services' },
@@ -36,22 +36,16 @@ export default function Navbar() {
         ${isScrolled ? 'bg-[rgba(15,23,42,0.95)] shadow-[0_8px_40px_rgba(0,0,0,0.25)]' : ''}`}
     >
       <Link href="/" className="flex items-center gap-2 transition-opacity hover:opacity-80">
-        <Image
-          src="/images/logo.svg"
-          alt="Soft Standards Inc."
-          width={104}
-          height={26}
-          className="h-[26px] w-auto brightness-0 invert"
-        />
+        <SoftStandardsLogoIcon className="h-[26px] w-auto" autoPlay={false} hoverEffect />
       </Link>
 
       {/* Desktop Navigation */}
-      <ul className="hidden md:flex items-center gap-1">
+      <ul className="hidden lg:flex items-center gap-1">
         {navLinks.map((link) => (
           <li key={link.href}>
             <Link
               href={link.href}
-              className={`text-white/70 text-[0.85rem] font-medium px-3.5 py-2 rounded-full transition-all
+              className={`text-white/70 text-[0.85rem] font-medium px-3.5 py-2 rounded-full transition-all whitespace-nowrap
                 hover:text-white hover:bg-white/10
                 ${pathname === link.href ? 'text-white bg-[rgba(124,58,237,0.3)]' : ''}`}
             >
@@ -63,7 +57,7 @@ export default function Navbar() {
           <Link
             href="#contact"
             className="bg-white text-gray-900 px-5 py-2.5 rounded-full text-[0.85rem] font-semibold ml-1
-              transition-all hover:bg-purple-500 hover:text-white hover:scale-[1.02]"
+              transition-all hover:bg-purple-500 hover:text-white hover:scale-[1.02] whitespace-nowrap"
           >
             Get in Touch
           </Link>
@@ -72,7 +66,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Toggle */}
       <button
-        className="flex md:hidden flex-col gap-[5px] p-2 mr-1"
+        className="flex lg:hidden flex-col gap-[5px] p-2 mr-1"
         aria-label="Menu"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
       >
@@ -83,14 +77,14 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-[rgba(15,23,42,0.95)] backdrop-blur-xl rounded-2xl p-4 md:hidden border border-white/10">
-          <ul className="flex flex-col gap-2">
+        <div className="absolute top-full left-0 right-0 mt-2 bg-[rgba(15,23,42,0.95)] backdrop-blur-xl rounded-2xl p-3 lg:hidden border border-white/10 w-full min-w-[200px]">
+          <ul className="flex flex-col gap-1.5">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block text-white/70 text-[0.9rem] font-medium px-4 py-3 rounded-xl transition-all
+                  className={`block text-white/70 text-[0.85rem] font-medium px-3 py-2.5 rounded-xl transition-all whitespace-nowrap
                     hover:text-white hover:bg-white/10
                     ${pathname === link.href ? 'text-white bg-[rgba(124,58,237,0.3)]' : ''}`}
                 >
@@ -102,7 +96,7 @@ export default function Navbar() {
               <Link
                 href="#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block bg-white text-gray-900 px-4 py-3 rounded-xl text-[0.9rem] font-semibold text-center mt-2"
+                className="block bg-white text-gray-900 px-3 py-2.5 rounded-xl text-[0.85rem] font-semibold text-center mt-1 whitespace-nowrap"
               >
                 Get in Touch
               </Link>
