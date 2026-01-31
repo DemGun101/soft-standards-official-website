@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Soft Standards Inc.</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══ Navigation ═══ -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/logo.svg" alt="Soft Standards Inc." height="32">
+    </a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="case-studies.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══ Hero ═══ -->
+  <section class="page-hero">
+    <h1 class="page-hero-title">
+      Insights & <span class="highlight">Ideas</span>
+    </h1>
+    <p class="page-hero-subtitle">
+      Thoughts on design, development, strategy, and the craft of building digital products that matter.
+    </p>
+
+    <div class="filter-tabs" style="margin-top: 32px;">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="design">Design</button>
+      <button class="filter-tab" data-filter="development">Development</button>
+      <button class="filter-tab" data-filter="strategy">Strategy</button>
+      <button class="filter-tab" data-filter="culture">Culture</button>
+    </div>
+  </section>
+
+  <!-- ═══ Featured Post ═══ -->
+  <section class="section" style="padding-top: 0;">
+    <div class="featured-post reveal">
+      <div class="featured-post-image"></div>
+      <div class="featured-post-content">
+        <div class="pill">Design</div>
+        <h2 class="featured-post-title">The Future of Brand Identity in the AI Era</h2>
+        <p class="featured-post-excerpt">As AI-generated content floods the digital landscape, authentic brand identity has never been more valuable. Here's how forward-thinking companies are adapting their visual systems for a post-AI world.</p>
+        <div class="post-meta">
+          <div class="post-meta-avatar"></div>
+          <div>
+            <span class="post-meta-name">Maya Torres</span> · Jan 28, 2026
+          </div>
+        </div>
+        <a href="#" class="btn-ghost" style="margin-top: 8px;">
+          Read Article
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Blog Grid ═══ -->
+  <section class="section">
+    <div class="blog-grid">
+      <article class="blog-card reveal" data-category="development" data-delay="1">
+        <div class="blog-card-image">
+          <div class="blog-card-image-inner"></div>
+        </div>
+        <div class="blog-card-body">
+          <div class="pill">Development</div>
+          <h3 class="blog-card-title">Why Performance Still Matters in 2026</h3>
+          <p class="blog-card-excerpt">Fast sites win. Period. A deep dive into Core Web Vitals, modern optimization strategies, and why milliseconds matter more than ever.</p>
+          <div class="post-meta">
+            <div class="post-meta-avatar"></div>
+            <div>
+              <span class="post-meta-name">Liam Patel</span> · Jan 24
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal" data-category="design" data-delay="2">
+        <div class="blog-card-image">
+          <div class="blog-card-image-inner"></div>
+        </div>
+        <div class="blog-card-body">
+          <div class="pill">Design</div>
+          <h3 class="blog-card-title">Design Systems at Scale</h3>
+          <p class="blog-card-excerpt">How we built a design system that serves 40+ components across web, mobile, and email — without breaking.</p>
+          <div class="post-meta">
+            <div class="post-meta-avatar" style="background: linear-gradient(135deg, var(--emerald-200), var(--emerald-400));"></div>
+            <div>
+              <span class="post-meta-name">Maya Torres</span> · Jan 20
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal" data-category="strategy" data-delay="3">
+        <div class="blog-card-image">
+          <div class="blog-card-image-inner"></div>
+        </div>
+        <div class="blog-card-body">
+          <div class="pill">Strategy</div>
+          <h3 class="blog-card-title">From Wireframe to Launch in 6 Weeks</h3>
+          <p class="blog-card-excerpt">A case study on rapid product development — balancing speed, quality, and client collaboration.</p>
+          <div class="post-meta">
+            <div class="post-meta-avatar" style="background: linear-gradient(135deg, #fef3c7, #fde68a);"></div>
+            <div>
+              <span class="post-meta-name">Emma Nakamura</span> · Jan 16
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal" data-category="design" data-delay="4">
+        <div class="blog-card-image">
+          <div class="blog-card-image-inner"></div>
+        </div>
+        <div class="blog-card-body">
+          <div class="pill">Design</div>
+          <h3 class="blog-card-title">The Power of White Space</h3>
+          <p class="blog-card-excerpt">Why less is often more in UI design. Exploring negative space, visual hierarchy, and breathing room.</p>
+          <div class="post-meta">
+            <div class="post-meta-avatar" style="background: linear-gradient(135deg, #fce7f3, #fbcfe8);"></div>
+            <div>
+              <span class="post-meta-name">Aisha Khalil</span> · Jan 12
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal" data-category="development" data-delay="5">
+        <div class="blog-card-image">
+          <div class="blog-card-image-inner"></div>
+        </div>
+        <div class="blog-card-body">
+          <div class="pill">Development</div>
+          <h3 class="blog-card-title">Building for Accessibility</h3>
+          <p class="blog-card-excerpt">Accessible design isn't optional. Our approach to building inclusive digital experiences that work for everyone.</p>
+          <div class="post-meta">
+            <div class="post-meta-avatar" style="background: linear-gradient(135deg, #d1fae5, #a7f3d0);"></div>
+            <div>
+              <span class="post-meta-name">Carlos Reyes</span> · Jan 8
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal" data-category="culture" data-delay="6">
+        <div class="blog-card-image">
+          <div class="blog-card-image-inner"></div>
+        </div>
+        <div class="blog-card-body">
+          <div class="pill">Culture</div>
+          <h3 class="blog-card-title">Remote-First, Quality-Always</h3>
+          <p class="blog-card-excerpt">How we built a distributed team across 3 continents without compromising craft, communication, or collaboration.</p>
+          <div class="post-meta">
+            <div class="post-meta-avatar" style="background: linear-gradient(135deg, #e5e7eb, #d1d5db);"></div>
+            <div>
+              <span class="post-meta-name">Sofia Kim</span> · Jan 4
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══ Newsletter ═══ -->
+  <section class="section">
+    <div class="newsletter reveal">
+      <div class="newsletter-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5B3BF4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </div>
+      <h2 class="newsletter-title">Stay in the loop</h2>
+      <p class="newsletter-subtitle">Get our latest insights, case studies, and announcements delivered monthly.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══ Topics Cloud ═══ -->
+  <section class="section">
+    <div class="section-header reveal">
+      <h3 class="section-title" style="font-size: 1.4rem;">Explore by <span class="highlight">Topic</span></h3>
+    </div>
+    <div class="tags-cloud reveal">
+      <span class="tag">Design</span>
+      <span class="tag">Development</span>
+      <span class="tag">Branding</span>
+      <span class="tag">UX</span>
+      <span class="tag">Strategy</span>
+      <span class="tag">Culture</span>
+      <span class="tag">Tech</span>
+      <span class="tag">CSS</span>
+      <span class="tag">React</span>
+      <span class="tag">Accessibility</span>
+      <span class="tag">Performance</span>
+      <span class="tag">Typography</span>
+      <span class="tag">Color Theory</span>
+      <span class="tag">Remote Work</span>
+    </div>
+  </section>
+
+  <!-- ═══ Footer ═══ -->
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/images/logo.svg" alt="Soft Standards Inc." height="32">
+        </a>
+        <p>The New Standard in Digital Marketing. AI Automation, Branding, Digital Marketing, Web & App Development.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Quick Links</div>
+        <a href="services.html">Services</a>
+        <a href="case-studies.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="careers.html">Careers</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <a href="services.html">Brand Strategy</a>
+        <a href="services.html">Web Development</a>
+        <a href="services.html">UI/UX Design</a>
+        <a href="services.html">Digital Marketing</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Stay Updated</div>
+        <p style="color: var(--gray-500); font-size: 0.85rem; margin-bottom: 4px;">Subscribe to our newsletter for insights and updates.</p>
+        <div class="footer-newsletter-input">
+          <input type="email" placeholder="Your email">
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Soft Standards Inc. All rights reserved.</span>
+      <div class="footer-socials">
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Dribbble</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // Navbar scroll
+    window.addEventListener('scroll', () => {
+      document.querySelector('nav').classList.toggle('nav-scrolled', window.scrollY > 50);
+    });
+
+    // Filter tabs
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const blogCards = document.querySelectorAll('.blog-card');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+
+        blogCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = '';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            requestAnimationFrame(() => {
+              card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            });
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Newsletter form
+    document.querySelector('.newsletter-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thanks for subscribing! (This is a demo)');
+    });
+  </script>
+</body>
+</html>

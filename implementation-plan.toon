@@ -1,0 +1,1386 @@
+IMPLEMENTATION PLAN
+===================
+
+meta
+  project: nexus digital agency
+  tagline: we craft digital experiences that convert
+  type: implementation guide with placeholder data
+  structure: scalable and modular
+
+---
+
+PHASE 1: INITIAL SETUP EXECUTION
+================================
+
+step 1.1: create project
+  command: bun create next-app nexus-agency
+  selections
+    typescript: no
+    eslint: yes
+    tailwind: yes
+    src directory: no
+    app router: yes
+    import alias: yes, use @
+
+step 1.2: navigate and install dependencies
+  command: cd nexus-agency
+  command: bun add three @react-three/fiber @react-three/drei
+  command: bun add gsap @gsap/react framer-motion
+  command: bun add -D @types/three
+
+step 1.3: initialize shadcn
+  command: bunx shadcn@latest init
+  selections
+    style: new-york
+    base color: neutral
+    css variables: yes
+
+step 1.4: install initial shadcn components
+  command: bunx shadcn@latest add button
+  command: bunx shadcn@latest add card
+  command: bunx shadcn@latest add badge
+  command: bunx shadcn@latest add separator
+  command: bunx shadcn@latest add sheet
+  command: bunx shadcn@latest add dropdown-menu
+  command: bunx shadcn@latest add switch
+
+---
+
+PHASE 2: FOLDER STRUCTURE CREATION
+==================================
+
+step 2.1: create all directories
+  commands
+    mkdir -p components/layout
+    mkdir -p components/common
+    mkdir -p components/three/effects
+    mkdir -p components/three/scenes
+    mkdir -p components/animations
+    mkdir -p components/sections
+    mkdir -p hooks
+    mkdir -p lib
+    mkdir -p providers
+    mkdir -p public/models
+    mkdir -p public/textures
+    mkdir -p public/images
+    mkdir -p data
+
+---
+
+PHASE 3: DATA LAYER - PLACEHOLDER CONTENT
+=========================================
+
+file 3.1: data/site-config.js
+  purpose: central site configuration
+  contents
+    site name: Nexus Digital
+    site description: premium digital agency
+    navigation links array
+      label: Home, href: /
+      label: Services, href: /services
+      label: Work, href: /work
+      label: About, href: /about
+      label: Contact, href: /contact
+    social links array
+      platform: twitter, url: placeholder
+      platform: linkedin, url: placeholder
+      platform: instagram, url: placeholder
+      platform: github, url: placeholder
+    contact info
+      email: hello@nexusdigital.agency
+      phone: +1 (555) 123-4567
+      address: 123 Innovation Street, Tech City, TC 10001
+
+file 3.2: data/services.js
+  purpose: services data
+  contents array of objects
+    service 1
+      id: web-development
+      title: Web Development
+      shortDescription: custom websites and web applications
+      description: paragraph about building scalable performant websites
+      icon: code bracket icon reference
+      features array: responsive design, cms integration, api development, performance optimization
+    service 2
+      id: digital-marketing
+      title: Digital Marketing
+      shortDescription: grow your online presence
+      description: paragraph about seo ppc social media strategies
+      icon: chart icon reference
+      features array: seo optimization, ppc campaigns, social media, analytics
+    service 3
+      id: brand-identity
+      title: Brand Identity
+      shortDescription: memorable brand experiences
+      description: paragraph about logo design brand guidelines
+      icon: palette icon reference
+      features array: logo design, brand guidelines, visual identity, brand strategy
+    service 4
+      id: ui-ux-design
+      title: UI/UX Design
+      shortDescription: intuitive user experiences
+      description: paragraph about user research wireframing prototyping
+      icon: layout icon reference
+      features array: user research, wireframing, prototyping, usability testing
+    service 5
+      id: mobile-apps
+      title: Mobile Apps
+      shortDescription: native and cross-platform apps
+      description: paragraph about ios android react native development
+      icon: smartphone icon reference
+      features array: ios development, android development, cross-platform, app store optimization
+    service 6
+      id: content-strategy
+      title: Content Strategy
+      shortDescription: content that connects
+      description: paragraph about content planning creation distribution
+      icon: document icon reference
+      features array: content audit, editorial planning, copywriting, content distribution
+
+file 3.3: data/projects.js
+  purpose: portfolio projects
+  contents array of objects
+    project 1
+      id: project-aurora
+      title: Aurora Finance
+      category: web development
+      description: fintech platform redesign with modern ui
+      thumbnail: /images/projects/aurora-thumb.jpg
+      tags array: react, nextjs, fintech
+      year: 2024
+      featured: true
+    project 2
+      id: project-bloom
+      title: Bloom Wellness
+      category: brand identity
+      description: complete rebrand for wellness startup
+      thumbnail: /images/projects/bloom-thumb.jpg
+      tags array: branding, identity, wellness
+      year: 2024
+      featured: true
+    project 3
+      id: project-cipher
+      title: Cipher Security
+      category: mobile apps
+      description: cybersecurity mobile application
+      thumbnail: /images/projects/cipher-thumb.jpg
+      tags array: react native, security, mobile
+      year: 2024
+      featured: true
+    project 4
+      id: project-drift
+      title: Drift E-commerce
+      category: web development
+      description: headless commerce platform
+      thumbnail: /images/projects/drift-thumb.jpg
+      tags array: shopify, headless, ecommerce
+      year: 2023
+      featured: false
+    project 5
+      id: project-echo
+      title: Echo Podcast
+      category: ui-ux design
+      description: podcast platform interface design
+      thumbnail: /images/projects/echo-thumb.jpg
+      tags array: ui design, audio, streaming
+      year: 2023
+      featured: false
+    project 6
+      id: project-flux
+      title: Flux Analytics
+      category: digital marketing
+      description: marketing dashboard and analytics
+      thumbnail: /images/projects/flux-thumb.jpg
+      tags array: analytics, dashboard, saas
+      year: 2023
+      featured: false
+
+file 3.4: data/testimonials.js
+  purpose: client testimonials
+  contents array of objects
+    testimonial 1
+      id: 1
+      quote: nexus transformed our digital presence completely. our conversions increased by 150% within three months.
+      author: Sarah Chen
+      role: CEO
+      company: Aurora Finance
+      avatar: /images/avatars/sarah.jpg
+    testimonial 2
+      id: 2
+      quote: the team understood our vision perfectly. the brand identity they created exceeded all expectations.
+      author: Marcus Webb
+      role: Founder
+      company: Bloom Wellness
+      avatar: /images/avatars/marcus.jpg
+    testimonial 3
+      id: 3
+      quote: professional, creative, and incredibly responsive. nexus is our go-to partner for all things digital.
+      author: Elena Rodriguez
+      role: Marketing Director
+      company: Cipher Security
+      avatar: /images/avatars/elena.jpg
+
+file 3.5: data/team.js
+  purpose: team members
+  contents array of objects
+    member 1
+      id: 1
+      name: Alex Morgan
+      role: Founder & Creative Director
+      bio: 15 years of digital experience
+      avatar: /images/team/alex.jpg
+      social: twitter, linkedin
+    member 2
+      id: 2
+      name: Jordan Lee
+      role: Technical Lead
+      bio: full stack architect and performance expert
+      avatar: /images/team/jordan.jpg
+      social: github, linkedin
+    member 3
+      id: 3
+      name: Sam Rivera
+      role: Design Lead
+      bio: award winning ui ux designer
+      avatar: /images/team/sam.jpg
+      social: dribbble, linkedin
+    member 4
+      id: 4
+      name: Casey Zhang
+      role: Marketing Director
+      bio: growth strategist and data enthusiast
+      avatar: /images/team/casey.jpg
+      social: twitter, linkedin
+
+file 3.6: data/stats.js
+  purpose: company statistics
+  contents array of objects
+    stat 1
+      value: 150+
+      label: Projects Completed
+    stat 2
+      value: 50+
+      label: Happy Clients
+    stat 3
+      value: 8+
+      label: Years Experience
+    stat 4
+      value: 15
+      label: Team Members
+
+file 3.7: data/faqs.js
+  purpose: frequently asked questions
+  contents array of objects
+    faq 1
+      question: what is your typical project timeline
+      answer: timelines vary based on scope. a typical website takes 6-8 weeks, while larger applications may take 3-6 months.
+    faq 2
+      question: do you offer ongoing support
+      answer: yes we offer maintenance packages including updates, security monitoring, and performance optimization.
+    faq 3
+      question: what is your pricing model
+      answer: we work on both project-based and retainer models depending on your needs. contact us for a custom quote.
+    faq 4
+      question: do you work with startups
+      answer: absolutely. we love working with startups and offer flexible packages to accommodate different budgets.
+
+---
+
+PHASE 4: UTILITY FILES
+======================
+
+file 4.1: lib/utils.js
+  note: already created by shadcn
+  contains: cn function for class merging
+
+file 4.2: lib/gsap-config.js
+  purpose: gsap plugin registration and defaults
+  contents
+    import gsap and plugins
+    register ScrollTrigger
+    register ScrollSmoother if using
+    export configured gsap instance
+    export default animation settings object
+      duration: 0.8
+      ease: power3.out
+
+file 4.3: lib/animation-variants.js
+  purpose: framer motion variants library
+  contents
+    fadeIn variant
+      initial: opacity 0
+      animate: opacity 1
+      exit: opacity 0
+    fadeInUp variant
+      initial: opacity 0, y 40
+      animate: opacity 1, y 0
+      exit: opacity 0, y -20
+    fadeInDown variant
+      initial: opacity 0, y -40
+      animate: opacity 1, y 0
+    fadeInLeft variant
+      initial: opacity 0, x -40
+      animate: opacity 1, x 0
+    fadeInRight variant
+      initial: opacity 0, x 40
+      animate: opacity 1, x 0
+    staggerContainer variant
+      animate: transition staggerChildren 0.1
+    scaleIn variant
+      initial: opacity 0, scale 0.8
+      animate: opacity 1, scale 1
+    slideInFromBottom variant
+      initial: y 100%
+      animate: y 0
+    pageTransition variant
+      initial: opacity 0
+      animate: opacity 1
+      exit: opacity 0
+
+file 4.4: lib/constants.js
+  purpose: global constants
+  contents
+    breakpoints object
+      sm: 640
+      md: 768
+      lg: 1024
+      xl: 1280
+      2xl: 1536
+    animation durations
+      fast: 0.2
+      normal: 0.4
+      slow: 0.8
+    z-index scale
+      dropdown: 50
+      sticky: 100
+      modal: 200
+      tooltip: 300
+
+file 4.5: lib/three-config.js
+  purpose: three.js defaults
+  contents
+    default camera settings
+      fov: 75
+      near: 0.1
+      far: 1000
+      position: 0 0 5
+    default canvas settings
+      dpr: 1 to 2
+      shadows: true
+    blob material defaults
+      color: primary color
+      roughness: 0.4
+      metalness: 0.1
+
+---
+
+PHASE 5: CUSTOM HOOKS
+=====================
+
+file 5.1: hooks/use-scroll-position.js
+  purpose: track scroll position
+  returns: scrollY, scrollX, scrollDirection
+  uses: useEffect with scroll listener
+  includes: throttling for performance
+
+file 5.2: hooks/use-mouse-position.js
+  purpose: track mouse position
+  returns: x, y, normalizedX, normalizedY
+  uses: useEffect with mousemove listener
+  useful for: parallax, 3d rotation effects
+
+file 5.3: hooks/use-viewport.js
+  purpose: responsive breakpoint detection
+  returns: width, height, isMobile, isTablet, isDesktop
+  uses: useEffect with resize listener
+  includes: debouncing
+
+file 5.4: hooks/use-media-query.js
+  purpose: single media query check
+  parameters: query string
+  returns: boolean matches
+  uses: matchMedia api
+
+file 5.5: hooks/use-reduced-motion.js
+  purpose: accessibility check
+  returns: boolean prefersReducedMotion
+  uses: prefers-reduced-motion media query
+  usage: disable animations if true
+
+file 5.6: hooks/use-intersection.js
+  purpose: intersection observer hook
+  parameters: options object
+  returns: ref, isIntersecting, entry
+  useful for: scroll triggered animations
+
+file 5.7: hooks/use-gsap-context.js
+  purpose: gsap context management
+  returns: contextRef, contextSafe function
+  ensures: proper cleanup on unmount
+
+file 5.8: hooks/use-local-storage.js
+  purpose: persist state to local storage
+  parameters: key, initialValue
+  returns: storedValue, setValue
+  useful for: theme preference persistence
+
+---
+
+PHASE 6: PROVIDERS
+==================
+
+file 6.1: providers/theme-provider.jsx
+  purpose: dark and light mode management
+  uses: next-themes package
+  wraps: entire application
+  provides: theme, setTheme, resolvedTheme
+  features
+    system preference detection
+    local storage persistence
+    no flash on load
+
+file 6.2: providers/smooth-scroll-provider.jsx
+  purpose: gsap smooth scrolling
+  uses: gsap ScrollSmoother
+  wraps: main content
+  provides: smooth scroll instance
+  configuration
+    smooth: 1.5
+    effects: true for parallax
+    normalizeScroll: true
+  note: only enable on desktop, disable on mobile
+
+file 6.3: providers/animation-provider.jsx
+  purpose: global animation context
+  uses: framer motion AnimatePresence
+  provides: page transition settings
+  wraps: children with AnimatePresence
+  mode: wait for sequential transitions
+
+file 6.4: providers/index.jsx
+  purpose: combine all providers
+  exports: single Providers component
+  order from outer to inner
+    ThemeProvider
+    SmoothScrollProvider
+    AnimationProvider
+
+---
+
+PHASE 7: LAYOUT COMPONENTS
+==========================
+
+file 7.1: components/layout/header.jsx
+  purpose: main navigation
+  structure
+    container with max width
+    left: logo component
+    center: navigation links from site-config
+    right: theme toggle, cta button
+  features
+    sticky on scroll
+    background blur when scrolled
+    mobile hamburger menu using Sheet component
+  animations
+    fade in on load
+    hide on scroll down, show on scroll up
+  responsive
+    desktop: full nav
+    mobile: hamburger with sheet drawer
+
+file 7.2: components/layout/footer.jsx
+  purpose: site footer
+  structure
+    top section
+      logo and tagline
+      newsletter signup form
+    middle section
+      column 1: navigation links
+      column 2: services links
+      column 3: contact info
+      column 4: social links
+    bottom section
+      copyright text
+      legal links privacy terms
+  animations
+    staggered fade in on scroll into view
+
+file 7.3: components/layout/mobile-nav.jsx
+  purpose: mobile navigation drawer
+  uses: shadcn Sheet component
+  structure
+    trigger: hamburger icon
+    content: full navigation links
+    includes: theme toggle, cta button
+  animations
+    slide in from right
+    staggered link reveals
+
+file 7.4: components/layout/page-wrapper.jsx
+  purpose: consistent page structure
+  structure
+    motion.main wrapper
+    optional hero section slot
+    content area
+  provides
+    page enter exit animations
+    scroll restoration
+    consistent padding
+
+file 7.5: components/layout/section-wrapper.jsx
+  purpose: consistent section structure
+  parameters: children, className, id
+  structure
+    section tag with id
+    container for max width
+    padding vertical
+  features
+    automatic scroll trigger setup
+    intersection observer for animations
+
+---
+
+PHASE 8: COMMON COMPONENTS
+==========================
+
+file 8.1: components/common/logo.jsx
+  purpose: site logo
+  parameters: className, variant light or dark
+  structure
+    svg logo or text logo
+    link to home
+  variants
+    light: for dark backgrounds
+    dark: for light backgrounds
+    auto: follows theme
+
+file 8.2: components/common/section-heading.jsx
+  purpose: consistent section titles
+  parameters: eyebrow, title, description, alignment
+  structure
+    eyebrow text small uppercase
+    main title h2
+    description paragraph
+  animations
+    text split animation with gsap
+    staggered word reveal
+
+file 8.3: components/common/animated-text.jsx
+  purpose: text reveal animations
+  parameters: text, type word or char or line
+  uses: gsap SplitText alternative
+  animations
+    split text into spans
+    animate each element
+
+file 8.4: components/common/animated-button.jsx
+  purpose: button with hover effects
+  extends: shadcn button
+  animations
+    magnetic effect on hover
+    background slide animation
+    scale on click
+
+file 8.5: components/common/theme-toggle.jsx
+  purpose: dark light mode switch
+  uses: shadcn switch or dropdown
+  structure
+    icon sun or moon
+    toggle interaction
+  animations
+    icon rotation on change
+    smooth color transition
+
+file 8.6: components/common/scroll-indicator.jsx
+  purpose: scroll down prompt
+  structure
+    animated arrow or mouse icon
+    scroll text
+  placement: bottom of hero
+  animations
+    bounce animation
+    fade out on scroll
+
+file 8.7: components/common/loading-screen.jsx
+  purpose: initial page loader
+  structure
+    full screen overlay
+    logo animation
+    progress indicator
+  animations
+    logo reveal
+    progress bar
+    exit animation revealing content
+
+file 8.8: components/common/cursor.jsx
+  purpose: custom cursor
+  structure
+    outer circle
+    inner dot
+  features
+    follows mouse smoothly
+    grows on hover interactive elements
+    changes on links and buttons
+  note: only on desktop
+
+file 8.9: components/common/magnetic-wrapper.jsx
+  purpose: magnetic hover effect
+  parameters: children, strength
+  uses: framer motion
+  effect: element follows cursor within bounds
+
+file 8.10: components/common/reveal-wrapper.jsx
+  purpose: scroll reveal animation
+  parameters: children, direction, delay
+  uses: framer motion and intersection hook
+  variants: up, down, left, right, fade
+
+file 8.11: components/common/parallax-wrapper.jsx
+  purpose: parallax scroll effect
+  parameters: children, speed, direction
+  uses: gsap ScrollTrigger
+  effect: element moves at different speed than scroll
+
+file 8.12: components/common/image-placeholder.jsx
+  purpose: placeholder for images before real assets
+  parameters: aspectRatio, className
+  structure
+    gradient background
+    optional icon
+    skeleton pulse animation
+
+---
+
+PHASE 9: THREE.JS COMPONENTS
+============================
+
+file 9.1: components/three/canvas-wrapper.jsx
+  purpose: reusable r3f canvas setup
+  parameters: children, className, cameraPosition
+  structure
+    Canvas component from r3f
+    Suspense for loading
+    default camera settings
+    performance settings dpr
+  includes
+    default lights if not overridden
+    default environment
+
+file 9.2: components/three/scenes/hero-scene.jsx
+  purpose: hero section 3d scene
+  contains
+    abstract blob mesh
+    ambient and directional lights
+    optional particles
+  features
+    blob morphs on mouse move
+    slow rotation animation
+    color changes with theme
+
+file 9.3: components/three/scenes/about-scene.jsx
+  purpose: about section 3d element
+  contains
+    floating geometric shapes
+    interconnected nodes
+  features
+    scroll based animation
+    parallax depth
+
+file 9.4: components/three/scenes/services-scene.jsx
+  purpose: services section 3d background
+  contains
+    abstract flowing shapes
+    gradient materials
+  features
+    subtle movement
+    responds to scroll position
+
+file 9.5: components/three/effects/abstract-blob.jsx
+  purpose: main hero blob
+  uses: drei MeshDistortMaterial or custom shader
+  parameters
+    color
+    distortSpeed
+    distortStrength
+    mouseInfluence
+  features
+    organic morphing animation
+    mouse position influence
+    theme aware colors
+  geometry: icosahedron or sphere with high segments
+
+file 9.6: components/three/effects/floating-particles.jsx
+  purpose: background particles
+  uses: drei Points or instanced mesh
+  parameters
+    count
+    color
+    size
+    spread
+  features
+    random initial positions
+    gentle floating animation
+    mouse repulsion optional
+
+file 9.7: components/three/effects/gradient-sphere.jsx
+  purpose: gradient colored sphere
+  uses: custom shader material
+  features
+    animated gradient
+    fresnel effect on edges
+    smooth color transitions
+
+file 9.8: components/three/effects/noise-plane.jsx
+  purpose: animated noise background
+  uses: custom shader with noise
+  features
+    flowing noise pattern
+    color theming
+    scroll influenced
+
+file 9.9: components/three/helpers/scene-lights.jsx
+  purpose: reusable lighting setup
+  contains
+    ambient light
+    directional light with shadows
+    optional point lights
+  parameters: intensity, color, shadowEnabled
+
+file 9.10: components/three/helpers/camera-rig.jsx
+  purpose: camera movement logic
+  features
+    smooth follow mouse
+    scroll based zoom
+    lerped transitions
+
+file 9.11: components/three/helpers/loading-progress.jsx
+  purpose: 3d asset loading indicator
+  uses: drei useProgress
+  displays
+    loading percentage
+    asset being loaded
+  animation: progress bar fill
+
+---
+
+PHASE 10: ANIMATION COMPONENTS
+==============================
+
+file 10.1: components/animations/gsap-initializer.jsx
+  purpose: initialize gsap plugins
+  runs: once on mount
+  registers: ScrollTrigger, other plugins
+  note: place high in component tree
+
+file 10.2: components/animations/page-transition.jsx
+  purpose: route change animations
+  uses: framer motion
+  structure
+    motion.div wrapper
+    enter animation
+    exit animation
+  variants
+    fade
+    slide
+    reveal
+
+file 10.3: components/animations/text-reveal.jsx
+  purpose: animated text appearance
+  parameters: children, trigger
+  uses: gsap
+  types
+    line by line
+    word by word
+    character by character
+  features
+    customizable timing
+    scroll trigger integration
+
+file 10.4: components/animations/stagger-container.jsx
+  purpose: stagger children animations
+  parameters: children, staggerDelay
+  uses: framer motion
+  effect: children animate in sequence
+
+file 10.5: components/animations/scroll-trigger-wrapper.jsx
+  purpose: gsap scroll trigger integration
+  parameters: children, animation, trigger settings
+  uses: gsap ScrollTrigger
+  features
+    customizable start end points
+    scrub option
+    pin option
+
+file 10.6: components/animations/counter.jsx
+  purpose: animated number counting
+  parameters: from, to, duration
+  uses: framer motion useSpring or gsap
+  features
+    count up or down
+    format options decimals, commas
+    trigger on scroll into view
+
+file 10.7: components/animations/marquee.jsx
+  purpose: infinite scrolling text
+  parameters: children, speed, direction
+  uses: css animation or gsap
+  features
+    seamless loop
+    pause on hover
+    reversible direction
+
+file 10.8: components/animations/morphing-text.jsx
+  purpose: text morphing between words
+  parameters: words array, interval
+  uses: framer motion
+  effect: smooth transition between different words
+
+---
+
+PHASE 11: SECTION COMPONENTS
+============================
+
+file 11.1: components/sections/hero-section.jsx
+  purpose: landing hero
+  layout: split with content left, 3d right
+  structure
+    left side 50%
+      eyebrow badge
+      main heading with animated text
+      subheading paragraph
+      cta buttons row
+      optional client logos
+    right side 50%
+      canvas wrapper
+      hero scene with blob
+  animations
+    content: staggered fade in from left
+    3d: blob animates in and starts morphing
+    scroll indicator at bottom
+  responsive
+    desktop: side by side
+    tablet: stacked, 3d smaller
+    mobile: stacked, 3d minimal or hidden
+
+file 11.2: components/sections/services-section.jsx
+  purpose: services overview
+  layout: grid with section heading
+  structure
+    section heading component
+    services grid 2x3 or 3x2
+    each service card
+      icon
+      title
+      short description
+      hover arrow link
+  animations
+    heading: text reveal
+    cards: staggered fade in up
+    hover: card lift with shadow
+  data source: data/services.js
+
+file 11.3: components/sections/work-section.jsx
+  purpose: featured projects
+  layout: alternating or grid
+  structure
+    section heading
+    featured projects display
+    each project
+      thumbnail image placeholder
+      category badge
+      title
+      description excerpt
+      tags
+      view project link
+    view all work button
+  animations
+    cards: reveal on scroll
+    images: parallax effect
+    hover: image scale, content reveal
+  data source: data/projects.js filter featured true
+
+file 11.4: components/sections/about-section.jsx
+  purpose: company introduction
+  layout: split content and visual
+  structure
+    left side
+      section heading
+      about paragraphs
+      key points list
+      link to full about page
+    right side
+      3d element or image
+      stats row
+  animations
+    content: fade in up
+    stats: counter animation
+    3d: scroll parallax
+  data source: data/stats.js
+
+file 11.5: components/sections/testimonials-section.jsx
+  purpose: client testimonials
+  layout: carousel or grid
+  structure
+    section heading
+    testimonials display
+    each testimonial
+      quote text
+      author info
+        avatar
+        name
+        role
+        company
+  animations
+    carousel: slide or fade between
+    quote marks: animate in
+  data source: data/testimonials.js
+
+file 11.6: components/sections/team-section.jsx
+  purpose: team members
+  layout: grid
+  structure
+    section heading
+    team grid
+    each member card
+      avatar image
+      name
+      role
+      social links
+  animations
+    cards: staggered reveal
+    hover: image filter, social icons appear
+  data source: data/team.js
+
+file 11.7: components/sections/cta-section.jsx
+  purpose: call to action
+  layout: centered
+  structure
+    background gradient or 3d
+    heading
+    description
+    cta buttons
+  animations
+    text reveal
+    button pulse or glow
+    background subtle movement
+
+file 11.8: components/sections/faq-section.jsx
+  purpose: frequently asked questions
+  layout: accordion
+  structure
+    section heading
+    accordion items
+    each faq
+      question as trigger
+      answer as content
+  uses: shadcn accordion component
+  animations
+    open close smooth
+    content fade in
+  data source: data/faqs.js
+
+file 11.9: components/sections/contact-section.jsx
+  purpose: contact form and info
+  layout: split
+  structure
+    left side
+      section heading
+      contact info
+        email
+        phone
+        address
+      social links
+    right side
+      contact form
+        name input
+        email input
+        message textarea
+        submit button
+  animations
+    form fields: staggered reveal
+    submit: loading state animation
+  note: form functionality added later
+
+file 11.10: components/sections/clients-section.jsx
+  purpose: client logos marquee
+  layout: full width marquee
+  structure
+    optional heading
+    logo marquee infinite scroll
+    logos as placeholder boxes or svgs
+  animations
+    seamless infinite scroll
+    grayscale to color on hover
+
+file 11.11: components/sections/process-section.jsx
+  purpose: how we work steps
+  layout: horizontal timeline or vertical
+  structure
+    section heading
+    process steps
+    each step
+      step number
+      title
+      description
+      icon or visual
+  animations
+    scroll triggered reveal
+    connecting line draws
+    steps reveal sequentially
+  placeholder data
+    step 1: Discovery - understand your goals
+    step 2: Strategy - plan the approach
+    step 3: Design - create the vision
+    step 4: Develop - build the solution
+    step 5: Launch - deliver and support
+
+---
+
+PHASE 12: PAGE IMPLEMENTATIONS
+==============================
+
+file 12.1: app/layout.jsx
+  purpose: root layout
+  structure
+    html with lang and class for theme
+    body
+      Providers wrapper
+        smooth scroll wrapper div
+          header
+          main content slot
+          footer
+        custom cursor
+  includes
+    font imports
+    metadata export
+
+file 12.2: app/page.jsx
+  purpose: home page
+  structure
+    page wrapper
+      hero section
+      clients section
+      services section
+      work section
+      about section
+      testimonials section
+      process section
+      cta section
+  animations
+    sections reveal on scroll
+    smooth scroll snapping optional
+
+file 12.3: app/services/page.jsx
+  purpose: services listing
+  structure
+    page wrapper
+      hero mini with title
+      services grid detailed
+      process section
+      cta section
+
+file 12.4: app/services/[slug]/page.jsx
+  purpose: individual service page
+  structure
+    service hero
+    service details
+    related projects
+    cta section
+  params: slug from url
+  data: find service by slug
+
+file 12.5: app/work/page.jsx
+  purpose: portfolio page
+  structure
+    page wrapper
+      hero mini
+      filter tabs by category
+      projects grid all
+      cta section
+
+file 12.6: app/work/[slug]/page.jsx
+  purpose: project case study
+  structure
+    project hero
+    project details
+    challenge solution results
+    project images gallery
+    next project link
+  params: slug from url
+  data: find project by slug
+
+file 12.7: app/about/page.jsx
+  purpose: about page
+  structure
+    page wrapper
+      hero mini
+      about content expanded
+      team section
+      values or culture section
+      cta section
+
+file 12.8: app/contact/page.jsx
+  purpose: contact page
+  structure
+    page wrapper
+      hero mini
+      contact section full
+      map placeholder
+      faq section
+
+file 12.9: app/globals.css
+  purpose: global styles
+  contents
+    tailwind directives
+    css variables for colors
+    custom properties for theme
+    base typography
+    custom scrollbar styles
+    selection styles
+    smooth scroll
+    utility classes for animations
+
+file 12.10: app/loading.jsx
+  purpose: loading state
+  structure
+    loading screen component
+  displays: during page transitions
+
+file 12.11: app/not-found.jsx
+  purpose: 404 page
+  structure
+    centered content
+    404 message
+    back to home link
+    optional 3d element
+
+---
+
+PHASE 13: CONFIGURATION FILES
+=============================
+
+file 13.1: next.config.js
+  contents
+    transpilePackages for three if needed
+    images domains configuration
+    experimental features if needed
+
+file 13.2: tailwind.config.js
+  extend
+    colors: add brand colors, theme colors
+    fontFamily: add custom fonts
+    animation: add custom keyframes
+    keyframes: define animations
+    screens: confirm breakpoints
+  plugins
+    tailwindcss-animate if not added by shadcn
+
+file 13.3: jsconfig.json
+  paths
+    @/*: base path
+    @/components/*
+    @/hooks/*
+    @/lib/*
+    @/data/*
+    @/providers/*
+    @/three/*: components/three/*
+
+file 13.4: .env.local
+  placeholders for
+    NEXT_PUBLIC_SITE_URL
+    any api keys for future
+
+---
+
+PHASE 14: STYLING TOKENS
+========================
+
+colors to define
+  primary: brand main color
+  primary-foreground: text on primary
+  secondary: brand secondary
+  secondary-foreground: text on secondary
+  background: page background
+  foreground: main text
+  muted: subtle backgrounds
+  muted-foreground: subtle text
+  accent: highlight color
+  accent-foreground: text on accent
+  destructive: error color
+  border: border color
+  ring: focus ring
+
+placeholder color values
+  light theme
+    background: hsl 0 0% 100%
+    foreground: hsl 0 0% 3.9%
+    primary: hsl 262 83% 58%
+    secondary: hsl 210 40% 96%
+    accent: hsl 262 83% 58%
+  dark theme
+    background: hsl 0 0% 3.9%
+    foreground: hsl 0 0% 98%
+    primary: hsl 262 83% 68%
+    secondary: hsl 215 20% 11%
+    accent: hsl 262 83% 68%
+
+---
+
+PHASE 15: RESPONSIVE BREAKPOINTS
+================================
+
+breakpoints strategy
+  mobile first approach
+  base: 0 to 639px mobile
+  sm: 640px small tablets
+  md: 768px tablets
+  lg: 1024px small laptops
+  xl: 1280px desktops
+  2xl: 1536px large screens
+
+component adjustments
+  header
+    mobile: hamburger menu
+    lg and up: full navigation
+  hero
+    mobile: stacked, minimal 3d
+    md: stacked with 3d
+    lg: split layout
+  grids
+    mobile: single column
+    sm: two columns
+    lg: three columns
+    xl: four columns where needed
+  typography
+    mobile: smaller sizes
+    lg: full sizes
+  spacing
+    mobile: reduced padding
+    lg: full spacing
+  3d scenes
+    mobile: simplified or hidden
+    lg: full complexity
+
+---
+
+PHASE 16: ACCESSIBILITY CHECKLIST
+=================================
+
+requirements
+  semantic html throughout
+  proper heading hierarchy
+  alt text for images
+  aria labels where needed
+  keyboard navigation support
+  focus visible styles
+  skip to content link
+  reduced motion support
+  color contrast compliance
+  form labels and error messages
+
+implementation notes
+  theme toggle: announce to screen readers
+  mobile menu: trap focus when open
+  animations: respect prefers-reduced-motion
+  3d content: provide alternative text content
+  interactive elements: minimum 44px touch target
+
+---
+
+PHASE 17: PERFORMANCE OPTIMIZATIONS
+===================================
+
+next.js
+  dynamic imports for heavy components
+  image optimization with next/image
+  font optimization with next/font
+  route prefetching
+
+three.js
+  dispose geometries and materials on unmount
+  use instancing for repeated objects
+  level of detail for complex models
+  limit pixel ratio to 2
+  use drei performance utilities
+
+animations
+  use transform and opacity only
+  avoid layout triggering properties
+  use will-change sparingly
+  debounce scroll handlers
+  use requestAnimationFrame
+
+loading
+  lazy load below fold sections
+  skeleton screens for loading states
+  progressive image loading
+  preload critical assets
+
+---
+
+PHASE 18: IMPLEMENTATION ORDER
+==============================
+
+order of implementation
+  1. project setup and dependencies
+  2. folder structure creation
+  3. configuration files
+  4. data files with placeholder content
+  5. utility files and constants
+  6. custom hooks
+  7. providers setup
+  8. root layout
+  9. common components
+  10. layout components header footer
+  11. three.js base components
+  12. animation components
+  13. section components one by one
+  14. home page assembly
+  15. additional pages
+  16. responsive adjustments
+  17. accessibility audit
+  18. performance optimization
+
+---
+
+NOTES AND REMINDERS
+===================
+
+scalability
+  all data externalized for easy updates
+  components accept data as props
+  styles use css variables for theming
+  3d scenes can be swapped easily
+  sections can be reordered or removed
+
+future additions
+  cms integration: data files become api calls
+  real images: replace placeholder components
+  form handling: add server actions or api routes
+  analytics: add tracking provider
+  seo: enhance metadata per page
+  blog: add blog section with mdx
+
+dependencies to add later if needed
+  next-themes: for theme provider
+  lenis: alternative smooth scroll
+  @studio-freight/lenis: another option
+  embla-carousel: for testimonials
+  react-hook-form: for forms
+  zod: for validation
+
+placeholder images
+  use gradient boxes initially
+  can use placeholder.com or similar
+  replace with real assets when available
+
+testing approach
+  each component in isolation first
+  then integrate into sections
+  then build pages
+  test responsive at each step
+  test both themes at each step
+
+---
+
+END OF IMPLEMENTATION PLAN

@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Palette - New Color System */
+  --primary: #7C3AED;
+  --secondary: #06B6D4;
+  --surface: #F8FAFC;
+  --background: #FFFFFF;
+  --error: #DC2626;
+
+  /* On-Colors (Text on backgrounds) */
+  --on-primary: #FFFFFF;
+  --on-secondary: #FFFFFF;
+  --on-surface: #0F172A;
+  --on-background: #0F172A;
+  --on-error: #FFFFFF;
+
+  /* Legacy mappings for compatibility */
+  --white: #FFFFFF;
+  --off-white: #F8FAFC;
+  --lavender-white: #F8FAFC;
+  --navy-black: #0F172A;
+
+  /* Gray Scale */
+  --gray-50: #F8FAFC;
+  --gray-100: #F1F5F9;
+  --gray-200: #E2E8F0;
+  --gray-300: #CBD5E1;
+  --gray-500: #64748B;
+  --gray-600: #475569;
+  --gray-800: #1E293B;
+  --gray-900: #0F172A;
+
+  /* Purple Scale - Primary Brand Colors */
+  --purple-50: #F5F3FF;
+  --purple-100: #EDE9FE;
+  --purple-200: #DDD6FE;
+  --purple-glow: #A78BFA;
+  --purple-400: #A78BFA;
+  --purple-500: #7C3AED;
+  --purple-600: #6D28D9;
+  --purple-700: #5B21B6;
+  --purple-800: #4C1D95;
+  --purple-900: #3B0764;
+
+  /* Cyan Scale - Secondary Brand Colors */
+  --cyan-50: #ECFEFF;
+  --cyan-100: #CFFAFE;
+  --cyan-200: #A5F3FC;
+  --cyan-400: #22D3EE;
+  --cyan-500: #06B6D4;
+  --cyan-600: #0891B2;
+  --cyan-700: #0E7490;
+
+  /* Radii */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --radius-pill: 999px;
+
+  /* Shadows - Updated to Electric Purple */
+  --shadow-subtle: 0 1px 3px rgba(15, 23, 42, 0.04);
+  --shadow-card: 0 4px 24px rgba(15, 23, 42, 0.06);
+  --shadow-elevated: 0 12px 40px rgba(15, 23, 42, 0.1);
+  --shadow-purple: 0 4px 20px rgba(124, 58, 237, 0.3);
+  --shadow-purple-lg: 0 8px 30px rgba(124, 58, 237, 0.4);
+  --shadow-glow: 0 4px 20px rgba(167, 139, 250, 0.4);
+  --shadow-cyan: 0 4px 20px rgba(6, 182, 212, 0.3);
+  --shadow-cyan-lg: 0 8px 30px rgba(6, 182, 212, 0.4);
+
+  /* Spacing */
+  --section-padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 80px);
+  --container-max: 1200px;
+  --container-wide: 1400px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--on-background);
+  --font-sans: var(--font-poppins);
+
+  /* Custom colors for Tailwind */
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-surface: var(--surface);
+  --color-navy-black: var(--navy-black);
+
+  --color-purple-50: var(--purple-50);
+  --color-purple-100: var(--purple-100);
+  --color-purple-200: var(--purple-200);
+  --color-purple-400: var(--purple-400);
+  --color-purple-500: var(--purple-500);
+  --color-purple-600: var(--purple-600);
+  --color-purple-700: var(--purple-700);
+  --color-purple-800: var(--purple-800);
+  --color-purple-900: var(--purple-900);
+
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--on-background);
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Marquee Animation */
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marqueeScroll 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Scroll Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal[data-delay="1"] { transition-delay: 0.1s; }
+.reveal[data-delay="2"] { transition-delay: 0.2s; }
+.reveal[data-delay="3"] { transition-delay: 0.3s; }
+.reveal[data-delay="4"] { transition-delay: 0.4s; }
+.reveal[data-delay="5"] { transition-delay: 0.5s; }
+.reveal[data-delay="6"] { transition-delay: 0.6s; }
+
+/* Pulse animation for availability dot */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Fade animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+/* Animation delay utilities */
+.delay-100 { animation-delay: 0.1s; }
+.delay-150 { animation-delay: 0.15s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-450 { animation-delay: 0.45s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-750 { animation-delay: 0.75s; }
+
+/* Highlight gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--purple-500), var(--purple-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card purple bar effect */
+.card-purple-bar {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-purple-bar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--purple-500), var(--purple-400));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.card-purple-bar:hover::after {
+  transform: scaleX(1);
+}
+
+/* Hide scrollbar for marquee */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
