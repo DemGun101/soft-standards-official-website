@@ -19,10 +19,9 @@ const serviceLinks = [
 ];
 
 const socialLinks = [
-  { href: '#', label: 'Twitter' },
-  { href: '#', label: 'LinkedIn' },
-  { href: '#', label: 'Dribbble' },
-  { href: '#', label: 'GitHub' },
+  { href: 'https://instagram.com/softstandards', label: 'Instagram' },
+  { href: 'https://linkedin.com/company/soft-sstandards-inc', label: 'LinkedIn' },
+  { href: 'mailto:contact@softstandards.net', label: 'Email' },
 ];
 
 export default function Footer() {
@@ -35,7 +34,7 @@ export default function Footer() {
             <SoftStandardsLogoIcon className="h-8 w-auto" autoPlay={false} hoverEffect />
           </Link>
           <p className="text-gray-500 text-[0.9rem] leading-[1.7] mt-4 max-w-[300px]">
-            The New Standard in Digital Marketing. AI Automation, Branding, Digital Marketing, Web & App Development.
+            The New Standard in Digital. AI automation, brand strategy, web development, and digital marketing — crafted with care from New York.
           </p>
         </div>
 

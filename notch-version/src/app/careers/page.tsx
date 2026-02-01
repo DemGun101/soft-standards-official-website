@@ -11,7 +11,7 @@ import {
 } from '@/components/Icons';
 
 const cultureItems = [
-  { icon: <GlobeIcon />, title: 'Remote First', desc: "Work from anywhere. We've been fully remote since day one, with team members across 12 countries and 8 time zones. Flexibility is built into everything we do — because life happens, and great work doesn't require an office.", span: true },
+  { icon: <GlobeIcon />, title: 'Remote First', desc: "Work from anywhere. We've built a flexible, remote-friendly culture from day one. Our team spans different cities and time zones, and we've proven that great work doesn't require an office — just great people and clear communication.", span: true },
   { icon: <SunIcon />, title: 'Growth Focused', desc: 'Annual learning budgets, conference tickets, and mentorship programs. We invest in your development because when you grow, we all win.' },
   { icon: <UsersIcon />, title: 'Team Driven', desc: "No rockstars, no egos. We collaborate openly, share credit generously, and win together. Everyone has a voice that matters." },
   { icon: <ActivityIcon />, title: 'Impact Oriented', desc: "Work on projects that move the needle. Every project we take on has a clear purpose and measurable outcomes — no busywork." },
@@ -36,10 +36,10 @@ const jobs = [
 ];
 
 const testimonials = [
-  { text: "Best career move I ever made. The autonomy, the projects, the people — everything just clicks. I've learned more here in one year than I did in five at my previous job.", name: 'Carlos Reyes', role: 'Senior Developer · 2 years' },
-  { text: "The flexibility is real. I work from Bali, my teammate works from Berlin, and we ship together like we're in the same room. Async-first done right.", name: 'Aisha Khalil', role: 'UX Researcher · 1.5 years' },
-  { text: "I've worked at agencies where 'learning budget' meant nothing. Here, they genuinely invest in your growth — and they expect you to use it.", name: 'Noah Fischer', role: 'Marketing Lead · 3 years' },
-  { text: "No politics, no bullshit. Just talented people doing great work. The culture here isn't just a slide deck — it's lived every single day.", name: 'Emma Nakamura', role: 'Strategy Lead · 4 years' },
+  { text: "I joined Soft Standards because of the people, and I stay because of the growth. Every project pushes me to learn something new, and the team always has your back.", name: 'Akash Ahmed', role: 'Senior Developer · 2 years' },
+  { text: "The flexibility here is real — not just a talking point. I manage my own schedule, work on meaningful projects, and genuinely enjoy what I do every day.", name: 'Alishba Ahmed', role: 'Senior Graphic Designer · 1.5 years' },
+  { text: "What I love most is the trust. There's no micromanagement, just clear goals and the freedom to figure out the best way to hit them.", name: 'Hashir Saleem', role: 'Associate Graphic Designer · 1 year' },
+  { text: "Soft Standards feels like a startup with a purpose. We move fast, we care about quality, and we actually celebrate each other's wins.", name: 'Zain-ul-Abedeen', role: 'Business Development · 2 years' },
 ];
 
 const filters = [
@@ -189,7 +189,7 @@ export default function CareersPage() {
                         ))}
                       </ul>
                       <Link
-                        href="#"
+                        href={`mailto:contact@softstandards.net?subject=Application: ${job.title}`}
                         className="inline-flex items-center gap-2.5 px-9 py-4 bg-purple-500 text-white rounded-full text-base font-semibold transition-all shadow-[0_4px_20px_rgba(124,58,237,0.3)] hover:bg-purple-600 hover:-translate-y-0.5"
                       >
                         Apply for this Role
@@ -247,7 +247,7 @@ export default function CareersPage() {
               We&apos;re always looking for exceptional talent. Send us your CV and tell us what you&apos;d bring to the team.
             </p>
             <Link
-              href="#contact"
+              href="mailto:contact@softstandards.net?subject=Open Application"
               className="inline-flex items-center gap-2.5 px-9 py-4 bg-gray-900 text-white border border-white/20 rounded-full text-base font-semibold transition-all hover:bg-purple-600 hover:-translate-y-0.5"
             >
               Send Your CV

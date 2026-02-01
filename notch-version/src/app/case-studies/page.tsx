@@ -1,28 +1,29 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import { SectionHeader } from '@/components/Section';
 import { ArrowRightIcon, ArrowUpRightIcon } from '@/components/Icons';
 
 const caseStudies = [
-  { id: 1, category: 'branding', categoryLabel: 'Branding', title: 'Nexus Fintech — Brand Identity', gradient: 'from-gray-100 to-gray-200' },
-  { id: 2, category: 'web', categoryLabel: 'Web Platform', title: 'Verdant Health — Web Platform', gradient: 'from-purple-100 to-purple-200' },
-  { id: 3, category: 'mobile', categoryLabel: 'Mobile App', title: 'Orbit SaaS — Mobile App', gradient: 'from-indigo-100 to-indigo-200' },
-  { id: 4, category: 'marketing', categoryLabel: 'Marketing', title: 'Atlas Logistics — Campaign', gradient: 'from-amber-100 to-amber-200' },
-  { id: 5, category: 'web', categoryLabel: 'E-commerce', title: 'Lumina Studio — E-commerce', gradient: 'from-pink-100 to-pink-200' },
-  { id: 6, category: 'branding', categoryLabel: 'Product Design', title: 'Prism AI — Product Design', gradient: 'from-violet-100 to-violet-200' },
+  { id: 1, category: 'web', categoryLabel: 'Web Platform', title: 'SpaceDome AI — Web Platform & Brand', image: '/images/case-studies/spacedome-ai.png' },
+  { id: 2, category: 'marketing', categoryLabel: 'Digital Marketing', title: 'Bicycle Health — Patient Acquisition', image: '/images/case-studies/bicycle-health.png' },
+  { id: 3, category: 'branding', categoryLabel: 'Branding', title: 'Meridian Consulting — Brand Refresh', image: '/images/case-studies/meridian-consulting.png' },
+  { id: 4, category: 'web', categoryLabel: 'E-commerce', title: 'Trellis Studios — E-commerce Platform', image: '/images/case-studies/trellis-studios.png' },
+  { id: 5, category: 'branding', categoryLabel: 'Product Design', title: 'Apex Ventures — Investor Platform', image: '/images/case-studies/apex-ventures.png' },
+  { id: 6, category: 'marketing', categoryLabel: 'Campaign', title: 'Horizon Wellness — Growth Campaign', image: '/images/case-studies/horizon-wellness.png' },
 ];
 
 const testimonials = [
-  { text: 'Soft Standards transformed our digital presence completely. The attention to detail and strategic thinking was beyond anything we expected. Our conversion rates doubled within the first quarter.', name: 'Sarah Mitchell', role: 'CEO, Nexus Fintech' },
-  { text: "Working with this team felt like having an in-house design department — but better. They understood our healthcare audience deeply and delivered a platform that our patients genuinely love using.", name: 'Dr. James Rivera', role: 'CTO, Verdant Health' },
-  { text: "The mobile app they delivered exceeded every benchmark we set. Fast, intuitive, and beautifully designed — it's become our primary revenue channel.", name: 'Alex Chen', role: 'Founder, Orbit SaaS' },
-  { text: "Their marketing strategy didn't just bring traffic — it brought the right traffic. Every dollar spent was accounted for and optimized. A true data-driven partnership.", name: 'Priya Sharma', role: 'VP Marketing, Atlas Logistics' },
+  { text: 'Soft Standards brought clarity to our brand at a critical moment. They understood our AI product deeply and translated that complexity into a website that actually resonates with our audience. The team is responsive, thoughtful, and genuinely invested in getting it right.', name: 'James Thornton', role: 'Founder, SpaceDome AI', avatar: '/images/case-studies/james-thornton.png' },
+  { text: 'Working with Soft Standards felt like working with people who truly cared about our mission. They helped us rethink our digital presence and the results spoke for themselves — more patients finding the help they need, faster.', name: 'Rachel Kim', role: 'VP Digital, Bicycle Health', avatar: '/images/case-studies/rachel-kim.png' },
+  { text: 'They didn\'t just deliver a beautiful website — they listened to our story and made sure every pixel reflected who we are. The whole process was smooth, collaborative, and honestly enjoyable.', name: 'Daniel Porter', role: 'Managing Director, Meridian Consulting', avatar: '/images/case-studies/daniel-porter.png' },
+  { text: 'Our e-commerce revenue jumped noticeably after the redesign. Soft Standards approached everything with care and strategy, not just aesthetics. They\'re partners, not vendors.', name: 'Sarah Lin', role: 'Founder, Trellis Studios', avatar: '/images/case-studies/sarah-lin.png' },
 ];
 
-const clientLogos = ['Nexus', 'Verdant', 'Orbit', 'Atlas', 'Lumina', 'Prism', 'Elevate', 'Horizon', 'Vertex', 'Catalyst'];
+const clientLogos = ['SpaceDome AI', 'Bicycle Health', 'Meridian', 'Trellis', 'Apex', 'Horizon', 'Crestview', 'Ember'];
 
 const filters = [
   { value: 'all', label: 'All' },
@@ -76,7 +77,8 @@ export default function CaseStudiesPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1200px] mx-auto">
           {filteredStudies.map((study, index) => (
             <RevealOnScroll key={study.id} delay={(index % 6) + 1}>
-              <div className={`rounded-[36px] overflow-hidden relative cursor-pointer aspect-[4/3] bg-gradient-to-br ${study.gradient} transition-transform duration-400 hover:scale-[1.02] group`}>
+              <div className="rounded-[36px] overflow-hidden relative cursor-pointer aspect-[4/3] bg-gray-100 transition-transform duration-400 hover:scale-[1.02] group">
+                <Image src={study.image} alt={study.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70 flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
                   <span className="inline-flex px-3.5 py-1.5 bg-white/20 backdrop-blur-lg rounded-full text-[0.8rem] font-semibold text-white mb-3 w-fit">
                     {study.categoryLabel}
@@ -104,23 +106,25 @@ export default function CaseStudiesPage() {
 
         <RevealOnScroll>
           <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 items-center max-w-[1200px] mx-auto">
-            <div className="aspect-[4/3] bg-gradient-to-br from-purple-800 to-purple-600 rounded-[36px]" />
+            <div className="aspect-[4/3] rounded-[36px] overflow-hidden relative">
+              <Image src="/images/case-studies/spacedome-ai-featured.png" alt="SpaceDome AI — Featured Case Study" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 55vw" />
+            </div>
             <div>
               <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[0.8rem] font-semibold bg-purple-50 text-purple-700 border border-purple-100 mb-4">
                 Web Platform
               </span>
               <h3 className="text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold text-white tracking-[-0.03em] mb-4 leading-[1.2]">
-                Verdant Health — Redefining Digital Healthcare
+                SpaceDome AI — Launching an AI-First Brand
               </h3>
               <p className="text-gray-300 leading-[1.7] mb-8">
-                We partnered with Verdant to redesign their patient-facing platform from scratch — improving speed, accessibility, and conversion across every touchpoint.
+                We partnered with SpaceDome AI to design and build their entire web presence from the ground up — crafting a brand identity and platform that communicates the power of their AI agent technology to a global audience.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
                 {[
-                  { value: '+240%', label: 'Traffic Increase' },
-                  { value: '1.8s', label: 'Load Time' },
-                  { value: '$1.2M', label: 'Revenue Impact' },
+                  { value: '+185%', label: 'Organic Traffic' },
+                  { value: '1.4s', label: 'Load Time' },
+                  { value: '3x', label: 'Lead Generation' },
                 ].map((metric) => (
                   <div key={metric.label} className="px-6 py-4 bg-white/[0.06] border border-white/[0.08] rounded-[20px]">
                     <div className="text-[1.4rem] font-extrabold text-purple-400">{metric.value}</div>
@@ -129,7 +133,7 @@ export default function CaseStudiesPage() {
                 ))}
               </div>
 
-              <Link href="#" className="inline-flex items-center gap-2 text-emerald-400 text-base font-semibold transition-all hover:gap-3.5">
+              <Link href="https://spacedome.ai" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-emerald-400 text-base font-semibold transition-all hover:gap-3.5">
                 View Full Case Study
                 <ArrowRightIcon />
               </Link>
@@ -181,7 +185,9 @@ export default function CaseStudiesPage() {
                 <div className="absolute top-5 right-8 text-[4rem] leading-none text-purple-200 font-extrabold">&ldquo;</div>
                 <p className="text-base text-gray-800 leading-[1.7] mb-6 relative">{testimonial.text}</p>
                 <div className="flex items-center gap-3.5">
-                  <div className="w-11 h-11 rounded-full bg-gradient-to-br from-purple-200 to-purple-400" />
+                  <div className="w-11 h-11 rounded-full overflow-hidden relative flex-shrink-0">
+                    <Image src={testimonial.avatar} alt={testimonial.name} fill className="object-cover" sizes="44px" />
+                  </div>
                   <div>
                     <div className="text-[0.95rem] font-bold text-gray-900">{testimonial.name}</div>
                     <div className="text-[0.8rem] text-gray-500">{testimonial.role}</div>
@@ -205,7 +211,9 @@ export default function CaseStudiesPage() {
               Your next project could be our next case study.
             </p>
             <Link
-              href="#contact"
+              href="https://calendly.com/youngbld101/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 px-9 py-4 bg-white text-purple-700 rounded-full text-base font-semibold transition-all shadow-[0_4px_20px_rgba(0,0,0,0.1)] hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.15)] relative"
             >
               Start a Conversation

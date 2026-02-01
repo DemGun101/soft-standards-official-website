@@ -7,7 +7,7 @@ import { CheckCircleIcon, SunIcon, EyeIcon, CheckIcon, ArrowRightIcon } from '@/
 
 export const metadata: Metadata = {
   title: 'About — Soft Standards Inc.',
-  description: 'A team of strategists, designers, and engineers obsessed with building digital products that move the needle.',
+  description: 'A close-knit team of developers, designers, and strategists who believe great digital work starts with genuinely understanding your story.',
 };
 
 const values = [
@@ -18,31 +18,27 @@ const values = [
 ];
 
 const timeline = [
-  { year: '2018', title: 'Founded', desc: 'Started as a two-person studio with one mission: raise the bar for digital craft. Our first client was a local fintech startup that became our long-term partner.' },
-  { year: '2020', title: 'First Major Award', desc: 'Recognized by Awwwards with a Site of the Day for our work on the Nexus Fintech rebrand — a turning point that put us on the global radar.' },
-  { year: '2022', title: '50th Project Milestone', desc: 'Crossed 50 completed projects and grew our team to 15. Expanded into mobile development and digital marketing disciplines.' },
-  { year: '2025', title: 'Global Expansion', desc: 'Opened remote hubs across three continents, serving clients in 12+ countries. 120+ projects delivered and counting.' },
+  { year: '2022', title: 'Founded', desc: 'Muhammad Furqan and Ishfaq Ahmed started Soft Standards with a simple belief: businesses deserve marketing that feels human, not automated. Our first project was a local brand refresh that turned into a long-term partnership.' },
+  { year: '2023', title: 'First Major Client', desc: 'Partnered with SpaceDome AI to build their web presence from scratch — positioning their AI agent platform for a global audience. This project put us on the map in the tech space.' },
+  { year: '2024', title: 'Team Growth', desc: 'Grew from a two-person operation to a team of six across development, design, and business development. Took on Bicycle Health and expanded into healthcare digital marketing.' },
+  { year: '2025', title: 'Scaling Up', desc: 'Crossed 40 completed projects, established our AI automation practice, and began serving clients across multiple industries from our New York base.' },
 ];
 
 const team = [
-  { name: 'Zain Ahmed', role: 'Founder & CEO', gradient: 'from-gray-100 to-gray-200' },
-  { name: 'Maya Torres', role: 'Design Director', gradient: 'from-emerald-100 to-emerald-200' },
-  { name: 'Liam Patel', role: 'Head of Engineering', gradient: 'from-indigo-100 to-indigo-200' },
-  { name: 'Emma Nakamura', role: 'Strategy Lead', gradient: 'from-amber-100 to-amber-200' },
-  { name: 'Carlos Reyes', role: 'Senior Developer', gradient: 'from-pink-100 to-pink-200' },
-  { name: 'Aisha Khalil', role: 'UX Researcher', gradient: 'from-green-100 to-green-200' },
-  { name: 'Noah Fischer', role: 'Marketing Lead', gradient: 'from-gray-200 to-gray-300' },
-  { name: 'Sofia Kim', role: 'Project Manager', gradient: 'from-emerald-200 to-emerald-400' },
+  { name: 'Muhammad Furqan', role: 'CEO', gradient: 'from-gray-100 to-gray-200' },
+  { name: 'Ishfaq Ahmed', role: 'CTO', gradient: 'from-indigo-100 to-indigo-200' },
+  { name: 'Zain-ul-Abedeen', role: 'Business Development', gradient: 'from-emerald-100 to-emerald-200' },
+  { name: 'Akash Ahmed', role: 'Senior Developer & AI Automation', gradient: 'from-amber-100 to-amber-200' },
+  { name: 'Alishba Ahmed', role: 'Senior Graphic Designer', gradient: 'from-pink-100 to-pink-200' },
+  { name: 'Hashir Saleem', role: 'Associate Graphic Designer', gradient: 'from-violet-100 to-violet-200' },
 ];
 
 const awards = [
-  { year: '2025', name: 'Red Dot Design Award', body: 'Interface & User Experience' },
-  { year: '2024', name: 'Awwwards Site of the Day', body: 'Verdant Health Platform' },
-  { year: '2024', name: 'CSS Design Award', body: 'Best UI Design' },
-  { year: '2023', name: 'Webby Award', body: 'Best Agency Website' },
-  { year: '2022', name: 'FWA of the Day', body: 'Nexus Fintech Rebrand' },
-  { year: '2021', name: 'Awwwards Honorable Mention', body: 'Orbit SaaS Mobile App' },
-  { year: '2020', name: 'Awwwards SOTD', body: 'Nexus Brand Identity' },
+  { year: '2025', name: 'SpaceDome AI', body: 'Full web platform & brand identity for AI agent startup' },
+  { year: '2024', name: 'Bicycle Health', body: 'Digital marketing & patient acquisition platform' },
+  { year: '2024', name: 'Meridian Consulting', body: 'Brand refresh & website redesign' },
+  { year: '2023', name: 'Trellis Studios', body: 'E-commerce platform & growth strategy' },
+  { year: '2023', name: 'Apex Ventures', body: 'Landing page & investor presentation design' },
 ];
 
 export default function AboutPage() {
@@ -55,26 +51,26 @@ export default function AboutPage() {
             We are <span className="text-gradient">Soft Standards Inc.</span>
           </h1>
           <p className="text-[clamp(1.05rem,2vw,1.25rem)] text-gray-500 max-w-[560px] mx-auto lg:mx-0 leading-[1.7] mb-10">
-            A team of strategists, designers, and engineers obsessed with building digital products that move the needle. We&apos;ve spent 8 years refining our craft — and we&apos;re just getting started.
+            A close-knit team of developers, designers, and strategists who believe great digital work starts with genuinely understanding your story. We&apos;ve been growing steadily since 2022 — and we&apos;re just getting started.
           </p>
 
           <div className="flex items-center justify-center lg:justify-start gap-8 sm:gap-12">
             <div className="text-center lg:text-left">
               <div className="text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold tracking-[-0.03em] text-gray-900">
-                8<span className="text-purple-500">+</span>
+                3<span className="text-purple-500">+</span>
               </div>
               <div className="text-[0.85rem] text-gray-500 font-medium mt-1">Years</div>
             </div>
             <div className="w-px h-12 bg-gray-100" />
             <div className="text-center lg:text-left">
               <div className="text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold tracking-[-0.03em] text-gray-900">
-                120<span className="text-purple-500">+</span>
+                40<span className="text-purple-500">+</span>
               </div>
               <div className="text-[0.85rem] text-gray-500 font-medium mt-1">Projects</div>
             </div>
             <div className="w-px h-12 bg-gray-100" />
             <div className="text-center lg:text-left">
-              <div className="text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold tracking-[-0.03em] text-gray-900">25</div>
+              <div className="text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold tracking-[-0.03em] text-gray-900">6</div>
               <div className="text-[0.85rem] text-gray-500 font-medium mt-1">Team Members</div>
             </div>
           </div>
@@ -98,7 +94,7 @@ export default function AboutPage() {
           <RevealOnScroll className="lg:col-span-3">
             <div className="bg-purple-50 rounded-[36px] p-12 text-center border border-purple-100">
               <p className="text-[clamp(1.2rem,2.5vw,1.6rem)] font-semibold text-purple-800 leading-[1.6] max-w-[700px] mx-auto">
-                &ldquo;We exist to raise the standard of digital — building products with intention, craft, and a relentless focus on outcomes that matter.&rdquo;
+                &ldquo;We exist to help businesses tell their story with honesty and craft — building digital products that connect with real people and drive real results.&rdquo;
               </p>
             </div>
           </RevealOnScroll>
@@ -152,7 +148,7 @@ export default function AboutPage() {
           />
         </RevealOnScroll>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
           {team.map((member, index) => (
             <RevealOnScroll key={member.name} delay={(index % 4) + 1}>
               <div className="text-center group">
@@ -171,8 +167,8 @@ export default function AboutPage() {
       <section className="py-[clamp(60px,10vw,120px)] px-[clamp(20px,5vw,80px)]">
         <RevealOnScroll>
           <SectionHeader
-            badge="Recognition"
-            title={<>Awards & <span className="text-gradient">Honors</span></>}
+            badge="Our Work"
+            title={<>Client <span className="text-gradient">Highlights</span></>}
           />
         </RevealOnScroll>
 
@@ -205,7 +201,9 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center relative">
               <Link
-                href="#contact"
+                href="https://calendly.com/youngbld101/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 px-9 py-4 bg-white text-purple-700 rounded-full text-base font-semibold transition-all shadow-[0_4px_20px_rgba(0,0,0,0.1)] hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.15)]"
               >
                 Start a Project

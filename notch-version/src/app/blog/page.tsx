@@ -1,21 +1,22 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import { SectionHeader } from '@/components/Section';
 import { ArrowRightIcon, MailIcon } from '@/components/Icons';
+import type { BlogPost } from '@/types/blog';
 
-const blogPosts = [
-  { id: 1, category: 'development', title: 'Why Performance Still Matters in 2026', excerpt: 'Fast sites win. Period. A deep dive into Core Web Vitals, modern optimization strategies, and why milliseconds matter more than ever.', author: 'Liam Patel', date: 'Jan 24', gradient: 'from-indigo-100 to-indigo-200' },
-  { id: 2, category: 'design', title: 'Design Systems at Scale', excerpt: 'How we built a design system that serves 40+ components across web, mobile, and email — without breaking.', author: 'Maya Torres', date: 'Jan 20', gradient: 'from-purple-100 to-purple-200' },
-  { id: 3, category: 'strategy', title: 'From Wireframe to Launch in 6 Weeks', excerpt: 'A case study on rapid product development — balancing speed, quality, and client collaboration.', author: 'Emma Nakamura', date: 'Jan 16', gradient: 'from-amber-100 to-amber-200' },
-  { id: 4, category: 'design', title: 'The Power of White Space', excerpt: 'Why less is often more in UI design. Exploring negative space, visual hierarchy, and breathing room.', author: 'Aisha Khalil', date: 'Jan 12', gradient: 'from-pink-100 to-pink-200' },
-  { id: 5, category: 'development', title: 'Building for Accessibility', excerpt: 'Accessible design isn\'t optional. Our approach to building inclusive digital experiences that work for everyone.', author: 'Carlos Reyes', date: 'Jan 8', gradient: 'from-violet-100 to-violet-200' },
-  { id: 6, category: 'culture', title: 'Remote-First, Quality-Always', excerpt: 'How we built a distributed team across 3 continents without compromising craft, communication, or collaboration.', author: 'Sofia Kim', date: 'Jan 4', gradient: 'from-gray-100 to-gray-200' },
+const fallbackBlogPosts: BlogPost[] = [
+  { id: 1, category: 'development', title: 'How AI Automation Is Changing Small Business Marketing', excerpt: 'AI isn\'t just for enterprise anymore. We explore how small and mid-size businesses can use automation to compete with bigger players — without losing their personal touch.', author: 'Akash Ahmed', date: 'Jan 24', gradient: 'from-indigo-100 to-indigo-200' },
+  { id: 2, category: 'design', title: 'The Art of Visual Storytelling in Brand Design', excerpt: 'Great brands don\'t just look good — they tell a story. How we approach visual identity to create designs that resonate emotionally with your audience.', author: 'Alishba Ahmed', date: 'Jan 20', gradient: 'from-purple-100 to-purple-200' },
+  { id: 3, category: 'strategy', title: 'From First Call to Launch: Our Client Process', excerpt: 'A transparent look at how we work with clients from initial discovery through delivery — and why communication matters more than tools.', author: 'Muhammad Furqan', date: 'Jan 16', gradient: 'from-amber-100 to-amber-200' },
+  { id: 4, category: 'design', title: 'Why Clean Design Wins Every Time', excerpt: 'Minimalism isn\'t about doing less — it\'s about being intentional. How we use white space, typography, and restraint to create interfaces that breathe.', author: 'Hashir Saleem', date: 'Jan 12', gradient: 'from-pink-100 to-pink-200' },
+  { id: 5, category: 'development', title: 'Building Fast Websites That Actually Convert', excerpt: 'Speed matters, but conversion matters more. Our approach to building sites that load in under 2 seconds and guide visitors toward action.', author: 'Akash Ahmed', date: 'Jan 8', gradient: 'from-violet-100 to-violet-200' },
+  { id: 6, category: 'culture', title: 'Growing a Remote Team That Actually Works', excerpt: 'How we built a distributed team across different cities without losing our collaborative spirit, work quality, or sense of belonging.', author: 'Zain-ul-Abedeen', date: 'Jan 4', gradient: 'from-gray-100 to-gray-200' },
 ];
 
-const tags = ['Design', 'Development', 'Branding', 'UX', 'Strategy', 'Culture', 'Tech', 'CSS', 'React', 'Accessibility', 'Performance', 'Typography', 'Color Theory', 'Remote Work'];
+const tags = ['AI Automation', 'Web Development', 'Brand Design', 'UX', 'Marketing Strategy', 'Culture', 'Next.js', 'React', 'Graphic Design', 'Client Success', 'Performance', 'Typography', 'Remote Work', 'Business Growth'];
 
 const filters = [
   { value: 'all', label: 'All' },
@@ -27,6 +28,28 @@ const filters = [
 
 export default function BlogPage() {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>(fallbackBlogPosts);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function loadBlogPosts() {
+      try {
+        const response = await fetch('/data/blog-posts.json');
+        if (response.ok) {
+          const posts: BlogPost[] = await response.json();
+          if (posts && posts.length > 0) {
+            setBlogPosts(posts);
+          }
+        }
+      } catch (error) {
+        console.error('Failed to load blog posts, using fallback:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadBlogPosts();
+  }, []);
 
   const filteredPosts = activeFilter === 'all'
     ? blogPosts
@@ -70,54 +93,86 @@ export default function BlogPage() {
       </section>
 
       {/* Featured Post */}
-      <section className="pb-[clamp(60px,10vw,120px)] px-[clamp(20px,5vw,80px)]">
-        <RevealOnScroll>
-          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-0 max-w-[1200px] mx-auto bg-white rounded-[36px] overflow-hidden border border-black/5 shadow-[0_4px_24px_rgba(15,23,42,0.06)] transition-all duration-350 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(15,23,42,0.1)]">
-            <div className="bg-gradient-to-br from-purple-200 to-purple-500 min-h-[320px]" />
-            <div className="p-12 flex flex-col justify-center">
-              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[0.8rem] font-semibold bg-purple-50 text-purple-700 border border-purple-100 mb-4 w-fit">
-                Design
-              </span>
-              <h2 className="text-[clamp(1.4rem,2.5vw,1.8rem)] font-extrabold text-gray-900 tracking-[-0.02em] leading-[1.2] mb-3">
-                The Future of Brand Identity in the AI Era
-              </h2>
-              <p className="text-[0.95rem] text-gray-500 leading-[1.7] mb-6">
-                As AI-generated content floods the digital landscape, authentic brand identity has never been more valuable. Here&apos;s how forward-thinking companies are adapting their visual systems for a post-AI world.
-              </p>
-              <div className="flex items-center gap-3 text-[0.85rem] text-gray-500 mb-2">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-200 to-purple-400" />
-                <span><span className="font-semibold text-gray-800">Maya Torres</span> · Jan 28, 2026</span>
+      {blogPosts.length > 0 && (
+        <section className="pb-[clamp(60px,10vw,120px)] px-[clamp(20px,5vw,80px)]">
+          <RevealOnScroll>
+            <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-0 max-w-[1200px] mx-auto bg-white rounded-[36px] overflow-hidden border border-black/5 shadow-[0_4px_24px_rgba(15,23,42,0.06)] transition-all duration-350 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(15,23,42,0.1)]">
+              <div className="min-h-[320px] relative overflow-hidden">
+                {blogPosts[0].imageUrl ? (
+                  <img
+                    src={blogPosts[0].imageUrl}
+                    alt={blogPosts[0].title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className={`bg-gradient-to-br ${blogPosts[0].gradient} w-full h-full`} />
+                )}
               </div>
-              <Link href="#" className="inline-flex items-center gap-2 text-purple-500 text-base font-semibold transition-all hover:gap-3.5 mt-2">
-                Read Article
-                <ArrowRightIcon />
-              </Link>
+              <div className="p-12 flex flex-col justify-center">
+                <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[0.8rem] font-semibold bg-purple-50 text-purple-700 border border-purple-100 mb-4 w-fit">
+                  {blogPosts[0].category.charAt(0).toUpperCase() + blogPosts[0].category.slice(1)}
+                </span>
+                <h2 className="text-[clamp(1.4rem,2.5vw,1.8rem)] font-extrabold text-gray-900 tracking-[-0.02em] leading-[1.2] mb-3">
+                  {blogPosts[0].title}
+                </h2>
+                <p className="text-[0.95rem] text-gray-500 leading-[1.7] mb-6">
+                  {blogPosts[0].excerpt}
+                </p>
+                <div className="flex items-center gap-3 text-[0.85rem] text-gray-500 mb-2">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-200 to-purple-400" />
+                  <span><span className="font-semibold text-gray-800">{blogPosts[0].author}</span> · {blogPosts[0].date}</span>
+                </div>
+                <Link
+                  href={blogPosts[0].link || '#'}
+                  target={blogPosts[0].link ? '_blank' : undefined}
+                  rel={blogPosts[0].link ? 'noopener noreferrer' : undefined}
+                  className="inline-flex items-center gap-2 text-purple-500 text-base font-semibold transition-all hover:gap-3.5 mt-2"
+                >
+                  Read Article
+                  <ArrowRightIcon />
+                </Link>
+              </div>
             </div>
-          </div>
-        </RevealOnScroll>
-      </section>
+          </RevealOnScroll>
+        </section>
+      )}
 
       {/* Blog Grid */}
       <section className="py-[clamp(60px,10vw,120px)] px-[clamp(20px,5vw,80px)]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
-          {filteredPosts.map((post, index) => (
+          {filteredPosts.slice(1).map((post, index) => (
             <RevealOnScroll key={post.id} delay={(index % 6) + 1}>
-              <article className="bg-white rounded-[28px] overflow-hidden border border-black/5 transition-all duration-350 hover:-translate-y-1.5 hover:shadow-[0_12px_40px_rgba(15,23,42,0.1)] group">
-                <div className="aspect-[16/10] overflow-hidden">
-                  <div className={`w-full h-full bg-gradient-to-br ${post.gradient} transition-transform duration-400 group-hover:scale-105`} />
-                </div>
-                <div className="p-6">
-                  <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[0.8rem] font-semibold bg-purple-50 text-purple-700 border border-purple-100 mb-3">
-                    {post.category.charAt(0).toUpperCase() + post.category.slice(1)}
-                  </span>
-                  <h3 className="text-[1.1rem] font-bold text-gray-900 tracking-[-0.01em] leading-[1.3] mb-2">{post.title}</h3>
-                  <p className="text-[0.88rem] text-gray-500 leading-[1.6] mb-4 line-clamp-2">{post.excerpt}</p>
-                  <div className="flex items-center gap-3 text-[0.85rem] text-gray-500">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-200 to-purple-400" />
-                    <span><span className="font-semibold text-gray-800">{post.author}</span> · {post.date}</span>
+              <Link
+                href={post.link || '#'}
+                target={post.link ? '_blank' : undefined}
+                rel={post.link ? 'noopener noreferrer' : undefined}
+                className="block"
+              >
+                <article className="bg-white rounded-[28px] overflow-hidden border border-black/5 transition-all duration-350 hover:-translate-y-1.5 hover:shadow-[0_12px_40px_rgba(15,23,42,0.1)] group h-full">
+                  <div className="aspect-[16/10] overflow-hidden">
+                    {post.imageUrl ? (
+                      <img
+                        src={post.imageUrl}
+                        alt={post.title}
+                        className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className={`w-full h-full bg-gradient-to-br ${post.gradient} transition-transform duration-400 group-hover:scale-105`} />
+                    )}
                   </div>
-                </div>
-              </article>
+                  <div className="p-6">
+                    <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[0.8rem] font-semibold bg-purple-50 text-purple-700 border border-purple-100 mb-3">
+                      {post.category.charAt(0).toUpperCase() + post.category.slice(1)}
+                    </span>
+                    <h3 className="text-[1.1rem] font-bold text-gray-900 tracking-[-0.01em] leading-[1.3] mb-2">{post.title}</h3>
+                    <p className="text-[0.88rem] text-gray-500 leading-[1.6] mb-4 line-clamp-2">{post.excerpt}</p>
+                    <div className="flex items-center gap-3 text-[0.85rem] text-gray-500">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-200 to-purple-400" />
+                      <span><span className="font-semibold text-gray-800">{post.author}</span> · {post.date}</span>
+                    </div>
+                  </div>
+                </article>
+              </Link>
             </RevealOnScroll>
           ))}
         </div>

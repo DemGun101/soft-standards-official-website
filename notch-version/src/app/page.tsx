@@ -294,7 +294,9 @@ export default function Home() {
           <div ref={heroCTARef} className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <MagneticButton>
               <Link
-                href="#contact"
+                href="https://calendly.com/youngbld101/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hero-cta-btn group inline-flex items-center gap-2.5 px-8 py-4 bg-gray-900 text-white rounded-full text-base font-semibold transition-all shadow-[0_4px_20px_rgba(15,23,42,0.2)] hover:bg-purple-600 hover:shadow-[0_8px_30px_rgba(124,58,237,0.4)]"
               >
                 Start Your Journey
@@ -333,54 +335,107 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Story Section 1: The Challenge */}
+      {/* Story Section 1: Revenue Promise */}
       <section
         id="story"
         ref={storySection1Ref}
-        className="min-h-screen flex items-center px-5 md:px-10 py-20 bg-gray-50"
+        className="min-h-screen flex items-center px-5 md:px-10 py-24 bg-gray-50 relative overflow-hidden"
       >
-        <div className="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-          <div className="story-1-text">
-            <span className="inline-block px-4 py-1.5 bg-purple-100 text-purple-600 rounded-full text-sm font-semibold mb-6">
-              The Challenge
+        {/* Background decorative blobs */}
+        <div className="absolute top-20 left-0 w-72 h-72 bg-purple-200 rounded-full blur-3xl opacity-30" />
+        <div className="absolute bottom-10 right-0 w-96 h-96 bg-cyan-200 rounded-full blur-3xl opacity-20" />
+
+        <div className="max-w-[1100px] mx-auto relative z-10">
+          {/* Full-width headline */}
+          <div className="story-1-text text-center mb-16">
+            <span className="inline-block px-5 py-2 bg-green-100 text-green-700 rounded-full text-sm font-bold tracking-wide uppercase mb-6">
+              Proven Revenue System
             </span>
-            <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight text-gray-900 mb-6 leading-tight">
-              In a world drowning in noise,
-              <span className="text-gradient"> how do you stand out?</span>
+            <h2 className="text-[clamp(2.2rem,5vw,3.8rem)] font-extrabold tracking-tight text-gray-900 leading-[1.1] mb-4">
+              Turn Your Personal Story Into
             </h2>
-            <p className="text-lg text-gray-500 leading-relaxed mb-6">
-              Traditional marketing is broken. Generic campaigns get ignored. Cookie-cutter strategies fail to connect.
-              Your audience craves authenticity, but scaling personal connection seems impossible.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed font-medium">
-              That&apos;s where we come in.
+            <p className="text-[clamp(2.2rem,5vw,3.8rem)] font-extrabold leading-[1.1]">
+              <span className="text-gradient">$10K–$50K</span>
+              <span className="text-gray-900"> in Monthly Revenue</span>
             </p>
           </div>
 
-          <div className="story-1-visual relative">
-            <div className="relative bg-white rounded-3xl p-8 shadow-[0_20px_60px_rgba(15,23,42,0.1)] border border-gray-100">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-50 rounded-2xl p-6 text-center">
-                  <div className="text-3xl font-bold text-red-400 mb-2">72%</div>
-                  <div className="text-sm text-gray-500">of ads ignored</div>
-                </div>
-                <div className="bg-gray-50 rounded-2xl p-6 text-center">
-                  <div className="text-3xl font-bold text-orange-400 mb-2">8 sec</div>
-                  <div className="text-sm text-gray-500">avg. attention span</div>
-                </div>
-                <div className="bg-gray-50 rounded-2xl p-6 text-center">
-                  <div className="text-3xl font-bold text-yellow-500 mb-2">91%</div>
-                  <div className="text-sm text-gray-500">prefer authentic brands</div>
-                </div>
-                <div className="bg-gray-50 rounded-2xl p-6 text-center">
-                  <div className="text-3xl font-bold text-purple-500 mb-2">5x</div>
-                  <div className="text-sm text-gray-500">more content needed</div>
-                </div>
+          {/* Two columns: Pain vs. Gain */}
+          <div className="story-1-visual grid md:grid-cols-2 gap-6 mb-12">
+            {/* Pain column */}
+            <div className="bg-white rounded-3xl p-8 border border-red-100 shadow-[0_8px_30px_rgba(239,68,68,0.08)] relative">
+              <div className="absolute -top-4 left-8">
+                <span className="inline-block px-4 py-1.5 bg-red-50 text-red-500 border border-red-200 rounded-full text-xs font-bold uppercase tracking-wider">
+                  Without Us
+                </span>
               </div>
+              <ul className="space-y-5 mt-4">
+                <li className="flex items-center gap-4">
+                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-red-50 flex items-center justify-center">
+                    <span className="text-red-400 font-bold text-sm">✕</span>
+                  </span>
+                  <span className="text-gray-600 text-[15px]">Burning cash on ads that get <strong className="text-gray-800">ignored</strong></span>
+                </li>
+                <li className="flex items-center gap-4">
+                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-red-50 flex items-center justify-center">
+                    <span className="text-red-400 font-bold text-sm">✕</span>
+                  </span>
+                  <span className="text-gray-600 text-[15px]">Creating <strong className="text-gray-800">5x more content</strong> just to keep up</span>
+                </li>
+                <li className="flex items-center gap-4">
+                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-red-50 flex items-center justify-center">
+                    <span className="text-red-400 font-bold text-sm">✕</span>
+                  </span>
+                  <span className="text-gray-600 text-[15px]">Cookie-cutter strategies that make you <strong className="text-gray-800">blend in</strong></span>
+                </li>
+              </ul>
             </div>
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-purple-100 rounded-full blur-2xl opacity-60" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-cyan-100 rounded-full blur-2xl opacity-60" />
+
+            {/* Gain column */}
+            <div className="bg-gray-900 rounded-3xl p-8 relative shadow-[0_8px_30px_rgba(15,23,42,0.2)]">
+              <div className="absolute -top-4 left-8">
+                <span className="inline-block px-4 py-1.5 bg-green-500 text-white rounded-full text-xs font-bold uppercase tracking-wider">
+                  With Us
+                </span>
+              </div>
+              <ul className="space-y-5 mt-4">
+                <li className="flex items-center gap-4">
+                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
+                    <span className="text-green-400 font-bold">&#10003;</span>
+                  </span>
+                  <span className="text-gray-300 text-[15px]">Capture attention in under <strong className="text-white">3 seconds</strong></span>
+                </li>
+                <li className="flex items-center gap-4">
+                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
+                    <span className="text-green-400 font-bold">&#10003;</span>
+                  </span>
+                  <span className="text-gray-300 text-[15px]">Convert cold traffic into warm leads <strong className="text-white">automatically</strong></span>
+                </li>
+                <li className="flex items-center gap-4">
+                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
+                    <span className="text-green-400 font-bold">&#10003;</span>
+                  </span>
+                  <span className="text-gray-300 text-[15px]">Works <strong className="text-white">24/7</strong> without you being &ldquo;always on&rdquo;</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Full-width bottom banner */}
+          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-purple-600 via-purple-700 to-indigo-700 p-8 md:p-10 text-center shadow-[0_20px_60px_rgba(124,58,237,0.3)]">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_60%)]" />
+            <div className="relative z-10">
+              <p className="text-purple-200 text-sm font-semibold uppercase tracking-widest mb-3">The Reality</p>
+              <p className="text-white text-2xl md:text-3xl font-bold mb-2">
+                91% of buyers prefer authentic brands.
+              </p>
+              <p className="text-purple-200 text-lg mb-1">
+                Most businesses can&apos;t scale personal connection. <span className="text-white font-bold">We solve that.</span>
+              </p>
+              <p className="text-white/80 text-base mt-4">
+                More revenue, less noise, <span className="text-yellow-300 font-bold">zero burnout.</span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -540,7 +595,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             <ScrollReveal delay={0} className="bg-white rounded-2xl p-6 md:p-8 text-center shadow-[0_4px_24px_rgba(15,23,42,0.06)] border border-gray-100">
               <div className="text-[clamp(2rem,5vw,3.5rem)] font-extrabold text-gray-900 mb-2">
-                <span className="stat-number" data-target="150">0</span>
+                <span className="stat-number" data-target="40">0</span>
                 <span className="text-purple-500">+</span>
               </div>
               <div className="text-sm md:text-base text-gray-500 font-medium">Projects Delivered</div>
@@ -548,7 +603,7 @@ export default function Home() {
 
             <ScrollReveal delay={0.1} className="bg-white rounded-2xl p-6 md:p-8 text-center shadow-[0_4px_24px_rgba(15,23,42,0.06)] border border-gray-100">
               <div className="text-[clamp(2rem,5vw,3.5rem)] font-extrabold text-gray-900 mb-2">
-                <span className="stat-number" data-target="98">0</span>
+                <span className="stat-number" data-target="95">0</span>
                 <span className="text-purple-500">%</span>
               </div>
               <div className="text-sm md:text-base text-gray-500 font-medium">Client Retention</div>
@@ -556,7 +611,7 @@ export default function Home() {
 
             <ScrollReveal delay={0.2} className="bg-white rounded-2xl p-6 md:p-8 text-center shadow-[0_4px_24px_rgba(15,23,42,0.06)] border border-gray-100">
               <div className="text-[clamp(2rem,5vw,3.5rem)] font-extrabold text-gray-900 mb-2">
-                <span className="stat-number" data-target="340">0</span>
+                <span className="stat-number" data-target="280">0</span>
                 <span className="text-purple-500">%</span>
               </div>
               <div className="text-sm md:text-base text-gray-500 font-medium">Avg. ROI Increase</div>
@@ -564,7 +619,7 @@ export default function Home() {
 
             <ScrollReveal delay={0.3} className="bg-white rounded-2xl p-6 md:p-8 text-center shadow-[0_4px_24px_rgba(15,23,42,0.06)] border border-gray-100">
               <div className="text-[clamp(2rem,5vw,3.5rem)] font-extrabold text-gray-900 mb-2">
-                <span className="stat-number" data-target="50">0</span>
+                <span className="stat-number" data-target="12">0</span>
                 <span className="text-purple-500">M+</span>
               </div>
               <div className="text-sm md:text-base text-gray-500 font-medium">Impressions Generated</div>
@@ -584,18 +639,18 @@ export default function Home() {
               </div>
 
               <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8 mt-4">
-                Soft Standards didn&apos;t just improve our marketing — they transformed how we think about
-                connecting with our audience. The AI-driven insights combined with genuinely creative
-                campaigns delivered results we didn&apos;t think were possible.
+                Soft Standards brought clarity to our brand at a time when everything felt chaotic.
+                They didn&apos;t just build us a website — they helped us tell our story in a way that
+                truly connects with our audience. The team genuinely cares about getting it right.
               </p>
 
               <div className="flex items-center justify-center gap-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
-                  SM
+                  JT
                 </div>
                 <div className="text-left">
-                  <div className="font-semibold text-gray-900">Sarah Mitchell</div>
-                  <div className="text-sm text-gray-500">CEO, TechVenture Labs</div>
+                  <div className="font-semibold text-gray-900">James Thornton</div>
+                  <div className="text-sm text-gray-500">Founder, SpaceDome AI</div>
                 </div>
               </div>
             </div>
@@ -635,7 +690,9 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <MagneticButton strength={0.2}>
                 <Link
-                  href="#"
+                  href="https://calendly.com/youngbld101/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2.5 px-8 py-4 bg-white text-gray-900 rounded-full text-base font-semibold transition-all hover:bg-purple-500 hover:text-white hover:shadow-[0_8px_30px_rgba(124,58,237,0.4)]"
                 >
                   Book a Free Strategy Call
@@ -657,11 +714,11 @@ export default function Home() {
           <ScrollReveal delay={0.4} className="mt-16 pt-10 border-t border-white/10">
             <p className="text-sm text-gray-500 mb-6">Trusted by innovative brands worldwide</p>
             <div className="flex flex-wrap items-center justify-center gap-8 opacity-50">
-              <span className="text-white font-semibold text-lg">TechVenture</span>
-              <span className="text-white font-semibold text-lg">Nexus AI</span>
-              <span className="text-white font-semibold text-lg">Orbit Labs</span>
-              <span className="text-white font-semibold text-lg">Prism Digital</span>
-              <span className="text-white font-semibold text-lg">Atlas Co.</span>
+              <span className="text-white font-semibold text-lg">SpaceDome AI</span>
+              <span className="text-white font-semibold text-lg">Bicycle Health</span>
+              <span className="text-white font-semibold text-lg">Meridian Consulting</span>
+              <span className="text-white font-semibold text-lg">Trellis Studios</span>
+              <span className="text-white font-semibold text-lg">Apex Ventures</span>
             </div>
           </ScrollReveal>
         </div>

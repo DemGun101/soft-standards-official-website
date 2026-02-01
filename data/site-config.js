@@ -1,32 +1,33 @@
 export const siteConfig = {
-  name: "Nexus Digital",
-  description: "We craft digital experiences that convert",
-  tagline: "Premium Digital Agency",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://nexusdigital.agency",
+  name: "Soft Standards Inc.",
+  description: "Where AI meets authentic brand storytelling. We help businesses grow with digital marketing, web development, and AI automation.",
+  tagline: "The New Standard in Digital",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://softstandards.net",
 
   navigation: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
-    { label: "Work", href: "/work" },
+    { label: "Work", href: "/case-studies" },
     { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
+    { label: "Blog", href: "/blog" },
+    { label: "Careers", href: "/careers" },
   ],
 
   social: [
-    { platform: "twitter", url: "https://twitter.com/nexusdigital", icon: "Twitter" },
-    { platform: "linkedin", url: "https://linkedin.com/company/nexusdigital", icon: "Linkedin" },
-    { platform: "instagram", url: "https://instagram.com/nexusdigital", icon: "Instagram" },
-    { platform: "github", url: "https://github.com/nexusdigital", icon: "Github" },
+    { platform: "instagram", url: "https://instagram.com/softstandards", icon: "Instagram" },
+    { platform: "linkedin", url: "https://linkedin.com/company/soft-sstandards-inc", icon: "Linkedin" },
   ],
 
   contact: {
-    email: "hello@nexusdigital.agency",
-    phone: "+1 (555) 123-4567",
-    address: "123 Innovation Street, Tech City, TC 10001",
+    email: "contact@softstandards.net",
+    phone: "+1 904 835 8096",
+    address: "New York, NY",
   },
 
+  booking: "https://calendly.com/youngbld101/30min",
+
   footer: {
-    description: "We transform ideas into exceptional digital experiences that drive growth and inspire action.",
-    copyright: `${new Date().getFullYear()} Nexus Digital. All rights reserved.`,
+    description: "Where AI meets authentic brand storytelling. We help businesses grow with digital marketing, web development, and AI automation.",
+    copyright: `${new Date().getFullYear()} Soft Standards Inc. All rights reserved.`,
   },
 };
