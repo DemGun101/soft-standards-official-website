@@ -6,14 +6,135 @@ import { useState } from 'react';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import { SectionHeader } from '@/components/Section';
 import { ArrowRightIcon, ArrowUpRightIcon } from '@/components/Icons';
+import Modal from '@/components/Modal';
 
-const caseStudies = [
-  { id: 1, category: 'web', categoryLabel: 'Web Platform', title: 'SpaceDome AI — Web Platform & Brand', image: '/images/case-studies/spacedome-ai.png' },
-  { id: 2, category: 'marketing', categoryLabel: 'Digital Marketing', title: 'Bicycle Health — Patient Acquisition', image: '/images/case-studies/bicycle-health.png' },
-  { id: 3, category: 'branding', categoryLabel: 'Branding', title: 'Meridian Consulting — Brand Refresh', image: '/images/case-studies/meridian-consulting.png' },
-  { id: 4, category: 'web', categoryLabel: 'E-commerce', title: 'Trellis Studios — E-commerce Platform', image: '/images/case-studies/trellis-studios.png' },
-  { id: 5, category: 'branding', categoryLabel: 'Product Design', title: 'Apex Ventures — Investor Platform', image: '/images/case-studies/apex-ventures.png' },
-  { id: 6, category: 'marketing', categoryLabel: 'Campaign', title: 'Horizon Wellness — Growth Campaign', image: '/images/case-studies/horizon-wellness.png' },
+interface CaseStudy {
+  id: number;
+  category: 'web' | 'marketing' | 'branding';
+  categoryLabel: string;
+  title: string;
+  image: string;
+  client: string;
+  year: string;
+  description: string;
+  challenge: string;
+  solution: string;
+  results: { value: string; label: string }[];
+  technologies: string[];
+  link?: string;
+}
+
+const caseStudies: CaseStudy[] = [
+  {
+    id: 1,
+    category: 'web',
+    categoryLabel: 'Web Platform',
+    title: 'SpaceDome AI — Web Platform & Brand',
+    image: '/images/case-studies/spacedome-ai.png',
+    client: 'SpaceDome AI',
+    year: '2024',
+    description: 'A comprehensive web platform and brand identity for an AI-powered space technology company. We crafted a digital experience that communicates cutting-edge innovation while remaining accessible to diverse audiences.',
+    challenge: 'SpaceDome AI needed to establish credibility in the competitive AI landscape while making complex technology concepts approachable. They required a platform that could scale with their rapid growth and effectively convert technical audiences into customers.',
+    solution: 'We designed a bold, futuristic brand identity paired with a high-performance website built on Next.js. The platform features interactive demos, seamless lead capture, and an intuitive content management system for their growing team.',
+    results: [
+      { value: '+185%', label: 'Organic Traffic' },
+      { value: '1.4s', label: 'Load Time' },
+      { value: '3x', label: 'Lead Generation' },
+    ],
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'GSAP', 'Vercel'],
+    link: 'https://spacedome.ai',
+  },
+  {
+    id: 2,
+    category: 'marketing',
+    categoryLabel: 'Digital Marketing',
+    title: 'Bicycle Health — Patient Acquisition',
+    image: '/images/case-studies/bicycle-health.png',
+    client: 'Bicycle Health',
+    year: '2024',
+    description: 'A strategic digital marketing campaign focused on patient acquisition for a leading telehealth provider specializing in addiction treatment and mental health services.',
+    challenge: 'Bicycle Health faced the challenge of reaching patients in need while navigating strict healthcare advertising regulations. They needed to increase patient volume while maintaining sensitivity around addiction treatment topics.',
+    solution: 'We developed a multi-channel marketing strategy combining SEO, paid search, and content marketing. Our approach focused on empathetic messaging, educational content, and optimized landing pages that converted visitors into booked appointments.',
+    results: [
+      { value: '+240%', label: 'Patient Signups' },
+      { value: '-45%', label: 'Cost per Acquisition' },
+      { value: '89%', label: 'Retention Rate' },
+    ],
+    technologies: ['Google Ads', 'Meta Ads', 'HubSpot', 'Segment', 'Looker'],
+  },
+  {
+    id: 3,
+    category: 'branding',
+    categoryLabel: 'Branding',
+    title: 'Meridian Consulting — Brand Refresh',
+    image: '/images/case-studies/meridian-consulting.png',
+    client: 'Meridian Consulting',
+    year: '2024',
+    description: 'A complete brand refresh for a boutique management consulting firm, positioning them as thought leaders in strategic transformation for mid-market companies.',
+    challenge: 'Meridian Consulting had outgrown their original brand identity. They needed a sophisticated visual system that would resonate with C-suite executives while differentiating them from larger, impersonal consulting giants.',
+    solution: 'We created a refined brand identity featuring a distinctive logomark, premium color palette, and comprehensive brand guidelines. The refresh included custom photography direction, presentation templates, and a brand voice guide.',
+    results: [
+      { value: '+65%', label: 'Brand Recognition' },
+      { value: '2.5x', label: 'Proposal Win Rate' },
+      { value: '+120%', label: 'Inbound Inquiries' },
+    ],
+    technologies: ['Figma', 'Adobe Creative Suite', 'Brand Guidelines', 'Motion Design'],
+  },
+  {
+    id: 4,
+    category: 'web',
+    categoryLabel: 'E-commerce',
+    title: 'Trellis Studios — E-commerce Platform',
+    image: '/images/case-studies/trellis-studios.png',
+    client: 'Trellis Studios',
+    year: '2023',
+    description: 'A custom e-commerce platform for a premium home goods brand, featuring seamless checkout, inventory management, and a stunning visual shopping experience.',
+    challenge: 'Trellis Studios was losing sales to friction in their checkout process and an outdated website that didn\'t reflect the quality of their handcrafted products. They needed a platform that could handle seasonal traffic spikes.',
+    solution: 'We built a headless e-commerce solution using Shopify Plus and a custom Next.js frontend. The result is a lightning-fast shopping experience with beautiful product galleries, AR preview features, and streamlined checkout.',
+    results: [
+      { value: '+156%', label: 'Revenue Growth' },
+      { value: '38%', label: 'Conversion Rate Up' },
+      { value: '0.8s', label: 'Page Load' },
+    ],
+    technologies: ['Shopify Plus', 'Next.js', 'Tailwind CSS', 'Algolia', 'Klaviyo'],
+    link: 'https://trellisstudios.com',
+  },
+  {
+    id: 5,
+    category: 'branding',
+    categoryLabel: 'Product Design',
+    title: 'Apex Ventures — Investor Platform',
+    image: '/images/case-studies/apex-ventures.png',
+    client: 'Apex Ventures',
+    year: '2024',
+    description: 'A sophisticated investor portal and brand identity for a venture capital firm, enabling seamless communication between partners, portfolio companies, and limited partners.',
+    challenge: 'Apex Ventures needed a secure, private platform for investor relations while projecting the innovative image expected of a tech-focused VC firm. Their existing tools were fragmented and created friction in LP communications.',
+    solution: 'We designed and built a custom investor portal with real-time portfolio dashboards, secure document sharing, and integrated communication tools. The brand identity positions Apex as forward-thinking yet trustworthy.',
+    results: [
+      { value: '4.8/5', label: 'LP Satisfaction' },
+      { value: '-70%', label: 'Admin Time' },
+      { value: '100%', label: 'Adoption Rate' },
+    ],
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'Auth0', 'AWS'],
+  },
+  {
+    id: 6,
+    category: 'marketing',
+    categoryLabel: 'Campaign',
+    title: 'Horizon Wellness — Growth Campaign',
+    image: '/images/case-studies/horizon-wellness.png',
+    client: 'Horizon Wellness',
+    year: '2024',
+    description: 'An integrated growth marketing campaign for a corporate wellness platform, driving enterprise sales through strategic content and account-based marketing.',
+    challenge: 'Horizon Wellness was competing against established players in the corporate wellness space. They needed to build awareness among HR decision-makers and demonstrate clear ROI for their employee wellness programs.',
+    solution: 'We executed a comprehensive ABM strategy targeting Fortune 500 HR leaders, combined with thought leadership content, webinar series, and strategic partnerships. Our approach focused on demonstrating measurable employee engagement outcomes.',
+    results: [
+      { value: '+320%', label: 'Pipeline Growth' },
+      { value: '12', label: 'Enterprise Deals' },
+      { value: '+85%', label: 'Demo Requests' },
+    ],
+    technologies: ['Salesforce', 'Demandbase', 'Marketo', 'LinkedIn Ads', '6sense'],
+  },
 ];
 
 const testimonials = [
@@ -35,6 +156,7 @@ const filters = [
 
 export default function CaseStudiesPage() {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [selectedStudy, setSelectedStudy] = useState<CaseStudy | null>(null);
 
   const filteredStudies = activeFilter === 'all'
     ? caseStudies
@@ -77,7 +199,10 @@ export default function CaseStudiesPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1200px] mx-auto">
           {filteredStudies.map((study, index) => (
             <RevealOnScroll key={study.id} delay={(index % 6) + 1}>
-              <div className="rounded-[36px] overflow-hidden relative cursor-pointer aspect-[4/3] bg-gray-100 transition-transform duration-400 hover:scale-[1.02] group">
+              <div
+                onClick={() => setSelectedStudy(study)}
+                className="rounded-[36px] overflow-hidden relative cursor-pointer aspect-[4/3] bg-gray-100 transition-transform duration-400 hover:scale-[1.02] group"
+              >
                 <Image src={study.image} alt={study.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70 flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
                   <span className="inline-flex px-3.5 py-1.5 bg-white/20 backdrop-blur-lg rounded-full text-[0.8rem] font-semibold text-white mb-3 w-fit">
@@ -93,6 +218,87 @@ export default function CaseStudiesPage() {
           ))}
         </div>
       </section>
+
+      {/* Case Study Modal */}
+      <Modal isOpen={!!selectedStudy} onClose={() => setSelectedStudy(null)}>
+        {selectedStudy && (
+          <div>
+            {/* Modal Header */}
+            <div className="p-5 sm:p-6 pb-0 sm:pb-0">
+              {/* Category & Meta */}
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3">
+                <span className="inline-flex px-3 py-1 bg-purple-100 rounded-full text-[0.75rem] font-semibold text-purple-700">
+                  {selectedStudy.categoryLabel}
+                </span>
+                <span className="text-[0.8rem] text-gray-400">{selectedStudy.client} • {selectedStudy.year}</span>
+              </div>
+
+              {/* Title */}
+              <h2 className="text-[1.25rem] sm:text-[1.5rem] font-extrabold text-gray-900 tracking-[-0.02em] leading-tight mb-4">
+                {selectedStudy.title}
+              </h2>
+
+              {/* Description */}
+              <p className="text-gray-600 leading-[1.7] text-[0.9rem] sm:text-[0.95rem] mb-5">
+                {selectedStudy.description}
+              </p>
+            </div>
+
+            {/* Results Row */}
+            <div className="px-5 sm:px-6 mb-5">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
+                {selectedStudy.results.map((result) => (
+                  <div key={result.label} className="flex-1 min-w-[90px] px-4 py-3 bg-gray-50 border border-gray-100 rounded-[16px] text-center">
+                    <div className="text-[1.1rem] sm:text-[1.25rem] font-extrabold text-purple-600">{result.value}</div>
+                    <div className="text-[0.7rem] sm:text-[0.75rem] text-gray-500">{result.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Challenge & Solution */}
+            <div className="px-5 sm:px-6 mb-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="p-4 bg-purple-50 rounded-[16px]">
+                  <h3 className="text-[0.7rem] sm:text-[0.75rem] font-bold text-purple-700 uppercase tracking-wider mb-2">Challenge</h3>
+                  <p className="text-gray-700 leading-[1.6] text-[0.8rem] sm:text-[0.85rem]">{selectedStudy.challenge}</p>
+                </div>
+                <div className="p-4 bg-cyan-50 rounded-[16px]">
+                  <h3 className="text-[0.7rem] sm:text-[0.75rem] font-bold text-cyan-700 uppercase tracking-wider mb-2">Solution</h3>
+                  <p className="text-gray-700 leading-[1.6] text-[0.8rem] sm:text-[0.85rem]">{selectedStudy.solution}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Technologies & CTA */}
+            <div className="p-5 sm:p-6 pt-0 sm:pt-0">
+              <div className="flex flex-wrap items-center gap-2 mb-5">
+                {selectedStudy.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-full text-[0.75rem] font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* CTA */}
+              {selectedStudy.link && (
+                <Link
+                  href={selectedStudy.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-purple-600 text-white rounded-full text-[0.85rem] font-semibold transition-all hover:bg-purple-700"
+                >
+                  Visit Live Site
+                  <ArrowUpRightIcon />
+                </Link>
+              )}
+            </div>
+          </div>
+        )}
+      </Modal>
 
       {/* Featured Case Study */}
       <section className="py-[clamp(60px,10vw,120px)] px-[clamp(20px,5vw,80px)] bg-[#0F172A] text-white">
