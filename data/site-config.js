@@ -7,7 +7,7 @@ export const siteConfig = {
   navigation: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
-    { label: "Work", href: "/case-studies" },
+    { label: "Case Studies", href: "/case-studies" },
     { label: "About", href: "/about" },
     { label: "Blog", href: "/blog" },
     { label: "Careers", href: "/careers" },
@@ -15,7 +15,7 @@ export const siteConfig = {
 
   social: [
     { platform: "instagram", url: "https://instagram.com/softstandards", icon: "Instagram" },
-    { platform: "linkedin", url: "https://linkedin.com/company/soft-sstandards-inc", icon: "Linkedin" },
+    { platform: "linkedin", url: "https://www.linkedin.com/company/soft-standards-inc/", icon: "Linkedin" },
   ],
 
   contact: {
@@ -24,7 +24,7 @@ export const siteConfig = {
     address: "New York, NY",
   },
 
-  booking: "https://calendly.com/youngbld101/30min",
+  booking: "https://calendly.com/contact-softstandards/30min",
 
   footer: {
     description: "Where AI meets authentic brand storytelling. We help businesses grow with digital marketing, web development, and AI automation.",

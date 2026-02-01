@@ -1,7 +1,8 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollReveal, Parallax, MagneticButton } from '@/components/animations';
@@ -9,6 +10,33 @@ import { ArrowRightIcon } from '@/components/Icons';
 import SoftStandardsLogo from '@/components/SoftStandardsLogo';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const testimonials = [
+  {
+    text: 'Soft Standards brought clarity to our brand at a critical moment. They understood our AI product deeply and translated that complexity into a website that actually resonates with our audience. The team is responsive, thoughtful, and genuinely invested in getting it right.',
+    name: 'James Thornton',
+    role: 'Founder, SpaceDome AI',
+    avatar: '/images/case-studies/james-thornton.png'
+  },
+  {
+    text: 'Working with Soft Standards felt like working with people who truly cared about our mission. They helped us rethink our digital presence and the results spoke for themselves — more patients finding the help they need, faster.',
+    name: 'Rachel Kim',
+    role: 'VP Digital, Bicycle Health',
+    avatar: '/images/case-studies/rachel-kim.png'
+  },
+  {
+    text: "They didn't just deliver a beautiful website — they listened to our story and made sure every pixel reflected who we are. The whole process was smooth, collaborative, and honestly enjoyable.",
+    name: 'Daniel Porter',
+    role: 'Managing Director, Meridian Consulting',
+    avatar: '/images/case-studies/daniel-porter.png'
+  },
+  {
+    text: "Our e-commerce revenue jumped noticeably after the redesign. Soft Standards approached everything with care and strategy, not just aesthetics. They're partners, not vendors.",
+    name: 'Sarah Lin',
+    role: 'Founder, Trellis Studios',
+    avatar: '/images/case-studies/sarah-lin.png'
+  },
+];
 
 export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -20,6 +48,15 @@ export default function Home() {
   const storySection1Ref = useRef<HTMLDivElement>(null);
   const storySection2Ref = useRef<HTMLDivElement>(null);
   const storySection3Ref = useRef<HTMLDivElement>(null);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  // Auto-slide testimonials
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -294,7 +331,7 @@ export default function Home() {
           <div ref={heroCTARef} className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <MagneticButton>
               <Link
-                href="https://calendly.com/youngbld101/30min"
+                href="https://calendly.com/contact-softstandards/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hero-cta-btn group inline-flex items-center gap-2.5 px-8 py-4 bg-gray-900 text-white rounded-full text-base font-semibold transition-all shadow-[0_4px_20px_rgba(15,23,42,0.2)] hover:bg-purple-600 hover:shadow-[0_8px_30px_rgba(124,58,237,0.4)]"
@@ -632,29 +669,94 @@ export default function Home() {
       <section className="py-20 md:py-32 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
           <ScrollReveal className="text-center">
-            <div className="relative bg-white rounded-3xl p-8 md:p-12 shadow-[0_20px_60px_rgba(15,23,42,0.08)] border border-gray-100">
-              {/* Quote mark */}
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white text-2xl font-serif">
-                &ldquo;
-              </div>
+            <span className="inline-block px-4 py-1.5 bg-purple-100 text-purple-600 rounded-full text-sm font-semibold mb-6">
+              Client Stories
+            </span>
+            <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight text-gray-900 mb-12">
+              What Our Clients
+              <span className="text-gradient"> Say</span>
+            </h2>
+          </ScrollReveal>
 
-              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8 mt-4">
-                Soft Standards brought clarity to our brand at a time when everything felt chaotic.
-                They didn&apos;t just build us a website — they helped us tell our story in a way that
-                truly connects with our audience. The team genuinely cares about getting it right.
-              </p>
+          <div className="relative">
+            {/* Testimonial Cards Container */}
+            <div className="relative overflow-hidden">
+              <div
+                className="flex transition-transform duration-700 ease-in-out"
+                style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
+              >
+                {testimonials.map((testimonial, index) => (
+                  <div
+                    key={index}
+                    className="w-full flex-shrink-0 px-2"
+                  >
+                    <div className="relative bg-white rounded-3xl p-8 md:p-12 shadow-[0_20px_60px_rgba(15,23,42,0.08)] border border-gray-100">
+                      {/* Quote mark */}
+                      <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white text-2xl font-serif">
+                        &ldquo;
+                      </div>
 
-              <div className="flex items-center justify-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
-                  JT
-                </div>
-                <div className="text-left">
-                  <div className="font-semibold text-gray-900">James Thornton</div>
-                  <div className="text-sm text-gray-500">Founder, SpaceDome AI</div>
-                </div>
+                      <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8 mt-4">
+                        {testimonial.text}
+                      </p>
+
+                      <div className="flex items-center justify-center gap-4">
+                        <div className="w-14 h-14 rounded-full overflow-hidden relative flex-shrink-0">
+                          <Image
+                            src={testimonial.avatar}
+                            alt={testimonial.name}
+                            fill
+                            className="object-cover"
+                            sizes="56px"
+                          />
+                        </div>
+                        <div className="text-left">
+                          <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                          <div className="text-sm text-gray-500">{testimonial.role}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          </ScrollReveal>
+
+            {/* Navigation Dots */}
+            <div className="flex items-center justify-center gap-2 mt-8">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTestimonial(index)}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                    index === currentTestimonial
+                      ? 'bg-purple-500 w-8'
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
+                />
+              ))}
+            </div>
+
+            {/* Navigation Arrows */}
+            <button
+              onClick={() => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-600 hover:text-purple-500 hover:shadow-xl transition-all"
+              aria-label="Previous testimonial"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button
+              onClick={() => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-600 hover:text-purple-500 hover:shadow-xl transition-all"
+              aria-label="Next testimonial"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -690,7 +792,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <MagneticButton strength={0.2}>
                 <Link
-                  href="https://calendly.com/youngbld101/30min"
+                  href="https://calendly.com/contact-softstandards/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2.5 px-8 py-4 bg-white text-gray-900 rounded-full text-base font-semibold transition-all hover:bg-purple-500 hover:text-white hover:shadow-[0_8px_30px_rgba(124,58,237,0.4)]"

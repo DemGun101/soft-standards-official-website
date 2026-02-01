@@ -2,10 +2,11 @@
 
 import Link from 'next/link';
 import SoftStandardsLogoIcon from './SoftStandardsLogoIcon';
+import { LinkedInIcon, InstagramIcon, MailIcon } from './Icons';
 
 const quickLinks = [
   { href: '/services', label: 'Services' },
-  { href: '/case-studies', label: 'Work' },
+  { href: '/case-studies', label: 'Case Studies' },
   { href: '/about', label: 'About' },
   { href: '/blog', label: 'Blog' },
   { href: '/careers', label: 'Careers' },
@@ -19,9 +20,9 @@ const serviceLinks = [
 ];
 
 const socialLinks = [
-  { href: 'https://instagram.com/softstandards', label: 'Instagram' },
-  { href: 'https://linkedin.com/company/soft-sstandards-inc', label: 'LinkedIn' },
-  { href: 'mailto:contact@softstandards.net', label: 'Email' },
+  { href: 'https://www.linkedin.com/company/soft-standards-inc/', label: 'LinkedIn', icon: LinkedInIcon },
+  { href: 'https://instagram.com/softstandards', label: 'Instagram', icon: InstagramIcon },
+  { href: 'mailto:contact@softstandards.net', label: 'Email', icon: MailIcon },
 ];
 
 export default function Footer() {
@@ -95,16 +96,27 @@ export default function Footer() {
       {/* Bottom */}
       <div className="flex flex-col md:flex-row items-center justify-between max-w-[1400px] mx-auto py-6 text-[0.85rem] text-gray-500 gap-4">
         <span>&copy; 2026 Soft Standards Inc. All rights reserved.</span>
-        <div className="flex gap-5">
-          {socialLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="text-gray-500 transition-colors hover:text-purple-400"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="flex items-center gap-4">
+          {socialLinks.map((link) => {
+            const Icon = link.icon;
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                target={link.href.startsWith('mailto') ? undefined : '_blank'}
+                rel={link.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+                className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all ${
+                  link.label === 'LinkedIn'
+                    ? 'bg-[#0A66C2] text-white hover:bg-[#004182]'
+                    : 'text-gray-400 hover:text-white hover:bg-white/10'
+                }`}
+                aria-label={link.label}
+              >
+                <Icon className="w-5 h-5" />
+                {link.label === 'LinkedIn' && <span className="text-sm font-medium">Follow us</span>}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </footer>
