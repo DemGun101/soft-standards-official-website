@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "3D Animated Website",
-  description: "Next.js website with Three.js and GSAP animations",
+  title: "Soft Standards Inc. — AI-Powered Marketing Excellence",
+  description: "Where AI meets marketing excellence. We bridge cutting-edge technology with authentic brand storytelling.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
