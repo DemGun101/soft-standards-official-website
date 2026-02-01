@@ -41,6 +41,32 @@ const variants = {
   clipReveal: { from: { clipPath: 'inset(100% 0 0 0)' }, to: { clipPath: 'inset(0% 0 0 0)' } },
 };
 
+// Get initial CSS styles for a variant to prevent flash of unstyled content
+const getInitialStyles = (variant: AnimationVariant, distance: number): React.CSSProperties => {
+  switch (variant) {
+    case 'fadeUp':
+      return { opacity: 0, transform: `translateY(${distance}px)` };
+    case 'fadeDown':
+      return { opacity: 0, transform: `translateY(-${distance}px)` };
+    case 'fadeLeft':
+      return { opacity: 0, transform: `translateX(-${distance}px)` };
+    case 'fadeRight':
+      return { opacity: 0, transform: `translateX(${distance}px)` };
+    case 'scale':
+      return { opacity: 0, transform: 'scale(0.8)' };
+    case 'rotate':
+      return { opacity: 0, transform: 'rotate(-10deg)' };
+    case 'blur':
+      return { opacity: 0, filter: 'blur(10px)' };
+    case 'slideUp':
+      return { transform: 'translateY(100%)' };
+    case 'clipReveal':
+      return { clipPath: 'inset(100% 0 0 0)' };
+    default:
+      return { opacity: 0 };
+  }
+};
+
 export default function ScrollReveal({
   children,
   className = '',
@@ -90,7 +116,7 @@ export default function ScrollReveal({
   }, [variant, delay, duration, distance, start, scrub, markers]);
 
   return (
-    <div ref={ref} className={className}>
+    <div ref={ref} className={className} style={getInitialStyles(variant, distance)}>
       {children}
     </div>
   );

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, ReactNode } from 'react';
+import { useEffect, useRef, ReactNode, useState } from 'react';
 
 interface RevealOnScrollProps {
   children: ReactNode;
@@ -10,13 +10,14 @@ interface RevealOnScrollProps {
 
 export default function RevealOnScroll({ children, className = '', delay }: RevealOnScrollProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const [isRevealed, setIsRevealed] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
+            setIsRevealed(true);
             observer.unobserve(entry.target);
           }
         });
@@ -35,8 +36,19 @@ export default function RevealOnScroll({ children, className = '', delay }: Reve
     };
   }, []);
 
+  // Calculate delay in seconds for CSS
+  const delaySeconds = delay ? delay * 0.1 : 0;
+
   return (
-    <div ref={ref} className={`reveal ${className}`} data-delay={delay}>
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: isRevealed ? 1 : 0,
+        transform: isRevealed ? 'translateY(0)' : 'translateY(24px)',
+        transition: `opacity 0.7s ease ${delaySeconds}s, transform 0.7s ease ${delaySeconds}s`,
+      }}
+    >
       {children}
     </div>
   );
