@@ -53,15 +53,6 @@ export default function Navbar() {
             </Link>
           </li>
         ))}
-        <li>
-          <Link
-            href="#contact"
-            className="bg-white text-gray-900 px-5 py-2.5 rounded-full text-[0.85rem] font-semibold ml-1
-              transition-all hover:bg-purple-500 hover:text-white hover:scale-[1.02] whitespace-nowrap"
-          >
-            Get in Touch
-          </Link>
-        </li>
       </ul>
 
       {/* Mobile Menu Toggle */}
@@ -92,15 +83,6 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
-            <li>
-              <Link
-                href="#contact"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block bg-white text-gray-900 px-3 py-2.5 rounded-xl text-[0.85rem] font-semibold text-center mt-1 whitespace-nowrap"
-              >
-                Get in Touch
-              </Link>
-            </li>
           </ul>
         </div>
       )}
