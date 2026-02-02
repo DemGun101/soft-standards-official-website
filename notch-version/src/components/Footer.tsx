@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import SoftStandardsLogoIcon from './SoftStandardsLogoIcon';
-import { LinkedInIcon, InstagramIcon, MailIcon } from './Icons';
+import { XIcon, FacebookIcon } from './Icons';
 
 const quickLinks = [
   { href: '/services', label: 'Services' },
@@ -20,9 +20,8 @@ const serviceLinks = [
 ];
 
 const socialLinks = [
-  { href: 'https://www.linkedin.com/company/soft-standards-inc/', label: 'LinkedIn', icon: LinkedInIcon },
-  { href: 'https://instagram.com/softstandards', label: 'Instagram', icon: InstagramIcon },
-  { href: 'mailto:contact@softstandards.net', label: 'Email', icon: MailIcon },
+  { href: 'https://x.com/softstandards', label: 'X', icon: XIcon },
+  { href: 'https://www.facebook.com/softstandards', label: 'Facebook', icon: FacebookIcon },
 ];
 
 export default function Footer() {
@@ -103,17 +102,12 @@ export default function Footer() {
               <Link
                 key={link.label}
                 href={link.href}
-                target={link.href.startsWith('mailto') ? undefined : '_blank'}
-                rel={link.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all ${
-                  link.label === 'LinkedIn'
-                    ? 'bg-[#0A66C2] text-white hover:bg-[#004182]'
-                    : 'text-gray-400 hover:text-white hover:bg-white/10'
-                }`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white hover:bg-white/10 flex items-center gap-2 px-4 py-2 rounded-full transition-all"
                 aria-label={link.label}
               >
                 <Icon className="w-5 h-5" />
-                {link.label === 'LinkedIn' && <span className="text-sm font-medium">Follow us</span>}
               </Link>
             );
           })}
