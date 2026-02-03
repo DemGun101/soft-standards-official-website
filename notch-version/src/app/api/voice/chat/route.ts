@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
-import { generateSystemPrompt } from "@/data/voice-agent-context";
+import { generateSystemPrompt, ScrollContext } from "@/data/voice-agent-context";
 import { voiceAgentConfig, ConversationMessage, VoiceCommand } from "@/lib/voice-agent-config";
 
 const anthropic = new Anthropic({
@@ -8,7 +8,13 @@ const anthropic = new Anthropic({
 });
 
 function parseCommand(text: string): VoiceCommand {
-  // Check for navigation command
+  // Check for scroll command first (same-page navigation)
+  const scrollMatch = text.match(/\[SCROLL:([^\]]+)\]/);
+  if (scrollMatch) {
+    return { type: "scroll", target: scrollMatch[1] };
+  }
+
+  // Check for navigation command (page navigation)
   const navigateMatch = text.match(/\[NAVIGATE:(\/[^\]]*)\]/);
   if (navigateMatch) {
     return { type: "navigate", target: navigateMatch[1] };
@@ -25,6 +31,7 @@ function parseCommand(text: string): VoiceCommand {
 function cleanResponseText(text: string): string {
   // Remove command tags from the response text for TTS
   return text
+    .replace(/\[SCROLL:[^\]]*\]/g, "")
     .replace(/\[NAVIGATE:[^\]]*\]/g, "")
     .replace(/\[BOOK\]/g, "")
     .trim();
@@ -33,9 +40,10 @@ function cleanResponseText(text: string): string {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { message, conversationHistory = [] } = body as {
+    const { message, conversationHistory = [], scrollContext } = body as {
       message: string;
       conversationHistory: ConversationMessage[];
+      scrollContext?: ScrollContext;
     };
 
     if (!message || typeof message !== "string") {
@@ -54,12 +62,12 @@ export async function POST(request: NextRequest) {
       { role: "user", content: message },
     ];
 
-    // Call Claude API
+    // Call Claude API with scroll context for contextual awareness
     const response = await anthropic.messages.create({
       model: voiceAgentConfig.llm.model,
       max_tokens: voiceAgentConfig.llm.maxTokens,
       temperature: voiceAgentConfig.llm.temperature,
-      system: generateSystemPrompt(),
+      system: generateSystemPrompt(scrollContext),
       messages,
     });
 

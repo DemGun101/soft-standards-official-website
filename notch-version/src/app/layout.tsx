@@ -33,7 +33,7 @@ export default function RootLayout({
             <Footer />
           </PageTransition>
         </SmoothScroll>
-        {/* <VoiceAgentWrapper /> */}
+        <VoiceAgentWrapper />
       </body>
     </html>
   );

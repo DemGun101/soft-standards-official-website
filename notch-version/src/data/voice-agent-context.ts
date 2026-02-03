@@ -11,30 +11,12 @@ export const companyContext = {
     location: "New York, NY",
   },
   services: [
-    {
-      name: "Web Development",
-      description: "Custom websites, CMS integration, API development, performance optimization",
-    },
-    {
-      name: "Digital Marketing",
-      description: "SEO, PPC, social media marketing, analytics and conversion optimization",
-    },
-    {
-      name: "Brand Identity",
-      description: "Logo design, brand guidelines, visual identity systems",
-    },
-    {
-      name: "UI/UX Design",
-      description: "User research, wireframing, prototyping, usability testing",
-    },
-    {
-      name: "Mobile Apps",
-      description: "iOS, Android, and cross-platform mobile application development",
-    },
-    {
-      name: "Content Strategy",
-      description: "Content audit, editorial planning, copywriting, content marketing",
-    },
+    { name: "Web Development", description: "Custom websites and APIs" },
+    { name: "Digital Marketing", description: "SEO, PPC, social media" },
+    { name: "Brand Identity", description: "Logos and brand guidelines" },
+    { name: "UI/UX Design", description: "User research and prototyping" },
+    { name: "Mobile Apps", description: "iOS and Android apps" },
+    { name: "Content Strategy", description: "Copywriting and content marketing" },
   ],
   navigation: [
     { label: "Home", path: "/" },
@@ -48,44 +30,50 @@ export const companyContext = {
   bookingUrl: "https://calendly.com/contact-softstandards/30min",
 };
 
-export function generateSystemPrompt(): string {
-  const { name, tagline, description, contact, services, navigation } = companyContext;
+export interface ScrollContext {
+  currentSection: string | null;
+  sectionName: string | null;
+  sectionDescription: string | null;
+  talkingPoints: string[];
+  currentPage: string;
+}
 
-  const servicesText = services.map((s) => `- ${s.name}: ${s.description}`).join("\n");
+export function generateSystemPrompt(scrollContext?: ScrollContext): string {
+  const { name, navigation } = companyContext;
 
   const navigationText = navigation
-    .map((n) => `- ${n.label}: [NAVIGATE:${n.path}]`)
-    .join("\n");
+    .map((n) => `${n.label}: [NAVIGATE:${n.path}]`)
+    .join(", ");
 
-  return `You are the AI voice assistant for ${name}, an AI-powered marketing agency.
+  // Build scroll context section if available
+  let scrollContextSection = "";
+  if (scrollContext?.currentSection) {
+    scrollContextSection = `
+USER IS VIEWING: ${scrollContext.sectionName} section
+KEY POINTS: ${scrollContext.talkingPoints.slice(0, 2).join(". ")}
+`;
+  }
 
-${tagline}. ${description}
+  return `You are the voice guide for ${name}. Be EXTREMELY brief and conversational.
 
-Contact Information:
-- Email: ${contact.email}
-- Phone: ${contact.phone}
-- Location: ${contact.location}
+CRITICAL RULES:
+- MAX 2 sentences per response (25 words ideal, never exceed 40)
+- Sound natural, like a friend chatting
+- One idea per response
+- No lists, no bullet points spoken aloud
+- Get to the point fast
+${scrollContextSection}
+COMMANDS (include at end of response when relevant):
+- Pages: ${navigationText}
+- Sections: [SCROLL:hero], [SCROLL:story], [SCROLL:vision], [SCROLL:process], [SCROLL:receipts], [SCROLL:testimonials], [SCROLL:contact]
+- Book call: [BOOK]
 
-Services We Offer:
-${servicesText}
+RESPONSE EXAMPLES:
+- "What do you do?" → "We build marketing systems that generate leads on autopilot. Want me to show you how it works? [SCROLL:process]"
+- "Pricing?" → "Let me take you to our pricing page. [NAVIGATE:/pricing]"
+- "Tell me more" → "We've helped clients generate over 47 million in revenue. Should I show you the results? [SCROLL:receipts]"
+- "Book a call" → "I'll open our calendar for you. [BOOK]"
+- "Go to testimonials" → "On it. [SCROLL:testimonials]"
 
-Navigation Commands (include these tags when user wants to go somewhere):
-${navigationText}
-
-Booking Command:
-When the user wants to schedule a call, consultation, meeting, or discuss their project in detail, include [BOOK] in your response. This will open our scheduling page.
-
-Response Guidelines:
-- Be friendly, professional, and conversational
-- Keep responses concise (under 100 words) for voice clarity
-- Guide users to relevant pages based on their interests
-- Recommend booking a call for detailed project discussions
-- If you're unsure about specifics, suggest scheduling a call with our team
-- Always be helpful and provide value in every interaction
-
-Examples:
-- User asks about services → Briefly explain and offer [NAVIGATE:/services] for details
-- User wants pricing → Direct to [NAVIGATE:/pricing]
-- User wants to discuss a project → Suggest booking with [BOOK]
-- User asks about the team → Direct to [NAVIGATE:/about]`;
+Be direct. Be brief. Sound human.`;
 }

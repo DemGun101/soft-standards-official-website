@@ -98,10 +98,12 @@ export function useSpeechRecognition(): SpeechRecognitionHook {
 
     recognition.onresult = (event: SpeechRecognitionEvent) => {
       let interim = "";
+      console.log("[SpeechRecognition] onresult event");
 
       for (let i = event.resultIndex; i < event.results.length; i++) {
         const result = event.results[i];
         const transcriptText = result[0].transcript;
+        console.log("[SpeechRecognition] transcript:", transcriptText, "isFinal:", result.isFinal);
 
         if (result.isFinal) {
           // If skipping wake word (manual open), capture transcript directly
@@ -137,6 +139,7 @@ export function useSpeechRecognition(): SpeechRecognitionHook {
     };
 
     recognition.onerror = (event: SpeechRecognitionErrorEvent) => {
+      console.log("[SpeechRecognition] onerror:", event.error);
       if (event.error === "no-speech") {
         // Ignore no-speech errors during continuous listening
         return;
@@ -145,17 +148,21 @@ export function useSpeechRecognition(): SpeechRecognitionHook {
         // Ignore aborted errors (happens when we stop listening)
         return;
       }
+      console.error("[SpeechRecognition] Setting error:", event.error);
       setError(`Speech recognition error: ${event.error}`);
       setIsListening(false);
       isListeningRef.current = false;
     };
 
     recognition.onend = () => {
+      console.log("[SpeechRecognition] onend, isListeningRef:", isListeningRef.current);
       // Restart if we should still be listening
       if (isListeningRef.current) {
         try {
+          console.log("[SpeechRecognition] restarting...");
           recognition.start();
-        } catch {
+        } catch (err) {
+          console.log("[SpeechRecognition] restart failed:", err);
           // Already started, ignore
         }
       } else {
@@ -173,7 +180,13 @@ export function useSpeechRecognition(): SpeechRecognitionHook {
   }, [checkWakeWord, wakeWordDetected]);
 
   const startListening = useCallback((skipWakeWord = false) => {
-    if (!recognitionRef.current || isListeningRef.current) return;
+    console.log("[SpeechRecognition] startListening called, skipWakeWord:", skipWakeWord);
+    console.log("[SpeechRecognition] recognitionRef.current:", !!recognitionRef.current, "isListeningRef.current:", isListeningRef.current);
+
+    if (!recognitionRef.current || isListeningRef.current) {
+      console.log("[SpeechRecognition] skipping - no recognition or already listening");
+      return;
+    }
 
     setError(null);
     setTranscript("");
@@ -183,6 +196,7 @@ export function useSpeechRecognition(): SpeechRecognitionHook {
 
     try {
       recognitionRef.current.start();
+      console.log("[SpeechRecognition] recognition.start() called successfully");
       setIsListening(true);
       isListeningRef.current = true;
     } catch (err) {

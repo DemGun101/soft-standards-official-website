@@ -1,141 +1,84 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useVoiceAgentContext } from "@/providers/VoiceAgentProvider";
-import VoiceOrbCanvas from "./VoiceOrbCanvas";
-import TranscriptOverlay from "./TranscriptOverlay";
-import TextInputFallback from "./TextInputFallback";
+import VoiceOrb3DCanvas from "./VoiceOrb3D";
 
 export default function VoiceAgentOrb() {
   const {
     status,
     isOpen,
-    currentTranscript,
-    currentResponse,
-    error,
     audioLevel,
     frequencyData,
-    isSupported,
     open,
     close,
-    sendMessage,
   } = useVoiceAgentContext();
 
   const [isMounted, setIsMounted] = useState(false);
+  const [isOverDark, setIsOverDark] = useState(false);
 
-  // Handle hydration
+  // Detect background color based on scroll position
+  const detectBackground = useCallback(() => {
+    const orbY = 60;
+    const sections = document.querySelectorAll("section");
+
+    for (const section of sections) {
+      const rect = section.getBoundingClientRect();
+
+      if (orbY >= rect.top && orbY <= rect.bottom) {
+        const computedStyle = window.getComputedStyle(section);
+        const bgColor = computedStyle.backgroundColor;
+
+        const match = bgColor.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
+        if (match) {
+          const r = parseInt(match[1]);
+          const g = parseInt(match[2]);
+          const b = parseInt(match[3]);
+          const luminance = (r * 299 + g * 587 + b * 114) / 1000;
+          setIsOverDark(luminance < 128);
+          return;
+        }
+
+        const isDark = section.classList.contains("bg-gray-900") ||
+                      section.classList.contains("bg-black") ||
+                      section.classList.contains("dark");
+        setIsOverDark(isDark);
+        return;
+      }
+    }
+  }, []);
+
   useEffect(() => {
     setIsMounted(true);
-  }, []);
+    detectBackground();
+    window.addEventListener("scroll", detectBackground, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", detectBackground);
+    };
+  }, [detectBackground]);
 
   if (!isMounted) {
     return null;
   }
 
-  // Get status text for display
-  const getStatusText = () => {
-    switch (status) {
-      case "idle":
-        return "Click to start";
-      case "listening":
-        return "Listening... speak now";
-      case "processing":
-        return "Thinking...";
-      case "speaking":
-        return "";
-      case "error":
-        return error || "Something went wrong";
-      default:
-        return "";
+  const handleClick = () => {
+    if (isOpen) {
+      close();
+    } else {
+      open();
     }
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900/90 backdrop-blur-xl">
-      {/* Close button */}
-      {isOpen && (
-        <button
-          onClick={close}
-          className="absolute top-6 right-6 p-3 text-gray-400 hover:text-white transition-colors"
-          aria-label="Close voice agent"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </button>
-      )}
-
-      <div className="flex flex-col items-center gap-8 max-w-lg w-full px-6">
-        {/* Orb */}
-        <div
-          onClick={() => {
-            if (!isOpen) {
-              open();
-            }
-          }}
-          className="relative"
-        >
-          <VoiceOrbCanvas
-            status={status}
-            audioLevel={audioLevel}
-            frequencyData={frequencyData}
-            size={200}
-          />
-
-          {/* Microphone indicator */}
-          {status === "listening" && (
-            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2">
-              <div className="flex gap-1">
-                <span className="w-1 h-4 bg-red-500 rounded-full animate-pulse" />
-                <span className="w-1 h-4 bg-red-500 rounded-full animate-pulse delay-75" />
-                <span className="w-1 h-4 bg-red-500 rounded-full animate-pulse delay-150" />
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Status text */}
-        <p
-          className={`text-center text-lg font-medium transition-colors ${
-            status === "error" ? "text-red-400" : "text-gray-300"
-          }`}
-        >
-          {getStatusText()}
-        </p>
-
-        {/* Transcript overlay */}
-        <TranscriptOverlay
-          transcript={currentTranscript}
-          response={currentResponse}
+    <div className="fixed top-6 left-6 z-50">
+      <div onClick={handleClick} className="cursor-pointer">
+        <VoiceOrb3DCanvas
           status={status}
+          audioLevel={audioLevel}
+          frequencyData={frequencyData}
+          size={150}
+          isOverDark={isOverDark}
         />
-
-        {/* Text input fallback */}
-        {!isSupported && (
-          <TextInputFallback onSubmit={sendMessage} status={status} />
-        )}
-
-        {/* Manual text input option */}
-        {isSupported && isOpen && status === "idle" && (
-          <TextInputFallback onSubmit={sendMessage} status={status} />
-        )}
-      </div>
-
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl" />
       </div>
     </div>
   );

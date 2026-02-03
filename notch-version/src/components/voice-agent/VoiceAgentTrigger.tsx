@@ -5,11 +5,18 @@ import { useVoiceAgentContext } from "@/providers/VoiceAgentProvider";
 export default function VoiceAgentTrigger() {
   const { isOpen, open, status } = useVoiceAgentContext();
 
+  console.log("[VoiceAgentTrigger] isOpen:", isOpen, "status:", status);
+
+  const handleClick = () => {
+    console.log("[VoiceAgentTrigger] clicked, calling open()");
+    open();
+  };
+
   if (isOpen) return null;
 
   return (
     <button
-      onClick={open}
+      onClick={handleClick}
       className="fixed bottom-6 right-6 z-40 group"
       aria-label="Open voice assistant"
     >

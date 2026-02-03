@@ -11,10 +11,10 @@ export const voiceAgentConfig = {
     speakerBoost: true,
   },
 
-  // Claude LLM settings
+  // Claude LLM settings - reduced tokens for faster voice responses
   llm: {
     model: "claude-sonnet-4-20250514",
-    maxTokens: 300,
+    maxTokens: 100,
     temperature: 0.7,
   },
 
@@ -68,6 +68,6 @@ export type ConversationMessage = {
 };
 
 export type VoiceCommand = {
-  type: "navigate" | "book" | null;
+  type: "navigate" | "book" | "scroll" | null;
   target?: string;
 };

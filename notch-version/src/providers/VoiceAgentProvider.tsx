@@ -2,6 +2,7 @@
 
 import { createContext, useContext, ReactNode } from "react";
 import { useVoiceAgent } from "@/hooks/useVoiceAgent";
+import { useScrollContext, SectionInfo } from "@/hooks/useScrollContext";
 import { VoiceAgentStatus, ConversationMessage } from "@/lib/voice-agent-config";
 
 interface VoiceAgentContextType {
@@ -16,6 +17,11 @@ interface VoiceAgentContextType {
   frequencyData: Uint8Array;
   isSupported: boolean;
 
+  // Scroll context
+  currentSection: SectionInfo | null;
+  visibleSections: SectionInfo[];
+  scrollToSection: (sectionId: string) => void;
+
   // Actions
   open: () => void;
   close: () => void;
@@ -28,10 +34,18 @@ interface VoiceAgentContextType {
 const VoiceAgentContext = createContext<VoiceAgentContextType | null>(null);
 
 export function VoiceAgentProvider({ children }: { children: ReactNode }) {
-  const voiceAgent = useVoiceAgent();
+  const scrollContext = useScrollContext();
+  const voiceAgent = useVoiceAgent(scrollContext);
+
+  const value: VoiceAgentContextType = {
+    ...voiceAgent,
+    currentSection: scrollContext.currentSection,
+    visibleSections: scrollContext.visibleSections,
+    scrollToSection: scrollContext.scrollToSection,
+  };
 
   return (
-    <VoiceAgentContext.Provider value={voiceAgent}>
+    <VoiceAgentContext.Provider value={value}>
       {children}
     </VoiceAgentContext.Provider>
   );

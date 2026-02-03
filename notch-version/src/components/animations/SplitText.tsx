@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect, ReactNode, ElementType } from 'react';
+import { useRef, useEffect, ReactNode, ElementType, ComponentPropsWithoutRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -15,6 +15,8 @@ interface SplitTextProps {
   splitBy?: 'chars' | 'words' | 'lines';
   scrollTrigger?: boolean;
 }
+
+type PolymorphicProps<E extends ElementType> = SplitTextProps & Omit<ComponentPropsWithoutRef<E>, keyof SplitTextProps>;
 
 export default function SplitText({
   children,
@@ -79,9 +81,10 @@ export default function SplitText({
     hasAnimated.current = true;
   }, [delay, stagger, splitBy, scrollTrigger]);
 
+  const Comp = Component as any;
   return (
-    <Component ref={containerRef as any} className={className}>
+    <Comp ref={containerRef} className={className}>
       {children}
-    </Component>
+    </Comp>
   );
 }

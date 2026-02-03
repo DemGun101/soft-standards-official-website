@@ -285,6 +285,7 @@ export default function Home() {
       {/* Hero Section */}
       <section
         ref={heroRef}
+        data-section="hero"
         className="relative min-h-screen flex flex-col items-center justify-center px-5 md:px-10 py-20 overflow-hidden"
       >
         {/* Animated gradient background */}
@@ -398,6 +399,7 @@ export default function Home() {
       {/* Story Section 1: Problem Agitation */}
       <section
         id="story"
+        data-section="story"
         ref={storySection1Ref}
         className="min-h-screen flex items-center px-5 md:px-10 py-24 bg-gray-50 relative overflow-hidden"
       >
@@ -476,6 +478,7 @@ export default function Home() {
       {/* Story Section 2: The Shift */}
       <section
         ref={storySection2Ref}
+        data-section="vision"
         className="min-h-screen flex items-center justify-center px-5 md:px-10 py-20 bg-gray-900 relative overflow-hidden"
       >
         <div className="ai-circles-container absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -535,6 +538,7 @@ export default function Home() {
       {/* Story Section 3: How It Works */}
       <section
         ref={storySection3Ref}
+        data-section="process"
         className="min-h-screen flex items-center px-5 md:px-10 py-20 md:py-32"
       >
         <div className="max-w-[1200px] mx-auto">
@@ -639,7 +643,7 @@ export default function Home() {
       </section>
 
       {/* Results/Social Proof Section */}
-      <section className="py-20 md:py-32 px-5 md:px-10 bg-gray-50">
+      <section data-section="receipts" className="py-20 md:py-32 px-5 md:px-10 bg-gray-50">
         <div className="max-w-[1200px] mx-auto">
           <ScrollReveal className="text-center mb-16">
             <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight text-gray-900">
@@ -686,7 +690,7 @@ export default function Home() {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-20 md:py-32 px-5 md:px-10">
+      <section data-section="testimonials" className="py-20 md:py-32 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
           <ScrollReveal className="text-center">
             <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight text-gray-900 mb-4">
@@ -781,7 +785,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="cta-section relative py-20 md:py-32 px-5 md:px-10 bg-gray-900 overflow-hidden">
+      <section id="contact" data-section="contact" className="cta-section relative py-20 md:py-32 px-5 md:px-10 bg-gray-900 overflow-hidden">
         {/* Glow effects */}
         <div className="cta-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(124,58,237,0.3)_0%,transparent_60%)] rounded-full pointer-events-none" />
         <div className="cta-glow absolute top-[30%] right-[10%] w-[300px] h-[300px] bg-[radial-gradient(circle,rgba(6,182,212,0.2)_0%,transparent_60%)] rounded-full pointer-events-none" />

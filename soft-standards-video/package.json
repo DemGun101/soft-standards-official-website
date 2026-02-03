@@ -1,0 +1,22 @@
+{
+  "name": "soft-standards-video",
+  "version": "1.0.0",
+  "description": "Promotional video for Soft Standards Inc.",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render SoftStandardsPromo out/promo.mp4",
+    "render:gif": "remotion render SoftStandardsPromo out/promo.gif"
+  },
+  "keywords": ["remotion", "video", "soft-standards"],
+  "author": "Soft Standards Inc.",
+  "license": "ISC",
+  "dependencies": {
+    "@remotion/cli": "4.0.396",
+    "@remotion/google-fonts": "4.0.396",
+    "@remotion/transitions": "4.0.396",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "remotion": "4.0.396",
+    "typescript": "5.4.5"
+  }
+}

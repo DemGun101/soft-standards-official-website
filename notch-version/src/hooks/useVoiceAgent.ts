@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { useSpeechRecognition } from "./useSpeechRecognition";
 import { useAudioPlayback } from "./useAudioPlayback";
 import { useAudioAnalyzer } from "./useAudioAnalyzer";
+import { SectionInfo } from "./useScrollContext";
+import { ScrollContext } from "@/data/voice-agent-context";
 import {
   VoiceAgentStatus,
   ConversationMessage,
@@ -13,7 +15,6 @@ import {
 } from "@/lib/voice-agent-config";
 
 interface VoiceAgentHook {
-  // State
   status: VoiceAgentStatus;
   isOpen: boolean;
   conversation: ConversationMessage[];
@@ -23,8 +24,6 @@ interface VoiceAgentHook {
   audioLevel: number;
   frequencyData: Uint8Array;
   isSupported: boolean;
-
-  // Actions
   open: () => void;
   close: () => void;
   startListening: () => void;
@@ -33,29 +32,39 @@ interface VoiceAgentHook {
   clearConversation: () => void;
 }
 
-export function useVoiceAgent(): VoiceAgentHook {
+interface ScrollContextInput {
+  currentSection: SectionInfo | null;
+  visibleSections: SectionInfo[];
+  scrollToSection: (sectionId: string) => void;
+}
+
+export function useVoiceAgent(scrollContextInput?: ScrollContextInput): VoiceAgentHook {
   const router = useRouter();
 
-  // State
   const [status, setStatus] = useState<VoiceAgentStatus>("idle");
   const [isOpen, setIsOpen] = useState(false);
   const [conversation, setConversation] = useState<ConversationMessage[]>([]);
   const [currentResponse, setCurrentResponse] = useState("");
   const [error, setError] = useState<string | null>(null);
 
-  // Refs for tracking state in callbacks
-  const statusRef = useRef<VoiceAgentStatus>("idle");
   const processingRef = useRef(false);
-  const manualOpenRef = useRef(false); // Track if opened via click (skip wake word)
+  const manualOpenRef = useRef(false);
+  const scrollContextRef = useRef(scrollContextInput);
+  const pendingCommandRef = useRef<VoiceCommand | null>(null);
+  const silenceTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const lastContentRef = useRef("");
+  const sendMessageRef = useRef<((text: string) => Promise<void>) | null>(null);
 
-  // Hooks
+  useEffect(() => {
+    scrollContextRef.current = scrollContextInput;
+  }, [scrollContextInput]);
+
   const {
     isListening,
     isSupported,
     transcript,
     interimTranscript,
     error: speechError,
-    wakeWordDetected,
     startListening: startSpeech,
     stopListening: stopSpeech,
     resetTranscript,
@@ -77,10 +86,10 @@ export function useVoiceAgent(): VoiceAgentHook {
     stopAnalyzing,
   } = useAudioAnalyzer();
 
-  // Current transcript (final + interim)
-  const currentTranscript = transcript + (interimTranscript ? " " + interimTranscript : "");
+  // Combined transcript - use final + interim
+  const currentTranscript = (transcript + " " + interimTranscript).trim();
 
-  // Update status based on state changes
+  // Update status
   useEffect(() => {
     let newStatus: VoiceAgentStatus = "idle";
 
@@ -95,10 +104,9 @@ export function useVoiceAgent(): VoiceAgentHook {
     }
 
     setStatus(newStatus);
-    statusRef.current = newStatus;
   }, [isListening, isPlaying, isLoadingAudio, error, speechError, audioError]);
 
-  // Start audio analysis when playing
+  // Audio visualization
   useEffect(() => {
     if (isPlaying && analyserNode) {
       startAnalyzing(analyserNode);
@@ -109,33 +117,95 @@ export function useVoiceAgent(): VoiceAgentHook {
 
   // Handle errors
   useEffect(() => {
-    if (speechError) setError(speechError);
-    if (audioError) setError(audioError);
-  }, [speechError, audioError]);
+    if (speechError) {
+      console.error("[VoiceAgent] speechError:", speechError);
+      setError(speechError);
+    }
+  }, [speechError]);
 
-  // Process transcript when ready (wake word detected OR manual open)
+  // Interrupt audio when user speaks
   useEffect(() => {
-    const shouldProcess = manualOpenRef.current || wakeWordDetected;
-    if (!shouldProcess || !transcript || processingRef.current) return;
+    if (!isOpen || !manualOpenRef.current) return;
 
-    // Wait a bit for user to finish speaking
-    const timeout = setTimeout(() => {
-      if (transcript && !processingRef.current) {
-        stopSpeech();
-        sendMessage(transcript);
+    const content = currentTranscript;
+    if (isPlaying && content.length >= 3) {
+      stopAudio();
+      pendingCommandRef.current = null;
+    }
+  }, [currentTranscript, isPlaying, isOpen, stopAudio]);
+
+  // Process speech - use BOTH final and interim transcripts
+  useEffect(() => {
+    if (!isOpen || !manualOpenRef.current) return;
+    if (isPlaying || isLoadingAudio || processingRef.current) return;
+
+    // Use combined content (final + interim)
+    const content = currentTranscript;
+    if (!content || content.length < 2) return;
+
+    // Check if content changed - only then reset the timer
+    if (content !== lastContentRef.current) {
+      // Clear existing timer when content changes
+      if (silenceTimerRef.current) {
+        clearTimeout(silenceTimerRef.current);
+        silenceTimerRef.current = null;
       }
-    }, 1500); // Wait 1.5s after last speech
 
-    return () => clearTimeout(timeout);
-  }, [transcript, wakeWordDetected, stopSpeech]);
+      lastContentRef.current = content;
 
-  // Handle command execution
+      // Wait for silence (content stops changing)
+      console.log("[VoiceAgent] Starting silence timer for:", content);
+      silenceTimerRef.current = setTimeout(() => {
+        console.log("[VoiceAgent] Silence timer fired, sending:", content);
+        if (content && content.length >= 2 && !processingRef.current) {
+          sendMessageRef.current?.(content);
+        }
+      }, 1200); // 1.2 seconds of silence
+    }
+
+    // Don't clear timer in cleanup - only clear when content changes
+  }, [currentTranscript, isOpen, isPlaying, isLoadingAudio]);
+
+  // Auto-resume listening
+  useEffect(() => {
+    console.log("[VoiceAgent] Auto-resume check - isOpen:", isOpen, "isPlaying:", isPlaying, "isLoadingAudio:", isLoadingAudio, "processingRef:", processingRef.current, "isListening:", isListening);
+
+    if (!isOpen || !manualOpenRef.current) {
+      console.log("[VoiceAgent] Not resuming - not open or not manual");
+      return;
+    }
+    if (isPlaying || isLoadingAudio || processingRef.current) {
+      console.log("[VoiceAgent] Not resuming - playing/loading/processing");
+      return;
+    }
+    if (isListening) {
+      console.log("[VoiceAgent] Not resuming - already listening");
+      return;
+    }
+    // Don't auto-resume if there's an error
+    if (speechError || error) {
+      console.log("[VoiceAgent] Not auto-resuming due to error:", speechError || error);
+      return;
+    }
+
+    console.log("[VoiceAgent] Will auto-resume listening in 500ms");
+    const timer = setTimeout(() => {
+      console.log("[VoiceAgent] Auto-resuming now");
+      if (isOpen && manualOpenRef.current && !processingRef.current && !isPlaying && !isLoadingAudio && !speechError && !error) {
+        resetTranscript();
+        lastContentRef.current = "";
+        startSpeech(true);
+      }
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, [isPlaying, isLoadingAudio, isOpen, isListening, startSpeech, resetTranscript, speechError, error]);
+
   const executeCommand = useCallback(
     (command: VoiceCommand) => {
       if (!command.type) return;
 
       if (command.type === "navigate" && command.target) {
-        // Validate route
         const isValidRoute = voiceAgentConfig.validRoutes.some(
           (r) => r.path === command.target
         );
@@ -143,34 +213,71 @@ export function useVoiceAgent(): VoiceAgentHook {
           router.push(command.target);
         }
       } else if (command.type === "book" && command.target) {
-        // Open booking URL in new tab
         window.open(command.target, "_blank", "noopener,noreferrer");
+      } else if (command.type === "scroll" && command.target) {
+        if (scrollContextRef.current?.scrollToSection) {
+          scrollContextRef.current.scrollToSection(command.target);
+        } else {
+          const element =
+            document.getElementById(command.target) ||
+            document.querySelector(`[data-section="${command.target}"]`);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }
       }
     },
     [router]
   );
 
-  // Send message to Claude API
+  const buildScrollContext = useCallback((): ScrollContext | undefined => {
+    const currentSection = scrollContextRef.current?.currentSection;
+    if (!currentSection) return undefined;
+
+    return {
+      currentSection: currentSection.id,
+      sectionName: currentSection.name,
+      sectionDescription: currentSection.description,
+      talkingPoints: currentSection.talkingPoints,
+      currentPage: typeof window !== "undefined" ? window.location.pathname : "/",
+    };
+  }, []);
+
   const sendMessage = useCallback(
     async (text: string) => {
-      if (!text.trim() || processingRef.current) return;
+      console.log("[VoiceAgent] sendMessage called with:", text);
+      if (!text.trim() || processingRef.current) {
+        console.log("[VoiceAgent] sendMessage skipped - empty or processing");
+        return;
+      }
 
       processingRef.current = true;
       setError(null);
       setCurrentResponse("");
 
+      // Stop listening and clear
+      stopSpeech();
+      resetTranscript();
+      lastContentRef.current = "";
+
+      if (silenceTimerRef.current) {
+        clearTimeout(silenceTimerRef.current);
+        silenceTimerRef.current = null;
+      }
+
       try {
-        // Add user message to conversation
         const userMessage: ConversationMessage = { role: "user", content: text };
         setConversation((prev) => [...prev, userMessage]);
 
-        // Call chat API
+        const scrollContext = buildScrollContext();
+
         const response = await fetch("/api/voice/chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             message: text,
             conversationHistory: conversation,
+            scrollContext,
           }),
         });
 
@@ -180,9 +287,9 @@ export function useVoiceAgent(): VoiceAgentHook {
         }
 
         const data = await response.json();
+        console.log("[VoiceAgent] API response:", data);
         const { response: assistantResponse, command } = data;
 
-        // Add assistant message to conversation
         const assistantMessage: ConversationMessage = {
           role: "assistant",
           content: assistantResponse,
@@ -190,53 +297,59 @@ export function useVoiceAgent(): VoiceAgentHook {
         setConversation((prev) => [...prev, assistantMessage]);
         setCurrentResponse(assistantResponse);
 
-        // Play the response
+        pendingCommandRef.current = command;
+
+        // Set processing to false BEFORE playing audio
+        // This allows auto-resume to work when audio ends
+        processingRef.current = false;
+
         await playAudio(assistantResponse);
 
-        // Execute any commands after playing
-        if (command && command.type) {
-          // Small delay to let user hear the response
-          setTimeout(() => executeCommand(command), 500);
+        if (pendingCommandRef.current?.type) {
+          executeCommand(pendingCommandRef.current);
+          pendingCommandRef.current = null;
         }
-
-        // Reset transcript and resume listening
-        resetTranscript();
-
-        // Resume listening after speaking is done
-        setTimeout(() => {
-          if (isOpen) {
-            startSpeech();
-          }
-        }, 100);
       } catch (err) {
         console.error("Voice agent error:", err);
         setError(err instanceof Error ? err.message : "An error occurred");
-      } finally {
         processingRef.current = false;
       }
     },
-    [conversation, playAudio, executeCommand, resetTranscript, isOpen, startSpeech]
+    [conversation, playAudio, executeCommand, resetTranscript, stopSpeech, buildScrollContext]
   );
 
-  // Open voice agent (manual open skips wake word requirement)
+  // Keep ref updated for use in setTimeout callbacks
+  useEffect(() => {
+    sendMessageRef.current = sendMessage;
+  }, [sendMessage]);
+
   const open = useCallback(() => {
+    console.log("[VoiceAgent] open() called");
     setIsOpen(true);
     setError(null);
     manualOpenRef.current = true;
-    startSpeech(true); // Skip wake word when manually opened
-  }, [startSpeech]);
+    lastContentRef.current = "";
+    resetTranscript();
+    console.log("[VoiceAgent] calling startSpeech(true)");
+    startSpeech(true);
+  }, [startSpeech, resetTranscript]);
 
-  // Close voice agent
   const close = useCallback(() => {
     setIsOpen(false);
     manualOpenRef.current = false;
+    processingRef.current = false;
     stopSpeech();
     stopAudio();
     stopAnalyzing();
     resetTranscript();
+    lastContentRef.current = "";
+    pendingCommandRef.current = null;
+    if (silenceTimerRef.current) {
+      clearTimeout(silenceTimerRef.current);
+      silenceTimerRef.current = null;
+    }
   }, [stopSpeech, stopAudio, stopAnalyzing, resetTranscript]);
 
-  // Manual start/stop listening
   const startListening = useCallback(() => {
     setError(null);
     startSpeech();
@@ -246,11 +359,11 @@ export function useVoiceAgent(): VoiceAgentHook {
     stopSpeech();
   }, [stopSpeech]);
 
-  // Clear conversation history
   const clearConversation = useCallback(() => {
     setConversation([]);
     setCurrentResponse("");
     resetTranscript();
+    lastContentRef.current = "";
   }, [resetTranscript]);
 
   return {
