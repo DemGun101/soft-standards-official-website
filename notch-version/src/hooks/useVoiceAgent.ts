@@ -213,7 +213,8 @@ export function useVoiceAgent(scrollContextInput?: ScrollContextInput): VoiceAge
           router.push(command.target);
         }
       } else if (command.type === "book" && command.target) {
-        window.open(command.target, "_blank", "noopener,noreferrer");
+        // Navigate to booking page within the app
+        router.push(command.target);
       } else if (command.type === "scroll" && command.target) {
         if (scrollContextRef.current?.scrollToSection) {
           scrollContextRef.current.scrollToSection(command.target);

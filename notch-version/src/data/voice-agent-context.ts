@@ -26,8 +26,9 @@ export const companyContext = {
     { label: "About", path: "/about" },
     { label: "Blog", path: "/blog" },
     { label: "Careers", path: "/careers" },
+    { label: "Book a Call", path: "/book" },
   ],
-  bookingUrl: "https://calendly.com/contact-softstandards/30min",
+  bookingUrl: "/book",
 };
 
 export interface ScrollContext {

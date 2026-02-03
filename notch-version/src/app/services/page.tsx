@@ -203,9 +203,7 @@ export default function ServicesPage() {
               Let&apos;s talk about what we can build together.
             </p>
             <Link
-              href="https://calendly.com/contact-softstandards/30min"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/book"
               className="inline-flex items-center gap-2.5 px-9 py-4 bg-white text-purple-700 rounded-full text-base font-semibold transition-all shadow-[0_4px_20px_rgba(0,0,0,0.1)] hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.15)] relative"
             >
               Get in Touch

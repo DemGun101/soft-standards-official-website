@@ -340,9 +340,7 @@ export default function Home() {
           <div ref={heroCTARef} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <MagneticButton>
               <Link
-                href="https://calendly.com/contact-softstandards/30min"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/book"
                 className="hero-cta-btn group inline-flex items-center gap-2.5 px-8 py-4 bg-gray-900 text-white rounded-full text-base font-semibold transition-all shadow-[0_4px_20px_rgba(15,23,42,0.2)] hover:bg-purple-600 hover:shadow-[0_8px_30px_rgba(124,58,237,0.4)]"
               >
                 See If You Qualify
@@ -835,9 +833,7 @@ export default function Home() {
           <ScrollReveal delay={0.4} className="text-center">
             <MagneticButton strength={0.2}>
               <Link
-                href="https://calendly.com/contact-softstandards/30min"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/book"
                 className="group inline-flex items-center gap-2.5 px-10 py-5 bg-white text-gray-900 rounded-full text-lg font-semibold transition-all hover:bg-purple-500 hover:text-white hover:shadow-[0_8px_30px_rgba(124,58,237,0.4)]"
               >
                 Book Your Free Growth Audit

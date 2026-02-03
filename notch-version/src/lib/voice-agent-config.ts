@@ -54,10 +54,11 @@ export const voiceAgentConfig = {
     { path: "/about", keywords: ["about", "who", "team", "company"] },
     { path: "/blog", keywords: ["blog", "articles", "posts", "news"] },
     { path: "/careers", keywords: ["careers", "jobs", "hiring", "work with us"] },
+    { path: "/book", keywords: ["book", "schedule", "call", "appointment", "meeting", "calendar"] },
   ],
 
-  // Calendly booking URL
-  bookingUrl: "https://calendly.com/contact-softstandards/30min",
+  // Booking page URL
+  bookingUrl: "/book",
 } as const;
 
 export type VoiceAgentStatus = "idle" | "listening" | "processing" | "speaking" | "error";
