@@ -7,8 +7,16 @@ import { CheckCircleIcon, SunIcon, EyeIcon, CheckIcon, ArrowRightIcon } from '@/
 import HeroSection from '@/components/HeroSection';
 
 export const metadata: Metadata = {
-  title: 'About — Soft Standards Inc.',
-  description: 'A close-knit team of developers, designers, and strategists who believe great digital work starts with genuinely understanding your story.',
+  title: 'About Us — Our Team & Story',
+  description: 'Meet the team behind Soft Standards Inc. — developers, designers, and strategists with 4+ years of experience and 40+ projects delivered. Founded in 2022, we blend AI with authentic brand storytelling.',
+  keywords: ['about soft standards', 'digital marketing team', 'marketing agency story', 'AI marketing experts'],
+  openGraph: {
+    title: 'About Soft Standards Inc. — Our Team & Story',
+    description: 'Meet the team behind 40+ successful projects. Developers, designers, and strategists who blend AI with authentic brand storytelling.',
+    type: 'website',
+    url: 'https://softstandards.net/about',
+  },
+  alternates: { canonical: 'https://softstandards.net/about' },
 };
 
 const values = [

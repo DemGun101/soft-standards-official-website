@@ -16,8 +16,16 @@ import {
 import type { IconType } from 'react-icons';
 
 export const metadata: Metadata = {
-  title: 'Services — Soft Standards Inc.',
-  description: 'From strategy to execution, we deliver end-to-end digital solutions that transform businesses and create lasting impact.',
+  title: 'Services — Web Development, AI Automation, Brand Strategy & More',
+  description: 'Full-service digital agency offering web development, app development, UI/UX design, brand strategy, digital marketing, and AI automation. Modern tech stacks, conversion-optimized results.',
+  keywords: ['web development services', 'app development agency', 'UI/UX design services', 'brand strategy agency', 'digital marketing services', 'AI automation services', 'SaaS development'],
+  openGraph: {
+    title: 'Our Services — Soft Standards Inc.',
+    description: 'Web development, app development, UI/UX design, brand strategy, digital marketing, and AI automation. End-to-end digital solutions.',
+    type: 'website',
+    url: 'https://softstandards.net/services',
+  },
+  alternates: { canonical: 'https://softstandards.net/services' },
 };
 
 const DexieIcon: IconType = (props) => (
@@ -252,6 +260,58 @@ export default function ServicesPage() {
           </div>
         </RevealOnScroll>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What services does Soft Standards offer?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We offer six core services: Brand Strategy, Web Development, UI/UX Design, Digital Marketing, Mobile App Development, and AI Automation & Agents. Each service is tailored to your business needs.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What tech stack do you use for web development?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We use modern frameworks including React, Next.js, TypeScript, Tailwind CSS, Three.js, and GSAP for animations. Our sites are fast, accessible, and conversion-optimized.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do you build mobile apps for both iOS and Android?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, we build both native and cross-platform mobile apps using React Native and Flutter. We handle everything from concept to App Store and Play Store submission.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What kind of AI automation do you provide?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We build custom AI chatbots, voice agents, workflow automation, and intelligent agents that integrate with your existing tools. From basic automation to advanced ML-powered solutions.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How long does a typical project take?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Timelines vary by scope. A website typically takes 2-4 weeks, an app 4-8 weeks, and brand strategy 2-3 weeks. We also offer rush delivery at 50% faster for an additional 25% of project cost.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
     </>
   );
 }

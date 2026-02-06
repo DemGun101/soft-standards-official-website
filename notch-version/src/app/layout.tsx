@@ -7,14 +7,51 @@ import VoiceAgentWrapper from "@/components/voice-agent/VoiceAgentWrapper";
 import CookieConsent from "@/components/CookieConsent";
 
 export const metadata: Metadata = {
-  title: "Soft Standards Inc. — AI-Powered Marketing Excellence",
-  description: "Where AI meets marketing excellence. We bridge cutting-edge technology with authentic brand storytelling to create digital experiences that convert strangers into loyal advocates.",
+  metadataBase: new URL("https://softstandards.net"),
+  title: {
+    default: "Soft Standards Inc. — AI-Powered Digital Marketing Agency",
+    template: "%s | Soft Standards Inc.",
+  },
+  description: "AI-powered digital marketing agency specializing in web development, brand strategy, UI/UX design, app development, and marketing automation. 40+ projects delivered with 97% client retention.",
+  keywords: ["digital marketing agency", "AI marketing", "web development agency", "brand strategy", "UI/UX design", "app development", "marketing automation", "SaaS marketing"],
+  authors: [{ name: "Soft Standards Inc." }],
+  creator: "Soft Standards Inc.",
+  publisher: "Soft Standards Inc.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
       { url: "/images/logo-icon.svg", type: "image/svg+xml" },
     ],
     apple: "/images/logo-icon.svg",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://softstandards.net",
+    siteName: "Soft Standards Inc.",
+    title: "Soft Standards Inc. — AI-Powered Digital Marketing Agency",
+    description: "AI-powered digital marketing agency specializing in web development, brand strategy, UI/UX design, app development, and marketing automation.",
+    images: [{ url: "/images/logo-icon.svg", width: 1200, height: 630, alt: "Soft Standards Inc." }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Soft Standards Inc. — AI-Powered Digital Marketing Agency",
+    description: "AI-powered digital marketing agency. Web development, brand strategy, UI/UX design, app development & marketing automation.",
+    images: ["/images/logo-icon.svg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://softstandards.net",
   },
 };
 
@@ -31,6 +68,37 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body className="font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Soft Standards Inc.",
+              url: "https://softstandards.net",
+              logo: "https://softstandards.net/images/logo-icon.svg",
+              description: "AI-powered digital marketing agency specializing in web development, brand strategy, UI/UX design, app development, and marketing automation.",
+              email: "contact@softstandards.net",
+              foundingDate: "2022",
+              numberOfEmployees: { "@type": "QuantitativeValue", minValue: 6 },
+              areaServed: "Worldwide",
+              knowsAbout: ["AI Automation", "Brand Strategy", "Web Development", "UI/UX Design", "Digital Marketing", "App Development"],
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Digital Services",
+                itemListElement: [
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web Development", description: "High-performance websites built with modern tech stacks" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "App Development", description: "Native and cross-platform mobile applications" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "UI/UX Design", description: "User-centered design backed by research and testing" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Brand Strategy", description: "Brand identities that cut through the noise" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Digital Marketing", description: "Data-driven campaigns that amplify reach and convert" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI Automation", description: "Custom AI agents and workflow automation" } },
+                ],
+              },
+              sameAs: [],
+            }),
+          }}
+        />
         <SmoothScroll>
           <PageTransition>
             <Navbar />

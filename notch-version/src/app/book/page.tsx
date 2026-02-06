@@ -2,8 +2,16 @@ import { Metadata } from 'next';
 import HeroSection from '@/components/HeroSection';
 
 export const metadata: Metadata = {
-  title: 'Book a Call — Soft Standards Inc.',
-  description: 'Schedule a free growth audit with our team. Let\'s discuss how we can help build your marketing machine.',
+  title: 'Book a Free Growth Audit — 15 Min Call',
+  description: 'Schedule a free 15-minute growth audit with Soft Standards. No pitch, just clarity on how AI-powered marketing can scale your business. Book your slot today.',
+  keywords: ['free marketing consultation', 'growth audit', 'book marketing call', 'digital marketing consultation'],
+  openGraph: {
+    title: 'Book a Free Growth Audit — Soft Standards Inc.',
+    description: 'Schedule a free 15-minute growth audit. No pitch, just clarity on what\'s possible for your business.',
+    type: 'website',
+    url: 'https://softstandards.net/book',
+  },
+  alternates: { canonical: 'https://softstandards.net/book' },
 };
 
 export default function BookPage() {
