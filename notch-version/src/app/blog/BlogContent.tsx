@@ -9,12 +9,12 @@ import type { BlogPost } from '@/types/blog';
 import HeroSection from '@/components/HeroSection';
 
 const fallbackBlogPosts: BlogPost[] = [
-  { id: 1, category: 'development', title: 'How AI Automation Is Changing Small Business Marketing', excerpt: 'AI isn\'t just for enterprise anymore. We explore how small and mid-size businesses can use automation to compete with bigger players — without losing their personal touch.', author: 'Akash Ahmed', date: 'Jan 24', gradient: 'from-indigo-100 to-indigo-200' },
-  { id: 2, category: 'design', title: 'The Art of Visual Storytelling in Brand Design', excerpt: 'Great brands don\'t just look good — they tell a story. How we approach visual identity to create designs that resonate emotionally with your audience.', author: 'Alishba Ahmed', date: 'Jan 20', gradient: 'from-purple-100 to-purple-200' },
-  { id: 3, category: 'strategy', title: 'From First Call to Launch: Our Client Process', excerpt: 'A transparent look at how we work with clients from initial discovery through delivery — and why communication matters more than tools.', author: 'Muhammad Furqan', date: 'Jan 16', gradient: 'from-amber-100 to-amber-200' },
-  { id: 4, category: 'design', title: 'Why Clean Design Wins Every Time', excerpt: 'Minimalism isn\'t about doing less — it\'s about being intentional. How we use white space, typography, and restraint to create interfaces that breathe.', author: 'Hashir Saleem', date: 'Jan 12', gradient: 'from-pink-100 to-pink-200' },
-  { id: 5, category: 'development', title: 'Building Fast Websites That Actually Convert', excerpt: 'Speed matters, but conversion matters more. Our approach to building sites that load in under 2 seconds and guide visitors toward action.', author: 'Akash Ahmed', date: 'Jan 8', gradient: 'from-violet-100 to-violet-200' },
-  { id: 6, category: 'culture', title: 'Growing a Remote Team That Actually Works', excerpt: 'How we built a distributed team across different cities without losing our collaborative spirit, work quality, or sense of belonging.', author: 'Zain-ul-Abedeen', date: 'Jan 4', gradient: 'from-gray-100 to-gray-200' },
+  { id: 1, category: 'development', title: 'How AI Automation Is Changing Small Business Marketing', excerpt: 'AI isn\'t just for enterprise anymore. We explore how small and mid-size businesses can use automation to compete with bigger players — without losing their personal touch.', author: 'Akash Ahmed', date: 'Jan 24, 2025', gradient: 'from-indigo-100 to-indigo-200' },
+  { id: 2, category: 'design', title: 'The Art of Visual Storytelling in Brand Design', excerpt: 'Great brands don\'t just look good — they tell a story. How we approach visual identity to create designs that resonate emotionally with your audience.', author: 'Alishba Ahmed', date: 'Jan 20, 2025', gradient: 'from-purple-100 to-purple-200' },
+  { id: 3, category: 'strategy', title: 'From First Call to Launch: Our Client Process', excerpt: 'A transparent look at how we work with clients from initial discovery through delivery — and why communication matters more than tools.', author: 'Muhammad Furqan', date: 'Jan 16, 2025', gradient: 'from-amber-100 to-amber-200' },
+  { id: 4, category: 'design', title: 'Why Clean Design Wins Every Time', excerpt: 'Minimalism isn\'t about doing less — it\'s about being intentional. How we use white space, typography, and restraint to create interfaces that breathe.', author: 'Hashir Saleem', date: 'Jan 12, 2025', gradient: 'from-pink-100 to-pink-200' },
+  { id: 5, category: 'development', title: 'Building Fast Websites That Actually Convert', excerpt: 'Speed matters, but conversion matters more. Our approach to building sites that load in under 2 seconds and guide visitors toward action.', author: 'Akash Ahmed', date: 'Jan 8, 2025', gradient: 'from-violet-100 to-violet-200' },
+  { id: 6, category: 'culture', title: 'Growing a Remote Team That Actually Works', excerpt: 'How we built a distributed team across different cities without losing our collaborative spirit, work quality, or sense of belonging.', author: 'Zain-ul-Abedeen', date: 'Jan 4, 2025', gradient: 'from-gray-100 to-gray-200' },
 ];
 
 const tags = ['AI Automation', 'Web Development', 'Brand Design', 'UX', 'Marketing Strategy', 'Culture', 'Next.js', 'React', 'Graphic Design', 'Client Success', 'Performance', 'Typography', 'Remote Work', 'Business Growth'];
@@ -58,7 +58,7 @@ export default function BlogContent() {
 
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thanks for subscribing! (This is a demo)');
+    alert('Thanks for subscribing!');
   };
 
   return (

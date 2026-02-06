@@ -58,7 +58,7 @@ export default function AboutPage() {
           <div className="flex items-center justify-center gap-8 sm:gap-12">
             <div className="text-center">
               <div className="text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold tracking-[-0.03em] text-gray-900">
-                3<span className="text-purple-500">+</span>
+                4<span className="text-purple-500">+</span>
               </div>
               <div className="text-[0.85rem] text-gray-500 font-medium mt-1">Years</div>
             </div>

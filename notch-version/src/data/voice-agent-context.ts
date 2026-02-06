@@ -11,12 +11,12 @@ export const companyContext = {
     location: "New York, NY",
   },
   services: [
-    { name: "Web Development", description: "Custom websites and APIs" },
-    { name: "Digital Marketing", description: "SEO, PPC, social media" },
-    { name: "Brand Identity", description: "Logos and brand guidelines" },
-    { name: "UI/UX Design", description: "User research and prototyping" },
-    { name: "Mobile Apps", description: "iOS and Android apps" },
-    { name: "Content Strategy", description: "Copywriting and content marketing" },
+    { name: "Brand Strategy", description: "Positioning, messaging, visual systems" },
+    { name: "Web Development", description: "Sites, apps, e-commerce, CMSs" },
+    { name: "UI/UX Design", description: "Research, wireframes, design systems" },
+    { name: "Digital Marketing", description: "SEO, PPC, email, content" },
+    { name: "Mobile Apps", description: "iOS, Android, React Native, Flutter" },
+    { name: "SEO & Analytics", description: "Organic growth, data analysis" },
   ],
   navigation: [
     { label: "Home", path: "/" },

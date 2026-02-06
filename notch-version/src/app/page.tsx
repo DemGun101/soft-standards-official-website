@@ -360,7 +360,7 @@ export default function Home() {
           {/* Trust Bar */}
           <div className="hero-cta-btn flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
             <span className="flex items-center gap-2">
-              <span className="font-bold text-gray-900">150+</span> systems built
+              <span className="font-bold text-gray-900">40+</span> systems built
             </span>
             <span className="hidden sm:inline text-gray-300">•</span>
             <span className="flex items-center gap-2">
@@ -512,7 +512,7 @@ export default function Home() {
 
           <div className="ai-text-3">
             <p className="text-gray-400 text-lg mb-6">
-              That&apos;s not a fantasy. That&apos;s a system. And we&apos;ve built it <span className="text-white font-bold">150+ times.</span>
+              That&apos;s not a fantasy. That&apos;s a system. And we&apos;ve built it <span className="text-white font-bold">40+ times.</span>
             </p>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 max-w-[500px] mx-auto">
@@ -665,7 +665,7 @@ export default function Home() {
                 <span className="stat-number" data-target="312">0</span>
                 <span className="text-purple-500">%</span>
               </div>
-              <div className="text-sm md:text-base text-gray-500 font-medium">Avg. ROI in 90 days</div>
+              <div className="text-sm md:text-base text-gray-500 font-medium">Average ROI in 90 days</div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2} className="bg-white rounded-2xl p-6 md:p-8 text-center shadow-[0_4px_24px_rgba(15,23,42,0.06)] border border-gray-100">
@@ -673,7 +673,7 @@ export default function Home() {
                 <span className="stat-number" data-target="67">0</span>
                 <span className="text-purple-500">%</span>
               </div>
-              <div className="text-sm md:text-base text-gray-500 font-medium">Avg. drop in cost per lead</div>
+              <div className="text-sm md:text-base text-gray-500 font-medium">Average drop in cost per lead</div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.3} className="bg-white rounded-2xl p-6 md:p-8 text-center shadow-[0_4px_24px_rgba(15,23,42,0.06)] border border-gray-100">
@@ -841,7 +841,7 @@ export default function Home() {
               </Link>
             </MagneticButton>
             <p className="text-gray-500 text-sm mt-6">
-              Limited to 4 new clients per month. Currently accepting applications for February.
+              Limited to 4 new clients per month. Currently accepting applications.
             </p>
           </ScrollReveal>
 

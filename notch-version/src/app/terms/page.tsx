@@ -820,7 +820,7 @@ export default function TermsOfServicePage() {
             bound by these Terms of Service.
           </p>
           <p className="text-[0.95rem] text-gray-500 leading-[1.8] italic">
-            &copy; 2026 Soft Standards Inc. All rights reserved.
+            &copy; {new Date().getFullYear()} Soft Standards Inc. All rights reserved.
           </p>
         </div>
       </section>

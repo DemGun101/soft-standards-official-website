@@ -3,12 +3,9 @@
 import { useVoiceAgentContext } from "@/providers/VoiceAgentProvider";
 
 export default function VoiceAgentTrigger() {
-  const { isOpen, open, status } = useVoiceAgentContext();
-
-  console.log("[VoiceAgentTrigger] isOpen:", isOpen, "status:", status);
+  const { isOpen, open } = useVoiceAgentContext();
 
   const handleClick = () => {
-    console.log("[VoiceAgentTrigger] clicked, calling open()");
     open();
   };
 

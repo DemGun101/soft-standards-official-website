@@ -12,7 +12,7 @@ This is the **Notch Version** of the Soft Standards official website — a Next.
 - Digital Marketing
 - App Development
 
-**Key Stats:** 120+ Projects Delivered | 98% Client Satisfaction | 8+ Years Experience
+**Key Stats:** 40+ Projects Delivered | 97% Client Retention | 4+ Years Experience
 
 ---
 

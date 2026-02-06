@@ -226,7 +226,7 @@ export default function HeroSection({
       {showScrollIndicator && (
         <div
           ref={scrollRef}
-          className={`absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 ${isDark ? 'text-gray-400' : 'text-gray-400'}`}
+          className={`absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}
           style={{ opacity: 0, willChange: 'transform, opacity' }}
         >
           <span className="text-xs font-medium tracking-wider uppercase">Scroll to explore</span>

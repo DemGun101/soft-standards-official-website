@@ -2,10 +2,11 @@
 
 import Link from 'next/link';
 import SoftStandardsLogoIcon from './SoftStandardsLogoIcon';
-import { XIcon, FacebookIcon } from './Icons';
+import { InstagramIcon, LinkedInIcon } from './Icons';
 
 const quickLinks = [
   { href: '/services', label: 'Services' },
+  { href: '/pricing', label: 'Pricing' },
   { href: '/case-studies', label: 'Case Studies' },
   { href: '/about', label: 'About' },
   { href: '/blog', label: 'Blog' },
@@ -17,11 +18,13 @@ const serviceLinks = [
   { href: '/services', label: 'Web Development' },
   { href: '/services', label: 'UI/UX Design' },
   { href: '/services', label: 'Digital Marketing' },
+  { href: '/services', label: 'Mobile Apps' },
+  { href: '/services', label: 'AI Automation' },
 ];
 
 const socialLinks = [
-  { href: 'https://x.com/softstandards', label: 'X', icon: XIcon },
-  { href: 'https://www.facebook.com/softstandards', label: 'Facebook', icon: FacebookIcon },
+  { href: 'https://instagram.com/softstandards', label: 'Instagram', icon: InstagramIcon },
+  { href: 'https://www.linkedin.com/company/soft-standards-inc/', label: 'LinkedIn', icon: LinkedInIcon },
 ];
 
 export default function Footer() {
@@ -95,7 +98,7 @@ export default function Footer() {
       {/* Bottom */}
       <div className="flex flex-col items-center max-w-[1400px] mx-auto py-6 text-[0.85rem] text-gray-500 gap-4">
         <div className="flex flex-col md:flex-row items-center justify-between w-full gap-4">
-          <span>&copy; 2026 Soft Standards Inc. All rights reserved.</span>
+          <span>&copy; {new Date().getFullYear()} Soft Standards Inc. All rights reserved.</span>
           <div className="flex items-center gap-4">
             {socialLinks.map((link) => {
               const Icon = link.icon;

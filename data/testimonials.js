@@ -2,7 +2,7 @@ export const testimonials = [
   {
     id: 1,
     quote:
-      "Nexus transformed our digital presence completely. Our conversions increased by 150% within three months of launching the new platform.",
+      "Soft Standards transformed our digital presence completely. Our conversions increased by 150% within three months of launching the new platform.",
     author: "Sarah Chen",
     role: "CEO",
     company: "Aurora Finance",
@@ -20,7 +20,7 @@ export const testimonials = [
   {
     id: 3,
     quote:
-      "Professional, creative, and incredibly responsive. Nexus is our go-to partner for all things digital. They deliver excellence every time.",
+      "Professional, creative, and incredibly responsive. Soft Standards is our go-to partner for all things digital. They deliver excellence every time.",
     author: "Elena Rodriguez",
     role: "Marketing Director",
     company: "Cipher Security",

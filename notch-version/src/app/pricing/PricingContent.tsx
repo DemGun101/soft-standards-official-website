@@ -11,7 +11,7 @@ import {
 } from '@/components/Icons';
 import HeroSection from '@/components/HeroSection';
 
-const CALENDLY_URL = 'https://calendly.com/contact-softstandards/30min';
+const BOOKING_URL = '/book';
 
 // Service pricing data
 const services = [
@@ -208,7 +208,7 @@ const faqs = [
   },
   {
     question: 'Do you offer rush delivery?',
-    answer: 'Yes! 50% faster delivery is available for +25% of the project cost. Contact us to discuss your timeline.',
+    answer: 'Yes! 50% faster delivery is available for an additional 25% of the project cost. Contact us to discuss your timeline.',
   },
   {
     question: 'Can I combine services for a discount?',
@@ -313,9 +313,7 @@ export default function PricingContent() {
 
                         <MagneticButton strength={0.2}>
                           <Link
-                            href={CALENDLY_URL}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href={BOOKING_URL}
                             className={`w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-[0.9rem] font-semibold transition-all ${
                               tier.popular
                                 ? 'bg-purple-500 text-white hover:bg-purple-600'
@@ -378,9 +376,7 @@ export default function PricingContent() {
                     <p className="text-[1.8rem] font-extrabold text-gray-900">{bundle.price}</p>
                     <MagneticButton strength={0.2}>
                       <Link
-                        href={CALENDLY_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href={BOOKING_URL}
                         className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white rounded-full text-[0.9rem] font-semibold transition-all hover:bg-purple-600"
                       >
                         Get Bundle
@@ -501,9 +497,7 @@ export default function PricingContent() {
             </p>
             <MagneticButton strength={0.2}>
               <Link
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={BOOKING_URL}
                 className="inline-flex items-center gap-2.5 px-9 py-4 bg-white text-purple-700 rounded-full text-base font-semibold transition-all shadow-[0_4px_20px_rgba(0,0,0,0.1)] hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.15)] relative"
               >
                 Book a Free Consultation

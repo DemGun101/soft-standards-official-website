@@ -156,7 +156,7 @@ const caseStudies: CaseStudy[] = [
       { value: '92%', label: 'User Retention' },
     ],
     technologies: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe', 'AWS'],
-    link: 'https://www.dev.chromosengine.com/',
+    link: 'https://www.chromosengine.com/',
   },
   {
     id: 8,
