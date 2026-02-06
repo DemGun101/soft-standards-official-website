@@ -4,6 +4,7 @@ import Card, { CardIcon, CardTitle, CardDescription } from '@/components/Card';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import { SectionHeader } from '@/components/Section';
 import { CheckCircleIcon, SunIcon, EyeIcon, CheckIcon, ArrowRightIcon } from '@/components/Icons';
+import HeroSection from '@/components/HeroSection';
 
 export const metadata: Metadata = {
   title: 'About — Soft Standards Inc.',
@@ -44,41 +45,37 @@ const awards = [
 export default function AboutPage() {
   return (
     <>
-      {/* Hero Split */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-[1200px] mx-auto pt-[clamp(140px,18vw,200px)] pb-[clamp(60px,8vw,100px)] px-[clamp(20px,5vw,80px)]">
-        <div className="text-center lg:text-left">
-          <h1 className="text-[clamp(2.8rem,7vw,5rem)] font-extrabold tracking-[-0.04em] leading-[1.05] mb-6">
-            We are <span className="text-gradient">Soft Standards Inc.</span>
-          </h1>
-          <p className="text-[clamp(1.05rem,2vw,1.25rem)] text-gray-500 max-w-[560px] mx-auto lg:mx-0 leading-[1.7] mb-10">
-            A close-knit team of developers, designers, and strategists who believe great digital work starts with genuinely understanding your story. We&apos;ve been growing steadily since 2022 — and we&apos;re just getting started.
-          </p>
+      <HeroSection
+        title={<>We are <span className="text-gradient">Soft Standards Inc.</span></>}
+        subtitle="A close-knit team of developers, designers, and strategists who believe great digital work starts with genuinely understanding your story."
+        badge="Our Story"
+        background="light"
+      />
 
-          <div className="flex items-center justify-center lg:justify-start gap-8 sm:gap-12">
-            <div className="text-center lg:text-left">
+      {/* Stats Bar */}
+      <section className="px-[clamp(20px,5vw,80px)] -mt-6 pb-[clamp(40px,6vw,80px)]">
+        <RevealOnScroll>
+          <div className="flex items-center justify-center gap-8 sm:gap-12">
+            <div className="text-center">
               <div className="text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold tracking-[-0.03em] text-gray-900">
                 3<span className="text-purple-500">+</span>
               </div>
               <div className="text-[0.85rem] text-gray-500 font-medium mt-1">Years</div>
             </div>
             <div className="w-px h-12 bg-gray-100" />
-            <div className="text-center lg:text-left">
+            <div className="text-center">
               <div className="text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold tracking-[-0.03em] text-gray-900">
                 40<span className="text-purple-500">+</span>
               </div>
               <div className="text-[0.85rem] text-gray-500 font-medium mt-1">Projects</div>
             </div>
             <div className="w-px h-12 bg-gray-100" />
-            <div className="text-center lg:text-left">
+            <div className="text-center">
               <div className="text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold tracking-[-0.03em] text-gray-900">6</div>
               <div className="text-[0.85rem] text-gray-500 font-medium mt-1">Team Members</div>
             </div>
           </div>
-        </div>
-
-        <div className="aspect-[4/3] bg-gradient-to-br from-purple-100 to-purple-400 rounded-[36px] relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[rgba(124,58,237,0.3)] to-transparent rounded-[36px]" />
-        </div>
+        </RevealOnScroll>
       </section>
 
       {/* Mission & Values */}

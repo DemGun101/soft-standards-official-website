@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { SmoothScroll, PageTransition } from "@/components/animations";
 import VoiceAgentWrapper from "@/components/voice-agent/VoiceAgentWrapper";
+import CookieConsent from "@/components/CookieConsent";
 
 export const metadata: Metadata = {
   title: "Soft Standards Inc. — AI-Powered Marketing Excellence",
@@ -34,6 +35,7 @@ export default function RootLayout({
           </PageTransition>
         </SmoothScroll>
         <VoiceAgentWrapper />
+        <CookieConsent />
       </body>
     </html>
   );

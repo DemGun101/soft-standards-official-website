@@ -1,0 +1,441 @@
+
+SOFT STANDARDS INC.
+www.softstandards.net
+ 
+Website Debug/Fix List
+Legal Requirements, Technical Audit & Portfolio Updates
+
+New York Corporation • Filed 12/05/2024
+DOS ID: 7479764 • Filing #241205005106
+Queens County, State of New York
+
+Prepared: February 2026
+Developer Reference Document — For Internal Use
+
+Important: Entity Classification Correction
+CORRECTION NOTICE
+Per the uploaded Certificate of Incorporation (NYS Department of State), this entity is registered as SOFT STANDARDS INC. — a New York Corporation incorporated under Section 402 of the Business Corporation Law, NOT an LLC.
+All legal pages (Terms of Service, Privacy Policy) must reference the correct entity type: “Soft Standards Inc., a New York corporation.” Governing law must cite New York State.
+
+
+Field
+Details
+Entity Name
+SOFT STANDARDS INC.
+Entity Type
+New York Corporation (Business Corporation Law §402)
+Filing Date
+December 05, 2024
+Filing Number
+241205005106
+DOS ID
+7479764
+County
+Queens, New York
+Stock
+200 shares, no par value
+Incorporator
+Muhammad Furqan
+Governing Law
+State of New York
+
+
+
+Section 1: Hero Section — Animation & Consistency Fixes
+1.1 — Current Issue: “Scroll Up” Animation
+The hero section currently displays a “scroll up” animation/text. This is incorrect UX behavior and needs to be replaced with a more appropriate, engaging animation.
+Required Changes:
+[CRITICAL] Remove the current “scroll up” text/animation from the hero section entirely.
+[CRITICAL] Replace with a scroll-down indicator (animated downward-pointing chevron or arrow).
+[HIGH] Add a smooth entrance animation for hero content (fade-in, slide-up, or staggered text reveal).
+[HIGH] Ensure the hero animation is consistent across ALL pages of the site — same height, same animation style, same timing.
+[MEDIUM] Implement scroll-triggered animations using CSS (Intersection Observer) or a library like GSAP/Framer Motion.
+Suggested Animation Approaches:
+Animation Type
+Best For
+Implementation
+Subtle parallax
+Depth and visual richness
+CSS background-attachment or GSAP ScrollTrigger
+Fade-in with stagger
+Clean, modern feel
+CSS @keyframes + animation-delay or Framer Motion
+Animated gradient BG
+Bold, contemporary look
+CSS gradient animation with hue-rotate
+Text typewriter effect
+Dynamic first impression
+JS-based typing animation (Typed.js)
+Lottie animation
+Complex custom motion
+Lottie-web library with After Effects export
+Scroll-reveal sections
+Progressive disclosure
+Intersection Observer API + CSS transitions
+
+Hero Consistency Requirements:
+All pages must use the same hero component with configurable title, subtitle, and background.
+Consistent hero height: minimum 60vh on desktop, 50vh on mobile.
+Same animation timing across all pages (recommend 0.6s–1.2s ease-out).
+Scroll indicator positioned identically on every page.
+Use GPU-accelerated CSS properties only (transform, opacity) to prevent jank.
+Add will-change: transform, opacity to animated elements.
+Ensure animation respects prefers-reduced-motion media query for accessibility.
+
+
+Section 2: Complete Technical Audit Checklist
+2.1 — Performance
+Run Google PageSpeed Insights — target 90+ mobile, 95+ desktop
+Check Core Web Vitals: LCP < 2.5s, FID < 100ms, CLS < 0.1
+Convert all images to WebP format with fallbacks
+Implement lazy loading on all below-fold images
+Minify CSS, JS, and HTML for production
+Enable GZIP or Brotli compression on server
+Set proper browser caching headers (Cache-Control, ETag)
+Eliminate render-blocking resources (defer non-critical JS, inline critical CSS)
+Audit and remove unused CSS/JS
+2.2 — Mobile Responsiveness
+Test on iOS Safari, Android Chrome, Samsung Internet, and Firefox Mobile
+Ensure touch targets are minimum 44x44px (Apple HIG / WCAG)
+Minimum 16px font size for body text (prevents iOS auto-zoom)
+No horizontal scrolling on any viewport width
+Hamburger menu fully functional with smooth open/close animation
+All forms are mobile-friendly with appropriate input types
+Verify viewport meta tag: <meta name="viewport" content="width=device-width, initial-scale=1">
+2.3 — Accessibility (WCAG 2.1 AA)
+All images have descriptive alt text
+Color contrast ratio: 4.5:1 normal text, 3:1 large text
+All interactive elements keyboard-accessible (Tab, Enter, Escape)
+Visible focus states on all focusable elements
+Proper heading hierarchy (H1 → H2 → H3, no skipping)
+ARIA labels on interactive components (buttons, nav, modals)
+Skip navigation link present
+Form inputs have associated <label> elements
+Error messages descriptive and announced to screen readers
+2.4 — SEO
+Unique title tags per page (50–60 characters)
+Meta descriptions per page (150–160 characters)
+One H1 tag per page, unique and descriptive
+XML sitemap created and submitted to Google Search Console
+robots.txt properly configured
+Canonical tags implemented to prevent duplicate content
+Schema.org structured data: Organization, LocalBusiness, Service
+Open Graph tags for Facebook/LinkedIn sharing
+Twitter Card tags for X/Twitter sharing
+2.5 — Security
+HTTPS enabled site-wide, no mixed content warnings
+Security headers: Content-Security-Policy, X-Frame-Options, X-Content-Type-Options
+Contact forms protected with reCAPTCHA or hCaptcha
+No sensitive data (API keys, tokens) in client-side code
+All dependencies updated to latest secure versions
+2.6 — Required Site Elements
+Favicon set (16x16, 32x32, 180x180 Apple Touch Icon)
+Contact information easily accessible from every page
+Professional About page with company info
+Services/offerings clearly presented
+Footer with navigation, contact info, and legal links
+Privacy Policy page (see Section 3)
+Terms of Service page (see Section 4)
+Cookie consent banner (especially for EU/international visitors)
+
+Section 3: Privacy Policy — Legal Requirements
+A Privacy Policy is LEGALLY REQUIRED if your website collects any personal information (including via contact forms, analytics, cookies, or email signups). As a New York Corporation, Soft Standards Inc. must comply with applicable federal, state, and international privacy laws.
+3.1 — Universal Requirements (All U.S. Websites)
+Element
+Description
+Required By
+What data is collected
+All categories of personal information
+All privacy laws
+How data is collected
+Direct (forms), automatic (cookies), third-party
+All privacy laws
+Purpose of collection
+Specific, stated reasons for each data type
+All privacy laws
+Third-party sharing
+Who receives data and why
+All privacy laws
+Data retention periods
+How long each category is kept
+CCPA, GDPR, States
+User rights
+How to access, delete, or correct data
+All privacy laws
+Contact information
+Privacy inquiry contact method
+All privacy laws
+Effective/update dates
+When policy was last updated
+All privacy laws
+
+3.2 — CCPA/CPRA Compliance (California)
+Applies if ANY one of the following is true: annual gross revenue over $26.6M; process data of 100,000+ California residents annually; or derive 50%+ revenue from selling/sharing personal data.
+Required CCPA Elements:
+Categories of personal information collected in the past 12 months.
+Sensitive personal information disclosure (separate section).
+Sources of personal information.
+Business/commercial purposes for collection.
+Categories of third parties (distinguish: disclosures vs. sales vs. sharing).
+“Do Not Sell or Share My Personal Information” link — must be conspicuous and homepage-accessible.
+“Limit Use of Sensitive Personal Information” link — required if collecting sensitive data.
+Global Privacy Control (GPC) recognition — must honor browser opt-out signals.
+Consumer rights section: right to know, delete, correct, opt-out, non-discrimination.
+Penalties: $2,500/unintentional violation; $7,500/intentional violation or involving minors; up to $750/incident for data breaches (private right of action).
+3.3 — COPPA Compliance (Children Under 13)
+Applies if website is directed to children under 13 or you have actual knowledge of collecting data from children under 13. Requires verifiable parental consent BEFORE collection.
+Penalties: Up to $53,088 per violation (FTC enforcement).
+3.4 — CAN-SPAM Act (Email Marketing)
+Required for ALL commercial emails sent by or on behalf of Soft Standards Inc.:
+Accurate header information (From, To, routing must identify sender correctly).
+Honest subject lines reflecting email content.
+Clear identification as advertisement.
+Valid physical postal address included in every email.
+One-click unsubscribe mechanism that works for at least 30 days.
+Honor opt-out requests within 10 business days.
+Penalties: Up to $53,088 per email in violation.
+3.5 — New York State Requirements
+As a New York Corporation, additional state-level requirements include:
+NY SHIELD Act: Requires “reasonable safeguards” to protect private information of NY residents. Must implement data security program with administrative, technical, and physical safeguards.
+NY General Business Law §899-aa: Data breach notification to affected NY residents “in the most expedient time possible” and to the NY Attorney General, DFS, and Division of State Police.
+NY Department of Financial Services (23 NYCRR 500): If providing financial services, must comply with cybersecurity regulations.
+3.6 — GDPR Compliance (International Users)
+Applies if you offer services to EU/EEA residents, monitor their behavior (via cookies/analytics), or have employees in the EU. Key requirements:
+Legal basis for processing (consent, contract, legitimate interest, etc.).
+Data subject rights: access, rectification, erasure, restriction, portability, objection.
+International data transfer mechanisms (EU-US Data Privacy Framework, SCCs, or BCRs).
+Right to lodge complaint with supervisory authority.
+Data Protection Officer contact info (if applicable).
+Penalties: Up to €20 million or 4% of global annual revenue (whichever is higher).
+3.7 — Cookie Consent Requirements
+Implement a cookie consent banner, especially if the site uses analytics (Google Analytics), marketing pixels, or any non-essential cookies:
+EU visitors: Prior opt-in consent required before setting non-essential cookies. “Accept All” and “Reject All” buttons must be equally prominent. No pre-checked boxes.
+California visitors: Opt-out model allowed (cookies can load, but provide opt-out). Honor Global Privacy Control (GPC) browser signals. Include “Do Not Sell or Share” link.
+All visitors: Disclose cookie categories (strictly necessary, functionality, analytics, marketing, third-party).
+3.8 — Privacy Policy Template Structure
+Recommended structure for the Soft Standards Inc. Privacy Policy page:
+Introduction (effective date, what this policy covers)
+Information We Collect (Personal, Sensitive, Automatically Collected)
+How We Collect Information
+How We Use Your Information
+Information Sharing and Disclosure
+Cookies and Tracking Technologies
+Data Retention
+Data Security
+Your Privacy Rights (with state-specific subsections: CA, NY, VA, CO, etc.)
+Do Not Track / Global Privacy Control
+Children’s Privacy
+International Data Transfers
+Third-Party Links
+Changes to This Policy
+Contact Us
+
+Section 4: Terms of Service — Legal Requirements
+A Terms of Service page is strongly recommended for protecting Soft Standards Inc. from liability. While not legally mandated by a single statute, it is essential for limiting exposure and establishing enforceable user agreements.
+4.1 — Essential Clauses
+Clause
+Purpose
+Priority
+Acceptance of Terms
+Establishes binding agreement when user accesses site
+CRITICAL
+Modification of Terms
+Allows updating ToS with notice; avoid “without notice” language
+CRITICAL
+User Obligations
+Age requirements, account security, accurate information
+HIGH
+Intellectual Property
+Protects company content, logos, trademarks
+HIGH
+Limitation of Liability
+Caps damages; must be CONSPICUOUS (caps/bold)
+CRITICAL
+Disclaimer of Warranties
+“AS IS” and “AS AVAILABLE” basis
+CRITICAL
+Indemnification
+Users compensate company for losses from misuse
+HIGH
+Dispute Resolution
+Arbitration vs. litigation; specify process
+HIGH
+Class Action Waiver
+Enforceable when paired with arbitration clause
+MEDIUM
+Governing Law
+State of New York, Queens County jurisdiction
+HIGH
+Severability
+If one clause invalid, others remain in effect
+MEDIUM
+Contact Information
+How users can reach the company
+REQUIRED
+
+4.2 — Implementation: Use Clickwrap, NOT Browsewrap
+IMPORTANT: CLICKWRAP vs. BROWSEWRAP
+Clickwrap (checkbox “I Agree”) has a ~70% court enforceability rate. Browsewrap (link in footer only) has only ~14% enforceability. Always use clickwrap for contact forms, checkout, and account creation.
+Backend must log: timestamp, IP address, ToS version accepted, and user agent for each consent.
+
+4.3 — Software/Web Development Company Specifics
+As a web development and digital services company, Soft Standards Inc. should also include:
+Service delivery terms and scope definitions.
+Professional services warranty (“workmanlike manner” standard).
+Payment terms and late fee provisions (standard: 1.5%/month on overdue balances).
+Project cancellation and refund policy.
+Third-party service disclaimers (hosting, APIs, SaaS tools).
+Data export provision after client termination (standard: 30-day window).
+Intellectual property assignment/licensing terms for client deliverables.
+4.4 — Terms of Service Template Structure
+Agreement to Terms
+Description of Services
+User Registration and Accounts
+Acceptable Use Policy
+Intellectual Property Rights
+User-Generated Content (if applicable)
+Payment Terms
+Termination
+Disclaimers
+Limitation of Liability
+Indemnification
+Dispute Resolution / Arbitration (NY governing law)
+Changes to Terms
+Contact Information
+4.5 — Scaling: Additional Legal Pages as Company Grows
+Policy
+When Required
+Privacy Policy
+LEGALLY REQUIRED if collecting any personal info
+Terms of Service
+Essential if accepting payments or user content
+Cookie Policy
+Required for EU visitors; recommended for all sites using cookies
+Acceptable Use Policy
+Recommended for platforms with user-generated content or SaaS
+DMCA Policy
+Required if users can post/upload content (Safe Harbor protection)
+Refund Policy
+Required for e-commerce; recommended for all paid services
+SLA
+Recommended for SaaS and enterprise services
+Accessibility Statement
+Best practice for ADA/WCAG compliance
+
+
+Section 5: Portfolio Updates — New Clients to Add
+5.1 — UI/UX and Web/App Development Clients
+A. GGMS.com
+Industry: Real Estate Technology (PropTech) / Marketing SaaS
+URL: https://www.ggms.com/
+Work: Full web design, UI/UX, SaaS platform development
+Portfolio Description: GGMS is a comprehensive real estate technology platform combining CRM, IDX website, and marketing automation. We designed and developed a modern, conversion-focused website communicating the platform’s value proposition to real estate professionals, featuring intuitive navigation, strong CTAs, and a professional aesthetic.
+B. M1neral.com
+Industry: Energy Technology (Oil & Gas SaaS)
+URL: https://m1neral.com or https://app.m1neral.com
+Work: SaaS platform development, GIS integration, UI/UX design
+Portfolio Description: M1neral is transforming the oil and gas minerals and royalties market with a cutting-edge transaction management platform featuring spatial search tools, workflow automation, and GIS mapping capabilities serving the entire value chain.
+C. Hitchhyke
+Industry: Transportation / Rideshare Technology
+URL: https://hitchhyke.app/ | hitchhyke-development-website.web.app
+Work: Mobile app development (iOS/Android), web design, platform development
+Portfolio Description: Hitchhyke is an innovative Jamaican service platform combining ridesharing with a marketplace for jobs, events, and services. We developed native mobile apps and the web presence featuring real-time tracking, safety features, and flexible payment options.
+D. Kreatorz.co
+Industry: AI & Software Solutions / Digital Agency
+URL: https://kreatorz.co/
+Work: Corporate website design, UI/UX design, content strategy
+Portfolio Description: Kreatorz.co is a technology company delivering AI infrastructure and software solutions. We designed a sleek, professional website communicating their expertise in digital transformation, AI development, and custom software.
+E. Chromosengine (Chromos)
+Industry: Medical Aesthetics Technology / Healthcare
+URL: https://www.dev.chromosengine.com/
+Work: Healthcare platform development, UI/UX, educational portal
+Portfolio Description: Chromos is a medical aesthetics platform connecting practitioners with cutting-edge treatments and training. We developed an online ecosystem serving aestheticians and medical professionals with educational resources and community features.
+F. Ryvato
+URL: app.ryvato.com
+⚠️ ACTION REQUIRED: Website not publicly accessible during audit. Verify URL with client and request screenshots or access credentials.
+
+
+
+5.2 — Social Media and Branding Clients
+A. Bicycle Health
+Industry: Healthcare / Telehealth
+URL: https://bicyclehealth.com
+Work: Social media posts, reels, and ads
+Drive: https://drive.google.com/drive/folders/1nGaamKxJ13yz5_13Ok4kQ8ghPDf1J-Z7
+Portfolio Description: Created comprehensive social media content and advertising campaigns for Bicycle Health, a leading telehealth provider addressing the opioid crisis through medication-assisted treatment. Work included social posts, engaging reels, and targeted ad creatives.
+B. Spacedome.ai
+Industry: Artificial Intelligence / SaaS Technology
+URL: https://spacedome.ai
+Work: Social media posts
+Drive: https://drive.google.com/drive/folders/1UC_9MtBGv6IKoKoX-frj1kYQJJT5GvOs
+Portfolio Description: Developed strategic social media content for Spacedome, an innovative AI company pioneering “Agents as a Service.” Content helped communicate complex AI concepts in accessible ways.
+C. Trio Nutrition
+Industry: Health & Wellness / Nutraceuticals
+URL: https://trionutrition.com
+Work: Social media posts and reels
+Drive: https://drive.google.com/drive/folders/1rnxEjCKbZ4MAggmb0kAOTXKPZpONTuTw
+Portfolio Description: Crafted engaging social media posts and video reels for Trio Nutrition, a premium supplement brand. Content highlighted USA-manufactured, FDA-facility tested products and educated audiences on holistic wellness.
+D. Rakabot
+Industry: Home Organization / Consumer Products
+URL: https://rakabot.com
+Work: Posts and reels
+Drive: https://drive.google.com/drive/folders/11C1moWuZ9IpA89GgxY4hbJjnWL0rmOjg
+Portfolio Description: Produced dynamic social media content including carousels, static posts, and engaging reels for Rakabot, an innovative home organization brand showcasing shoe racks and entryway solutions.
+E. IR Naturals (Irresistible Naturals)
+Industry: Beauty & Skincare
+URL: https://irnaturals.com
+Work: Social media posts
+Drive: https://drive.google.com/drive/folders/1GwHDYUWvwQAOAK6GF7LjTpEFLLUBb50V
+Portfolio Description: Created authentic social media content for Irresistible Naturals, a hand-crafted skincare brand committed to clean beauty since 2009. Posts showcased body souffles, natural soaps, and body washes.
+
+Section 6: Implementation Priority Checklist
+Phase 1: CRITICAL — Fix Immediately
+[CRITICAL] Fix hero section “scroll up” animation → replace with scroll-down indicator or appropriate animation.
+[CRITICAL] Make hero section consistent across all pages (same component, height, timing).
+[CRITICAL] Create and publish Privacy Policy page with all legally required elements.
+[CRITICAL] Create and publish Terms of Service page with essential clauses.
+[CRITICAL] Ensure legal entity is referenced correctly: “Soft Standards Inc., a New York corporation” — NOT an LLC.
+Phase 2: HIGH — Within 1 Week
+[HIGH] Implement cookie consent banner (especially for EU/international visitors).
+[HIGH] Add proper meta tags (title, description) to all pages for SEO.
+[HIGH] Add “Do Not Sell or Share My Personal Information” link (CCPA compliance).
+[HIGH] Verify all internal links are working (scan for 404 errors).
+[HIGH] Add new UI/UX portfolio clients: GGMS, M1neral, Hitchhyke, Kreatorz, Chromos.
+[HIGH] Add new Social Media clients: Bicycle Health, Spacedome, Trio Nutrition, Rakabot, IR Naturals.
+Phase 3: MEDIUM — Within 2 Weeks
+[MEDIUM] Run full accessibility audit (WAVE or axe DevTools).
+[MEDIUM] Optimize all images for web (WebP format, lazy loading, responsive srcset).
+[MEDIUM] Implement Schema.org structured data (Organization, LocalBusiness, Service).
+[MEDIUM] Add Open Graph and Twitter Card meta tags for social sharing.
+[MEDIUM] Ensure full mobile responsiveness on all pages.
+[MEDIUM] Verify Ryvato URL and get Chromosengine URL confirmed.
+Phase 4: LOW — Within 1 Month
+[LOW] Create and submit XML sitemap to Google Search Console.
+[LOW] Run performance optimization pass (Core Web Vitals targets).
+[LOW] Add DMCA policy if user-generated content exists.
+[LOW] Create Acceptable Use Policy if offering platform/SaaS services.
+[LOW] Add accessibility statement.
+
+
+Section 7: Penalty Quick Reference
+Violation
+Maximum Penalty
+CCPA — Unintentional
+$2,500 per violation
+CCPA — Intentional
+$7,500 per violation
+CCPA — Data Breach
+$750 per incident (private action)
+COPPA
+$53,088 per violation
+CAN-SPAM
+$53,088 per email
+GDPR
+€20 million or 4% global revenue
+NY SHIELD Act
+Up to $5,000 per violation (AG enforcement)
+
+
+DISCLAIMER: This document is for informational and developer guidance purposes only. It does not constitute legal advice. All legal pages (Privacy Policy, Terms of Service) should be reviewed by a qualified attorney licensed in New York before publication.
+
+— End of Document —

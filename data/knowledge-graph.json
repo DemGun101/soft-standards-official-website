@@ -1,0 +1,1609 @@
+{
+  "nodes": [
+    {
+      "name": "I decided to use Redis for the session cache in the auth service",
+      "type": "decision",
+      "properties": {
+        "decision_id": "5dcca681-7cc8-44d1-abe8-40d37a642edf",
+        "project": "general",
+        "context": "I decided to use Redis for the session cache in the auth service",
+        "reasoning": "",
+        "full_decision": "I decided to use Redis for the session cache in the auth service"
+      },
+      "id": "46b9f50b-3127-4e36-90a3-af4bacbf03c7",
+      "created_at": "2026-02-06T17:58:03.859Z",
+      "updated_at": "2026-02-06T17:58:03.859Z"
+    },
+    {
+      "name": "general",
+      "type": "project",
+      "properties": {},
+      "id": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "created_at": "2026-02-06T17:58:03.859Z",
+      "updated_at": "2026-02-06T17:58:03.859Z"
+    },
+    {
+      "name": "redis",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "e5aec595-0a61-4334-99c1-761f3385313f",
+      "created_at": "2026-02-06T17:58:03.860Z",
+      "updated_at": "2026-02-06T17:58:03.860Z"
+    },
+    {
+      "name": "Remember: the staging server IP is 10.0.5.42",
+      "type": "decision",
+      "properties": {
+        "decision_id": "e1609fea-75e1-416b-b946-4b3aba82cb54",
+        "project": "general",
+        "context": "Remember: the staging server IP is 10.0.5.42",
+        "reasoning": "",
+        "full_decision": "Remember: the staging server IP is 10.0.5.42"
+      },
+      "id": "796104b4-bcec-4b60-b96f-b0e4f4dc1e3b",
+      "created_at": "2026-02-06T17:58:03.864Z",
+      "updated_at": "2026-02-06T17:58:03.864Z"
+    },
+    {
+      "name": "Note to self: always run migrations before deploying to prod",
+      "type": "decision",
+      "properties": {
+        "decision_id": "1c588018-9255-4576-8364-6148435bb52e",
+        "project": "general",
+        "context": "Note to self: always run migrations before deploying to prod",
+        "reasoning": "",
+        "full_decision": "Note to self: always run migrations before deploying to prod"
+      },
+      "id": "d97bf172-3674-4ffc-95a0-7272cfc584cc",
+      "created_at": "2026-02-06T17:58:03.868Z",
+      "updated_at": "2026-02-06T17:58:03.868Z"
+    },
+    {
+      "name": "We agreed to use Tailwind CSS for all frontend projects going forward",
+      "type": "decision",
+      "properties": {
+        "decision_id": "0087a68d-cb0a-49a1-80d4-45341e5accd0",
+        "project": "general",
+        "context": "We agreed to use Tailwind CSS for all frontend projects going forward",
+        "reasoning": "",
+        "full_decision": "We agreed to use Tailwind CSS for all frontend projects going forward"
+      },
+      "id": "a7552b52-6d27-43b2-ad37-ed7453bc382d",
+      "created_at": "2026-02-06T17:58:03.872Z",
+      "updated_at": "2026-02-06T17:58:03.872Z"
+    },
+    {
+      "name": "tailwind",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "ad8bdc88-4074-4eef-80d3-27c1d8ce14cb",
+      "created_at": "2026-02-06T17:58:03.872Z",
+      "updated_at": "2026-02-06T17:58:03.872Z"
+    },
+    {
+      "name": "css",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "d7f4a948-d21b-4f9b-9778-da817848bcf8",
+      "created_at": "2026-02-06T17:58:03.872Z",
+      "updated_at": "2026-02-06T17:58:03.872Z"
+    },
+    {
+      "name": "Save this: the monitoring dashboard URL is https://grafana.internal.dev",
+      "type": "decision",
+      "properties": {
+        "decision_id": "c8b13a49-b171-4b8d-8e5f-2a8f2bd6a3d0",
+        "project": "general",
+        "context": "Save this: the monitoring dashboard URL is https://grafana.internal.dev",
+        "reasoning": "",
+        "full_decision": "Save this: the monitoring dashboard URL is https://grafana.internal.dev"
+      },
+      "id": "6bdcc6f0-0f76-41ad-80a6-ef490977f326",
+      "created_at": "2026-02-06T17:58:03.877Z",
+      "updated_at": "2026-02-06T17:58:03.877Z"
+    },
+    {
+      "name": "https://grafana.internal.dev",
+      "type": "file",
+      "properties": {
+        "confidence": 0.9,
+        "source": "rule"
+      },
+      "id": "d41b68ab-4fa0-4602-8051-89baa7892faf",
+      "created_at": "2026-02-06T17:58:03.877Z",
+      "updated_at": "2026-02-06T17:58:03.877Z"
+    },
+    {
+      "name": "Progress: Exploration of claude-brain intelligence features completed. Found all implementations: ev",
+      "type": "decision",
+      "properties": {
+        "decision_id": "ce42c354-d414-4f66-b656-6af5d76030a0",
+        "project": "claude-brain",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: Exploration of claude-brain intelligence features completed. Found all implementations: evolution tracker, trend detector, timeline builder, recommendations engine, cross-project patterns, chain retrieval, knowledge graph scoring. Knowledge graph scoring likely returns 50% due to combinedScore calculation using alpha=0.6 weighting. Evolution tracker uses Jaccard similarity with 0.6 threshold for change detection. Trends use momentum calculation. Cross-project uses term overlap + semantic clustering. Recommendations use similarity * confidence. All wired through router intent classification and search engine orchestration. Main issue: graph search scores get set via calculateNameScore but then combined with graphScore using 0.6*name + 0.4*graph weighting."
+      },
+      "id": "913202e4-b7fe-4296-9715-52f9605f5524",
+      "created_at": "2026-02-06T17:58:03.890Z",
+      "updated_at": "2026-02-06T17:58:03.890Z"
+    },
+    {
+      "name": "claude-brain",
+      "type": "project",
+      "properties": {},
+      "id": "ad3b7e72-e445-4352-af06-5591064e2e0f",
+      "created_at": "2026-02-06T17:58:03.890Z",
+      "updated_at": "2026-02-06T17:58:03.890Z"
+    },
+    {
+      "name": "claude-",
+      "type": "person",
+      "properties": {
+        "confidence": 0.7,
+        "source": "nlp"
+      },
+      "id": "0133db38-351e-4485-b340-0406679eb80e",
+      "created_at": "2026-02-06T17:58:03.890Z",
+      "updated_at": "2026-02-06T17:58:03.890Z"
+    },
+    {
+      "name": "Exploration complete: Claude Brain's intent classification, routing, and intelligence system.\n\nKEY F",
+      "type": "decision",
+      "properties": {
+        "decision_id": "a68fc7a7-8e66-43da-807b-b3e06d197de3",
+        "project": "claude-brain",
+        "context": "Exploration complete: Claude Brain's intent classification, routing, and intelligence system",
+        "reasoning": "",
+        "full_decision": "Exploration complete: Claude Brain's intent classification, routing, and intelligence system.\n\nKEY FINDINGS:\n\n1. INTENT CLASSIFIER (intent-classifier.ts)\n- 14 primary intents: session_start, context_needed, decision_made, store_this, pattern_found, mistake_learned, progress_update, question, comparison, exploration, list_all, update_memory, delete_memory, no_action\n- Phase 19 B1-B4 improvements:\n  - B1: Question confidence raised (? → 0.95, question word → 0.90)\n  - B2: session_start narrowed (must be at start + no progress indicators)\n  - B3: Temporal signal detection added to secondary intents\n  - B4: Extended question guards (do I, did we, have we patterns)\n- Priority-ordered classification (first confident match wins)\n- No LLM calls, pure pattern matching\n- Secondary intents: decision_made, comparison, exploration, question, session_start\n- Question guards prevent \"I prefer X?\" from being stored as decision\n\n2. DECLARATIVE STATEMENT HANDLING\n- \"The API timeout should be 30 seconds\" → matches DECISION_PHRASES (\"should use\") → decision_made intent\n- Full message becomes decision text, not abbreviated\n- Entity extraction captures: project, technologies, topic, reasoning, alternatives\n- Stored with tags for searchability\n\n3. ROUTING (router.ts)\n- BrainRouter: orchestrates intents → handlers → unified BrainResponse\n- 14 handler methods for each intent\n- Key handlers:\n  * handleStoreThis: explicit remember/save directives\n  * handleDecisionMade: captured decisions\n  * handleListAll: \"what decisions\", \"show all\" → fetchAllDecisions\n  * handleQuestion: hybrid/temporal/chain search\n  * handleExploration: timeline/evolution/trends\n  * handleUpdateMemory: similarity-based matching (0.5 threshold)\n  * handleDeleteMemory: similarity-based matching (0.5 threshold)\n\n4. ENTITY EXTRACTION (entity-extractor.ts)\n- Extracts: project, technologies, topic, decision, reasoning, alternatives, completedTask, nextSteps, original, correction, patternType\n- Tech dictionary: 70+ common techs (typescript, react, python, etc.)\n- GENERIC_WORDS set prevents false positives (small, large, general, etc.)\n- Project matching via explicit patterns + vault service fallback\n\n5. LIST QUERIES vs QUESTIONS\n- \"list all\" intent: handles \"what decisions\", \"show all\", \"list everything\"\n- Fetches ALL decisions/patterns/corrections (not paginated in list handler)\n- Question intent: searches for relevant results (filtered, ranked, limited to 5)\n- \"what decisions\" could match either depending on intent classifier confidence\n\n6. CORRECTION vs LEARNING\n- Both match MISTAKE_PHRASES: \"bug was\", \"lesson learned\", \"should have\", \"avoid using\"\n- mistake_learned intent → storeCorrection method\n- Extracts: original mistake, correction approach, reasoning\n- No distinction in classifier; both stored as corrections in memory\n\n7. ADVANCED INTELLIGENCE FEATURES (SearchEngine)\nPhase 19 integration:\n- temporal_search: parse temporal phrases, filter by date range (TemporalQueryProcessor)\n- buildTimeline: TimelineBuilder for chronological queries\n- analyzeEvolution: DecisionEvolutionTracker for \"how has X changed\"\n- detectTrends: TrendDetector for trend analysis\n- chainSearch: ChainRetrieval for multi-hop complex questions\n- getRecommendations: Recommender for proactive suggestions\n- findCrossProjectPatterns: PatternGeneralizer for cross-project insights\n- searchGraph: KnowledgeGraph for related concepts\n- All wrapped with 5s timeout + fallback\n\n8. RESPONSE FILTERING (response-filter.ts)\nPhase 19 D2-D3:\n- Infrastructure noise removal (strong 1-hit, weak 2+ hits)\n- Deduplication: ID-based, prefix-based (first 100 chars), word-overlap (0.75 threshold, was 0.85)\n- Dynamic threshold: keep results ≥70% of median score\n- Limit to 5 results max\n- Relevance scoring (90%+ highly relevant, 70%+ good, etc.)\n\n9. QUESTION HANDLING (detailed)\n- Uses SearchEngine for all searches (hybrid, cached, temporal)\n- Parallel: patterns + corrections + graph results\n- Detects complex questions (2+ ?, >200 chars, multi-clause)\n- Chain retrieval for complex questions\n- CrossProject patterns for general/unspecified project\n- Knowledge graph enrichment for all questions\n- Episode registration\n\n10. MEMORY SERVICE (memory/index.ts)\nRoutes to ChromaDB if enabled, falls back to SQLite:\n- rememberDecision: store decision with context/reasoning\n- searchRaw: hybrid/cached search with normalization\n- searchPatterns, searchCorrections\n- fetchAllDecisions: bulk access (project-filtered if specified)\n- updateDecision: delete old + store new\n- deleteDecision: by ID\n- addDecisionStoredListener: hooks for KG builder\n\n11. NORMALIZATION (routing/types.ts)\nFlattens nested { memory: { id }, decision: { id } } structure:\n- normalizeSearchResults: handles nested ChromaDB/SQLite results\n- normalizePatternResults, normalizeCorrectionResults\n- Extracts reasoning into content for display\n\n12. STORAGE BEHAVIOR\n- store_this & decision_made: uses full message as decision text\n- context: topic or first 200 chars of message\n- reasoning: extracted from message if present\n- tags: technologies extracted or ['auto-detected']/['user-stored']\n- Also writes to vault (Obsidian) via writeToVault helper\n- Links to active episode via episode manager\n\n13. EPISODE INTEGRATION (C8)\n- registerEpisodeMessage: tracks all messages by intent\n- linkToActiveEpisode: associates decisions/patterns/corrections with episodes\n- Enables session continuity and episodic memory\n\nARCHITECTURAL PATTERNS:\n- Lazy singleton for BrainRouter\n- Services initialized check before operations\n- Timeout wrapping for all external service calls\n- Fallback chains (hybrid → plain, ChromaDB → SQLite, TemporalQueryProcessor → plain)\n- Dynamic imports for optional features (temporal, prediction, reasoning)\n- Semantic cache for repeated queries\n\nFILE LOCATIONS:\n- Intent: src/routing/intent-classifier.ts\n- Router: src/routing/router.ts\n- Entity extractor: src/routing/entity-extractor.ts\n- Search engine: src/routing/search-engine.ts\n- Response filter: src/routing/response-filter.ts\n- Brain handler: src/server/handlers/tools/brain.ts\n- Memory service: src/memory/index.ts\n- Intelligence features:\n  * Temporal: src/temporal/{timeline,evolution,trends,query-processor}.ts\n  * Prediction: src/prediction/{recommender,decision-predictor,context-anticipator}.ts\n  * Reasoning: src/reasoning/{chain-retrieval,synthesizer,counterfactual}.ts\n  * Cross-project: src/cross-project/{generalizer,transfer,affinity}.ts\n  * Knowledge: src/knowledge/graph/{builder,schema}.ts"
+      },
+      "id": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "anthropic",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "ebb100fc-0b03-4c04-8d04-54948493a7fd",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "typescript",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "d39baecd-7005-411c-8569-5cac7e5b2543",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "chromadb",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "1ab61498-15c1-4224-afd5-3b3cd6e4a09f",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "sql",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "dcbe0af9-c09a-414c-a55e-189c2bfc799f",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "api",
+      "type": "concept",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "0e96695b-bc33-4874-b00d-10ac4456ea67",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "react",
+      "type": "technology",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "34936946-b581-4a0c-9546-30577034b301",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "python",
+      "type": "technology",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "01a563d5-83c2-4fbf-826a-c678f6dc1544",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "memory/index.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "afb57a75-acee-49a7-94df-aacc10ba0d65",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "routing/types.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "7e2c4f68-736b-44a2-b3fd-1d4d2290555a",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "src/routing/intent-classifier.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "0eb5f5a5-0179-4aff-b6f2-5a12c4dfe7fa",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "src/routing/router.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "73040896-8631-43fd-8bdf-7486d3b8ef3a",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "src/routing/entity-extractor.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "e08f6e10-0322-414f-abce-192c2ee214c0",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "src/routing/search-engine.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "6dfaa7f1-4729-4142-b1ca-3bb6cb5b24ac",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "src/routing/response-filter.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "cfee447a-99c3-481a-893f-5d003ffd3f6c",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "src/server/handlers/tools/brain.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "02be2e23-85dd-4b01-8506-967639e7ae0b",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "src/memory/index.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "a9a039d7-fd54-4318-8bf0-ce5ec6778147",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "claude",
+      "type": "person",
+      "properties": {
+        "confidence": 0.7,
+        "source": "nlp"
+      },
+      "id": "7a322134-6d29-43a7-9ee4-dad0499b4518",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "\"lesson",
+      "type": "person",
+      "properties": {
+        "confidence": 0.7,
+        "source": "nlp"
+      },
+      "id": "240eff45-a031-434b-98c3-9c613e37a31c",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "- memory service:",
+      "type": "concept",
+      "properties": {
+        "confidence": 0.65,
+        "source": "nlp"
+      },
+      "id": "7e9e89b2-f3c6-45db-8534-e8d73d75eed0",
+      "created_at": "2026-02-06T17:58:04.133Z",
+      "updated_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "name": "Progress: stronger brain usage enforcement: updated all 4 CLAUDE",
+      "type": "decision",
+      "properties": {
+        "decision_id": "62125902-61eb-433f-8e25-4bfe5b54809a",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: stronger brain usage enforcement: updated all 4 CLAUDE"
+      },
+      "id": "ba3abc42-0f01-4f5c-aee2-68eb9cc65cd1",
+      "created_at": "2026-02-06T17:58:04.136Z",
+      "updated_at": "2026-02-06T17:58:04.136Z"
+    },
+    {
+      "name": "claude progress",
+      "type": "person",
+      "properties": {
+        "confidence": 0.7,
+        "source": "nlp"
+      },
+      "id": "f5c709c9-d1ee-436b-aea4-d4c0c46a3daf",
+      "created_at": "2026-02-06T17:58:04.136Z",
+      "updated_at": "2026-02-06T17:58:04.136Z"
+    },
+    {
+      "name": "Progress: brain usage enforcement to MEMORY",
+      "type": "decision",
+      "properties": {
+        "decision_id": "b4e2c375-53ba-4803-99e2-4584d9cab026",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: brain usage enforcement to MEMORY"
+      },
+      "id": "c4352252-d902-4648-8ae0-a8f1e15538e0",
+      "created_at": "2026-02-06T17:58:04.137Z",
+      "updated_at": "2026-02-06T17:58:04.137Z"
+    },
+    {
+      "name": "Progress: /Users/dem/higgsfield as the user's working project folder for Higgsfield video generation",
+      "type": "decision",
+      "properties": {
+        "decision_id": "8b801692-a214-45f3-84f1-8f45ac913647",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: /Users/dem/higgsfield as the user's working project folder for Higgsfield video generation"
+      },
+      "id": "32e50e86-a2d3-4e25-aeeb-fe424f676cfb",
+      "created_at": "2026-02-06T17:58:04.149Z",
+      "updated_at": "2026-02-06T17:58:04.149Z"
+    },
+    {
+      "name": "Progress: CLAUDE",
+      "type": "decision",
+      "properties": {
+        "decision_id": "f05acf1a-8b03-40da-9d93-d8937190e818",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: CLAUDE"
+      },
+      "id": "00f5728b-052b-4d6d-8658-7286371447f3",
+      "created_at": "2026-02-06T17:58:04.151Z",
+      "updated_at": "2026-02-06T17:58:04.151Z"
+    },
+    {
+      "name": "Progress: 3 custom skills for the Higgsfield project at /Users/dem/higgsfield/",
+      "type": "decision",
+      "properties": {
+        "decision_id": "690c43ff-8232-4c3a-b06b-04c4b6cca79c",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: 3 custom skills for the Higgsfield project at /Users/dem/higgsfield/"
+      },
+      "id": "106ba935-23a4-4b0d-a4a7-48f3356fc800",
+      "created_at": "2026-02-06T17:58:04.153Z",
+      "updated_at": "2026-02-06T17:58:04.153Z"
+    },
+    {
+      "name": "Progress: /Users/dem/higgsfield/",
+      "type": "decision",
+      "properties": {
+        "decision_id": "7c92521c-751c-4e82-8565-7206cacf7bfc",
+        "project": "directory",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: /Users/dem/higgsfield/"
+      },
+      "id": "9e456a40-570b-4a83-80fe-177cb8d27acb",
+      "created_at": "2026-02-06T17:58:04.154Z",
+      "updated_at": "2026-02-06T17:58:04.154Z"
+    },
+    {
+      "name": "directory",
+      "type": "project",
+      "properties": {},
+      "id": "106bb854-4f84-428f-aece-ed07dd739004",
+      "created_at": "2026-02-06T17:58:04.154Z",
+      "updated_at": "2026-02-06T17:58:04.154Z"
+    },
+    {
+      "name": "Progress: full analysis of softstandards",
+      "type": "decision",
+      "properties": {
+        "decision_id": "c090370f-5ded-4744-a638-1e77f2e5ce4a",
+        "project": "higgsfield",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: full analysis of softstandards"
+      },
+      "id": "6414237a-1c96-47e5-9de5-88e0747d51b5",
+      "created_at": "2026-02-06T17:58:04.155Z",
+      "updated_at": "2026-02-06T17:58:04.155Z"
+    },
+    {
+      "name": "higgsfield",
+      "type": "project",
+      "properties": {},
+      "id": "89a98106-f0f3-4626-a13d-31b30a562f16",
+      "created_at": "2026-02-06T17:58:04.155Z",
+      "updated_at": "2026-02-06T17:58:04.155Z"
+    },
+    {
+      "name": "Progress: full 7-video Higgsfield production plan for softstandards",
+      "type": "decision",
+      "properties": {
+        "decision_id": "9419122d-ab28-4b9f-9004-98c1fb1829cb",
+        "project": "higgsfield",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: full 7-video Higgsfield production plan for softstandards"
+      },
+      "id": "01197260-27d1-4364-a993-b4c803fbf1a3",
+      "created_at": "2026-02-06T17:58:04.157Z",
+      "updated_at": "2026-02-06T17:58:04.157Z"
+    },
+    {
+      "name": "Progress: COMPLETE PROJECT CONTEXT - Soft Standards Lead Magnet Video\n\n## Client: Soft Standards (so",
+      "type": "decision",
+      "properties": {
+        "decision_id": "06abfd56-6102-4592-8882-afada7d1a686",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: COMPLETE PROJECT CONTEXT - Soft Standards Lead Magnet Video\n\n## Client: Soft Standards (softstandards.net)\n- Brand: Navy #0F172A + Purple #5B3BF4, Poppins font\n- Target: Founders/entrepreneurs who need marketing systems\n- Services: Paid ads, SEO, email automation, CRM, brand strategy\n- CTA: \"Book Your Free Audit\" / \"Schedule a Call\"\n- Has \"Watch How It Works\" button with no actual video yet\n\n## Higgsfield Setup (FIXED)\n- Account: Zain UI on cloud.higgsfield.ai\n- API Key: 50e5d017-d309-45fb-9e9a-ee005cf71584\n- Credits: ~770 remaining (started with 800)\n- MCP server: /Users/dem/higgsfield-mcp/\n- CRITICAL: Soul model path is `higgsfield-ai/soul/standard` (NOT /v1/text2image/soul)\n- V2 API: Authorization: Key {key}:{secret}, flat JSON body\n- Params: prompt, aspect_ratio (16:9, 4:3, etc), resolution (720p/1080p), enhance_prompt, seed, batch_size, style_id\n- Video still uses old API: /v1/image2video/dop with params wrapper\n\n## Lead Magnet Intro Video Plan (5 scenes)\nGoal: Easy to understand, makes prospects book an appointment, CTA at end\n\n### Scene 1: \"The Struggle\"\n- Prompt: Frustrated entrepreneur at desk late at night, laptop glow illuminating tired face, scattered papers, empty coffee cups, dark moody office\n- Style: Realistic (59cff3e6-a897-4741-8498-28a7e943d48b)\n- Motion: Crash Zoom In (zoom into the frustration)\n\n### Scene 2: \"The Breakthrough\"  \n- Prompt: Moment of discovery, purple light breaking through darkness revealing a clear path forward, entrepreneur looking up with hope, cinematic lighting shift from dark to purple glow\n- Style: Geominimal\n- Motion: Dolly In (approaching the solution)\n\n### Scene 3: \"The Machine\"\n- Prompt: Sleek futuristic marketing automation dashboard with flowing data streams, purple and navy color scheme, holographic displays showing campaign metrics, clean minimal tech aesthetic\n- Style: Geominimal\n- Motion: Crane Up (revealing the scale)\n\n### Scene 4: \"The Results\"\n- Prompt: Revenue metrics exploding upward on elegant dark dashboard, green growth arrows, celebration atmosphere, golden hour light streaming through modern office windows\n- Style: Spotlight (40ff999c-f576-443c-b5b3-c7d1391a666e)\n- Motion: Glam\n\n### Scene 5: \"The CTA\"\n- Prompt: Clean elegant call-to-action screen, \"Book Your Free Audit\" in bold typography, purple gradient button on dark navy background, subtle light particles, premium luxury feel\n- Style: Quiet Luxury\n- Motion: Super Dolly In (urgency)\n\n## Style IDs Used\n- Realistic: 59cff3e6-a897-4741-8498-28a7e943d48b\n- Geominimal: (look up from styles)\n- Spotlight: 40ff999c-f576-443c-b5b3-c7d1391a666e\n- Quiet Luxury: (look up from styles)\n\n## Video Quality Tiers\n- Video lite: 2 credits (fastest, good for preview)\n- Video turbo: ~5 credits\n- Video standard: 9 credits (highest quality)\n\n## Production Workflow\n1. Generate 5 images with Soul Standard (higgsfield-ai/soul/standard)\n2. Poll each until complete\n3. Convert each to video using generate_video with motion presets\n4. Deliver all video URLs\n\n## Budget Estimate\n- 5 images at 720p: 5 × 1.5 = 7.5 credits\n- 5 videos at lite: 5 × 2 = 10 credits\n- Total minimum: ~17.5 credits ($1.10)\n- With standard video: ~52.5 credits ($3.28)"
+      },
+      "id": "3b5a00dd-af44-4733-ac0b-dd655f7c1bbf",
+      "created_at": "2026-02-06T17:58:04.203Z",
+      "updated_at": "2026-02-06T17:58:04.203Z"
+    },
+    {
+      "name": "mcp",
+      "type": "concept",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "1c197417-baa1-452f-95b8-3ba5d60170ec",
+      "created_at": "2026-02-06T17:58:04.203Z",
+      "updated_at": "2026-02-06T17:58:04.203Z"
+    },
+    {
+      "name": "json",
+      "type": "technology",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "bf93fec1-4f4d-4e56-b817-6df4efecb32c",
+      "created_at": "2026-02-06T17:58:04.203Z",
+      "updated_at": "2026-02-06T17:58:04.203Z"
+    },
+    {
+      "name": "csharp",
+      "type": "technology",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "e5d00d67-9d82-430f-a236-c0e6dc40308f",
+      "created_at": "2026-02-06T17:58:04.203Z",
+      "updated_at": "2026-02-06T17:58:04.203Z"
+    },
+    {
+      "name": "dolly in",
+      "type": "person",
+      "properties": {
+        "confidence": 0.7,
+        "source": "nlp"
+      },
+      "id": "56155d13-795d-4f29-adc5-f7378f53b355",
+      "created_at": "2026-02-06T17:58:04.203Z",
+      "updated_at": "2026-02-06T17:58:04.203Z"
+    },
+    {
+      "name": "cta\"",
+      "type": "concept",
+      "properties": {
+        "confidence": 0.65,
+        "source": "nlp"
+      },
+      "id": "9d6ad414-8237-4500-a456-e282d2ccbf57",
+      "created_at": "2026-02-06T17:58:04.203Z",
+      "updated_at": "2026-02-06T17:58:04.203Z"
+    },
+    {
+      "name": "Progress: TECHNICAL DETAILS - Higgsfield API Configuration\n\n## API Authentication\n- Platform: cloud.",
+      "type": "decision",
+      "properties": {
+        "decision_id": "ecd64911-a9b7-4801-ba40-2c56792d6473",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: TECHNICAL DETAILS - Higgsfield API Configuration\n\n## API Authentication\n- Platform: cloud.higgsfield.ai (dashboard) / platform.higgsfield.ai (API)\n- API Key: 50e5d017-d309-45fb-9e9a-ee005cf71584\n- Secret: e38ac5459e279e917edf353103dad2d4c8d768365b2e285a153827138cc1569d\n- V2 Auth Header: Authorization: Key 50e5d017-d309-45fb-9e9a-ee005cf71584:e38ac5459e279e917edf353103dad2d4c8d768365b2e285a153827138cc1569d\n\n## Image Generation (V2 API - Soul Standard)\n- Endpoint: POST https://platform.higgsfield.ai/higgsfield-ai/soul/standard\n- Auth: Authorization: Key {api_key}:{secret}\n- Payload (flat JSON, NO params wrapper):\n  {\n    \"prompt\": \"...\",\n    \"aspect_ratio\": \"16:9\",  // options: 16:9, 4:3, 1:1, 9:16, 3:4, 3:2, 2:3\n    \"resolution\": \"720p\",     // options: 720p, 1080p\n    \"enhance_prompt\": true,\n    \"seed\": 42,\n    \"batch_size\": 1,          // 1 or 4\n    \"style_id\": \"optional-uuid\"\n  }\n- Response: {\"status\":\"queued\",\"request_id\":\"uuid\",\"status_url\":\"...\",\"cancel_url\":\"...\"}\n- Cost: 1.5 credits (720p), 3 credits (1080p)\n\n## Status Polling (V2)\n- Endpoint: GET https://platform.higgsfield.ai/requests/{request_id}/status\n- Auth: same Authorization: Key header\n- Response when done: {\"status\":\"completed\",\"images\":[{\"url\":\"https://d3u0tzju9qaucj.cloudfront.net/...\"}]}\n\n## Video Generation (V1 API - DoP)\n- Endpoint: POST https://platform.higgsfield.ai/v1/image2video/dop\n- Auth: hf-api-key + hf-secret headers (old format, still works)\n- Payload: {\"params\": {\"model\":\"dop-preview\",\"prompt\":\"...\",\"input_images\":[{\"type\":\"image_url\",\"image_url\":\"...\"}],\"motions\":[{\"id\":\"motion-uuid\",\"strength\":0.5}]}}\n- Models: dop-lite (2 credits), dop-turbo (~5 credits), dop-preview/standard (9 credits)\n- Status polling: GET /v1/job-sets/{job_set_id}\n\n## Other Working Models on V2\n- flux-pro/kontext/max/text-to-image (general purpose)\n- bytedance/seedream/v4/text-to-image (cinematic)\n- reve/text-to-image\n\n## MCP Server Files\n- /Users/dem/higgsfield-mcp/src/higgsfield_mcp/client.py (UPDATED - uses V2 for images)\n- /Users/dem/higgsfield-mcp/src/higgsfield_mcp/server.py\n- /Users/dem/higgsfield/.mcp.json (MCP config with credentials)\n\n## Key Style IDs\n- Realistic: 59cff3e6-a897-4741-8498-28a7e943d48b\n- Spotlight: 40ff999c-f576-443c-b5b3-c7d1391a666e\n- Others: query higgsfield://styles resource or GET /v1/text2image/soul-styles\n\n## Account\n- User: Zain UI\n- Balance: ~770 credits remaining\n- Subscription: Active on cloud.higgsfield.ai"
+      },
+      "id": "a6e73b02-a45d-4a06-9b60-a44469547a34",
+      "created_at": "2026-02-06T17:58:04.225Z",
+      "updated_at": "2026-02-06T17:58:04.225Z"
+    },
+    {
+      "name": "https://platform.higgsfield.ai/higgsfield-ai/soul/standard",
+      "type": "file",
+      "properties": {
+        "confidence": 0.9,
+        "source": "rule"
+      },
+      "id": "c797fe45-3e03-47fc-b36e-59846138fff9",
+      "created_at": "2026-02-06T17:58:04.226Z",
+      "updated_at": "2026-02-06T17:58:04.226Z"
+    },
+    {
+      "name": "https://platform.higgsfield.ai/requests/{request_id}/status",
+      "type": "file",
+      "properties": {
+        "confidence": 0.9,
+        "source": "rule"
+      },
+      "id": "780c7998-80d3-438e-9df4-212037bfe700",
+      "created_at": "2026-02-06T17:58:04.226Z",
+      "updated_at": "2026-02-06T17:58:04.226Z"
+    },
+    {
+      "name": "https://d3u0tzju9qaucj.cloudfront.net/...\"}]}",
+      "type": "file",
+      "properties": {
+        "confidence": 0.9,
+        "source": "rule"
+      },
+      "id": "119644c1-b4f0-4d8d-a1e9-e157ef0a7814",
+      "created_at": "2026-02-06T17:58:04.226Z",
+      "updated_at": "2026-02-06T17:58:04.226Z"
+    },
+    {
+      "name": "https://platform.higgsfield.ai/v1/image2video/dop",
+      "type": "file",
+      "properties": {
+        "confidence": 0.9,
+        "source": "rule"
+      },
+      "id": "f28b0b74-6d8e-44fe-b9a3-179f6fea39be",
+      "created_at": "2026-02-06T17:58:04.226Z",
+      "updated_at": "2026-02-06T17:58:04.226Z"
+    },
+    {
+      "name": "/Users/dem/higgsfield-mcp/src/higgsfield_mcp/client.py",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "2b8f4e1d-d0af-45fa-b962-691d5488d736",
+      "created_at": "2026-02-06T17:58:04.226Z",
+      "updated_at": "2026-02-06T17:58:04.226Z"
+    },
+    {
+      "name": "/Users/dem/higgsfield-mcp/src/higgsfield_mcp/server.py",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "a879a80f-bf3d-40b7-802b-1ba0a1cace66",
+      "created_at": "2026-02-06T17:58:04.226Z",
+      "updated_at": "2026-02-06T17:58:04.226Z"
+    },
+    {
+      "name": "/Users/dem/higgsfield/.mcp.json",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "f9bfde51-6c66-4a3f-bb63-690faa8d6505",
+      "created_at": "2026-02-06T17:58:04.226Z",
+      "updated_at": "2026-02-06T17:58:04.226Z"
+    },
+    {
+      "name": "Progress: MCP client: switched from async httpx to sync httpx with asyncio",
+      "type": "decision",
+      "properties": {
+        "decision_id": "4e6ce135-0212-4d93-8a4a-79daf6b4dac7",
+        "project": "higgsfield",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: MCP client: switched from async httpx to sync httpx with asyncio"
+      },
+      "id": "0857b69f-27ed-4781-a3cf-48b6fdccbf7e",
+      "created_at": "2026-02-06T17:58:04.229Z",
+      "updated_at": "2026-02-06T17:58:04.229Z"
+    },
+    {
+      "name": "Progress: setup of notch-version skills and CLAUDE",
+      "type": "decision",
+      "properties": {
+        "decision_id": "694f6143-7f3b-4d76-86f2-d912a0e31552",
+        "project": "soft-standards-official-website",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: setup of notch-version skills and CLAUDE"
+      },
+      "id": "0b46378e-0f76-4684-811c-a621daeeba2c",
+      "created_at": "2026-02-06T19:29:07.455Z",
+      "updated_at": "2026-02-06T19:29:07.455Z"
+    },
+    {
+      "name": "soft-standards-official-website",
+      "type": "project",
+      "properties": {},
+      "id": "5fefd207-68ba-4ddb-9613-703b78a93ca1",
+      "created_at": "2026-02-06T19:29:07.456Z",
+      "updated_at": "2026-02-06T19:29:07.456Z"
+    },
+    {
+      "name": "Progress: thorough exploration of /Users/dem/soft-standards-official-website/notch-version/ - Found ",
+      "type": "decision",
+      "properties": {
+        "decision_id": "e84ae29d-a841-4d85-bde8-45fb9c440778",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: thorough exploration of /Users/dem/soft-standards-official-website/notch-version/ - Found all pages (home, about, services, pricing, case-studies, blog, careers, book), identified hero components, confirmed no Privacy/Terms pages exist, documented client list (SpaceDome AI, Bicycle Health, Meridian Consulting, Trellis Studios, Apex Ventures, Horizon Wellness), discovered Soft Standards Inc legal entity, no cookie consent, basic SEO metadata setup, GSAP animation system in place, navbar is floating notch design with dark backdrop, footer is comprehensive with newsletter"
+      },
+      "id": "dab6bfc2-94f4-4589-ad85-f6c55570e140",
+      "created_at": "2026-02-06T19:38:21.706Z",
+      "updated_at": "2026-02-06T19:38:21.706Z"
+    },
+    {
+      "name": "meridian consulting,",
+      "type": "concept",
+      "properties": {
+        "confidence": 0.65,
+        "source": "nlp"
+      },
+      "id": "ba826f71-0acb-4015-992b-bcabb1e2c171",
+      "created_at": "2026-02-06T19:38:21.706Z",
+      "updated_at": "2026-02-06T19:38:21.706Z"
+    },
+    {
+      "name": "soft standards inc",
+      "type": "concept",
+      "properties": {
+        "confidence": 0.65,
+        "source": "nlp"
+      },
+      "id": "e12974b3-6df4-4f2c-af56-6bcf023b56e8",
+      "created_at": "2026-02-06T19:38:21.707Z",
+      "updated_at": "2026-02-06T19:38:21.707Z"
+    },
+    {
+      "name": "Progress: React component matching site design (dark theme, glassmorphism), localStorage for prefere",
+      "type": "decision",
+      "properties": {
+        "decision_id": "5cc72490-f493-46b8-9eeb-f2b33925266e",
+        "project": "soft-standards-official-website",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: React component matching site design (dark theme, glassmorphism), localStorage for preference storage"
+      },
+      "id": "435a5b48-f6ab-4e3d-b54e-8653eaab930c",
+      "created_at": "2026-02-06T19:45:13.520Z",
+      "updated_at": "2026-02-06T19:45:13.520Z"
+    },
+    {
+      "name": "Progress: thorough exploration of /Users/dem/soft-standards-official-website/notch-version/",
+      "type": "decision",
+      "properties": {
+        "decision_id": "445c8d47-4ada-4cc4-afe0-a619af04cee8",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: thorough exploration of /Users/dem/soft-standards-official-website/notch-version/"
+      },
+      "id": "ff82c245-1506-400f-8a40-7c8c32b198d9",
+      "created_at": "2026-02-06T19:55:59.995Z",
+      "updated_at": "2026-02-06T19:55:59.995Z"
+    },
+    {
+      "name": "Progress: Privacy Policy page for Soft Standards Inc",
+      "type": "decision",
+      "properties": {
+        "decision_id": "348e1b41-22da-4938-bc21-90fa31237e47",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: Privacy Policy page for Soft Standards Inc"
+      },
+      "id": "87965b18-bbb2-44cb-a76b-3b40e450f665",
+      "created_at": "2026-02-06T20:02:13.801Z",
+      "updated_at": "2026-02-06T20:02:13.801Z"
+    },
+    {
+      "name": "Progress: Terms of Service page at /Users/dem/soft-standards-official-website/notch-version/src/app/",
+      "type": "decision",
+      "properties": {
+        "decision_id": "e090dc8c-3115-48a5-9920-5dbf938140c8",
+        "project": "soft-standards-official-website",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: Terms of Service page at /Users/dem/soft-standards-official-website/notch-version/src/app/terms/page"
+      },
+      "id": "108f7925-49e1-47bf-9e75-40fc726e5076",
+      "created_at": "2026-02-06T20:03:15.027Z",
+      "updated_at": "2026-02-06T20:03:15.027Z"
+    },
+    {
+      "name": "Progress: successfully",
+      "type": "decision",
+      "properties": {
+        "decision_id": "1c2e3c1a-1b9a-4fe3-ab17-3f05161394a0",
+        "project": "soft-standards-official-website",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: successfully"
+      },
+      "id": "b4783292-3fd9-4ea3-8e95-a0112a2c421b",
+      "created_at": "2026-02-06T20:04:46.293Z",
+      "updated_at": "2026-02-06T20:04:46.293Z"
+    },
+    {
+      "name": "Progress: metadata audit of 10 page",
+      "type": "decision",
+      "properties": {
+        "decision_id": "c0fa8944-dcc0-498f-a431-125cb91ca879",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: metadata audit of 10 page"
+      },
+      "id": "dc61a0ee-11d4-454a-9a7b-298a41e89bc5",
+      "created_at": "2026-02-06T20:07:50.218Z",
+      "updated_at": "2026-02-06T20:07:50.218Z"
+    },
+    {
+      "name": "page progress",
+      "type": "person",
+      "properties": {
+        "confidence": 0.7,
+        "source": "nlp"
+      },
+      "id": "c77692f4-dd37-4f2c-bcfa-077835c33672",
+      "created_at": "2026-02-06T20:07:50.218Z",
+      "updated_at": "2026-02-06T20:07:50.218Z"
+    },
+    {
+      "name": "Progress: Link audit completed. Found comprehensive mapping of internal routes. All main routes have",
+      "type": "decision",
+      "properties": {
+        "decision_id": "de5ac1c6-5e8b-4f61-b90b-a1a323b1b4d7",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: Link audit completed. Found comprehensive mapping of internal routes. All main routes have matching pages: /, /about, /services, /pricing, /blog, /case-studies, /careers, /book, /privacy, /terms. Hash anchors found: #story (homepage), #contact (footer/multiple pages), #open-roles (careers), #contact-us (privacy), #ccpa-opt-out (privacy). No broken internal links detected."
+      },
+      "id": "3c547e11-116c-4f60-b727-e3d82125bb99",
+      "created_at": "2026-02-06T20:14:35.163Z",
+      "updated_at": "2026-02-06T20:14:35.163Z"
+    },
+    {
+      "name": "Progress: Phase 2 of the Soft Standards website audit",
+      "type": "decision",
+      "properties": {
+        "decision_id": "50c54294-c83f-494c-98fe-9592a72c60fa",
+        "project": "soft-standards-official-website",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: Phase 2 of the Soft Standards website audit"
+      },
+      "id": "c407e61c-c5e1-4c44-a825-5ef1d59c2ad9",
+      "created_at": "2026-02-06T20:16:15.723Z",
+      "updated_at": "2026-02-06T20:16:15.723Z"
+    }
+  ],
+  "edges": [
+    {
+      "source": "46b9f50b-3127-4e36-90a3-af4bacbf03c7",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "b1de4eea-4728-46dc-a668-fa7901397727",
+      "created_at": "2026-02-06T17:58:03.860Z"
+    },
+    {
+      "source": "46b9f50b-3127-4e36-90a3-af4bacbf03c7",
+      "target": "e5aec595-0a61-4334-99c1-761f3385313f",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "44e39023-ebfe-4b3e-8b38-4654d1c0280a",
+      "created_at": "2026-02-06T17:58:03.860Z"
+    },
+    {
+      "source": "796104b4-bcec-4b60-b96f-b0e4f4dc1e3b",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "cc33ec3e-7e4f-43dc-b219-943e3d20de78",
+      "created_at": "2026-02-06T17:58:03.864Z"
+    },
+    {
+      "source": "d97bf172-3674-4ffc-95a0-7272cfc584cc",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "fc7f2cb9-7e5d-45dc-b3c1-8096c3609d5c",
+      "created_at": "2026-02-06T17:58:03.868Z"
+    },
+    {
+      "source": "a7552b52-6d27-43b2-ad37-ed7453bc382d",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "d48026c3-0bfc-4fdf-ab97-b6f4d5449d24",
+      "created_at": "2026-02-06T17:58:03.872Z"
+    },
+    {
+      "source": "a7552b52-6d27-43b2-ad37-ed7453bc382d",
+      "target": "ad8bdc88-4074-4eef-80d3-27c1d8ce14cb",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "0db5b162-6f51-4666-a0af-f703454214a1",
+      "created_at": "2026-02-06T17:58:03.872Z"
+    },
+    {
+      "source": "a7552b52-6d27-43b2-ad37-ed7453bc382d",
+      "target": "d7f4a948-d21b-4f9b-9778-da817848bcf8",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "a7fbf2f6-706d-4752-b6c3-b1ec19b35fdb",
+      "created_at": "2026-02-06T17:58:03.872Z"
+    },
+    {
+      "source": "6bdcc6f0-0f76-41ad-80a6-ef490977f326",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "b1b1e234-6f83-4640-8ea3-fab052001909",
+      "created_at": "2026-02-06T17:58:03.877Z"
+    },
+    {
+      "source": "6bdcc6f0-0f76-41ad-80a6-ef490977f326",
+      "target": "d41b68ab-4fa0-4602-8051-89baa7892faf",
+      "relationship": "relates_to",
+      "weight": 0.9,
+      "properties": {},
+      "id": "36108e88-8d83-4a3a-ab4f-e2f78c64fa7c",
+      "created_at": "2026-02-06T17:58:03.877Z"
+    },
+    {
+      "source": "913202e4-b7fe-4296-9715-52f9605f5524",
+      "target": "ad3b7e72-e445-4352-af06-5591064e2e0f",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "cefa13c5-44f1-435b-8911-36851c7273a2",
+      "created_at": "2026-02-06T17:58:03.890Z"
+    },
+    {
+      "source": "913202e4-b7fe-4296-9715-52f9605f5524",
+      "target": "0133db38-351e-4485-b340-0406679eb80e",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "1e903e8c-bb8e-45eb-9366-01fefd3fa76e",
+      "created_at": "2026-02-06T17:58:03.890Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "ad3b7e72-e445-4352-af06-5591064e2e0f",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "34227fdd-ee2e-4f05-bb3a-ab02aad6f570",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "ebb100fc-0b03-4c04-8d04-54948493a7fd",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "1ed1d11e-f15a-443a-9ed8-c96997c94f8f",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "d39baecd-7005-411c-8569-5cac7e5b2543",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "fdb05b6f-b1c2-4383-8f08-3d1b3ab478db",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "1ab61498-15c1-4224-afd5-3b3cd6e4a09f",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "721eef7a-8e86-4198-90ff-6b1de1ee8588",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "dcbe0af9-c09a-414c-a55e-189c2bfc799f",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "38375296-a447-4c11-b98f-21f3c0459ba9",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "0e96695b-bc33-4874-b00d-10ac4456ea67",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "259f94fe-9a17-4aa6-bb58-5d3f05209191",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "34936946-b581-4a0c-9546-30577034b301",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "50898ab0-0555-47e0-9e33-f6b0fe2dfd69",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "01a563d5-83c2-4fbf-826a-c678f6dc1544",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "a4a43173-871e-4710-9a85-d8b00e0c55c2",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "afb57a75-acee-49a7-94df-aacc10ba0d65",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "e931194d-ea7e-4ce5-9891-87ff8cf105f5",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "7e2c4f68-736b-44a2-b3fd-1d4d2290555a",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "53c8e6e3-c857-4141-9af9-773e9101c046",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "0eb5f5a5-0179-4aff-b6f2-5a12c4dfe7fa",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "6a05a148-a6df-4896-b637-966ec52e8fc1",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "73040896-8631-43fd-8bdf-7486d3b8ef3a",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "77a1da75-fd7f-426e-9cad-994609d37617",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "e08f6e10-0322-414f-abce-192c2ee214c0",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "fd12c3e7-6ff8-4709-a2e6-edc4464c66d2",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "6dfaa7f1-4729-4142-b1ca-3bb6cb5b24ac",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "ae68bac7-863d-4a86-a2ac-bccfb9e784a9",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "cfee447a-99c3-481a-893f-5d003ffd3f6c",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "0190b51e-4ce9-4292-9b42-bff077ade28e",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "02be2e23-85dd-4b01-8506-967639e7ae0b",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "6567748b-2b0e-4f71-883b-4ab646590c9f",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "a9a039d7-fd54-4318-8bf0-ce5ec6778147",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "aa514f43-03ae-450a-b6de-b7817a2ac71f",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "7a322134-6d29-43a7-9ee4-dad0499b4518",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "c71d5ae1-771c-42b3-98ac-552e859e6ec7",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "240eff45-a031-434b-98c3-9c613e37a31c",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "0b78ed74-ddfc-401a-b1b9-dfeac3131523",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "46ed8acd-3e66-4091-99e0-1aedc76f354d",
+      "target": "7e9e89b2-f3c6-45db-8534-e8d73d75eed0",
+      "relationship": "relates_to",
+      "weight": 0.65,
+      "properties": {},
+      "id": "9da1184d-f730-4f93-acc3-8b36f1fbe8a0",
+      "created_at": "2026-02-06T17:58:04.133Z"
+    },
+    {
+      "source": "ba3abc42-0f01-4f5c-aee2-68eb9cc65cd1",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "e4234f85-3685-4c2c-a1f0-bd94be023153",
+      "created_at": "2026-02-06T17:58:04.136Z"
+    },
+    {
+      "source": "ba3abc42-0f01-4f5c-aee2-68eb9cc65cd1",
+      "target": "ebb100fc-0b03-4c04-8d04-54948493a7fd",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "a99d286e-b57c-4448-8810-f9a5796b8022",
+      "created_at": "2026-02-06T17:58:04.136Z"
+    },
+    {
+      "source": "ba3abc42-0f01-4f5c-aee2-68eb9cc65cd1",
+      "target": "f5c709c9-d1ee-436b-aea4-d4c0c46a3daf",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "ce311cf6-4399-4a01-ba93-d8687661aad1",
+      "created_at": "2026-02-06T17:58:04.136Z"
+    },
+    {
+      "source": "c4352252-d902-4648-8ae0-a8f1e15538e0",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "52684b77-7d93-47a7-8575-1dc1cd873483",
+      "created_at": "2026-02-06T17:58:04.137Z"
+    },
+    {
+      "source": "32e50e86-a2d3-4e25-aeeb-fe424f676cfb",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "dbcf6d56-46a1-44e1-9797-e2e52f46d466",
+      "created_at": "2026-02-06T17:58:04.149Z"
+    },
+    {
+      "source": "00f5728b-052b-4d6d-8658-7286371447f3",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "f1d2a1eb-009a-4f56-9559-9c5f8a41f06d",
+      "created_at": "2026-02-06T17:58:04.151Z"
+    },
+    {
+      "source": "00f5728b-052b-4d6d-8658-7286371447f3",
+      "target": "ebb100fc-0b03-4c04-8d04-54948493a7fd",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "92d3ecd7-1baf-4892-bb8d-7d02f45fde98",
+      "created_at": "2026-02-06T17:58:04.151Z"
+    },
+    {
+      "source": "00f5728b-052b-4d6d-8658-7286371447f3",
+      "target": "f5c709c9-d1ee-436b-aea4-d4c0c46a3daf",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "65ae1664-d8f5-4acc-ac69-cb8524c6de98",
+      "created_at": "2026-02-06T17:58:04.151Z"
+    },
+    {
+      "source": "106ba935-23a4-4b0d-a4a7-48f3356fc800",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "d6c49920-abfc-473e-97ec-e130ff71332b",
+      "created_at": "2026-02-06T17:58:04.153Z"
+    },
+    {
+      "source": "9e456a40-570b-4a83-80fe-177cb8d27acb",
+      "target": "106bb854-4f84-428f-aece-ed07dd739004",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "0a9d440f-8b0e-41e4-a582-f6ae5fae34b0",
+      "created_at": "2026-02-06T17:58:04.154Z"
+    },
+    {
+      "source": "6414237a-1c96-47e5-9de5-88e0747d51b5",
+      "target": "89a98106-f0f3-4626-a13d-31b30a562f16",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "1b142b38-a9ba-42ec-a6f1-fe1e5fb93724",
+      "created_at": "2026-02-06T17:58:04.155Z"
+    },
+    {
+      "source": "01197260-27d1-4364-a993-b4c803fbf1a3",
+      "target": "89a98106-f0f3-4626-a13d-31b30a562f16",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "ad610086-5551-4acb-b62e-3cb5da71607a",
+      "created_at": "2026-02-06T17:58:04.157Z"
+    },
+    {
+      "source": "3b5a00dd-af44-4733-ac0b-dd655f7c1bbf",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "6c9ee648-816b-4866-bac8-f99dd7044f67",
+      "created_at": "2026-02-06T17:58:04.203Z"
+    },
+    {
+      "source": "3b5a00dd-af44-4733-ac0b-dd655f7c1bbf",
+      "target": "0e96695b-bc33-4874-b00d-10ac4456ea67",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "8ca43530-e699-4dfd-ae90-f8150db3db1c",
+      "created_at": "2026-02-06T17:58:04.203Z"
+    },
+    {
+      "source": "3b5a00dd-af44-4733-ac0b-dd655f7c1bbf",
+      "target": "1c197417-baa1-452f-95b8-3ba5d60170ec",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "4838d957-dbfb-46a9-a4ac-e002f28c3608",
+      "created_at": "2026-02-06T17:58:04.203Z"
+    },
+    {
+      "source": "3b5a00dd-af44-4733-ac0b-dd655f7c1bbf",
+      "target": "bf93fec1-4f4d-4e56-b817-6df4efecb32c",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "dae3a869-59b0-4f77-924d-7199d535413e",
+      "created_at": "2026-02-06T17:58:04.203Z"
+    },
+    {
+      "source": "3b5a00dd-af44-4733-ac0b-dd655f7c1bbf",
+      "target": "e5d00d67-9d82-430f-a236-c0e6dc40308f",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "266dbca3-a9e5-4610-a905-bba64ef4c9ef",
+      "created_at": "2026-02-06T17:58:04.203Z"
+    },
+    {
+      "source": "3b5a00dd-af44-4733-ac0b-dd655f7c1bbf",
+      "target": "56155d13-795d-4f29-adc5-f7378f53b355",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "3ddeb72f-ee2a-4b57-8486-19e6e961108d",
+      "created_at": "2026-02-06T17:58:04.203Z"
+    },
+    {
+      "source": "3b5a00dd-af44-4733-ac0b-dd655f7c1bbf",
+      "target": "9d6ad414-8237-4500-a456-e282d2ccbf57",
+      "relationship": "relates_to",
+      "weight": 0.65,
+      "properties": {},
+      "id": "598d6d26-1ef2-4288-8b67-b274b4d7f919",
+      "created_at": "2026-02-06T17:58:04.203Z"
+    },
+    {
+      "source": "a6e73b02-a45d-4a06-9b60-a44469547a34",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "e7dee301-19d5-443b-9a97-df601fc78e34",
+      "created_at": "2026-02-06T17:58:04.225Z"
+    },
+    {
+      "source": "a6e73b02-a45d-4a06-9b60-a44469547a34",
+      "target": "0e96695b-bc33-4874-b00d-10ac4456ea67",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "4855b4de-265d-40de-8be4-dd4a1ea89367",
+      "created_at": "2026-02-06T17:58:04.225Z"
+    },
+    {
+      "source": "a6e73b02-a45d-4a06-9b60-a44469547a34",
+      "target": "1c197417-baa1-452f-95b8-3ba5d60170ec",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "2d0c161e-7fb7-45d2-a2e6-7a01146a60ae",
+      "created_at": "2026-02-06T17:58:04.225Z"
+    },
+    {
+      "source": "a6e73b02-a45d-4a06-9b60-a44469547a34",
+      "target": "bf93fec1-4f4d-4e56-b817-6df4efecb32c",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "9d619a5d-7ffd-4178-94f8-967cfeb2037e",
+      "created_at": "2026-02-06T17:58:04.225Z"
+    },
+    {
+      "source": "a6e73b02-a45d-4a06-9b60-a44469547a34",
+      "target": "e5d00d67-9d82-430f-a236-c0e6dc40308f",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "5488db89-a27b-45ae-a3fa-f53177d68c46",
+      "created_at": "2026-02-06T17:58:04.225Z"
+    },
+    {
+      "source": "a6e73b02-a45d-4a06-9b60-a44469547a34",
+      "target": "c797fe45-3e03-47fc-b36e-59846138fff9",
+      "relationship": "relates_to",
+      "weight": 0.9,
+      "properties": {},
+      "id": "8a194e9f-be16-4f2c-906a-5f591d5bca95",
+      "created_at": "2026-02-06T17:58:04.226Z"
+    },
+    {
+      "source": "a6e73b02-a45d-4a06-9b60-a44469547a34",
+      "target": "780c7998-80d3-438e-9df4-212037bfe700",
+      "relationship": "relates_to",
+      "weight": 0.9,
+      "properties": {},
+      "id": "474f5737-a9d0-49d9-9d6f-d7986b486ab8",
+      "created_at": "2026-02-06T17:58:04.226Z"
+    },
+    {
+      "source": "a6e73b02-a45d-4a06-9b60-a44469547a34",
+      "target": "119644c1-b4f0-4d8d-a1e9-e157ef0a7814",
+      "relationship": "relates_to",
+      "weight": 0.9,
+      "properties": {},
+      "id": "6a82d6a4-d544-4620-9752-44d104296d56",
+      "created_at": "2026-02-06T17:58:04.226Z"
+    },
+    {
+      "source": "a6e73b02-a45d-4a06-9b60-a44469547a34",
+      "target": "f28b0b74-6d8e-44fe-b9a3-179f6fea39be",
+      "relationship": "relates_to",
+      "weight": 0.9,
+      "properties": {},
+      "id": "90ea466d-4520-4505-998d-03128db73d59",
+      "created_at": "2026-02-06T17:58:04.226Z"
+    },
+    {
+      "source": "a6e73b02-a45d-4a06-9b60-a44469547a34",
+      "target": "2b8f4e1d-d0af-45fa-b962-691d5488d736",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "21c49642-e534-4301-ae5f-d9c7a868669d",
+      "created_at": "2026-02-06T17:58:04.226Z"
+    },
+    {
+      "source": "a6e73b02-a45d-4a06-9b60-a44469547a34",
+      "target": "a879a80f-bf3d-40b7-802b-1ba0a1cace66",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "89efdf90-2d2a-446a-a92a-dc0b19e9c117",
+      "created_at": "2026-02-06T17:58:04.226Z"
+    },
+    {
+      "source": "a6e73b02-a45d-4a06-9b60-a44469547a34",
+      "target": "f9bfde51-6c66-4a3f-bb63-690faa8d6505",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "79502bd4-b5c8-42e2-a68b-0d4e47b7f234",
+      "created_at": "2026-02-06T17:58:04.226Z"
+    },
+    {
+      "source": "0857b69f-27ed-4781-a3cf-48b6fdccbf7e",
+      "target": "89a98106-f0f3-4626-a13d-31b30a562f16",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "33aa2fa9-26ec-4424-ad39-2e6db2b9f306",
+      "created_at": "2026-02-06T17:58:04.229Z"
+    },
+    {
+      "source": "0857b69f-27ed-4781-a3cf-48b6fdccbf7e",
+      "target": "1c197417-baa1-452f-95b8-3ba5d60170ec",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "d6d86ee6-fbfd-4c38-a9ad-db710b2c939a",
+      "created_at": "2026-02-06T17:58:04.229Z"
+    },
+    {
+      "source": "0b46378e-0f76-4684-811c-a621daeeba2c",
+      "target": "5fefd207-68ba-4ddb-9613-703b78a93ca1",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "86799717-93c3-4c21-bf2d-6178668a9d4c",
+      "created_at": "2026-02-06T19:29:07.456Z"
+    },
+    {
+      "source": "0b46378e-0f76-4684-811c-a621daeeba2c",
+      "target": "ebb100fc-0b03-4c04-8d04-54948493a7fd",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "41e63759-14bc-40f4-b0ad-5b5edfc15fec",
+      "created_at": "2026-02-06T19:29:07.456Z"
+    },
+    {
+      "source": "0b46378e-0f76-4684-811c-a621daeeba2c",
+      "target": "f5c709c9-d1ee-436b-aea4-d4c0c46a3daf",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "e2fdf4e5-b3e1-4029-b79c-589453b5ee21",
+      "created_at": "2026-02-06T19:29:07.456Z"
+    },
+    {
+      "source": "dab6bfc2-94f4-4589-ad85-f6c55570e140",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "ac26a7f7-17af-4192-81f0-8edb615a7fc6",
+      "created_at": "2026-02-06T19:38:21.706Z"
+    },
+    {
+      "source": "dab6bfc2-94f4-4589-ad85-f6c55570e140",
+      "target": "ba826f71-0acb-4015-992b-bcabb1e2c171",
+      "relationship": "relates_to",
+      "weight": 0.65,
+      "properties": {},
+      "id": "943ba65e-b2ab-45ef-8627-36bc0618e66d",
+      "created_at": "2026-02-06T19:38:21.706Z"
+    },
+    {
+      "source": "dab6bfc2-94f4-4589-ad85-f6c55570e140",
+      "target": "e12974b3-6df4-4f2c-af56-6bcf023b56e8",
+      "relationship": "relates_to",
+      "weight": 0.65,
+      "properties": {},
+      "id": "8500cb8e-8e51-449d-a02d-7cd187a59b8d",
+      "created_at": "2026-02-06T19:38:21.707Z"
+    },
+    {
+      "source": "435a5b48-f6ab-4e3d-b54e-8653eaab930c",
+      "target": "5fefd207-68ba-4ddb-9613-703b78a93ca1",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "8cb0b76e-7706-496c-b75a-8a03e79ae9ee",
+      "created_at": "2026-02-06T19:45:13.520Z"
+    },
+    {
+      "source": "435a5b48-f6ab-4e3d-b54e-8653eaab930c",
+      "target": "34936946-b581-4a0c-9546-30577034b301",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "fc830b11-5535-4cf8-bfed-daed7841a937",
+      "created_at": "2026-02-06T19:45:13.520Z"
+    },
+    {
+      "source": "ff82c245-1506-400f-8a40-7c8c32b198d9",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "efb664ae-73be-4ad5-bc83-f699beae7df3",
+      "created_at": "2026-02-06T19:55:59.995Z"
+    },
+    {
+      "source": "87965b18-bbb2-44cb-a76b-3b40e450f665",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "6d54bf91-8205-482a-9fb7-97d32bd7807b",
+      "created_at": "2026-02-06T20:02:13.802Z"
+    },
+    {
+      "source": "87965b18-bbb2-44cb-a76b-3b40e450f665",
+      "target": "e12974b3-6df4-4f2c-af56-6bcf023b56e8",
+      "relationship": "relates_to",
+      "weight": 0.65,
+      "properties": {},
+      "id": "27c1ce10-c8b8-4728-ae38-17c48ea795e0",
+      "created_at": "2026-02-06T20:02:13.802Z"
+    },
+    {
+      "source": "108f7925-49e1-47bf-9e75-40fc726e5076",
+      "target": "5fefd207-68ba-4ddb-9613-703b78a93ca1",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "68767f99-d9d0-4d24-82dd-78d11238b1de",
+      "created_at": "2026-02-06T20:03:15.027Z"
+    },
+    {
+      "source": "b4783292-3fd9-4ea3-8e95-a0112a2c421b",
+      "target": "5fefd207-68ba-4ddb-9613-703b78a93ca1",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "4576aadb-1f82-4d49-a344-6fb556e77657",
+      "created_at": "2026-02-06T20:04:46.294Z"
+    },
+    {
+      "source": "dc61a0ee-11d4-454a-9a7b-298a41e89bc5",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "b7113b7a-9651-48e5-acba-719651e4acb1",
+      "created_at": "2026-02-06T20:07:50.218Z"
+    },
+    {
+      "source": "dc61a0ee-11d4-454a-9a7b-298a41e89bc5",
+      "target": "c77692f4-dd37-4f2c-bcfa-077835c33672",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "1eabfb51-7e41-4f1b-8548-9801aded4a76",
+      "created_at": "2026-02-06T20:07:50.218Z"
+    },
+    {
+      "source": "3c547e11-116c-4f60-b727-e3d82125bb99",
+      "target": "75a9c01d-4f40-4dcf-88b2-3c41d63b283c",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "94e9f6b4-80e9-4f08-9761-9e80685e8284",
+      "created_at": "2026-02-06T20:14:35.163Z"
+    },
+    {
+      "source": "c407e61c-c5e1-4c44-a825-5ef1d59c2ad9",
+      "target": "5fefd207-68ba-4ddb-9613-703b78a93ca1",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "3dfdc039-332c-42d5-acf3-683325ef110d",
+      "created_at": "2026-02-06T20:16:15.725Z"
+    }
+  ],
+  "version": "1.0.0",
+  "saved_at": "2026-02-06T20:16:24.325Z"
+}

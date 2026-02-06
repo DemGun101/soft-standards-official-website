@@ -5,8 +5,9 @@ import RevealOnScroll from '@/components/RevealOnScroll';
 import { SectionHeader } from '@/components/Section';
 import {
   LayersIcon, MonitorIcon, GlobeIcon, LogInIcon, SmartphoneIcon, ActivityIcon,
-  ArrowRightIcon, ChevronRightIcon
+  ArrowRightIcon,
 } from '@/components/Icons';
+import HeroSection from '@/components/HeroSection';
 
 export const metadata: Metadata = {
   title: 'Services — Soft Standards Inc.',
@@ -22,24 +23,13 @@ const techStack = [
 export default function ServicesPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="pt-[clamp(140px,18vw,200px)] pb-[clamp(60px,8vw,100px)] px-[clamp(20px,5vw,80px)] text-center relative overflow-hidden bg-[#0F172A] text-white">
-        <div className="absolute top-[-40%] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(124,58,237,0.12)_0%,transparent_70%)] rounded-full pointer-events-none" />
-
-        <div className="text-[0.85rem] text-gray-300 mb-6 flex items-center justify-center gap-2">
-          <Link href="/" className="text-purple-500 transition-colors hover:text-purple-400">Home</Link>
-          <ChevronRightIcon />
-          Services
-        </div>
-
-        <h1 className="text-[clamp(2.8rem,7vw,5rem)] font-extrabold tracking-[-0.04em] leading-[1.05] max-w-[800px] mx-auto mb-6">
-          Services built for <span className="text-gradient">growth</span>.
-        </h1>
-
-        <p className="text-[clamp(1.05rem,2vw,1.25rem)] text-gray-300 max-w-[560px] mx-auto leading-[1.7]">
-          From strategy to execution, we deliver end-to-end digital solutions that transform businesses and create lasting impact.
-        </p>
-      </section>
+      <HeroSection
+        title={<>Services built for <span className="text-gradient">growth</span>.</>}
+        subtitle="From strategy to execution, we deliver end-to-end digital solutions that transform businesses and create lasting impact."
+        breadcrumbs={[{ href: '/', label: 'Home' }]}
+        breadcrumbCurrent="Services"
+        background="dark"
+      />
 
       {/* Services Bento Grid */}
       <section className="py-[clamp(60px,10vw,120px)] px-[clamp(20px,5vw,80px)]">

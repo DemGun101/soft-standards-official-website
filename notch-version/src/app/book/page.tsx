@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
-import { ChevronRightIcon } from '@/components/Icons';
+import HeroSection from '@/components/HeroSection';
 
 export const metadata: Metadata = {
   title: 'Book a Call — Soft Standards Inc.',
@@ -10,24 +9,14 @@ export const metadata: Metadata = {
 export default function BookPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="pt-[clamp(140px,18vw,180px)] pb-8 px-[clamp(20px,5vw,80px)] text-center relative overflow-hidden">
-        <div className="absolute top-[-40%] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(124,58,237,0.08)_0%,transparent_70%)] rounded-full pointer-events-none" />
-
-        <div className="text-[0.85rem] text-gray-500 mb-6 flex items-center justify-center gap-2">
-          <Link href="/" className="text-purple-500 transition-colors hover:text-purple-400">Home</Link>
-          <ChevronRightIcon />
-          Book a Call
-        </div>
-
-        <h1 className="text-[clamp(2rem,5vw,3.5rem)] font-extrabold tracking-[-0.04em] leading-[1.05] max-w-[700px] mx-auto mb-4">
-          Book Your Free <span className="text-gradient">Growth Audit</span>
-        </h1>
-
-        <p className="text-[clamp(1rem,2vw,1.15rem)] text-gray-500 max-w-[500px] mx-auto leading-[1.7] mb-2">
-          15 minutes. No pitch. Just clarity on what&apos;s possible.
-        </p>
-      </section>
+      <HeroSection
+        title={<>Book Your Free <span className="text-gradient">Growth Audit</span></>}
+        subtitle="15 minutes. No pitch. Just clarity on what's possible."
+        breadcrumbs={[{ href: '/', label: 'Home' }]}
+        breadcrumbCurrent="Book a Call"
+        background="light"
+        showScrollIndicator={false}
+      />
 
       {/* Calendar Section */}
       <section className="pb-[clamp(60px,10vw,120px)] px-[clamp(20px,5vw,80px)]">

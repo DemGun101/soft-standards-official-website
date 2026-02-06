@@ -7,8 +7,9 @@ import { SectionHeader } from '@/components/Section';
 import MagneticButton from '@/components/animations/MagneticButton';
 import {
   MonitorIcon, SmartphoneIcon, LogInIcon, GlobeIcon, ActivityIcon,
-  ArrowRightIcon, ChevronRightIcon, CheckCircleIcon
+  ArrowRightIcon, CheckCircleIcon
 } from '@/components/Icons';
+import HeroSection from '@/components/HeroSection';
 
 const CALENDLY_URL = 'https://calendly.com/contact-softstandards/30min';
 
@@ -225,25 +226,17 @@ export default function PricingContent() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="pt-[clamp(140px,18vw,200px)] pb-[clamp(60px,8vw,100px)] px-[clamp(20px,5vw,80px)] text-center relative overflow-hidden bg-[#0F172A] text-white">
-        <div className="absolute top-[-40%] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(124,58,237,0.12)_0%,transparent_70%)] rounded-full pointer-events-none" />
+      <HeroSection
+        title={<>Transparent <span className="text-gradient">Pricing</span></>}
+        subtitle="Budget-friendly packages designed for every stage of growth. No hidden fees, just honest pricing."
+        breadcrumbs={[{ href: '/', label: 'Home' }]}
+        breadcrumbCurrent="Pricing"
+        background="dark"
+        showScrollIndicator={false}
+      />
 
-        <div className="text-[0.85rem] text-gray-300 mb-6 flex items-center justify-center gap-2">
-          <Link href="/" className="text-purple-500 transition-colors hover:text-purple-400">Home</Link>
-          <ChevronRightIcon />
-          Pricing
-        </div>
-
-        <h1 className="text-[clamp(2.8rem,7vw,5rem)] font-extrabold tracking-[-0.04em] leading-[1.05] max-w-[800px] mx-auto mb-6">
-          Transparent <span className="text-gradient">Pricing</span>
-        </h1>
-
-        <p className="text-[clamp(1.05rem,2vw,1.25rem)] text-gray-300 max-w-[560px] mx-auto leading-[1.7] mb-10">
-          Budget-friendly packages designed for every stage of growth. No hidden fees, just honest pricing.
-        </p>
-
-        {/* Tab Toggle */}
+      {/* Tab Toggle */}
+      <section className="bg-[#0F172A] pb-[clamp(40px,5vw,60px)] -mt-[clamp(40px,5vw,60px)] text-center relative z-10">
         <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full p-1.5 border border-white/10">
           <button
             onClick={() => setActiveTab('services')}

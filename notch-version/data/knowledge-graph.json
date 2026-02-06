@@ -1,0 +1,1324 @@
+{
+  "nodes": [
+    {
+      "name": "I decided to use Redis for the session cache in the auth service",
+      "type": "decision",
+      "properties": {
+        "decision_id": "5dcca681-7cc8-44d1-abe8-40d37a642edf",
+        "project": "general",
+        "context": "I decided to use Redis for the session cache in the auth service",
+        "reasoning": "",
+        "full_decision": "I decided to use Redis for the session cache in the auth service"
+      },
+      "id": "45e1cb27-56e3-4b88-bfb3-cf84fffab8bb",
+      "created_at": "2026-02-06T19:30:56.500Z",
+      "updated_at": "2026-02-06T19:30:56.500Z"
+    },
+    {
+      "name": "general",
+      "type": "project",
+      "properties": {},
+      "id": "f796dc9f-e00b-4210-b249-0b6c68a0d9f8",
+      "created_at": "2026-02-06T19:30:56.500Z",
+      "updated_at": "2026-02-06T19:30:56.500Z"
+    },
+    {
+      "name": "redis",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "ee1fbf0b-6577-4a6d-a6f9-e25dd90de766",
+      "created_at": "2026-02-06T19:30:56.500Z",
+      "updated_at": "2026-02-06T19:30:56.500Z"
+    },
+    {
+      "name": "Remember: the staging server IP is 10.0.5.42",
+      "type": "decision",
+      "properties": {
+        "decision_id": "e1609fea-75e1-416b-b946-4b3aba82cb54",
+        "project": "general",
+        "context": "Remember: the staging server IP is 10.0.5.42",
+        "reasoning": "",
+        "full_decision": "Remember: the staging server IP is 10.0.5.42"
+      },
+      "id": "79738786-c73e-483a-8ec0-e8579e56ccb3",
+      "created_at": "2026-02-06T19:30:56.505Z",
+      "updated_at": "2026-02-06T19:30:56.505Z"
+    },
+    {
+      "name": "Note to self: always run migrations before deploying to prod",
+      "type": "decision",
+      "properties": {
+        "decision_id": "1c588018-9255-4576-8364-6148435bb52e",
+        "project": "general",
+        "context": "Note to self: always run migrations before deploying to prod",
+        "reasoning": "",
+        "full_decision": "Note to self: always run migrations before deploying to prod"
+      },
+      "id": "4477fd96-3ae9-4d32-b9a6-19370538b6a6",
+      "created_at": "2026-02-06T19:30:56.511Z",
+      "updated_at": "2026-02-06T19:30:56.511Z"
+    },
+    {
+      "name": "We agreed to use Tailwind CSS for all frontend projects going forward",
+      "type": "decision",
+      "properties": {
+        "decision_id": "0087a68d-cb0a-49a1-80d4-45341e5accd0",
+        "project": "general",
+        "context": "We agreed to use Tailwind CSS for all frontend projects going forward",
+        "reasoning": "",
+        "full_decision": "We agreed to use Tailwind CSS for all frontend projects going forward"
+      },
+      "id": "28adb4db-3b2a-42b7-abe3-cccc91820c09",
+      "created_at": "2026-02-06T19:30:56.518Z",
+      "updated_at": "2026-02-06T19:30:56.518Z"
+    },
+    {
+      "name": "tailwind",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "cc4c9b85-3a8d-4be9-ac99-639b56514e92",
+      "created_at": "2026-02-06T19:30:56.518Z",
+      "updated_at": "2026-02-06T19:30:56.518Z"
+    },
+    {
+      "name": "css",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "c3be91ed-b7b0-4dcf-9b6e-a70fbe4d6878",
+      "created_at": "2026-02-06T19:30:56.518Z",
+      "updated_at": "2026-02-06T19:30:56.518Z"
+    },
+    {
+      "name": "Save this: the monitoring dashboard URL is https://grafana.internal.dev",
+      "type": "decision",
+      "properties": {
+        "decision_id": "c8b13a49-b171-4b8d-8e5f-2a8f2bd6a3d0",
+        "project": "general",
+        "context": "Save this: the monitoring dashboard URL is https://grafana.internal.dev",
+        "reasoning": "",
+        "full_decision": "Save this: the monitoring dashboard URL is https://grafana.internal.dev"
+      },
+      "id": "c14333b9-1358-46fa-ad0f-28ae9caf6202",
+      "created_at": "2026-02-06T19:30:56.522Z",
+      "updated_at": "2026-02-06T19:30:56.522Z"
+    },
+    {
+      "name": "https://grafana.internal.dev",
+      "type": "file",
+      "properties": {
+        "confidence": 0.9,
+        "source": "rule"
+      },
+      "id": "5dc62649-3822-4736-ae81-27d857beebe5",
+      "created_at": "2026-02-06T19:30:56.522Z",
+      "updated_at": "2026-02-06T19:30:56.522Z"
+    },
+    {
+      "name": "Progress: Exploration of claude-brain intelligence features completed. Found all implementations: ev",
+      "type": "decision",
+      "properties": {
+        "decision_id": "ce42c354-d414-4f66-b656-6af5d76030a0",
+        "project": "claude-brain",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: Exploration of claude-brain intelligence features completed. Found all implementations: evolution tracker, trend detector, timeline builder, recommendations engine, cross-project patterns, chain retrieval, knowledge graph scoring. Knowledge graph scoring likely returns 50% due to combinedScore calculation using alpha=0.6 weighting. Evolution tracker uses Jaccard similarity with 0.6 threshold for change detection. Trends use momentum calculation. Cross-project uses term overlap + semantic clustering. Recommendations use similarity * confidence. All wired through router intent classification and search engine orchestration. Main issue: graph search scores get set via calculateNameScore but then combined with graphScore using 0.6*name + 0.4*graph weighting."
+      },
+      "id": "cb3b62a4-a7a6-4582-b880-d6be2378ec02",
+      "created_at": "2026-02-06T19:30:56.542Z",
+      "updated_at": "2026-02-06T19:30:56.542Z"
+    },
+    {
+      "name": "claude-brain",
+      "type": "project",
+      "properties": {},
+      "id": "cbfb61bf-b1e6-4b7d-a8ff-39e61e0395c1",
+      "created_at": "2026-02-06T19:30:56.542Z",
+      "updated_at": "2026-02-06T19:30:56.542Z"
+    },
+    {
+      "name": "claude-",
+      "type": "person",
+      "properties": {
+        "confidence": 0.7,
+        "source": "nlp"
+      },
+      "id": "ffb734fc-b72b-4ebd-bfe4-5021f7e5359b",
+      "created_at": "2026-02-06T19:30:56.542Z",
+      "updated_at": "2026-02-06T19:30:56.542Z"
+    },
+    {
+      "name": "Exploration complete: Claude Brain's intent classification, routing, and intelligence system.\n\nKEY F",
+      "type": "decision",
+      "properties": {
+        "decision_id": "a68fc7a7-8e66-43da-807b-b3e06d197de3",
+        "project": "claude-brain",
+        "context": "Exploration complete: Claude Brain's intent classification, routing, and intelligence system",
+        "reasoning": "",
+        "full_decision": "Exploration complete: Claude Brain's intent classification, routing, and intelligence system.\n\nKEY FINDINGS:\n\n1. INTENT CLASSIFIER (intent-classifier.ts)\n- 14 primary intents: session_start, context_needed, decision_made, store_this, pattern_found, mistake_learned, progress_update, question, comparison, exploration, list_all, update_memory, delete_memory, no_action\n- Phase 19 B1-B4 improvements:\n  - B1: Question confidence raised (? → 0.95, question word → 0.90)\n  - B2: session_start narrowed (must be at start + no progress indicators)\n  - B3: Temporal signal detection added to secondary intents\n  - B4: Extended question guards (do I, did we, have we patterns)\n- Priority-ordered classification (first confident match wins)\n- No LLM calls, pure pattern matching\n- Secondary intents: decision_made, comparison, exploration, question, session_start\n- Question guards prevent \"I prefer X?\" from being stored as decision\n\n2. DECLARATIVE STATEMENT HANDLING\n- \"The API timeout should be 30 seconds\" → matches DECISION_PHRASES (\"should use\") → decision_made intent\n- Full message becomes decision text, not abbreviated\n- Entity extraction captures: project, technologies, topic, reasoning, alternatives\n- Stored with tags for searchability\n\n3. ROUTING (router.ts)\n- BrainRouter: orchestrates intents → handlers → unified BrainResponse\n- 14 handler methods for each intent\n- Key handlers:\n  * handleStoreThis: explicit remember/save directives\n  * handleDecisionMade: captured decisions\n  * handleListAll: \"what decisions\", \"show all\" → fetchAllDecisions\n  * handleQuestion: hybrid/temporal/chain search\n  * handleExploration: timeline/evolution/trends\n  * handleUpdateMemory: similarity-based matching (0.5 threshold)\n  * handleDeleteMemory: similarity-based matching (0.5 threshold)\n\n4. ENTITY EXTRACTION (entity-extractor.ts)\n- Extracts: project, technologies, topic, decision, reasoning, alternatives, completedTask, nextSteps, original, correction, patternType\n- Tech dictionary: 70+ common techs (typescript, react, python, etc.)\n- GENERIC_WORDS set prevents false positives (small, large, general, etc.)\n- Project matching via explicit patterns + vault service fallback\n\n5. LIST QUERIES vs QUESTIONS\n- \"list all\" intent: handles \"what decisions\", \"show all\", \"list everything\"\n- Fetches ALL decisions/patterns/corrections (not paginated in list handler)\n- Question intent: searches for relevant results (filtered, ranked, limited to 5)\n- \"what decisions\" could match either depending on intent classifier confidence\n\n6. CORRECTION vs LEARNING\n- Both match MISTAKE_PHRASES: \"bug was\", \"lesson learned\", \"should have\", \"avoid using\"\n- mistake_learned intent → storeCorrection method\n- Extracts: original mistake, correction approach, reasoning\n- No distinction in classifier; both stored as corrections in memory\n\n7. ADVANCED INTELLIGENCE FEATURES (SearchEngine)\nPhase 19 integration:\n- temporal_search: parse temporal phrases, filter by date range (TemporalQueryProcessor)\n- buildTimeline: TimelineBuilder for chronological queries\n- analyzeEvolution: DecisionEvolutionTracker for \"how has X changed\"\n- detectTrends: TrendDetector for trend analysis\n- chainSearch: ChainRetrieval for multi-hop complex questions\n- getRecommendations: Recommender for proactive suggestions\n- findCrossProjectPatterns: PatternGeneralizer for cross-project insights\n- searchGraph: KnowledgeGraph for related concepts\n- All wrapped with 5s timeout + fallback\n\n8. RESPONSE FILTERING (response-filter.ts)\nPhase 19 D2-D3:\n- Infrastructure noise removal (strong 1-hit, weak 2+ hits)\n- Deduplication: ID-based, prefix-based (first 100 chars), word-overlap (0.75 threshold, was 0.85)\n- Dynamic threshold: keep results ≥70% of median score\n- Limit to 5 results max\n- Relevance scoring (90%+ highly relevant, 70%+ good, etc.)\n\n9. QUESTION HANDLING (detailed)\n- Uses SearchEngine for all searches (hybrid, cached, temporal)\n- Parallel: patterns + corrections + graph results\n- Detects complex questions (2+ ?, >200 chars, multi-clause)\n- Chain retrieval for complex questions\n- CrossProject patterns for general/unspecified project\n- Knowledge graph enrichment for all questions\n- Episode registration\n\n10. MEMORY SERVICE (memory/index.ts)\nRoutes to ChromaDB if enabled, falls back to SQLite:\n- rememberDecision: store decision with context/reasoning\n- searchRaw: hybrid/cached search with normalization\n- searchPatterns, searchCorrections\n- fetchAllDecisions: bulk access (project-filtered if specified)\n- updateDecision: delete old + store new\n- deleteDecision: by ID\n- addDecisionStoredListener: hooks for KG builder\n\n11. NORMALIZATION (routing/types.ts)\nFlattens nested { memory: { id }, decision: { id } } structure:\n- normalizeSearchResults: handles nested ChromaDB/SQLite results\n- normalizePatternResults, normalizeCorrectionResults\n- Extracts reasoning into content for display\n\n12. STORAGE BEHAVIOR\n- store_this & decision_made: uses full message as decision text\n- context: topic or first 200 chars of message\n- reasoning: extracted from message if present\n- tags: technologies extracted or ['auto-detected']/['user-stored']\n- Also writes to vault (Obsidian) via writeToVault helper\n- Links to active episode via episode manager\n\n13. EPISODE INTEGRATION (C8)\n- registerEpisodeMessage: tracks all messages by intent\n- linkToActiveEpisode: associates decisions/patterns/corrections with episodes\n- Enables session continuity and episodic memory\n\nARCHITECTURAL PATTERNS:\n- Lazy singleton for BrainRouter\n- Services initialized check before operations\n- Timeout wrapping for all external service calls\n- Fallback chains (hybrid → plain, ChromaDB → SQLite, TemporalQueryProcessor → plain)\n- Dynamic imports for optional features (temporal, prediction, reasoning)\n- Semantic cache for repeated queries\n\nFILE LOCATIONS:\n- Intent: src/routing/intent-classifier.ts\n- Router: src/routing/router.ts\n- Entity extractor: src/routing/entity-extractor.ts\n- Search engine: src/routing/search-engine.ts\n- Response filter: src/routing/response-filter.ts\n- Brain handler: src/server/handlers/tools/brain.ts\n- Memory service: src/memory/index.ts\n- Intelligence features:\n  * Temporal: src/temporal/{timeline,evolution,trends,query-processor}.ts\n  * Prediction: src/prediction/{recommender,decision-predictor,context-anticipator}.ts\n  * Reasoning: src/reasoning/{chain-retrieval,synthesizer,counterfactual}.ts\n  * Cross-project: src/cross-project/{generalizer,transfer,affinity}.ts\n  * Knowledge: src/knowledge/graph/{builder,schema}.ts"
+      },
+      "id": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "anthropic",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "07bb8bb3-28ea-4b30-b066-0ef9fa5d09a5",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "typescript",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "2855ea2e-b15d-4a98-8ef8-28e758c1f864",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "chromadb",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "5c3bc8aa-b7dd-4da9-9ea6-f8b2458c0983",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "sql",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "621dfa7a-b507-444e-b129-94227aec156e",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "api",
+      "type": "concept",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "61097625-2f85-4c26-a7ab-614d4d8c1c4f",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "react",
+      "type": "technology",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "fb3ec442-f389-4976-b1e4-8285f096a0b3",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "python",
+      "type": "technology",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "8e15c30a-f232-40d2-909f-1fccb74f429d",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "memory/index.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "7900de9e-0692-4257-bb36-2c684ae1eedb",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "routing/types.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "0faa2c18-08c0-405f-ba45-25302e9b348d",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "src/routing/intent-classifier.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "9713c8ba-9840-4e02-8bba-a86e9c5cb991",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "src/routing/router.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "93e8db91-2a75-448e-b078-56e73d5e1eb3",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "src/routing/entity-extractor.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "8178470f-7005-4105-b9d2-c88eba0cacc7",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "src/routing/search-engine.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "f7ee85a4-9d2d-4fd4-b108-af3d4ea3acff",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "src/routing/response-filter.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "ebe30e01-5ac7-4b7f-887e-cd24992ee229",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "src/server/handlers/tools/brain.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "607ac1f7-9cee-4d64-bb9b-5635f37be336",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "src/memory/index.ts",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "c9c0ac32-218d-4976-ae7e-f5f08a71ba98",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "claude",
+      "type": "person",
+      "properties": {
+        "confidence": 0.7,
+        "source": "nlp"
+      },
+      "id": "c3c3c398-777e-40a1-9706-a91523137670",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "\"lesson",
+      "type": "person",
+      "properties": {
+        "confidence": 0.7,
+        "source": "nlp"
+      },
+      "id": "4609fd8b-aa81-4fac-87cb-45afec49913f",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "- memory service:",
+      "type": "concept",
+      "properties": {
+        "confidence": 0.65,
+        "source": "nlp"
+      },
+      "id": "ba66806c-46b3-4637-9d72-e86d0799f5b4",
+      "created_at": "2026-02-06T19:30:56.651Z",
+      "updated_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "name": "Progress: stronger brain usage enforcement: updated all 4 CLAUDE",
+      "type": "decision",
+      "properties": {
+        "decision_id": "62125902-61eb-433f-8e25-4bfe5b54809a",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: stronger brain usage enforcement: updated all 4 CLAUDE"
+      },
+      "id": "13fb504d-d74d-44c7-94f1-cb3fefada5da",
+      "created_at": "2026-02-06T19:30:56.655Z",
+      "updated_at": "2026-02-06T19:30:56.655Z"
+    },
+    {
+      "name": "claude progress",
+      "type": "person",
+      "properties": {
+        "confidence": 0.7,
+        "source": "nlp"
+      },
+      "id": "fe013283-ab97-4af7-b15d-15caaf1c9884",
+      "created_at": "2026-02-06T19:30:56.655Z",
+      "updated_at": "2026-02-06T19:30:56.655Z"
+    },
+    {
+      "name": "Progress: brain usage enforcement to MEMORY",
+      "type": "decision",
+      "properties": {
+        "decision_id": "b4e2c375-53ba-4803-99e2-4584d9cab026",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: brain usage enforcement to MEMORY"
+      },
+      "id": "d7b0c45f-c3af-4c9d-866e-d5571b53a7ba",
+      "created_at": "2026-02-06T19:30:56.658Z",
+      "updated_at": "2026-02-06T19:30:56.658Z"
+    },
+    {
+      "name": "Progress: /Users/dem/higgsfield as the user's working project folder for Higgsfield video generation",
+      "type": "decision",
+      "properties": {
+        "decision_id": "8b801692-a214-45f3-84f1-8f45ac913647",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: /Users/dem/higgsfield as the user's working project folder for Higgsfield video generation"
+      },
+      "id": "4b66b71b-c695-439f-af6b-097b527b78be",
+      "created_at": "2026-02-06T19:30:56.667Z",
+      "updated_at": "2026-02-06T19:30:56.667Z"
+    },
+    {
+      "name": "Progress: CLAUDE",
+      "type": "decision",
+      "properties": {
+        "decision_id": "f05acf1a-8b03-40da-9d93-d8937190e818",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: CLAUDE"
+      },
+      "id": "02e029b3-b4f6-47a7-a9cd-15bc67eaeadd",
+      "created_at": "2026-02-06T19:30:56.670Z",
+      "updated_at": "2026-02-06T19:30:56.670Z"
+    },
+    {
+      "name": "Progress: 3 custom skills for the Higgsfield project at /Users/dem/higgsfield/",
+      "type": "decision",
+      "properties": {
+        "decision_id": "690c43ff-8232-4c3a-b06b-04c4b6cca79c",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: 3 custom skills for the Higgsfield project at /Users/dem/higgsfield/"
+      },
+      "id": "01e6d9e1-ba76-4596-882b-455ffa118bfd",
+      "created_at": "2026-02-06T19:30:56.674Z",
+      "updated_at": "2026-02-06T19:30:56.674Z"
+    },
+    {
+      "name": "Progress: /Users/dem/higgsfield/",
+      "type": "decision",
+      "properties": {
+        "decision_id": "7c92521c-751c-4e82-8565-7206cacf7bfc",
+        "project": "directory",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: /Users/dem/higgsfield/"
+      },
+      "id": "4e484d36-07be-4aaa-b93a-850cd2ea9f9c",
+      "created_at": "2026-02-06T19:30:56.675Z",
+      "updated_at": "2026-02-06T19:30:56.675Z"
+    },
+    {
+      "name": "directory",
+      "type": "project",
+      "properties": {},
+      "id": "14a81f94-5732-42a1-a740-99316c7f3e74",
+      "created_at": "2026-02-06T19:30:56.675Z",
+      "updated_at": "2026-02-06T19:30:56.675Z"
+    },
+    {
+      "name": "Progress: full analysis of softstandards",
+      "type": "decision",
+      "properties": {
+        "decision_id": "c090370f-5ded-4744-a638-1e77f2e5ce4a",
+        "project": "higgsfield",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: full analysis of softstandards"
+      },
+      "id": "c9c4b7cd-6137-409d-8f8b-a9acdffc5aeb",
+      "created_at": "2026-02-06T19:30:56.676Z",
+      "updated_at": "2026-02-06T19:30:56.676Z"
+    },
+    {
+      "name": "higgsfield",
+      "type": "project",
+      "properties": {},
+      "id": "11a3cdcd-ff37-4f91-8b64-b788ffe03819",
+      "created_at": "2026-02-06T19:30:56.676Z",
+      "updated_at": "2026-02-06T19:30:56.676Z"
+    },
+    {
+      "name": "Progress: full 7-video Higgsfield production plan for softstandards",
+      "type": "decision",
+      "properties": {
+        "decision_id": "9419122d-ab28-4b9f-9004-98c1fb1829cb",
+        "project": "higgsfield",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: full 7-video Higgsfield production plan for softstandards"
+      },
+      "id": "4b869d60-d25f-4d48-991e-b07abfab7de1",
+      "created_at": "2026-02-06T19:30:56.678Z",
+      "updated_at": "2026-02-06T19:30:56.678Z"
+    },
+    {
+      "name": "Progress: COMPLETE PROJECT CONTEXT - Soft Standards Lead Magnet Video\n\n## Client: Soft Standards (so",
+      "type": "decision",
+      "properties": {
+        "decision_id": "06abfd56-6102-4592-8882-afada7d1a686",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: COMPLETE PROJECT CONTEXT - Soft Standards Lead Magnet Video\n\n## Client: Soft Standards (softstandards.net)\n- Brand: Navy #0F172A + Purple #5B3BF4, Poppins font\n- Target: Founders/entrepreneurs who need marketing systems\n- Services: Paid ads, SEO, email automation, CRM, brand strategy\n- CTA: \"Book Your Free Audit\" / \"Schedule a Call\"\n- Has \"Watch How It Works\" button with no actual video yet\n\n## Higgsfield Setup (FIXED)\n- Account: Zain UI on cloud.higgsfield.ai\n- API Key: 50e5d017-d309-45fb-9e9a-ee005cf71584\n- Credits: ~770 remaining (started with 800)\n- MCP server: /Users/dem/higgsfield-mcp/\n- CRITICAL: Soul model path is `higgsfield-ai/soul/standard` (NOT /v1/text2image/soul)\n- V2 API: Authorization: Key {key}:{secret}, flat JSON body\n- Params: prompt, aspect_ratio (16:9, 4:3, etc), resolution (720p/1080p), enhance_prompt, seed, batch_size, style_id\n- Video still uses old API: /v1/image2video/dop with params wrapper\n\n## Lead Magnet Intro Video Plan (5 scenes)\nGoal: Easy to understand, makes prospects book an appointment, CTA at end\n\n### Scene 1: \"The Struggle\"\n- Prompt: Frustrated entrepreneur at desk late at night, laptop glow illuminating tired face, scattered papers, empty coffee cups, dark moody office\n- Style: Realistic (59cff3e6-a897-4741-8498-28a7e943d48b)\n- Motion: Crash Zoom In (zoom into the frustration)\n\n### Scene 2: \"The Breakthrough\"  \n- Prompt: Moment of discovery, purple light breaking through darkness revealing a clear path forward, entrepreneur looking up with hope, cinematic lighting shift from dark to purple glow\n- Style: Geominimal\n- Motion: Dolly In (approaching the solution)\n\n### Scene 3: \"The Machine\"\n- Prompt: Sleek futuristic marketing automation dashboard with flowing data streams, purple and navy color scheme, holographic displays showing campaign metrics, clean minimal tech aesthetic\n- Style: Geominimal\n- Motion: Crane Up (revealing the scale)\n\n### Scene 4: \"The Results\"\n- Prompt: Revenue metrics exploding upward on elegant dark dashboard, green growth arrows, celebration atmosphere, golden hour light streaming through modern office windows\n- Style: Spotlight (40ff999c-f576-443c-b5b3-c7d1391a666e)\n- Motion: Glam\n\n### Scene 5: \"The CTA\"\n- Prompt: Clean elegant call-to-action screen, \"Book Your Free Audit\" in bold typography, purple gradient button on dark navy background, subtle light particles, premium luxury feel\n- Style: Quiet Luxury\n- Motion: Super Dolly In (urgency)\n\n## Style IDs Used\n- Realistic: 59cff3e6-a897-4741-8498-28a7e943d48b\n- Geominimal: (look up from styles)\n- Spotlight: 40ff999c-f576-443c-b5b3-c7d1391a666e\n- Quiet Luxury: (look up from styles)\n\n## Video Quality Tiers\n- Video lite: 2 credits (fastest, good for preview)\n- Video turbo: ~5 credits\n- Video standard: 9 credits (highest quality)\n\n## Production Workflow\n1. Generate 5 images with Soul Standard (higgsfield-ai/soul/standard)\n2. Poll each until complete\n3. Convert each to video using generate_video with motion presets\n4. Deliver all video URLs\n\n## Budget Estimate\n- 5 images at 720p: 5 × 1.5 = 7.5 credits\n- 5 videos at lite: 5 × 2 = 10 credits\n- Total minimum: ~17.5 credits ($1.10)\n- With standard video: ~52.5 credits ($3.28)"
+      },
+      "id": "371f2c39-b8ee-470f-be41-6503dcface0c",
+      "created_at": "2026-02-06T19:30:56.729Z",
+      "updated_at": "2026-02-06T19:30:56.729Z"
+    },
+    {
+      "name": "mcp",
+      "type": "concept",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "2dd1099b-b8f2-4379-aa9c-9d6023d96e0a",
+      "created_at": "2026-02-06T19:30:56.729Z",
+      "updated_at": "2026-02-06T19:30:56.729Z"
+    },
+    {
+      "name": "json",
+      "type": "technology",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "5b3edfd9-5775-48b3-983c-f77b78d3c3cb",
+      "created_at": "2026-02-06T19:30:56.729Z",
+      "updated_at": "2026-02-06T19:30:56.729Z"
+    },
+    {
+      "name": "csharp",
+      "type": "technology",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "0ebb4a67-2a7d-4933-9f86-ecf8cadb095d",
+      "created_at": "2026-02-06T19:30:56.729Z",
+      "updated_at": "2026-02-06T19:30:56.729Z"
+    },
+    {
+      "name": "dolly in",
+      "type": "person",
+      "properties": {
+        "confidence": 0.7,
+        "source": "nlp"
+      },
+      "id": "f6a3c108-b2c5-48ed-8dd4-a5d521dcf3cf",
+      "created_at": "2026-02-06T19:30:56.729Z",
+      "updated_at": "2026-02-06T19:30:56.729Z"
+    },
+    {
+      "name": "cta\"",
+      "type": "concept",
+      "properties": {
+        "confidence": 0.65,
+        "source": "nlp"
+      },
+      "id": "9639f763-df3c-45b4-970f-7b602b1e0c60",
+      "created_at": "2026-02-06T19:30:56.729Z",
+      "updated_at": "2026-02-06T19:30:56.729Z"
+    },
+    {
+      "name": "Progress: TECHNICAL DETAILS - Higgsfield API Configuration\n\n## API Authentication\n- Platform: cloud.",
+      "type": "decision",
+      "properties": {
+        "decision_id": "ecd64911-a9b7-4801-ba40-2c56792d6473",
+        "project": "general",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: TECHNICAL DETAILS - Higgsfield API Configuration\n\n## API Authentication\n- Platform: cloud.higgsfield.ai (dashboard) / platform.higgsfield.ai (API)\n- API Key: 50e5d017-d309-45fb-9e9a-ee005cf71584\n- Secret: e38ac5459e279e917edf353103dad2d4c8d768365b2e285a153827138cc1569d\n- V2 Auth Header: Authorization: Key 50e5d017-d309-45fb-9e9a-ee005cf71584:e38ac5459e279e917edf353103dad2d4c8d768365b2e285a153827138cc1569d\n\n## Image Generation (V2 API - Soul Standard)\n- Endpoint: POST https://platform.higgsfield.ai/higgsfield-ai/soul/standard\n- Auth: Authorization: Key {api_key}:{secret}\n- Payload (flat JSON, NO params wrapper):\n  {\n    \"prompt\": \"...\",\n    \"aspect_ratio\": \"16:9\",  // options: 16:9, 4:3, 1:1, 9:16, 3:4, 3:2, 2:3\n    \"resolution\": \"720p\",     // options: 720p, 1080p\n    \"enhance_prompt\": true,\n    \"seed\": 42,\n    \"batch_size\": 1,          // 1 or 4\n    \"style_id\": \"optional-uuid\"\n  }\n- Response: {\"status\":\"queued\",\"request_id\":\"uuid\",\"status_url\":\"...\",\"cancel_url\":\"...\"}\n- Cost: 1.5 credits (720p), 3 credits (1080p)\n\n## Status Polling (V2)\n- Endpoint: GET https://platform.higgsfield.ai/requests/{request_id}/status\n- Auth: same Authorization: Key header\n- Response when done: {\"status\":\"completed\",\"images\":[{\"url\":\"https://d3u0tzju9qaucj.cloudfront.net/...\"}]}\n\n## Video Generation (V1 API - DoP)\n- Endpoint: POST https://platform.higgsfield.ai/v1/image2video/dop\n- Auth: hf-api-key + hf-secret headers (old format, still works)\n- Payload: {\"params\": {\"model\":\"dop-preview\",\"prompt\":\"...\",\"input_images\":[{\"type\":\"image_url\",\"image_url\":\"...\"}],\"motions\":[{\"id\":\"motion-uuid\",\"strength\":0.5}]}}\n- Models: dop-lite (2 credits), dop-turbo (~5 credits), dop-preview/standard (9 credits)\n- Status polling: GET /v1/job-sets/{job_set_id}\n\n## Other Working Models on V2\n- flux-pro/kontext/max/text-to-image (general purpose)\n- bytedance/seedream/v4/text-to-image (cinematic)\n- reve/text-to-image\n\n## MCP Server Files\n- /Users/dem/higgsfield-mcp/src/higgsfield_mcp/client.py (UPDATED - uses V2 for images)\n- /Users/dem/higgsfield-mcp/src/higgsfield_mcp/server.py\n- /Users/dem/higgsfield/.mcp.json (MCP config with credentials)\n\n## Key Style IDs\n- Realistic: 59cff3e6-a897-4741-8498-28a7e943d48b\n- Spotlight: 40ff999c-f576-443c-b5b3-c7d1391a666e\n- Others: query higgsfield://styles resource or GET /v1/text2image/soul-styles\n\n## Account\n- User: Zain UI\n- Balance: ~770 credits remaining\n- Subscription: Active on cloud.higgsfield.ai"
+      },
+      "id": "08f1f5e3-4065-43a6-ab78-a8f9373493e3",
+      "created_at": "2026-02-06T19:30:56.762Z",
+      "updated_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "name": "https://platform.higgsfield.ai/higgsfield-ai/soul/standard",
+      "type": "file",
+      "properties": {
+        "confidence": 0.9,
+        "source": "rule"
+      },
+      "id": "9f9c3cd1-978f-49ee-a29d-7aa280990d8d",
+      "created_at": "2026-02-06T19:30:56.762Z",
+      "updated_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "name": "https://platform.higgsfield.ai/requests/{request_id}/status",
+      "type": "file",
+      "properties": {
+        "confidence": 0.9,
+        "source": "rule"
+      },
+      "id": "cb7e3868-ef6c-4d67-b495-80a1d5cd43b2",
+      "created_at": "2026-02-06T19:30:56.762Z",
+      "updated_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "name": "https://d3u0tzju9qaucj.cloudfront.net/...\"}]}",
+      "type": "file",
+      "properties": {
+        "confidence": 0.9,
+        "source": "rule"
+      },
+      "id": "a2be13a4-8591-4c58-9e54-91305b3cb017",
+      "created_at": "2026-02-06T19:30:56.762Z",
+      "updated_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "name": "https://platform.higgsfield.ai/v1/image2video/dop",
+      "type": "file",
+      "properties": {
+        "confidence": 0.9,
+        "source": "rule"
+      },
+      "id": "49388ca0-9cdc-41ab-b84c-a341fcc2b296",
+      "created_at": "2026-02-06T19:30:56.762Z",
+      "updated_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "name": "/Users/dem/higgsfield-mcp/src/higgsfield_mcp/client.py",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "25b7bbbb-4ffb-45dd-a225-75a47946d088",
+      "created_at": "2026-02-06T19:30:56.762Z",
+      "updated_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "name": "/Users/dem/higgsfield-mcp/src/higgsfield_mcp/server.py",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "6db088f3-e1b6-4cb7-a8d4-a5dc7cdccf83",
+      "created_at": "2026-02-06T19:30:56.762Z",
+      "updated_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "name": "/Users/dem/higgsfield/.mcp.json",
+      "type": "file",
+      "properties": {
+        "confidence": 0.85,
+        "source": "rule"
+      },
+      "id": "6e84a6ec-7c67-45a8-86e8-54d9e90319ed",
+      "created_at": "2026-02-06T19:30:56.762Z",
+      "updated_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "name": "Progress: MCP client: switched from async httpx to sync httpx with asyncio",
+      "type": "decision",
+      "properties": {
+        "decision_id": "4e6ce135-0212-4d93-8a4a-79daf6b4dac7",
+        "project": "higgsfield",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: MCP client: switched from async httpx to sync httpx with asyncio"
+      },
+      "id": "84d0caf4-dadd-4f81-870c-c233e7534bc9",
+      "created_at": "2026-02-06T19:30:56.766Z",
+      "updated_at": "2026-02-06T19:30:56.766Z"
+    },
+    {
+      "name": "Progress: setup of notch-version skills and CLAUDE",
+      "type": "decision",
+      "properties": {
+        "decision_id": "694f6143-7f3b-4d76-86f2-d912a0e31552",
+        "project": "soft-standards-official-website",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: setup of notch-version skills and CLAUDE"
+      },
+      "id": "726534c6-0114-4464-9204-d071e0a90435",
+      "created_at": "2026-02-06T19:30:56.769Z",
+      "updated_at": "2026-02-06T19:30:56.769Z"
+    },
+    {
+      "name": "soft-standards-official-website",
+      "type": "project",
+      "properties": {},
+      "id": "cb553c67-1c8c-485a-8720-7337a8fcd8cf",
+      "created_at": "2026-02-06T19:30:56.769Z",
+      "updated_at": "2026-02-06T19:30:56.769Z"
+    }
+  ],
+  "edges": [
+    {
+      "source": "45e1cb27-56e3-4b88-bfb3-cf84fffab8bb",
+      "target": "f796dc9f-e00b-4210-b249-0b6c68a0d9f8",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "3c9f1fac-bef6-41ec-acd0-e4ff9672d728",
+      "created_at": "2026-02-06T19:30:56.500Z"
+    },
+    {
+      "source": "45e1cb27-56e3-4b88-bfb3-cf84fffab8bb",
+      "target": "ee1fbf0b-6577-4a6d-a6f9-e25dd90de766",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "9a20aabf-94bd-4e69-8f86-cdc31b302c7c",
+      "created_at": "2026-02-06T19:30:56.500Z"
+    },
+    {
+      "source": "79738786-c73e-483a-8ec0-e8579e56ccb3",
+      "target": "f796dc9f-e00b-4210-b249-0b6c68a0d9f8",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "eb2dfc63-7d31-4850-8319-86d5c4ba4a1c",
+      "created_at": "2026-02-06T19:30:56.505Z"
+    },
+    {
+      "source": "4477fd96-3ae9-4d32-b9a6-19370538b6a6",
+      "target": "f796dc9f-e00b-4210-b249-0b6c68a0d9f8",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "37609c25-2b27-4c70-9ada-e3df0ce61280",
+      "created_at": "2026-02-06T19:30:56.511Z"
+    },
+    {
+      "source": "28adb4db-3b2a-42b7-abe3-cccc91820c09",
+      "target": "f796dc9f-e00b-4210-b249-0b6c68a0d9f8",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "c515b2c7-d33f-4afa-b321-37038f7cd1d5",
+      "created_at": "2026-02-06T19:30:56.518Z"
+    },
+    {
+      "source": "28adb4db-3b2a-42b7-abe3-cccc91820c09",
+      "target": "cc4c9b85-3a8d-4be9-ac99-639b56514e92",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "14f223f2-ffb0-4271-85c5-80a474aa5c10",
+      "created_at": "2026-02-06T19:30:56.518Z"
+    },
+    {
+      "source": "28adb4db-3b2a-42b7-abe3-cccc91820c09",
+      "target": "c3be91ed-b7b0-4dcf-9b6e-a70fbe4d6878",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "f372d531-12bf-40fa-b948-b591cb54f969",
+      "created_at": "2026-02-06T19:30:56.518Z"
+    },
+    {
+      "source": "c14333b9-1358-46fa-ad0f-28ae9caf6202",
+      "target": "f796dc9f-e00b-4210-b249-0b6c68a0d9f8",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "70ce029e-3d82-4f6a-82f6-e9cfaaa2b1c7",
+      "created_at": "2026-02-06T19:30:56.522Z"
+    },
+    {
+      "source": "c14333b9-1358-46fa-ad0f-28ae9caf6202",
+      "target": "5dc62649-3822-4736-ae81-27d857beebe5",
+      "relationship": "relates_to",
+      "weight": 0.9,
+      "properties": {},
+      "id": "e2677614-82a2-49c8-b405-4728c1d32fcf",
+      "created_at": "2026-02-06T19:30:56.522Z"
+    },
+    {
+      "source": "cb3b62a4-a7a6-4582-b880-d6be2378ec02",
+      "target": "cbfb61bf-b1e6-4b7d-a8ff-39e61e0395c1",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "04732948-eed1-4b2d-ad05-cd4a63bea981",
+      "created_at": "2026-02-06T19:30:56.542Z"
+    },
+    {
+      "source": "cb3b62a4-a7a6-4582-b880-d6be2378ec02",
+      "target": "ffb734fc-b72b-4ebd-bfe4-5021f7e5359b",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "739bd07c-b06f-4fc9-b82a-eea7ff8b9014",
+      "created_at": "2026-02-06T19:30:56.542Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "cbfb61bf-b1e6-4b7d-a8ff-39e61e0395c1",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "288ba4d3-488c-4aa7-8cb8-931d73e380c1",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "07bb8bb3-28ea-4b30-b066-0ef9fa5d09a5",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "2a750a46-5687-4264-bae7-39fa34113755",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "2855ea2e-b15d-4a98-8ef8-28e758c1f864",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "50c70e33-1c89-4b07-9870-1d60f76709a3",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "5c3bc8aa-b7dd-4da9-9ea6-f8b2458c0983",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "a78df90f-1804-4135-868e-034bfbb74539",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "621dfa7a-b507-444e-b129-94227aec156e",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "04a51ee8-a2ae-40d5-b998-61645be313e9",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "61097625-2f85-4c26-a7ab-614d4d8c1c4f",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "f51a9088-44a9-4f6d-9350-5cd50b296213",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "fb3ec442-f389-4976-b1e4-8285f096a0b3",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "af20d940-ee0c-4359-81de-0162b7295f73",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "8e15c30a-f232-40d2-909f-1fccb74f429d",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "4ddd587d-1a54-4d12-a0a8-7d1a0459d408",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "7900de9e-0692-4257-bb36-2c684ae1eedb",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "a5e9f6e0-34e6-48d8-8df9-156bde3083c2",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "0faa2c18-08c0-405f-ba45-25302e9b348d",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "0116bb51-c8d5-479b-9221-759c5c1498b0",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "9713c8ba-9840-4e02-8bba-a86e9c5cb991",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "f378a761-0449-420e-a752-fb0b11d5fa7b",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "93e8db91-2a75-448e-b078-56e73d5e1eb3",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "b7aea4dc-d0ce-4c14-865e-2bb35769e42f",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "8178470f-7005-4105-b9d2-c88eba0cacc7",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "d39926ee-f833-42ef-8988-f55606ca8f81",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "f7ee85a4-9d2d-4fd4-b108-af3d4ea3acff",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "0b0621bc-e965-4608-85a8-a9ecc3b3c4e7",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "ebe30e01-5ac7-4b7f-887e-cd24992ee229",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "f1942b61-5bca-4d47-b497-479bafd3d5a1",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "607ac1f7-9cee-4d64-bb9b-5635f37be336",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "d1a3f929-9905-479d-84d8-88a283f65f6c",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "c9c0ac32-218d-4976-ae7e-f5f08a71ba98",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "81c05ecb-9c27-4717-93f7-2fb68e3849cd",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "c3c3c398-777e-40a1-9706-a91523137670",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "2c5b5b3d-ab4d-4dc1-acfe-83a7cf8d6b59",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "4609fd8b-aa81-4fac-87cb-45afec49913f",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "e4215fef-5bc0-4a3b-8901-e1ecf0c1b635",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "b08bb834-57c7-44fc-9ed3-a1833593a77b",
+      "target": "ba66806c-46b3-4637-9d72-e86d0799f5b4",
+      "relationship": "relates_to",
+      "weight": 0.65,
+      "properties": {},
+      "id": "06b8ff26-e5ce-4fb8-b9ca-9ec9e98e4011",
+      "created_at": "2026-02-06T19:30:56.651Z"
+    },
+    {
+      "source": "13fb504d-d74d-44c7-94f1-cb3fefada5da",
+      "target": "f796dc9f-e00b-4210-b249-0b6c68a0d9f8",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "7a8ac739-0088-4d69-9d7c-422e4cce00d9",
+      "created_at": "2026-02-06T19:30:56.655Z"
+    },
+    {
+      "source": "13fb504d-d74d-44c7-94f1-cb3fefada5da",
+      "target": "07bb8bb3-28ea-4b30-b066-0ef9fa5d09a5",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "87dfe12e-27cf-4687-9959-5584b09cb044",
+      "created_at": "2026-02-06T19:30:56.655Z"
+    },
+    {
+      "source": "13fb504d-d74d-44c7-94f1-cb3fefada5da",
+      "target": "fe013283-ab97-4af7-b15d-15caaf1c9884",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "dabb82f6-5b61-4de2-8692-9cf13028f0ee",
+      "created_at": "2026-02-06T19:30:56.655Z"
+    },
+    {
+      "source": "d7b0c45f-c3af-4c9d-866e-d5571b53a7ba",
+      "target": "f796dc9f-e00b-4210-b249-0b6c68a0d9f8",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "6aff7857-60af-4ae6-9268-f161947bbad4",
+      "created_at": "2026-02-06T19:30:56.658Z"
+    },
+    {
+      "source": "4b66b71b-c695-439f-af6b-097b527b78be",
+      "target": "f796dc9f-e00b-4210-b249-0b6c68a0d9f8",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "55739274-d79c-4e07-afba-4d20976e0cb4",
+      "created_at": "2026-02-06T19:30:56.668Z"
+    },
+    {
+      "source": "02e029b3-b4f6-47a7-a9cd-15bc67eaeadd",
+      "target": "f796dc9f-e00b-4210-b249-0b6c68a0d9f8",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "fbd7a59d-1367-454e-bffc-b140749cfe04",
+      "created_at": "2026-02-06T19:30:56.670Z"
+    },
+    {
+      "source": "02e029b3-b4f6-47a7-a9cd-15bc67eaeadd",
+      "target": "07bb8bb3-28ea-4b30-b066-0ef9fa5d09a5",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "97f49ec0-8fd1-4e0e-a579-d3b12168fa31",
+      "created_at": "2026-02-06T19:30:56.670Z"
+    },
+    {
+      "source": "02e029b3-b4f6-47a7-a9cd-15bc67eaeadd",
+      "target": "fe013283-ab97-4af7-b15d-15caaf1c9884",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "8e2fca33-fd44-4211-8298-5cfc96fa2879",
+      "created_at": "2026-02-06T19:30:56.670Z"
+    },
+    {
+      "source": "01e6d9e1-ba76-4596-882b-455ffa118bfd",
+      "target": "f796dc9f-e00b-4210-b249-0b6c68a0d9f8",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "36341fc9-239c-4870-8b94-d0122a5df881",
+      "created_at": "2026-02-06T19:30:56.674Z"
+    },
+    {
+      "source": "4e484d36-07be-4aaa-b93a-850cd2ea9f9c",
+      "target": "14a81f94-5732-42a1-a740-99316c7f3e74",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "5d156b4c-8913-4d4b-8f60-4eaf98ef0aec",
+      "created_at": "2026-02-06T19:30:56.675Z"
+    },
+    {
+      "source": "c9c4b7cd-6137-409d-8f8b-a9acdffc5aeb",
+      "target": "11a3cdcd-ff37-4f91-8b64-b788ffe03819",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "5cb96ed1-98a3-41e9-b0f6-6baad1404fe1",
+      "created_at": "2026-02-06T19:30:56.676Z"
+    },
+    {
+      "source": "4b869d60-d25f-4d48-991e-b07abfab7de1",
+      "target": "11a3cdcd-ff37-4f91-8b64-b788ffe03819",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "c6cff519-b61e-4dec-8b48-019a6d9b2c32",
+      "created_at": "2026-02-06T19:30:56.678Z"
+    },
+    {
+      "source": "371f2c39-b8ee-470f-be41-6503dcface0c",
+      "target": "f796dc9f-e00b-4210-b249-0b6c68a0d9f8",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "7947501a-7d17-4fb9-877c-6864063f550a",
+      "created_at": "2026-02-06T19:30:56.729Z"
+    },
+    {
+      "source": "371f2c39-b8ee-470f-be41-6503dcface0c",
+      "target": "61097625-2f85-4c26-a7ab-614d4d8c1c4f",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "d46ddccf-8291-4144-bfa3-149508e146ec",
+      "created_at": "2026-02-06T19:30:56.729Z"
+    },
+    {
+      "source": "371f2c39-b8ee-470f-be41-6503dcface0c",
+      "target": "2dd1099b-b8f2-4379-aa9c-9d6023d96e0a",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "9d978059-87d9-4471-a320-b2ab07602367",
+      "created_at": "2026-02-06T19:30:56.729Z"
+    },
+    {
+      "source": "371f2c39-b8ee-470f-be41-6503dcface0c",
+      "target": "5b3edfd9-5775-48b3-983c-f77b78d3c3cb",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "dc43e374-da8a-477d-afc2-0828cbe65119",
+      "created_at": "2026-02-06T19:30:56.729Z"
+    },
+    {
+      "source": "371f2c39-b8ee-470f-be41-6503dcface0c",
+      "target": "0ebb4a67-2a7d-4933-9f86-ecf8cadb095d",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "4a588588-311a-4aff-9a20-eb80752f9a04",
+      "created_at": "2026-02-06T19:30:56.729Z"
+    },
+    {
+      "source": "371f2c39-b8ee-470f-be41-6503dcface0c",
+      "target": "f6a3c108-b2c5-48ed-8dd4-a5d521dcf3cf",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "1d806f74-7b90-420a-9a8c-38455ca8c04c",
+      "created_at": "2026-02-06T19:30:56.729Z"
+    },
+    {
+      "source": "371f2c39-b8ee-470f-be41-6503dcface0c",
+      "target": "9639f763-df3c-45b4-970f-7b602b1e0c60",
+      "relationship": "relates_to",
+      "weight": 0.65,
+      "properties": {},
+      "id": "aec06b63-fc15-4951-9952-84d5a149253a",
+      "created_at": "2026-02-06T19:30:56.729Z"
+    },
+    {
+      "source": "08f1f5e3-4065-43a6-ab78-a8f9373493e3",
+      "target": "f796dc9f-e00b-4210-b249-0b6c68a0d9f8",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "91711531-f40e-4348-9677-7cb98b545f87",
+      "created_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "source": "08f1f5e3-4065-43a6-ab78-a8f9373493e3",
+      "target": "61097625-2f85-4c26-a7ab-614d4d8c1c4f",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "3328678e-a159-4f91-8fe1-b1dcf42c8d91",
+      "created_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "source": "08f1f5e3-4065-43a6-ab78-a8f9373493e3",
+      "target": "2dd1099b-b8f2-4379-aa9c-9d6023d96e0a",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "6a58731d-4cb2-41fe-8df3-a83455d629d2",
+      "created_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "source": "08f1f5e3-4065-43a6-ab78-a8f9373493e3",
+      "target": "5b3edfd9-5775-48b3-983c-f77b78d3c3cb",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "4e374e80-3b84-490b-a698-4c76ab305995",
+      "created_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "source": "08f1f5e3-4065-43a6-ab78-a8f9373493e3",
+      "target": "0ebb4a67-2a7d-4933-9f86-ecf8cadb095d",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "176fd203-082c-4ada-9cdb-cb446c96e8da",
+      "created_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "source": "08f1f5e3-4065-43a6-ab78-a8f9373493e3",
+      "target": "9f9c3cd1-978f-49ee-a29d-7aa280990d8d",
+      "relationship": "relates_to",
+      "weight": 0.9,
+      "properties": {},
+      "id": "98921704-a0a1-49d4-b55c-ca6a4e036ffb",
+      "created_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "source": "08f1f5e3-4065-43a6-ab78-a8f9373493e3",
+      "target": "cb7e3868-ef6c-4d67-b495-80a1d5cd43b2",
+      "relationship": "relates_to",
+      "weight": 0.9,
+      "properties": {},
+      "id": "3d759990-6385-48ed-ad81-4cb847858979",
+      "created_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "source": "08f1f5e3-4065-43a6-ab78-a8f9373493e3",
+      "target": "a2be13a4-8591-4c58-9e54-91305b3cb017",
+      "relationship": "relates_to",
+      "weight": 0.9,
+      "properties": {},
+      "id": "564f3bf7-794e-4d43-ae0a-11abcf1e5a64",
+      "created_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "source": "08f1f5e3-4065-43a6-ab78-a8f9373493e3",
+      "target": "49388ca0-9cdc-41ab-b84c-a341fcc2b296",
+      "relationship": "relates_to",
+      "weight": 0.9,
+      "properties": {},
+      "id": "b543dc2c-58c7-4f43-a58a-974c276afd90",
+      "created_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "source": "08f1f5e3-4065-43a6-ab78-a8f9373493e3",
+      "target": "25b7bbbb-4ffb-45dd-a225-75a47946d088",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "b7369a8a-91db-4797-b9e0-a399a703f81a",
+      "created_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "source": "08f1f5e3-4065-43a6-ab78-a8f9373493e3",
+      "target": "6db088f3-e1b6-4cb7-a8d4-a5dc7cdccf83",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "b4d51b7e-0829-4ad1-addb-2ed59e15b42c",
+      "created_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "source": "08f1f5e3-4065-43a6-ab78-a8f9373493e3",
+      "target": "6e84a6ec-7c67-45a8-86e8-54d9e90319ed",
+      "relationship": "relates_to",
+      "weight": 0.85,
+      "properties": {},
+      "id": "d998cf57-5ecb-49f5-86d4-1c973f1946e8",
+      "created_at": "2026-02-06T19:30:56.762Z"
+    },
+    {
+      "source": "84d0caf4-dadd-4f81-870c-c233e7534bc9",
+      "target": "11a3cdcd-ff37-4f91-8b64-b788ffe03819",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "46ac263b-6474-4ebd-b128-d4bb6920c828",
+      "created_at": "2026-02-06T19:30:56.766Z"
+    },
+    {
+      "source": "84d0caf4-dadd-4f81-870c-c233e7534bc9",
+      "target": "2dd1099b-b8f2-4379-aa9c-9d6023d96e0a",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "4a305097-2735-4054-8a52-921ab5096a0d",
+      "created_at": "2026-02-06T19:30:56.766Z"
+    },
+    {
+      "source": "726534c6-0114-4464-9204-d071e0a90435",
+      "target": "cb553c67-1c8c-485a-8720-7337a8fcd8cf",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "5b645f69-f9a2-44c7-99ba-774b5c78e11b",
+      "created_at": "2026-02-06T19:30:56.769Z"
+    },
+    {
+      "source": "726534c6-0114-4464-9204-d071e0a90435",
+      "target": "07bb8bb3-28ea-4b30-b066-0ef9fa5d09a5",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "7bd4e610-ae24-48fa-954d-336f8803c8fe",
+      "created_at": "2026-02-06T19:30:56.769Z"
+    },
+    {
+      "source": "726534c6-0114-4464-9204-d071e0a90435",
+      "target": "fe013283-ab97-4af7-b15d-15caaf1c9884",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "e39d5bef-f375-4062-951d-1958d19aee98",
+      "created_at": "2026-02-06T19:30:56.769Z"
+    }
+  ],
+  "version": "1.0.0",
+  "saved_at": "2026-02-06T19:31:56.438Z"
+}

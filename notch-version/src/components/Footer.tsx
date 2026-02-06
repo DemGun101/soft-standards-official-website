@@ -93,24 +93,39 @@ export default function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="flex flex-col md:flex-row items-center justify-between max-w-[1400px] mx-auto py-6 text-[0.85rem] text-gray-500 gap-4">
-        <span>&copy; 2026 Soft Standards Inc. All rights reserved.</span>
-        <div className="flex items-center gap-4">
-          {socialLinks.map((link) => {
-            const Icon = link.icon;
-            return (
-              <Link
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white hover:bg-white/10 flex items-center gap-2 px-4 py-2 rounded-full transition-all"
-                aria-label={link.label}
-              >
-                <Icon className="w-5 h-5" />
-              </Link>
-            );
-          })}
+      <div className="flex flex-col items-center max-w-[1400px] mx-auto py-6 text-[0.85rem] text-gray-500 gap-4">
+        <div className="flex flex-col md:flex-row items-center justify-between w-full gap-4">
+          <span>&copy; 2026 Soft Standards Inc. All rights reserved.</span>
+          <div className="flex items-center gap-4">
+            {socialLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white hover:bg-white/10 flex items-center gap-2 px-4 py-2 rounded-full transition-all"
+                  aria-label={link.label}
+                >
+                  <Icon className="w-5 h-5" />
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+        <div className="flex items-center gap-2 text-[0.8rem]">
+          <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+            Privacy Policy
+          </Link>
+          <span className="text-gray-600">&middot;</span>
+          <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+            Terms of Service
+          </Link>
+          <span className="text-gray-600">&middot;</span>
+          <Link href="/privacy#ccpa-opt-out" className="text-gray-400 hover:text-white transition-colors">
+            Do Not Sell My Info
+          </Link>
         </div>
       </div>
     </footer>
