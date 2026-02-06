@@ -8,16 +8,61 @@ import {
   ArrowRightIcon,
 } from '@/components/Icons';
 import HeroSection from '@/components/HeroSection';
+import {
+  SiReact, SiTypescript, SiNextdotjs, SiFramer, SiGreensock,
+  SiThreedotjs, SiMongodb, SiPostgresql, SiFigma, SiWebflow,
+  SiTailwindcss, SiSvelte, SiCplusplus, SiShadcnui,
+} from 'react-icons/si';
+import type { IconType } from 'react-icons';
 
 export const metadata: Metadata = {
   title: 'Services — Soft Standards Inc.',
   description: 'From strategy to execution, we deliver end-to-end digital solutions that transform businesses and create lasting impact.',
 };
 
-const techStack = [
-  'Figma', 'React', 'Next.js', 'Node.js', 'TypeScript', 'AWS',
-  'Shopify', 'WordPress', 'Tailwind CSS', 'Framer', 'Webflow', 'Python',
-  'OpenAI', 'LangChain'
+const DexieIcon: IconType = (props) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M12 2L3 7v10l9 5 9-5V7l-9-5zm0 2.18L18.36 7.5 12 10.82 5.64 7.5 12 4.18zM5 9.06l6 3.33v6.55L5 15.61V9.06zm14 0v6.55l-6 3.33v-6.55l6-3.33z" />
+  </svg>
+);
+
+const ChromaIcon: IconType = (props) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5L5.5 12 11 7.5v9zm2 0v-9L18.5 12 13 16.5z" />
+  </svg>
+);
+
+const RemotionIcon: IconType = (props) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm6 4v8l6-4-6-4z" />
+  </svg>
+);
+
+const HiggsfieldIcon: IconType = (props) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M6 4v16h3V13.5h6V20h3V4h-3v6.5H9V4H6z" />
+  </svg>
+);
+
+const techStack: { name: string; icon: IconType; color: string }[] = [
+  { name: 'React', icon: SiReact, color: '#61DAFB' },
+  { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+  { name: 'Next.js', icon: SiNextdotjs, color: '#000000' },
+  { name: 'Framer', icon: SiFramer, color: '#0055FF' },
+  { name: 'GSAP', icon: SiGreensock, color: '#88CE02' },
+  { name: 'Three.js', icon: SiThreedotjs, color: '#000000' },
+  { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+  { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
+  { name: 'Dexie', icon: DexieIcon, color: '#FF8C42' },
+  { name: 'Chroma', icon: ChromaIcon, color: '#FF6F61' },
+  { name: 'Remotion', icon: RemotionIcon, color: '#0B84F3' },
+  { name: 'Higgsfield', icon: HiggsfieldIcon, color: '#A855F7' },
+  { name: 'Figma', icon: SiFigma, color: '#F24E1E' },
+  { name: 'Webflow', icon: SiWebflow, color: '#4353FF' },
+  { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
+  { name: 'shadcn/ui', icon: SiShadcnui, color: '#000000' },
+  { name: 'Svelte', icon: SiSvelte, color: '#FF3E00' },
+  { name: 'C++', icon: SiCplusplus, color: '#00599C' },
 ];
 
 export default function ServicesPage() {
@@ -162,18 +207,23 @@ export default function ServicesPage() {
 
         <RevealOnScroll>
           <div className="bg-white/50 backdrop-blur-2xl border border-black/[0.04] rounded-[36px] max-w-[1200px] mx-auto overflow-hidden">
-            <div className="overflow-hidden relative py-8">
+            <div className="overflow-hidden relative py-10">
               <div className="absolute left-0 top-0 bottom-0 w-[120px] bg-gradient-to-r from-[#F8FAFC] to-transparent z-10 pointer-events-none" />
               <div className="absolute right-0 top-0 bottom-0 w-[120px] bg-gradient-to-l from-[#F8FAFC] to-transparent z-10 pointer-events-none" />
 
-              <div className="flex items-center gap-12 animate-marquee w-max">
+              <div className="flex items-center gap-10 animate-marquee w-max">
                 {[...techStack, ...techStack].map((tech, index) => (
-                  <span
-                    key={`${tech}-${index}`}
-                    className="text-base font-semibold text-gray-500 px-6 py-2 bg-white rounded-full border border-gray-100 whitespace-nowrap transition-colors hover:text-purple-500"
+                  <div
+                    key={`${tech.name}-${index}`}
+                    className="group flex flex-col items-center gap-2.5 px-4"
                   >
-                    {tech}
-                  </span>
+                    <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-gray-50 border border-gray-100 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:border-transparent">
+                      <tech.icon className="w-9 h-9 transition-transform duration-300 group-hover:scale-110" style={{ color: tech.color }} />
+                    </div>
+                    <span className="text-[0.7rem] font-medium text-gray-500 whitespace-nowrap transition-colors duration-300 group-hover:text-gray-700">
+                      {tech.name}
+                    </span>
+                  </div>
                 ))}
               </div>
             </div>
