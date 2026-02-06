@@ -10,7 +10,11 @@ export const metadata: Metadata = {
   title: "Soft Standards Inc. — AI-Powered Marketing Excellence",
   description: "Where AI meets marketing excellence. We bridge cutting-edge technology with authentic brand storytelling to create digital experiences that convert strangers into loyal advocates.",
   icons: {
-    icon: "/images/logo-icon.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/images/logo-icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/images/logo-icon.svg",
   },
 };
 
