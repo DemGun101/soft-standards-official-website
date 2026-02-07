@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { SmoothScroll, PageTransition } from "@/components/animations";
-import VoiceAgentWrapper from "@/components/voice-agent/VoiceAgentWrapper";
+import VoiceAgentLazy from "@/components/voice-agent/VoiceAgentLazy";
 import CookieConsent from "@/components/CookieConsent";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://softstandards.net"),
@@ -31,13 +39,13 @@ export const metadata: Metadata = {
     siteName: "Soft Standards Inc.",
     title: "Soft Standards Inc. — AI-Powered Digital Marketing Agency",
     description: "AI-powered digital marketing agency specializing in web development, brand strategy, UI/UX design, app development, and marketing automation.",
-    images: [{ url: "/images/logo-icon.svg", width: 1200, height: 630, alt: "Soft Standards Inc." }],
+    images: [{ url: "/images/og-default.png", width: 1200, height: 630, alt: "Soft Standards Inc." }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Soft Standards Inc. — AI-Powered Digital Marketing Agency",
     description: "AI-powered digital marketing agency. Web development, brand strategy, UI/UX design, app development & marketing automation.",
-    images: ["/images/logo-icon.svg"],
+    images: ["/images/og-default.png"],
   },
   robots: {
     index: true,
@@ -52,6 +60,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://softstandards.net",
+    types: {
+      "application/rss+xml": "/blog/rss.xml",
+    },
   },
 };
 
@@ -61,13 +72,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800&display=swap" rel="stylesheet" />
-      </head>
+    <html lang="en" className={poppins.variable}>
       <body className="font-sans antialiased">
+        {/* Skip to content */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-purple-600 focus:text-white focus:rounded-lg focus:text-sm focus:font-semibold"
+        >
+          Skip to main content
+        </a>
+
+        {/* Organization Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -95,18 +110,41 @@ export default function RootLayout({
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI Automation", description: "Custom AI agents and workflow automation" } },
                 ],
               },
-              sameAs: [],
+              sameAs: [
+                "https://www.linkedin.com/company/soft-standards-inc/",
+                "https://instagram.com/softstandardsinc",
+              ],
             }),
           }}
         />
+
+        {/* WebSite Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Soft Standards Inc.",
+              url: "https://softstandards.net",
+              publisher: {
+                "@type": "Organization",
+                name: "Soft Standards Inc.",
+              },
+            }),
+          }}
+        />
+
         <SmoothScroll>
           <PageTransition>
             <Navbar />
-            {children}
+            <div id="main-content">
+              {children}
+            </div>
             <Footer />
           </PageTransition>
         </SmoothScroll>
-        <VoiceAgentWrapper />
+        <VoiceAgentLazy />
         <CookieConsent />
       </body>
     </html>

@@ -5,6 +5,8 @@ import RevealOnScroll from '@/components/RevealOnScroll';
 import { SectionHeader } from '@/components/Section';
 import { CheckCircleIcon, SunIcon, EyeIcon, CheckIcon, ArrowRightIcon } from '@/components/Icons';
 import HeroSection from '@/components/HeroSection';
+import BreadcrumbSchema from '@/components/schemas/BreadcrumbSchema';
+import PersonSchema from '@/components/schemas/PersonSchema';
 
 export const metadata: Metadata = {
   title: 'About Us — Our Team & Story',
@@ -15,6 +17,7 @@ export const metadata: Metadata = {
     description: 'Meet the team behind 40+ successful projects. Developers, designers, and strategists who blend AI with authentic brand storytelling.',
     type: 'website',
     url: 'https://softstandards.net/about',
+    images: [{ url: '/images/og-default.png', width: 1200, height: 630, alt: 'About Soft Standards Inc.' }],
   },
   alternates: { canonical: 'https://softstandards.net/about' },
 };
@@ -50,9 +53,58 @@ const awards = [
   { year: '2023', name: 'Apex Ventures', body: 'Landing page & investor presentation design' },
 ];
 
+const faqs = [
+  {
+    question: 'Who founded Soft Standards Inc.?',
+    answer: 'Soft Standards Inc. was founded in 2022 by Muhammad Furqan (CEO) and Ishfaq Ahmed (CTO). They started the agency with a mission to help businesses build marketing systems that feel human, not automated.',
+  },
+  {
+    question: 'What services does Soft Standards offer?',
+    answer: 'Soft Standards offers six core services: AI Automation, Brand Strategy, Web Development, UI/UX Design, Digital Marketing, and App Development. All services are available as standalone offerings or as part of a complete done-for-you marketing system.',
+  },
+  {
+    question: 'How many projects has Soft Standards delivered?',
+    answer: 'Soft Standards has delivered over 40 projects across multiple industries including technology, healthcare, e-commerce, and professional services, maintaining a 97% client retention rate.',
+  },
+  {
+    question: 'What is Soft Standards\' approach to marketing?',
+    answer: 'Rather than offering one-off marketing tactics, Soft Standards builds complete marketing systems — brand strategy, website, ad campaigns, email automation, and CRM setup — delivered in a 30-day sprint. Clients own every asset upon completion.',
+  },
+  {
+    question: 'What results has Soft Standards achieved for clients?',
+    answer: 'Clients have seen results including 7x revenue growth in 90 days, 67% reduction in cost per lead, 4.2x conversion rate improvements, and an average ROI of 312% within the first quarter of engagement.',
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbSchema
+        breadcrumbs={[{ name: 'Home', href: '/' }]}
+        currentPage="About"
+      />
+      <PersonSchema name="Muhammad Furqan" jobTitle="CEO" />
+      <PersonSchema name="Ishfaq Ahmed" jobTitle="CTO" />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       <HeroSection
         title={<>We are <span className="text-gradient">Soft Standards Inc.</span></>}
         subtitle="A close-knit team of developers, designers, and strategists who believe great digital work starts with genuinely understanding your story."
@@ -82,6 +134,41 @@ export default function AboutPage() {
               <div className="text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold tracking-[-0.03em] text-gray-900">6</div>
               <div className="text-[0.85rem] text-gray-500 font-medium mt-1">Team Members</div>
             </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+
+      {/* Quick Facts */}
+      <section className="px-[clamp(20px,5vw,80px)] pb-[clamp(40px,6vw,80px)]">
+        <RevealOnScroll>
+          <div className="max-w-[800px] mx-auto bg-gray-50 rounded-3xl p-8 md:p-10 border border-gray-100">
+            <h3 className="text-lg font-bold text-gray-900 mb-6">Quick Facts</h3>
+            <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+              <div>
+                <dt className="text-sm font-semibold text-gray-500">Founded</dt>
+                <dd className="text-base text-gray-900">2022</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-semibold text-gray-500">Headquarters</dt>
+                <dd className="text-base text-gray-900">New York, USA</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-semibold text-gray-500">Team Size</dt>
+                <dd className="text-base text-gray-900">6 members</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-semibold text-gray-500">Industries Served</dt>
+                <dd className="text-base text-gray-900">Technology, Healthcare, E-commerce, Professional Services</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-semibold text-gray-500">Core Technologies</dt>
+                <dd className="text-base text-gray-900">Next.js, React, TypeScript, AI/ML, Three.js</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-semibold text-gray-500">Notable Clients</dt>
+                <dd className="text-base text-gray-900">SpaceDome AI, Bicycle Health, Meridian Consulting, Trellis Studios</dd>
+              </div>
+            </dl>
           </div>
         </RevealOnScroll>
       </section>
@@ -191,6 +278,36 @@ export default function AboutPage() {
             ))}
           </div>
         </RevealOnScroll>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-[clamp(60px,10vw,120px)] px-[clamp(20px,5vw,80px)]">
+        <RevealOnScroll>
+          <SectionHeader
+            badge="Common Questions"
+            title={<>Frequently <span className="text-gradient">Asked</span></>}
+          />
+        </RevealOnScroll>
+
+        <div className="max-w-[800px] mx-auto space-y-4">
+          {faqs.map((faq, index) => (
+            <RevealOnScroll key={index} delay={(index % 3) + 1}>
+              <details className="group bg-white rounded-2xl border border-gray-100 shadow-[0_2px_12px_rgba(15,23,42,0.04)] overflow-hidden">
+                <summary className="flex items-center justify-between cursor-pointer p-6 text-left">
+                  <h4 className="text-base font-semibold text-gray-900 pr-4">{faq.question}</h4>
+                  <span className="flex-shrink-0 w-6 h-6 text-gray-400 group-open:rotate-45 transition-transform duration-200">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M12 5v14M5 12h14" />
+                    </svg>
+                  </span>
+                </summary>
+                <div className="px-6 pb-6 text-gray-500 leading-relaxed">
+                  {faq.answer}
+                </div>
+              </details>
+            </RevealOnScroll>
+          ))}
+        </div>
       </section>
 
       {/* CTA Banner */}
