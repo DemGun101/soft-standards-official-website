@@ -8,32 +8,32 @@ const defaultServices: ServiceItem[] = [
   {
     name: "Brand Strategy",
     description: "Complete brand positioning, messaging framework, and visual identity system designed to differentiate your business and convert prospects.",
-    url: "https://softstandards.net/services#brand-strategy",
+    url: "https://softstandardsinc.com/services#brand-strategy",
   },
   {
     name: "Web Development",
     description: "High-converting websites built with modern frameworks, optimized for speed, SEO, and lead generation.",
-    url: "https://softstandards.net/services#web-development",
+    url: "https://softstandardsinc.com/services#web-development",
   },
   {
     name: "UI/UX Design",
     description: "User-centered design that turns visitors into customers with intuitive navigation and conversion-focused layouts.",
-    url: "https://softstandards.net/services#ui-ux-design",
+    url: "https://softstandardsinc.com/services#ui-ux-design",
   },
   {
     name: "Digital Marketing",
     description: "Data-driven ad campaigns across Google, Meta, and LinkedIn that generate qualified leads at scale.",
-    url: "https://softstandards.net/services#digital-marketing",
+    url: "https://softstandardsinc.com/services#digital-marketing",
   },
   {
     name: "AI Automation",
     description: "AI-powered marketing automation systems that handle lead nurturing, email sequences, and follow-ups 24/7.",
-    url: "https://softstandards.net/services#ai-automation",
+    url: "https://softstandardsinc.com/services#ai-automation",
   },
   {
     name: "App Development",
     description: "Native and cross-platform mobile applications with performance, design, and scalability built in from day one.",
-    url: "https://softstandards.net/services#app-development",
+    url: "https://softstandardsinc.com/services#app-development",
   },
 ];
 
@@ -47,7 +47,7 @@ export default function ServiceSchema({ services = defaultServices }: { services
     provider: {
       "@type": "Organization",
       name: "Soft Standards Inc.",
-      url: "https://softstandards.net",
+      url: "https://softstandardsinc.com",
     },
     areaServed: { "@type": "Country", name: "United States" },
   }));

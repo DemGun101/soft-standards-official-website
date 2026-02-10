@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
               &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), is committed to protecting and
               respecting your privacy. This Privacy Policy describes how we collect, use, disclose,
               and safeguard your personal information when you visit our website at{' '}
-              <strong>softstandards.net</strong>, use our services, communicate with us, or otherwise
+              <strong>softstandardsinc.com</strong>, use our services, communicate with us, or otherwise
               interact with our digital properties (collectively, the &quot;Services&quot;).
             </p>
             <p className="text-[0.95rem] text-gray-600 leading-[1.8] mb-4">
@@ -566,10 +566,10 @@ export default function PrivacyPolicyPage() {
                   However, some of our use of cookies and tracking technologies may constitute
                   &quot;sharing&quot; under the CPRA. To opt out, please contact us at{' '}
                   <a
-                    href="mailto:privacy@softstandards.net"
+                    href="mailto:privacy@softstandardsinc.com"
                     className="text-blue-600 underline hover:text-blue-800"
                   >
-                    privacy@softstandards.net
+                    privacy@softstandardsinc.com
                   </a>
                   .
                 </li>
@@ -590,10 +590,10 @@ export default function PrivacyPolicyPage() {
                 To exercise your CCPA/CPRA rights, please submit a verifiable consumer request by
                 emailing us at{' '}
                 <a
-                  href="mailto:privacy@softstandards.net"
+                  href="mailto:privacy@softstandardsinc.com"
                   className="text-blue-600 underline hover:text-blue-800"
                 >
-                  privacy@softstandards.net
+                  privacy@softstandardsinc.com
                 </a>
                 . We will verify your identity before processing your request and respond within
                 forty-five (45) days of receiving your verified request.
@@ -680,10 +680,10 @@ export default function PrivacyPolicyPage() {
                 <strong>Data Protection Officer:</strong> For GDPR-related inquiries, please
                 contact our designated privacy point of contact at{' '}
                 <a
-                  href="mailto:privacy@softstandards.net"
+                  href="mailto:privacy@softstandardsinc.com"
                   className="text-blue-600 underline hover:text-blue-800"
                 >
-                  privacy@softstandards.net
+                  privacy@softstandardsinc.com
                 </a>
                 .
               </p>
@@ -758,10 +758,10 @@ export default function PrivacyPolicyPage() {
               <p className="text-[0.95rem] text-gray-600 leading-[1.8] mb-4">
                 To exercise your VCDPA rights, please contact us at{' '}
                 <a
-                  href="mailto:privacy@softstandards.net"
+                  href="mailto:privacy@softstandardsinc.com"
                   className="text-blue-600 underline hover:text-blue-800"
                 >
-                  privacy@softstandards.net
+                  privacy@softstandardsinc.com
                 </a>
                 . If we decline your request, you may appeal our decision by contacting us at the
                 same email address. If your appeal is denied, you may contact the Virginia Attorney
@@ -804,10 +804,10 @@ export default function PrivacyPolicyPage() {
               <p className="text-[0.95rem] text-gray-600 leading-[1.8] mb-4">
                 To exercise your CPA rights, please contact us at{' '}
                 <a
-                  href="mailto:privacy@softstandards.net"
+                  href="mailto:privacy@softstandardsinc.com"
                   className="text-blue-600 underline hover:text-blue-800"
                 >
-                  privacy@softstandards.net
+                  privacy@softstandardsinc.com
                 </a>
                 . You have the right to appeal our decision regarding your request. If your appeal is
                 denied, you may contact the Colorado Attorney General.
@@ -851,10 +851,10 @@ export default function PrivacyPolicyPage() {
               If you are a parent or guardian and believe that your child under 13 has provided us
               with personal information without your consent, please contact us immediately at{' '}
               <a
-                href="mailto:privacy@softstandards.net"
+                href="mailto:privacy@softstandardsinc.com"
                 className="text-blue-600 underline hover:text-blue-800"
               >
-                privacy@softstandards.net
+                privacy@softstandardsinc.com
               </a>{' '}
               so that we can take appropriate action.
             </p>
@@ -933,10 +933,10 @@ export default function PrivacyPolicyPage() {
               <p className="text-[0.95rem] text-gray-600 leading-[1.8] mb-1">
                 Email:{' '}
                 <a
-                  href="mailto:privacy@softstandards.net"
+                  href="mailto:privacy@softstandardsinc.com"
                   className="text-blue-600 underline hover:text-blue-800"
                 >
-                  privacy@softstandards.net
+                  privacy@softstandardsinc.com
                 </a>
               </p>
             </div>

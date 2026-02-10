@@ -1,23 +1,29 @@
 import { Metadata } from 'next';
 import PricingContent from './PricingContent';
+import BreadcrumbSchema from '@/components/schemas/BreadcrumbSchema';
 
 export const metadata: Metadata = {
-  title: 'Pricing — Transparent & Budget-Friendly Digital Services',
-  description: 'Transparent pricing for web development (from $2,500), app development (from $5,000), UI/UX design (from $800), social media marketing (from $500/mo), and AI automation (from $10,000). Flexible payments available.',
-  keywords: ['web development cost', 'app development pricing', 'UI/UX design rates', 'social media marketing packages', 'AI automation pricing', 'affordable digital agency'],
-  openGraph: {
-    title: 'Pricing — Soft Standards Inc.',
-    description: 'Transparent, budget-friendly pricing for digital services. Web development from $2,500, UI/UX from $800, with bundle discounts up to 20%.',
-    type: 'website',
-    url: 'https://softstandards.net/pricing',
+  title: "Pricing | Performance-Based Marketing — Pay Only When It Works",
+  description: "No retainers until results. Reduced upfront build cost + 30-day proof period. Monthly optimization starts only when your KPIs are hit. Cancel anytime. See pricing tiers.",
+  keywords: ["performance-based marketing pricing", "marketing agency pricing", "pay for results marketing", "marketing system cost"],
+  alternates: {
+    canonical: "https://www.softstandardsinc.com/pricing",
   },
-  alternates: { canonical: 'https://softstandards.net/pricing' },
+  openGraph: {
+    title: "Pricing | Pay Only When It Works | Soft Standards",
+    description: "Reduced upfront build. 30-day proof period. Retainer only when KPIs hit. Cancel anytime.",
+    url: "https://www.softstandardsinc.com/pricing",
+    images: [{ url: "/images/og-default.png", width: 1200, height: 630 }],
+  },
 };
 
 export default function PricingPage() {
   return (
     <>
-      <PricingContent />
+      <BreadcrumbSchema
+        breadcrumbs={[{ name: 'Home', href: '/' }]}
+        currentPage="Pricing"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -27,48 +33,49 @@ export default function PricingPage() {
             mainEntity: [
               {
                 "@type": "Question",
-                name: "How much does web development cost at Soft Standards?",
+                name: "How does the pricing model work?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Web development starts at $2,500 for a Starter package (10+ pages, responsive design, CMS, SEO setup). Professional packages range from $3,500-$8,000 with custom animations and e-commerce. Enterprise is custom-quoted.",
+                  text: "You pay a reduced upfront cost to build your marketing system. After launch, there's a 30-day proof period where we track your KPIs at no additional cost. The monthly retainer only starts once your system is delivering measurable results. You can cancel anytime.",
                 },
               },
               {
                 "@type": "Question",
-                name: "Do you offer payment plans?",
+                name: "What if the system doesn't hit the agreed KPIs?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, we offer flexible monthly installment payments with no large upfront payment required. All plans include this option.",
+                  text: "You don't pay the retainer until it does. We keep optimizing during the proof period and beyond. If we can't hit the benchmarks we agreed on, we keep working until we do.",
                 },
               },
               {
                 "@type": "Question",
-                name: "What is included in post-launch support?",
+                name: "Do you charge monthly retainers?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "All Starter plans include 10 days of post-launch support covering bug fixes, minor adjustments, and technical assistance. Extended 30-day support is available as an add-on for $300.",
+                  text: "Only after your system is proven to work. The retainer covers ongoing optimization, management, and scaling. It's month-to-month with no lock-in — you can cancel anytime. You own everything we build.",
                 },
               },
               {
                 "@type": "Question",
-                name: "Can I bundle multiple services for a discount?",
+                name: "How much does it cost?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes! Our bundle packages save 15-20%. Digital Launch (web + design + social media) starts at $4,800, Full Stack Product (app + design + web) from $7,500, and AI Transformation (AI + web) from $10,600.",
+                  text: "The upfront build ranges from $3,500 to custom pricing depending on scope. Book a free 15-minute call — we'll scope your project and give you an honest number.",
                 },
               },
               {
                 "@type": "Question",
-                name: "How much does AI automation cost?",
+                name: "What do I own after the build?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "AI Automation starts at $10,000 for a Starter package including an AI chatbot/assistant, basic automation, and integration setup. Professional packages range from $15,000-$35,000 with custom AI agents and advanced workflows.",
+                  text: "Everything. The website, the brand assets, the funnels, the automations, the ad accounts — it's all yours. If you cancel the retainer, you keep everything we built.",
                 },
               },
             ],
           }),
         }}
       />
+      <PricingContent />
     </>
   );
 }

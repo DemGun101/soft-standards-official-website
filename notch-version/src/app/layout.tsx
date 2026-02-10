@@ -25,13 +25,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://softstandards.net"),
+  metadataBase: new URL("https://www.softstandardsinc.com"),
   title: {
-    default: "Soft Standards Inc. — AI-Powered Digital Marketing Agency",
-    template: "%s | Soft Standards Inc.",
+    default: "Soft Standards | AI-Powered Marketing Agency | New York & Lahore",
+    template: "%s | Soft Standards",
   },
-  description: "AI-powered digital marketing agency specializing in web development, brand strategy, UI/UX design, app development, and marketing automation. 40+ projects delivered with 97% client retention.",
-  keywords: ["digital marketing agency", "AI marketing", "web development agency", "brand strategy", "UI/UX design", "app development", "marketing automation", "SaaS marketing"],
+  description: "We build complete marketing systems in 30 days — brand strategy, web development, UI/UX, AI automation, and growth marketing. 150+ systems built. $47M+ in client revenue. Pay only when it works.",
+  keywords: ["AI marketing agency", "marketing automation agency", "web development agency NYC", "growth marketing", "brand strategy", "digital marketing agency", "AI automation"],
   authors: [{ name: "Soft Standards Inc." }],
   creator: "Soft Standards Inc.",
   publisher: "Soft Standards Inc.",
@@ -44,16 +44,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://softstandards.net",
-    siteName: "Soft Standards Inc.",
-    title: "Soft Standards Inc. — AI-Powered Digital Marketing Agency",
-    description: "AI-powered digital marketing agency specializing in web development, brand strategy, UI/UX design, app development, and marketing automation.",
-    images: [{ url: "/images/og-default.png", width: 1200, height: 630, alt: "Soft Standards Inc." }],
+    url: "https://www.softstandardsinc.com",
+    siteName: "Soft Standards",
+    title: "Soft Standards | AI-Powered Marketing Agency",
+    description: "Complete marketing systems in 30 days. Brand strategy, web dev, UI/UX, AI automation & growth marketing. Pay only when it works.",
+    images: [{ url: "/images/og-default.png", width: 1200, height: 630, alt: "Soft Standards" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Soft Standards Inc. — AI-Powered Digital Marketing Agency",
-    description: "AI-powered digital marketing agency. Web development, brand strategy, UI/UX design, app development & marketing automation.",
+    title: "Soft Standards | AI-Powered Marketing Agency",
+    description: "Complete marketing systems in 30 days. Pay only when it works.",
     images: ["/images/og-default.png"],
   },
   robots: {
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://softstandards.net",
+    canonical: "https://www.softstandardsinc.com",
     types: {
       "application/rss+xml": "/blog/rss.xml",
     },
@@ -104,25 +104,47 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Soft Standards Inc.",
-              url: "https://softstandards.net",
-              logo: "https://softstandards.net/images/logo-icon.svg",
-              description: "AI-powered digital marketing agency specializing in web development, brand strategy, UI/UX design, app development, and marketing automation.",
-              email: "contact@softstandards.net",
+              name: "Soft Standards",
+              legalName: "Soft Standards Inc.",
+              url: "https://www.softstandardsinc.com",
+              logo: "https://www.softstandardsinc.com/images/logo-icon.svg",
+              description: "AI-powered marketing agency building complete marketing systems in 30 days. Brand strategy, web development, UI/UX, digital marketing, and AI automation.",
+              email: "contact@softstandardsinc.com",
               foundingDate: "2022",
-              numberOfEmployees: { "@type": "QuantitativeValue", minValue: 6 },
+              numberOfEmployees: { "@type": "QuantitativeValue", value: 6 },
+              address: [
+                {
+                  "@type": "PostalAddress",
+                  streetAddress: "18820B 69th Ave Apt 1B",
+                  addressLocality: "Fresh Meadows",
+                  addressRegion: "NY",
+                  postalCode: "11365",
+                  addressCountry: "US",
+                },
+                {
+                  "@type": "PostalAddress",
+                  addressLocality: "Lahore",
+                  addressRegion: "Punjab",
+                  addressCountry: "PK",
+                },
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "sales",
+                url: "https://www.softstandardsinc.com/book",
+              },
               areaServed: "Worldwide",
               knowsAbout: ["AI Automation", "Brand Strategy", "Web Development", "UI/UX Design", "Digital Marketing", "App Development"],
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
-                name: "Digital Services",
+                name: "Marketing Services",
                 itemListElement: [
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web Development", description: "High-performance websites built with modern tech stacks" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "App Development", description: "Native and cross-platform mobile applications" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "UI/UX Design", description: "User-centered design backed by research and testing" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Brand Strategy", description: "Brand identities that cut through the noise" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Digital Marketing", description: "Data-driven campaigns that amplify reach and convert" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI Automation", description: "Custom AI agents and workflow automation" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Brand Strategy", description: "Strategic brand foundation — positioning, messaging, and identity" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web Development", description: "Fast, conversion-optimized websites built with Next.js and React" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "UI/UX Design", description: "Research-backed, tested user interfaces" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Digital Marketing", description: "SEO, PPC, email, and social media as one integrated system" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mobile App Development", description: "iOS, Android, and cross-platform apps using React Native" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI Automation", description: "Custom AI agents, chatbots, and workflow automation" } },
                 ],
               },
               sameAs: [
@@ -140,11 +162,16 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "Soft Standards Inc.",
-              url: "https://softstandards.net",
+              name: "Soft Standards",
+              url: "https://www.softstandardsinc.com",
               publisher: {
                 "@type": "Organization",
-                name: "Soft Standards Inc.",
+                name: "Soft Standards",
+              },
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://www.softstandardsinc.com/blog?q={search_term_string}",
+                "query-input": "required name=search_term_string",
               },
             }),
           }}

@@ -6,7 +6,7 @@ export const companyContext = {
   description:
     "AI-powered marketing agency that bridges cutting-edge technology with authentic brand storytelling to create digital experiences that convert strangers into loyal advocates.",
   contact: {
-    email: "contact@softstandards.net",
+    email: "contact@softstandardsinc.com",
     phone: "+1 904 835 8096",
     location: "New York, NY",
   },

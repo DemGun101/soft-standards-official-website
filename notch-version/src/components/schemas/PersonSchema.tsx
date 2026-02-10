@@ -14,7 +14,7 @@ export default function PersonSchema({ name, jobTitle, worksFor = 'Soft Standard
     worksFor: {
       '@type': 'Organization',
       name: worksFor,
-      url: 'https://softstandards.net',
+      url: 'https://www.softstandardsinc.com',
     },
     ...(sameAs.length > 0 && { sameAs }),
   };

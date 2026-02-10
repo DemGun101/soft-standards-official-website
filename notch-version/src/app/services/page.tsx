@@ -17,16 +17,16 @@ import {
 import type { IconType } from 'react-icons';
 
 export const metadata: Metadata = {
-  title: 'Services — Web Development, AI Automation, Brand Strategy & More',
-  description: 'Full-service digital agency offering web development, app development, UI/UX design, brand strategy, digital marketing, and AI automation. Modern tech stacks, conversion-optimized results.',
-  keywords: ['web development services', 'app development agency', 'UI/UX design services', 'brand strategy agency', 'digital marketing services', 'AI automation services', 'SaaS development'],
+  title: 'Marketing Services | Web Dev, UI/UX, SEO, AI Automation | Soft Standards',
+  description: 'Six integrated marketing services: brand strategy, web development, UI/UX design, digital marketing, mobile apps, and AI automation. Built as one system, not silos. 4-week delivery.',
+  keywords: ['marketing services', 'web development services', 'UI/UX design services', 'SEO services', 'AI automation services', 'brand strategy agency', 'digital marketing services'],
   openGraph: {
-    title: 'Our Services — Soft Standards Inc.',
-    description: 'Web development, app development, UI/UX design, brand strategy, digital marketing, and AI automation. End-to-end digital solutions.',
+    title: 'Marketing Services | Web Dev, UI/UX, SEO, AI Automation | Soft Standards',
+    description: 'Six integrated marketing services: brand strategy, web development, UI/UX design, digital marketing, mobile apps, and AI automation. Built as one system, not silos.',
     type: 'website',
-    url: 'https://softstandards.net/services',
+    url: 'https://www.softstandardsinc.com/services',
   },
-  alternates: { canonical: 'https://softstandards.net/services' },
+  alternates: { canonical: 'https://www.softstandardsinc.com/services' },
 };
 
 const DexieIcon: IconType = (props) => (
@@ -79,8 +79,8 @@ export default function ServicesPage() {
     <>
       <ServiceSchema />
       <HeroSection
-        title={<>Services built for <span className="text-gradient">growth</span>.</>}
-        subtitle="From strategy to execution, we deliver end-to-end digital solutions that transform businesses and create lasting impact."
+        title={<>Marketing Services — Web Development, UI/UX, SEO &amp; <span className="text-gradient">AI Automation</span></>}
+        subtitle="Six integrated services. One marketing system. Built in 4 weeks, not 4 months."
         breadcrumbs={[{ href: '/', label: 'Home' }]}
         breadcrumbCurrent="Services"
         background="dark"
@@ -91,8 +91,8 @@ export default function ServicesPage() {
         <RevealOnScroll>
           <SectionHeader
             badge="What We Do"
-            title={<>Our <span className="text-gradient">Expertise</span></>}
-            subtitle="Six core disciplines, one seamless experience. Every service designed to drive measurable results."
+            title={<>Six Integrated Services. <span className="text-gradient">One Marketing System.</span></>}
+            subtitle="Every service designed to drive measurable results — built as one system, not silos."
           />
         </RevealOnScroll>
 
@@ -100,74 +100,90 @@ export default function ServicesPage() {
           <RevealOnScroll delay={1} className="lg:col-span-2">
             <Card withPurpleBar className="p-10 h-full">
               <CardIcon><LayersIcon /></CardIcon>
-              <CardTitle>Brand Strategy</CardTitle>
+              <CardTitle>Brand Strategy &amp; Positioning Services</CardTitle>
               <CardDescription>
                 We define and shape brand identities that cut through the noise. From positioning and messaging to visual systems that scale, we build brands that people remember and trust.
               </CardDescription>
-              <div className="flex flex-wrap gap-2 mt-4">
-                {['Brand Audit', 'Visual Identity', 'Brand Guidelines', 'Naming', 'Tone of Voice'].map((item) => (
-                  <span key={item} className="px-3.5 py-1.5 bg-purple-50 text-purple-700 rounded-full text-[0.8rem] font-medium">
-                    {item}
-                  </span>
-                ))}
-              </div>
+              <ul className="mt-4 space-y-1.5 text-[0.85rem] text-gray-600">
+                <li><strong>Market Research &amp; Competitive Analysis</strong></li>
+                <li><strong>Brand Messaging &amp; Identity Development</strong></li>
+                <li><strong>Go-To-Market Strategy</strong></li>
+              </ul>
             </Card>
           </RevealOnScroll>
 
           <RevealOnScroll delay={2}>
             <Card withPurpleBar className="h-full">
               <CardIcon><MonitorIcon /></CardIcon>
-              <CardTitle>Web Development</CardTitle>
+              <CardTitle>Web Development Services</CardTitle>
               <CardDescription>
                 High-performance websites built with modern tech stacks. Fast, accessible, and conversion-optimized.
               </CardDescription>
+              <ul className="mt-3 space-y-1.5 text-[0.85rem] text-gray-600">
+                <li><strong>Custom Website Design &amp; Development</strong></li>
+                <li><strong>E-Commerce &amp; SaaS Platforms</strong></li>
+                <li><strong>Speed Optimization &amp; Core Web Vitals</strong></li>
+              </ul>
             </Card>
           </RevealOnScroll>
 
           <RevealOnScroll delay={3}>
             <Card withPurpleBar className="h-full">
               <CardIcon><LogInIcon /></CardIcon>
-              <CardTitle>UI/UX Design</CardTitle>
+              <CardTitle>UI/UX Design Services</CardTitle>
               <CardDescription>
                 User-centered design that delights. We craft intuitive interfaces backed by research and testing.
               </CardDescription>
+              <ul className="mt-3 space-y-1.5 text-[0.85rem] text-gray-600">
+                <li><strong>User Research &amp; Wireframing</strong></li>
+                <li><strong>Interface Design &amp; Prototyping</strong></li>
+                <li><strong>Usability Testing &amp; Iteration</strong></li>
+              </ul>
             </Card>
           </RevealOnScroll>
 
           <RevealOnScroll delay={4}>
             <Card withPurpleBar className="h-full">
               <CardIcon><GlobeIcon /></CardIcon>
-              <CardTitle>Digital Marketing</CardTitle>
+              <CardTitle>Digital Marketing Services</CardTitle>
               <CardDescription>
                 Data-driven campaigns that amplify reach and convert visitors into customers.
               </CardDescription>
+              <ul className="mt-3 space-y-1.5 text-[0.85rem] text-gray-600">
+                <li><strong>Search Engine Optimization (SEO)</strong></li>
+                <li><strong>PPC &amp; Paid Advertising Management</strong></li>
+                <li><strong>Email Marketing &amp; Automation</strong></li>
+                <li><strong>Social Media Marketing</strong></li>
+              </ul>
             </Card>
           </RevealOnScroll>
 
           <RevealOnScroll delay={5} className="lg:col-span-2">
             <Card withPurpleBar className="p-10 h-full">
               <CardIcon><SmartphoneIcon /></CardIcon>
-              <CardTitle>Mobile Apps</CardTitle>
+              <CardTitle>Mobile App Development Services</CardTitle>
               <CardDescription>
                 Native and cross-platform mobile applications that deliver seamless experiences. We handle everything from concept to App Store — with performance, design, and scalability built in from day one.
               </CardDescription>
-              <div className="flex flex-wrap gap-2 mt-4">
-                {['iOS', 'Android', 'React Native', 'Flutter', 'App Store Optimization'].map((item) => (
-                  <span key={item} className="px-3.5 py-1.5 bg-purple-50 text-purple-700 rounded-full text-[0.8rem] font-medium">
-                    {item}
-                  </span>
-                ))}
-              </div>
+              <ul className="mt-4 space-y-1.5 text-[0.85rem] text-gray-600">
+                <li><strong>iOS &amp; Android App Development</strong></li>
+                <li><strong>Cross-Platform Apps With React Native</strong></li>
+              </ul>
             </Card>
           </RevealOnScroll>
 
           <RevealOnScroll delay={6}>
             <Card withPurpleBar className="h-full">
               <CardIcon><ActivityIcon /></CardIcon>
-              <CardTitle>SEO & Analytics</CardTitle>
+              <CardTitle>AI Automation Services</CardTitle>
               <CardDescription>
-                Organic growth strategies backed by real data. We make sure your audience finds you.
+                Custom AI agents, chatbots, and workflow automation that replace 40+ hours of manual work per week.
               </CardDescription>
+              <ul className="mt-3 space-y-1.5 text-[0.85rem] text-gray-600">
+                <li><strong>Custom AI Chatbots &amp; Virtual Assistants</strong></li>
+                <li><strong>Workflow Automation &amp; Integration</strong></li>
+                <li><strong>AI-Powered Analytics &amp; Reporting</strong></li>
+              </ul>
             </Card>
           </RevealOnScroll>
         </div>
@@ -247,7 +263,7 @@ export default function ServicesPage() {
           <div className="bg-purple-500 rounded-[36px] py-[clamp(48px,6vw,80px)] px-[clamp(24px,4vw,64px)] text-center relative overflow-hidden max-w-[1200px] mx-auto">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1)_0%,transparent_60%)] pointer-events-none" />
             <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold text-white tracking-[-0.03em] mb-3 relative">
-              Ready to start your project?
+              Ready to Build Your Marketing System?
             </h2>
             <p className="text-[1.05rem] text-white/80 mb-8 relative">
               Let&apos;s talk about what we can build together.
@@ -262,6 +278,28 @@ export default function ServicesPage() {
           </div>
         </RevealOnScroll>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Marketing Services",
+            "description": "Six integrated marketing services built as one system",
+            "url": "https://www.softstandardsinc.com/services",
+            "numberOfItems": 6,
+            "itemListElement": [
+              { "@type": "Service", "position": 1, "name": "Brand Strategy", "description": "Strategic brand foundation — positioning, messaging, and identity that builds trust before you say a word.", "provider": { "@type": "Organization", "name": "Soft Standards" }, "url": "https://www.softstandardsinc.com/services#brand-strategy" },
+              { "@type": "Service", "position": 2, "name": "Web Development", "description": "Fast, conversion-optimized websites built with Next.js, React, and TypeScript.", "provider": { "@type": "Organization", "name": "Soft Standards" }, "url": "https://www.softstandardsinc.com/services#web-development" },
+              { "@type": "Service", "position": 3, "name": "UI/UX Design", "description": "Research-backed, tested, and refined user interfaces.", "provider": { "@type": "Organization", "name": "Soft Standards" }, "url": "https://www.softstandardsinc.com/services#ui-ux-design" },
+              { "@type": "Service", "position": 4, "name": "Digital Marketing", "description": "SEO, PPC, email, and social media running as one integrated system.", "provider": { "@type": "Organization", "name": "Soft Standards" }, "url": "https://www.softstandardsinc.com/services#digital-marketing" },
+              { "@type": "Service", "position": 5, "name": "Mobile App Development", "description": "iOS, Android, and cross-platform apps using React Native.", "provider": { "@type": "Organization", "name": "Soft Standards" }, "url": "https://www.softstandardsinc.com/services#mobile-apps" },
+              { "@type": "Service", "position": 6, "name": "AI Automation", "description": "Custom AI agents, chatbots, and workflow automation that replace 40+ hours of manual work per week.", "provider": { "@type": "Organization", "name": "Soft Standards" }, "url": "https://www.softstandardsinc.com/services#ai-automation" }
+            ]
+          }),
+        }}
+      />
 
       <script
         type="application/ld+json"

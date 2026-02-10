@@ -51,7 +51,7 @@ export default function TermsOfServicePage() {
             between you (&quot;Client,&quot; &quot;you,&quot; or &quot;your&quot;) and Soft
             Standards Inc., a New York corporation (&quot;Soft Standards,&quot; &quot;Company,&quot;
             &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), governing your access to and use of
-            our website located at softstandards.net (the &quot;Site&quot;) and all related services,
+            our website located at softstandardsinc.com (the &quot;Site&quot;) and all related services,
             applications, products, and content provided by Soft Standards Inc. (collectively, the
             &quot;Services&quot;).
           </p>
@@ -155,7 +155,7 @@ export default function TermsOfServicePage() {
           <p className="text-[0.95rem] text-gray-600 leading-[1.8] mb-4">
             You agree to immediately notify Soft Standards Inc. of any unauthorized use of your
             account or any other breach of security of which you become aware. You may notify us by
-            contacting us at legal@softstandards.net. We will not be liable for any loss or damage
+            contacting us at legal@softstandardsinc.com. We will not be liable for any loss or damage
             arising from your failure to comply with this requirement.
           </p>
           <h3 className="text-[1.15rem] font-semibold text-gray-800 mb-3 mt-6">
@@ -799,19 +799,19 @@ export default function TermsOfServicePage() {
             <p className="text-[0.95rem] text-gray-600 leading-[1.8] mt-2">
               Email:{' '}
               <a
-                href="mailto:legal@softstandards.net"
+                href="mailto:legal@softstandardsinc.com"
                 className="text-purple-600 hover:text-purple-700 underline underline-offset-2"
               >
-                legal@softstandards.net
+                legal@softstandardsinc.com
               </a>
             </p>
             <p className="text-[0.95rem] text-gray-600 leading-[1.8] mt-2">
               Website:{' '}
               <a
-                href="https://softstandards.net"
+                href="https://softstandardsinc.com"
                 className="text-purple-600 hover:text-purple-700 underline underline-offset-2"
               >
-                softstandards.net
+                softstandardsinc.com
               </a>
             </p>
           </div>

@@ -9,17 +9,17 @@ import BreadcrumbSchema from '@/components/schemas/BreadcrumbSchema';
 import PersonSchema from '@/components/schemas/PersonSchema';
 
 export const metadata: Metadata = {
-  title: 'About Us — Our Team & Story',
-  description: 'Meet the team behind Soft Standards Inc. — developers, designers, and strategists with 4+ years of experience and 40+ projects delivered. Founded in 2022, we blend AI with authentic brand storytelling.',
-  keywords: ['about soft standards', 'digital marketing team', 'marketing agency story', 'AI marketing experts'],
+  title: 'About Soft Standards | AI Marketing Agency | 150+ Systems Built Since 2022',
+  description: '6-person AI marketing agency founded in 2022. Offices in New York and Lahore. 150+ marketing systems, $47M+ client revenue, 97% retention. Meet the team behind the results.',
+  keywords: ['about soft standards', 'AI marketing agency team', 'marketing agency New York', 'digital marketing team'],
   openGraph: {
-    title: 'About Soft Standards Inc. — Our Team & Story',
-    description: 'Meet the team behind 40+ successful projects. Developers, designers, and strategists who blend AI with authentic brand storytelling.',
+    title: 'About Soft Standards | AI Marketing Agency | 150+ Systems Built Since 2022',
+    description: '6-person AI marketing agency founded in 2022. Offices in New York and Lahore. 150+ marketing systems, $47M+ client revenue, 97% retention.',
     type: 'website',
-    url: 'https://softstandards.net/about',
+    url: 'https://www.softstandardsinc.com/about',
     images: [{ url: '/images/og-default.png', width: 1200, height: 630, alt: 'About Soft Standards Inc.' }],
   },
-  alternates: { canonical: 'https://softstandards.net/about' },
+  alternates: { canonical: 'https://www.softstandardsinc.com/about' },
 };
 
 const values = [
@@ -33,7 +33,7 @@ const timeline = [
   { year: '2022', title: 'Founded', desc: 'Muhammad Furqan and Ishfaq Ahmed started Soft Standards with a simple belief: businesses deserve marketing that feels human, not automated. Our first project was a local brand refresh that turned into a long-term partnership.' },
   { year: '2023', title: 'First Major Client', desc: 'Partnered with SpaceDome AI to build their web presence from scratch — positioning their AI agent platform for a global audience. This project put us on the map in the tech space.' },
   { year: '2024', title: 'Team Growth', desc: 'Grew from a two-person operation to a team of six across development, design, and business development. Took on Bicycle Health and expanded into healthcare digital marketing.' },
-  { year: '2025', title: 'Scaling Up', desc: 'Crossed 40 completed projects, established our AI automation practice, and began serving clients across multiple industries from our New York base.' },
+  { year: '2025', title: 'Scaling Up', desc: 'Crossed 150 completed marketing systems, established our AI automation practice, and began serving clients across multiple industries from our New York base.' },
 ];
 
 const team = [
@@ -64,7 +64,7 @@ const faqs = [
   },
   {
     question: 'How many projects has Soft Standards delivered?',
-    answer: 'Soft Standards has delivered over 40 projects across multiple industries including technology, healthcare, e-commerce, and professional services, maintaining a 97% client retention rate.',
+    answer: 'Soft Standards has delivered over 150 marketing systems across multiple industries including technology, healthcare, e-commerce, and professional services, generating $47M+ in client revenue with a 97% client retention rate.',
   },
   {
     question: 'What is Soft Standards\' approach to marketing?',
@@ -85,6 +85,7 @@ export default function AboutPage() {
       />
       <PersonSchema name="Muhammad Furqan" jobTitle="CEO" />
       <PersonSchema name="Ishfaq Ahmed" jobTitle="CTO" />
+      <PersonSchema name="Zain-ul-Abedeen" jobTitle="Business Development" />
 
       {/* FAQPage Schema */}
       <script
@@ -106,7 +107,7 @@ export default function AboutPage() {
       />
 
       <HeroSection
-        title={<>We are <span className="text-gradient">Soft Standards Inc.</span></>}
+        title={<>About Soft Standards — <span className="text-gradient">AI Marketing Agency</span> in New York &amp; Lahore</>}
         subtitle="A close-knit team of developers, designers, and strategists who believe great digital work starts with genuinely understanding your story."
         badge="Our Story"
         background="light"
@@ -118,21 +119,23 @@ export default function AboutPage() {
           <div className="flex items-center justify-center gap-8 sm:gap-12">
             <div className="text-center">
               <div className="text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold tracking-[-0.03em] text-gray-900">
-                4<span className="text-purple-500">+</span>
+                150<span className="text-purple-500">+</span>
               </div>
-              <div className="text-[0.85rem] text-gray-500 font-medium mt-1">Years</div>
+              <div className="text-[0.85rem] text-gray-500 font-medium mt-1">Marketing Systems</div>
             </div>
             <div className="w-px h-12 bg-gray-100" />
             <div className="text-center">
               <div className="text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold tracking-[-0.03em] text-gray-900">
-                40<span className="text-purple-500">+</span>
+                $47M<span className="text-purple-500">+</span>
               </div>
-              <div className="text-[0.85rem] text-gray-500 font-medium mt-1">Projects</div>
+              <div className="text-[0.85rem] text-gray-500 font-medium mt-1">Client Revenue</div>
             </div>
             <div className="w-px h-12 bg-gray-100" />
             <div className="text-center">
-              <div className="text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold tracking-[-0.03em] text-gray-900">6</div>
-              <div className="text-[0.85rem] text-gray-500 font-medium mt-1">Team Members</div>
+              <div className="text-[clamp(1.8rem,4vw,2.5rem)] font-extrabold tracking-[-0.03em] text-gray-900">
+                97<span className="text-purple-500">%</span>
+              </div>
+              <div className="text-[0.85rem] text-gray-500 font-medium mt-1">Retention</div>
             </div>
           </div>
         </RevealOnScroll>
@@ -142,7 +145,7 @@ export default function AboutPage() {
       <section className="px-[clamp(20px,5vw,80px)] pb-[clamp(40px,6vw,80px)]">
         <RevealOnScroll>
           <div className="max-w-[800px] mx-auto bg-gray-50 rounded-3xl p-8 md:p-10 border border-gray-100">
-            <h3 className="text-lg font-bold text-gray-900 mb-6">Quick Facts</h3>
+            <h2 className="text-lg font-bold text-gray-900 mb-6">Offices in New York and Lahore</h2>
             <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
               <div>
                 <dt className="text-sm font-semibold text-gray-500">Founded</dt>
@@ -178,7 +181,7 @@ export default function AboutPage() {
         <RevealOnScroll>
           <SectionHeader
             badge="What Drives Us"
-            title={<>Mission & <span className="text-gradient">Values</span></>}
+            title={<>Our Approach to <span className="text-gradient">Marketing</span></>}
           />
         </RevealOnScroll>
 
@@ -208,7 +211,7 @@ export default function AboutPage() {
         <RevealOnScroll>
           <SectionHeader
             badge="Our Journey"
-            title={<>The <span className="text-gradient">Story</span></>}
+            title={<>Founded in 2022 to Build Marketing Systems That <span className="text-gradient">Actually Work</span></>}
           />
         </RevealOnScroll>
 
@@ -236,7 +239,7 @@ export default function AboutPage() {
           <SectionHeader
             badge="Our People"
             title={<>Meet the <span className="text-gradient">Team</span></>}
-            subtitle="Diverse minds, unified mission. Here are some of the people behind Soft Standards."
+            subtitle="Diverse minds, unified mission. Here are the people behind Soft Standards."
           />
         </RevealOnScroll>
 
@@ -247,8 +250,7 @@ export default function AboutPage() {
                 <div className={`w-full aspect-square rounded-[36px] bg-gradient-to-br ${member.gradient} mb-4 overflow-hidden relative transition-transform duration-350 group-hover:scale-[1.03]`}>
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[rgba(124,58,237,0.2)] opacity-0 group-hover:opacity-100 transition-opacity duration-350" />
                 </div>
-                <h4 className="text-base font-bold text-gray-900 mb-0.5">{member.name}</h4>
-                <p className="text-[0.85rem] text-gray-500">{member.role}</p>
+                <h3 className="text-base font-bold text-gray-900 mb-0.5">{member.name} — {member.role}</h3>
               </div>
             </RevealOnScroll>
           ))}
@@ -260,7 +262,7 @@ export default function AboutPage() {
         <RevealOnScroll>
           <SectionHeader
             badge="Our Work"
-            title={<>Client <span className="text-gradient">Highlights</span></>}
+            title={<>150+ Marketing Systems. $47M+ in Client Revenue. <span className="text-gradient">97% Retention.</span></>}
           />
         </RevealOnScroll>
 
@@ -316,7 +318,7 @@ export default function AboutPage() {
           <div className="bg-purple-500 rounded-[36px] py-[clamp(48px,6vw,80px)] px-[clamp(24px,4vw,64px)] text-center relative overflow-hidden max-w-[1200px] mx-auto">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1)_0%,transparent_60%)] pointer-events-none" />
             <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold text-white tracking-[-0.03em] mb-3 relative">
-              Want to work with us?
+              Work With Us
             </h2>
             <p className="text-[1.05rem] text-white/80 mb-8 relative">
               We&apos;re always looking for ambitious projects and great people.

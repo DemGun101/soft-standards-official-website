@@ -39,6 +39,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/api/",
       },
     ],
-    sitemap: "https://softstandards.net/sitemap.xml",
+    sitemap: "https://www.softstandardsinc.com/sitemap.xml",
   };
 }

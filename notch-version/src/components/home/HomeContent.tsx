@@ -319,9 +319,9 @@ export default function HomeContent() {
             ref={heroTitleRef}
             className="text-[clamp(2.8rem,6.5vw,5rem)] font-extrabold tracking-[-0.04em] leading-[1.1] mb-6 text-gray-900"
           >
-            We Build Marketing Machines
+            AI-Powered Marketing Agency —
             <br />
-            <span className="text-gradient">That Print Money While You Sleep</span>
+            <span className="text-gradient">Complete Systems Built in 30 Days</span>
           </h1>
 
           {/* Subtitle */}
@@ -361,7 +361,7 @@ export default function HomeContent() {
           {/* Trust Bar */}
           <div className="hero-cta-btn flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
             <span className="flex items-center gap-2">
-              <span className="font-bold text-gray-900">40+</span> systems built
+              <span className="font-bold text-gray-900">150+</span> systems built
             </span>
             <span className="hidden sm:inline text-gray-300">•</span>
             <span className="flex items-center gap-2">
@@ -410,9 +410,9 @@ export default function HomeContent() {
           {/* Section header */}
           <div className="story-1-text text-center mb-12">
             <h2 className="text-[clamp(2.2rem,5vw,3.5rem)] font-extrabold tracking-tight text-gray-900 leading-[1.1] mb-8">
-              Here&apos;s Why Your Marketing
+              We Build the Entire
               <br />
-              <span className="text-gradient">Isn&apos;t Working</span>
+              <span className="text-gradient">Marketing Machine</span>
             </h2>
           </div>
 
@@ -422,34 +422,20 @@ export default function HomeContent() {
               <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8">
                 You&apos;ve tried the agencies. You&apos;ve tried the freelancers. You&apos;ve tried doing it yourself at 11pm after the kids are asleep.
               </p>
-              <p className="text-lg text-gray-500 mb-8">And you&apos;re still:</p>
-
-              <ul className="space-y-5 mb-10">
-                <li className="flex items-start gap-4">
-                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-red-50 flex items-center justify-center mt-0.5">
-                    <span className="text-red-400 font-bold text-sm">✕</span>
-                  </span>
-                  <span className="text-gray-700 text-lg"><strong className="text-gray-900">Posting content that gets likes but not sales</strong></span>
-                </li>
-                <li className="flex items-start gap-4">
-                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-red-50 flex items-center justify-center mt-0.5">
-                    <span className="text-red-400 font-bold text-sm">✕</span>
-                  </span>
-                  <span className="text-gray-700 text-lg"><strong className="text-gray-900">Burning cash on ads that &ldquo;need more testing&rdquo;</strong></span>
-                </li>
-                <li className="flex items-start gap-4">
-                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-red-50 flex items-center justify-center mt-0.5">
-                    <span className="text-red-400 font-bold text-sm">✕</span>
-                  </span>
-                  <span className="text-gray-700 text-lg"><strong className="text-gray-900">Watching competitors with worse products win</strong> because they have better systems</span>
-                </li>
-                <li className="flex items-start gap-4">
-                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-red-50 flex items-center justify-center mt-0.5">
-                    <span className="text-red-400 font-bold text-sm">✕</span>
-                  </span>
-                  <span className="text-gray-700 text-lg"><strong className="text-gray-900">Trading time for money</strong> because nothing runs without you</span>
-                </li>
-              </ul>
+              <div className="space-y-6 mb-10">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Brand Strategy That Positions You to Win</h3>
+                  <p className="text-gray-600 text-lg">We define your positioning, messaging, and identity so customers trust you before the first conversation.</p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Conversion-Optimized Web Development</h3>
+                  <p className="text-gray-600 text-lg">Fast, modern websites built to convert — not just look pretty. Every page engineered for revenue.</p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">AI Automation That Replaces Manual Work</h3>
+                  <p className="text-gray-600 text-lg">Custom AI agents, chatbots, and workflows that replace 40+ hours of manual work per week.</p>
+                </div>
+              </div>
             </div>
 
             {/* The real problem */}
@@ -488,9 +474,9 @@ export default function HomeContent() {
 
         <div className="relative z-10 text-center max-w-[800px]">
           <h2 className="ai-text-1 text-[clamp(2rem,5vw,3.5rem)] font-bold text-white mb-10 leading-tight">
-            What If Marketing Just...
+            An AI Marketing Agency Built
             <br />
-            <span className="text-gradient">Worked?</span>
+            <span className="text-gradient">for Growth, Not Guesswork</span>
           </h2>
 
           <div className="ai-text-2 text-left max-w-[550px] mx-auto mb-10">
@@ -513,7 +499,7 @@ export default function HomeContent() {
 
           <div className="ai-text-3">
             <p className="text-gray-400 text-lg mb-6">
-              That&apos;s not a fantasy. That&apos;s a system. And we&apos;ve built it <span className="text-white font-bold">40+ times.</span>
+              That&apos;s not a fantasy. That&apos;s a system. And we&apos;ve built it <span className="text-white font-bold">150+ times.</span>
             </p>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 max-w-[500px] mx-auto">
@@ -544,78 +530,61 @@ export default function HomeContent() {
           <div className="text-center mb-16">
             <ScrollReveal>
               <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight text-gray-900 mb-4">
-                From Stranger to Customer
-                <span className="text-gradient"> in 4 Weeks</span>
+                How Our Performance-Based
+                <span className="text-gradient"> Model Works</span>
               </h2>
             </ScrollReveal>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6">
-            {/* Week 1 */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Phase 1 */}
             <div className="solution-card group bg-white rounded-3xl p-8 shadow-[0_4px_24px_rgba(15,23,42,0.06)] border border-gray-100 hover:shadow-[0_20px_60px_rgba(124,58,237,0.12)] hover:border-purple-100 transition-all duration-500 relative">
               <div className="absolute -top-3 left-8">
                 <span className="inline-block px-3 py-1 bg-purple-500 text-white rounded-full text-xs font-bold">
-                  WEEK 1
+                  PHASE 1
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 mt-4">EXTRACT</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 mt-4">We Build Your Marketing System</h3>
               <p className="text-gray-500 leading-relaxed mb-6">
-                We download everything in your head. Your story. Your customers. Your competitors. Your goals. Chaos becomes clarity.
+                We download everything in your head. Your story. Your customers. Your competitors. Your goals. Then we build the entire system — website, automations, ad creative, email sequences.
               </p>
               <div className="pt-4 border-t border-gray-100">
                 <p className="text-sm text-gray-400">You get:</p>
-                <p className="text-sm font-semibold text-purple-600">Complete brand strategy document</p>
+                <p className="text-sm font-semibold text-purple-600">Complete brand strategy + full website + automation stack</p>
               </div>
             </div>
 
-            {/* Week 2 */}
+            {/* Phase 2 */}
             <div className="solution-card group bg-white rounded-3xl p-8 shadow-[0_4px_24px_rgba(15,23,42,0.06)] border border-gray-100 hover:shadow-[0_20px_60px_rgba(124,58,237,0.12)] hover:border-purple-100 transition-all duration-500 relative">
               <div className="absolute -top-3 left-8">
                 <span className="inline-block px-3 py-1 bg-purple-500 text-white rounded-full text-xs font-bold">
-                  WEEK 2
+                  PHASE 2
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 mt-4">BUILD</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 mt-4">30-Day Proof Period — You Pay Nothing</h3>
               <p className="text-gray-500 leading-relaxed mb-6">
-                Our team builds your entire system — website, automations, ad creative, email sequences. You approve. We refine.
+                Ads go live. Sequences start running. Leads start flowing. You start closing. We prove it works before you invest a dollar.
               </p>
               <div className="pt-4 border-t border-gray-100">
                 <p className="text-sm text-gray-400">You get:</p>
-                <p className="text-sm font-semibold text-purple-600">Full website + automation stack</p>
+                <p className="text-sm font-semibold text-purple-600">Live campaigns + lead flow + zero risk</p>
               </div>
             </div>
 
-            {/* Week 3 */}
+            {/* Phase 3 */}
             <div className="solution-card group bg-white rounded-3xl p-8 shadow-[0_4px_24px_rgba(15,23,42,0.06)] border border-gray-100 hover:shadow-[0_20px_60px_rgba(124,58,237,0.12)] hover:border-purple-100 transition-all duration-500 relative">
               <div className="absolute -top-3 left-8">
                 <span className="inline-block px-3 py-1 bg-purple-500 text-white rounded-full text-xs font-bold">
-                  WEEK 3
+                  PHASE 3
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 mt-4">LAUNCH</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 mt-4">Monthly Growth — Only When It Works</h3>
               <p className="text-gray-500 leading-relaxed mb-6">
-                Ads go live. Sequences start running. Leads start flowing. You start closing.
+                We watch the data. Kill what doesn&apos;t work. Double down on what does. You only pay when results are proven.
               </p>
               <div className="pt-4 border-t border-gray-100">
                 <p className="text-sm text-gray-400">You get:</p>
-                <p className="text-sm font-semibold text-purple-600">Live campaigns + lead flow</p>
-              </div>
-            </div>
-
-            {/* Week 4 */}
-            <div className="solution-card group bg-white rounded-3xl p-8 shadow-[0_4px_24px_rgba(15,23,42,0.06)] border border-gray-100 hover:shadow-[0_20px_60px_rgba(124,58,237,0.12)] hover:border-purple-100 transition-all duration-500 relative">
-              <div className="absolute -top-3 left-8">
-                <span className="inline-block px-3 py-1 bg-purple-500 text-white rounded-full text-xs font-bold">
-                  WEEK 4
-                </span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 mt-4">OPTIMIZE</h3>
-              <p className="text-gray-500 leading-relaxed mb-6">
-                We watch the data. Kill what doesn&apos;t work. Double down on what does.
-              </p>
-              <div className="pt-4 border-t border-gray-100">
-                <p className="text-sm text-gray-400">You get:</p>
-                <p className="text-sm font-semibold text-purple-600">Optimization playbook + full training</p>
+                <p className="text-sm font-semibold text-purple-600">Optimization playbook + ongoing growth</p>
               </div>
             </div>
           </div>
@@ -646,8 +615,8 @@ export default function HomeContent() {
         <div className="max-w-[1200px] mx-auto">
           <ScrollReveal className="text-center mb-16">
             <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight text-gray-900">
-              The
-              <span className="text-gradient"> Receipts</span>
+              150+ Marketing Systems Built.
+              <span className="text-gradient"> $47M+ in Client Revenue.</span>
             </h2>
           </ScrollReveal>
 
@@ -697,10 +666,20 @@ export default function HomeContent() {
         <div className="max-w-[900px] mx-auto">
           <ScrollReveal className="text-center">
             <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight text-gray-900 mb-4">
-              They Came Skeptical.
-              <span className="text-gradient"> They Left Scaled.</span>
+              Marketing Results
+              <span className="text-gradient"> From Real Clients</span>
             </h2>
-            <p className="text-lg text-gray-500 mb-12">Don&apos;t take our word for it. Look at the receipts.</p>
+            <p className="text-lg text-gray-500 mb-8">Don&apos;t take our word for it. Look at the receipts.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12 max-w-[600px] mx-auto text-left">
+              <div className="bg-gray-50 rounded-2xl p-5 border border-gray-100">
+                <h3 className="text-lg font-bold text-gray-900">+185% Organic Traffic for SpaceDome AI</h3>
+                <p className="text-sm text-gray-500 mt-1">Web platform &amp; brand identity built from zero</p>
+              </div>
+              <div className="bg-gray-50 rounded-2xl p-5 border border-gray-100">
+                <h3 className="text-lg font-bold text-gray-900">67% Lower Cost Per Lead for Bicycle Health</h3>
+                <p className="text-sm text-gray-500 mt-1">Patient acquisition system for telehealth</p>
+              </div>
+            </div>
           </ScrollReveal>
 
           <div className="relative">
@@ -803,8 +782,8 @@ export default function HomeContent() {
         <div className="relative z-10 max-w-[900px] mx-auto">
           <ScrollReveal>
             <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold text-white mb-12 leading-tight text-center">
-              Two Paths
-              <span className="text-gradient"> Forward</span>
+              Book a Free 15-Minute
+              <span className="text-gradient"> Growth Audit</span>
             </h2>
           </ScrollReveal>
 

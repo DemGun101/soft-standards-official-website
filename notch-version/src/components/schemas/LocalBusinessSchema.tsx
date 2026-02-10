@@ -2,11 +2,11 @@ export default function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "@id": "https://softstandards.net/#business",
+    "@id": "https://softstandardsinc.com/#business",
     name: "Soft Standards Inc.",
-    image: "https://softstandards.net/images/og-default.png",
-    url: "https://softstandards.net",
-    email: "contact@softstandards.net",
+    image: "https://softstandardsinc.com/images/og-default.png",
+    url: "https://softstandardsinc.com",
+    email: "contact@softstandardsinc.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "New York",

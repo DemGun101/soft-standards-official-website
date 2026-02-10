@@ -64,7 +64,7 @@ export default function BlogContent() {
   return (
     <>
       <HeroSection
-        title={<>Insights & <span className="text-gradient">Ideas</span></>}
+        title={<>Marketing Blog — AI Automation, Growth Strategy & <span className="text-gradient">Web Development Insights</span></>}
         subtitle="Thoughts on design, development, strategy, and the craft of building digital products that matter."
         background="light"
         showScrollIndicator={false}
@@ -136,6 +136,7 @@ export default function BlogContent() {
 
       {/* Blog Grid */}
       <section className="py-[clamp(60px,10vw,120px)] px-[clamp(20px,5vw,80px)]">
+        <h2 className="sr-only">Latest Articles</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
           {filteredPosts.slice(1).map((post, index) => (
             <RevealOnScroll key={post.id} delay={(index % 6) + 1}>
@@ -208,7 +209,7 @@ export default function BlogContent() {
       <section className="py-[clamp(60px,10vw,120px)] px-[clamp(20px,5vw,80px)]">
         <RevealOnScroll>
           <SectionHeader
-            title={<>Explore by <span className="text-gradient">Topic</span></>}
+            title={<><span className="text-gradient">Topics</span></>}
           />
         </RevealOnScroll>
 

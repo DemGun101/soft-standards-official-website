@@ -4,23 +4,23 @@ import ReviewSchema from '@/components/schemas/ReviewSchema';
 import LocalBusinessSchema from '@/components/schemas/LocalBusinessSchema';
 
 export const metadata: Metadata = {
-  title: 'Soft Standards Inc. — AI-Powered Digital Marketing Agency',
-  description: 'AI-powered digital marketing agency specializing in web development, brand strategy, UI/UX design, app development, and marketing automation. 40+ projects delivered with 97% client retention. Build your marketing machine in 30 days.',
-  keywords: ['digital marketing agency', 'AI marketing', 'web development agency', 'brand strategy', 'UI/UX design', 'app development', 'marketing automation', 'SaaS marketing', 'done for you marketing'],
+  title: 'Soft Standards | AI-Powered Marketing Agency | New York & Lahore',
+  description: 'We build complete marketing systems in 30 days — brand strategy, web development, UI/UX, AI automation, and growth marketing. 150+ systems built. $47M+ in client revenue. Pay only when it works.',
+  keywords: ['AI marketing agency', 'marketing automation agency', 'web development agency NYC', 'growth marketing', 'brand strategy', 'digital marketing agency', 'AI automation'],
   openGraph: {
-    title: 'Soft Standards Inc. — AI-Powered Digital Marketing Agency',
-    description: 'We build marketing machines that print money while you sleep. Brand, website, ads, automation — all done-for-you in 30 days.',
+    title: 'Soft Standards | AI-Powered Marketing Agency | New York & Lahore',
+    description: 'We build complete marketing systems in 30 days — brand strategy, web development, UI/UX, AI automation, and growth marketing. 150+ systems built. $47M+ in client revenue.',
     type: 'website',
-    url: 'https://softstandards.net',
-    images: [{ url: '/images/og-default.png', width: 1200, height: 630, alt: 'Soft Standards Inc.' }],
+    url: 'https://www.softstandardsinc.com/',
+    images: [{ url: '/og/home.jpg', width: 1200, height: 630, alt: 'Soft Standards — AI-Powered Marketing Agency' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Soft Standards Inc. — AI-Powered Digital Marketing Agency',
-    description: 'We build marketing machines that print money while you sleep. 40+ projects delivered, 97% client retention.',
-    images: ['/images/og-default.png'],
+    title: 'Soft Standards | AI-Powered Marketing Agency | New York & Lahore',
+    description: 'We build complete marketing systems in 30 days — 150+ systems built, $47M+ in client revenue. Pay only when it works.',
+    images: ['/og/home.jpg'],
   },
-  alternates: { canonical: 'https://softstandards.net' },
+  alternates: { canonical: 'https://www.softstandardsinc.com/' },
 };
 
 export default function Home() {

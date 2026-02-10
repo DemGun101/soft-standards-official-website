@@ -12,9 +12,9 @@ import {
 import HeroSection from '@/components/HeroSection';
 
 const cultureItems = [
-  { icon: <GlobeIcon />, title: 'Remote First', desc: "Work from anywhere. We've built a flexible, remote-friendly culture from day one. Our team spans different cities and time zones, and we've proven that great work doesn't require an office — just great people and clear communication.", span: true },
-  { icon: <SunIcon />, title: 'Growth Focused', desc: 'Annual learning budgets, conference tickets, and mentorship programs. We invest in your development because when you grow, we all win.' },
-  { icon: <UsersIcon />, title: 'Team Driven', desc: "No rockstars, no egos. We collaborate openly, share credit generously, and win together. Everyone has a voice that matters." },
+  { icon: <GlobeIcon />, title: 'Remote-First Team Across New York & Lahore', desc: "Work from anywhere. We've built a flexible, remote-friendly culture from day one. Our team spans different cities and time zones, and we've proven that great work doesn't require an office — just great people and clear communication.", span: true },
+  { icon: <SunIcon />, title: '$2,500 Annual Growth Budget', desc: 'Annual learning budgets, conference tickets, and mentorship programs. We invest in your development because when you grow, we all win.' },
+  { icon: <UsersIcon />, title: 'Real Projects, Real Impact', desc: "No rockstars, no egos. We collaborate openly, share credit generously, and win together. Every project we take on has a clear purpose and measurable outcomes." },
   { icon: <ActivityIcon />, title: 'Impact Oriented', desc: "Work on projects that move the needle. Every project we take on has a clear purpose and measurable outcomes — no busywork." },
 ];
 
@@ -28,12 +28,12 @@ const benefits = [
 ];
 
 const jobs = [
-  { id: 1, title: 'Senior Product Designer', dept: 'Design', category: 'design', desc: "We're looking for a seasoned product designer to lead design initiatives for our highest-impact client projects. You'll work directly with stakeholders to define strategy, create user flows, and deliver pixel-perfect interfaces.", requirements: ['5+ years of product design experience', 'Mastery of Figma and modern design tools', 'Strong portfolio showcasing end-to-end product work', 'Experience leading design systems', 'Excellent communication and presentation skills'] },
-  { id: 2, title: 'Full-Stack Engineer (React + Node)', dept: 'Engineering', category: 'engineering', desc: "Join our engineering team to build high-performance web applications for clients across industries. You'll own features end-to-end, from API design to frontend polish.", requirements: ['4+ years of full-stack development experience', 'Expert-level React, TypeScript, and Node.js', 'Experience with modern build tools and deployment pipelines', 'Strong understanding of accessibility and performance', 'Passion for clean code and best practices'] },
-  { id: 3, title: 'Brand Designer', dept: 'Design', category: 'design', desc: "Craft visual identities that tell stories. We need a brand designer who can balance strategic thinking with exceptional craft — from logomarks to full identity systems.", requirements: ['3+ years of brand/identity design experience', 'Exceptional typography and layout skills', 'Portfolio showing diverse brand work', 'Proficiency in Illustrator, Photoshop, and Figma', 'Understanding of brand strategy and positioning'] },
-  { id: 4, title: 'Digital Marketing Strategist', dept: 'Marketing', category: 'marketing', desc: "Drive measurable results for our clients. You'll design and execute data-driven campaigns across channels — SEO, paid ads, email, social, and more.", requirements: ['4+ years in digital marketing (agency experience preferred)', 'Deep knowledge of SEO, PPC, and analytics', 'Experience with Google Ads, Meta Ads, and analytics platforms', 'Proven track record of campaign ROI', 'Strong analytical and reporting skills'] },
-  { id: 5, title: 'Mobile Developer (React Native)', dept: 'Engineering', category: 'engineering', desc: "Build beautiful, performant mobile apps for iOS and Android. You'll collaborate with designers and backend engineers to deliver native-quality experiences.", requirements: ['3+ years of React Native development', 'Strong understanding of mobile UI/UX patterns', 'Experience with native modules and app deployment', 'Familiarity with CI/CD for mobile', 'Published apps in App Store and Play Store'] },
-  { id: 6, title: 'Project Manager', dept: 'Operations', category: 'operations', desc: "Keep our projects on track and our clients happy. You'll coordinate timelines, manage stakeholder communication, and ensure smooth delivery across teams.", requirements: ['3+ years of project management in a digital agency', 'Experience managing agile and waterfall projects', 'Excellent organizational and communication skills', 'Proficiency with tools like Notion, Linear, or Asana', 'Ability to juggle multiple projects simultaneously'] },
+  { id: 1, title: 'Senior Product Designer — Remote', dept: 'Design', category: 'design', desc: "We're looking for a seasoned product designer to lead design initiatives for our highest-impact client projects. You'll work directly with stakeholders to define strategy, create user flows, and deliver pixel-perfect interfaces.", requirements: ['5+ years of product design experience', 'Mastery of Figma and modern design tools', 'Strong portfolio showcasing end-to-end product work', 'Experience leading design systems', 'Excellent communication and presentation skills'] },
+  { id: 2, title: 'Full-Stack Engineer (React + Node) — Remote', dept: 'Engineering', category: 'engineering', desc: "Join our engineering team to build high-performance web applications for clients across industries. You'll own features end-to-end, from API design to frontend polish.", requirements: ['4+ years of full-stack development experience', 'Expert-level React, TypeScript, and Node.js', 'Experience with modern build tools and deployment pipelines', 'Strong understanding of accessibility and performance', 'Passion for clean code and best practices'] },
+  { id: 3, title: 'Digital Marketing Strategist — Remote', dept: 'Marketing', category: 'marketing', desc: "Drive measurable results for our clients. You'll design and execute data-driven campaigns across channels — SEO, paid ads, email, social, and more.", requirements: ['4+ years in digital marketing (agency experience preferred)', 'Deep knowledge of SEO, PPC, and analytics', 'Experience with Google Ads, Meta Ads, and analytics platforms', 'Proven track record of campaign ROI', 'Strong analytical and reporting skills'] },
+  { id: 4, title: 'Junior UI Designer — Remote', dept: 'Design', category: 'design', desc: "Craft visual identities that tell stories. We need a designer who can balance strategic thinking with exceptional craft — from UI components to full brand systems.", requirements: ['1+ years of UI/UX design experience', 'Proficiency in Figma', 'Portfolio showing diverse design work', 'Strong typography and layout skills', 'Understanding of design systems and component libraries'] },
+  { id: 5, title: 'Content Writer — Remote', dept: 'Marketing', category: 'marketing', desc: "Create compelling content that drives organic growth. You'll write blog posts, case studies, landing page copy, and social content for our clients and our own brand.", requirements: ['2+ years of content writing experience', 'Strong understanding of SEO writing', 'Portfolio of published articles or blog posts', 'Excellent grammar and storytelling skills', 'Familiarity with content management systems'] },
+  { id: 6, title: 'Operations & Client Success — Remote', dept: 'Operations', category: 'operations', desc: "Keep our projects on track and our clients happy. You'll coordinate timelines, manage stakeholder communication, and ensure smooth delivery across teams.", requirements: ['3+ years of project management in a digital agency', 'Experience managing agile and waterfall projects', 'Excellent organizational and communication skills', 'Proficiency with tools like Notion, Linear, or Asana', 'Ability to juggle multiple projects simultaneously'] },
 ];
 
 const testimonials = [
@@ -62,7 +62,7 @@ export default function CareersContent() {
   return (
     <>
       <HeroSection
-        title={<>Build the <span className="text-gradient">future</span> with us.</>}
+        title={<>Careers at Soft Standards — Remote Marketing & <span className="text-gradient">Engineering Jobs</span></>}
         subtitle="We're a fully remote team of makers, thinkers, and problem-solvers building digital products that matter. Join us and do the best work of your career."
         background="gradient"
         cta={{ href: '#open-roles', label: 'View Open Roles' }}
@@ -73,7 +73,7 @@ export default function CareersContent() {
         <RevealOnScroll>
           <SectionHeader
             badge="Our Culture"
-            title={<>Why <span className="text-gradient">Soft Standards Inc.</span></>}
+            title={<>Why Work at an <span className="text-gradient">AI Marketing Agency</span></>}
             subtitle="We've built a culture where great work happens naturally — and where people actually want to stay."
           />
         </RevealOnScroll>
@@ -122,7 +122,7 @@ export default function CareersContent() {
         <RevealOnScroll>
           <SectionHeader
             badge="We're Hiring"
-            title={<>Open <span className="text-gradient">Roles</span></>}
+            title={<>Open <span className="text-gradient">Positions</span></>}
           />
         </RevealOnScroll>
 
@@ -176,7 +176,7 @@ export default function CareersContent() {
                         ))}
                       </ul>
                       <Link
-                        href={`mailto:contact@softstandards.net?subject=Application: ${job.title}`}
+                        href={`mailto:contact@softstandardsinc.com?subject=Application: ${job.title}`}
                         className="inline-flex items-center gap-2.5 px-9 py-4 bg-purple-500 text-white rounded-full text-base font-semibold transition-all shadow-[0_4px_20px_rgba(124,58,237,0.3)] hover:bg-purple-600 hover:-translate-y-0.5"
                       >
                         Apply for this Role
@@ -194,8 +194,8 @@ export default function CareersContent() {
       <section className="py-[clamp(60px,10vw,120px)] px-[clamp(20px,5vw,80px)] bg-[#F8FAFC]">
         <RevealOnScroll>
           <SectionHeader
-            badge="Team Stories"
-            title={<>Hear From the <span className="text-gradient">Team</span></>}
+            badge="How We Hire"
+            title={<>Our Hiring <span className="text-gradient">Process</span></>}
           />
         </RevealOnScroll>
 
@@ -228,13 +228,13 @@ export default function CareersContent() {
           <div className="bg-gray-900 rounded-[36px] py-[clamp(48px,6vw,80px)] px-[clamp(24px,4vw,64px)] text-center max-w-[1200px] mx-auto relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-purple-500 to-purple-400" />
             <h2 className="text-[clamp(1.6rem,3.5vw,2.4rem)] font-extrabold text-white mb-3">
-              Don&apos;t see your role?
+              Don&apos;t See Your Role? Reach Out Anyway.
             </h2>
             <p className="text-base text-gray-300 mb-8 max-w-[500px] mx-auto">
               We&apos;re always looking for exceptional talent. Send us your CV and tell us what you&apos;d bring to the team.
             </p>
             <Link
-              href="mailto:contact@softstandards.net?subject=Open Application"
+              href="mailto:contact@softstandardsinc.com?subject=Open Application"
               className="inline-flex items-center gap-2.5 px-9 py-4 bg-gray-900 text-white border border-white/20 rounded-full text-base font-semibold transition-all hover:bg-purple-600 hover:-translate-y-0.5"
             >
               Send Your CV

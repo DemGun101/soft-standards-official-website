@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import blogPosts from '../../../../public/data/blog-posts.json';
 
 export async function GET() {
-  const baseUrl = 'https://softstandards.net';
+  const baseUrl = 'https://www.softstandardsinc.com';
 
   const items = blogPosts
     .map(

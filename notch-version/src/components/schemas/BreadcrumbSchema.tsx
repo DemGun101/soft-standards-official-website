@@ -14,7 +14,7 @@ export default function BreadcrumbSchema({ breadcrumbs, currentPage }: Breadcrum
       '@type': 'ListItem' as const,
       position: index + 1,
       name: crumb.name,
-      item: `https://softstandards.net${crumb.href}`,
+      item: `https://www.softstandardsinc.com${crumb.href}`,
     })),
     {
       '@type': 'ListItem' as const,
