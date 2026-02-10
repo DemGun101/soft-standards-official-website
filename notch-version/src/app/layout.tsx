@@ -27,14 +27,17 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.softstandardsinc.com"),
   title: {
-    default: "Soft Standards | AI-Powered Marketing Agency | New York & Lahore",
-    template: "%s | Soft Standards",
+    default: "Soft Standards Inc. | AI-Powered Marketing Agency",
+    template: "%s | Soft Standards Inc.",
   },
-  description: "We build complete marketing systems in 30 days — brand strategy, web development, UI/UX, AI automation, and growth marketing. 150+ systems built. $47M+ in client revenue. Pay only when it works.",
+  description: "AI-powered marketing systems. Brand strategy, web dev, digital marketing & automation. 150+ systems. $47M+ client revenue.",
   keywords: ["AI marketing agency", "marketing automation agency", "web development agency NYC", "growth marketing", "brand strategy", "digital marketing agency", "AI automation"],
   authors: [{ name: "Soft Standards Inc." }],
   creator: "Soft Standards Inc.",
   publisher: "Soft Standards Inc.",
+  verification: {
+    google: "YOUR_VERIFICATION_CODE",
+  },
   icons: {
     icon: [
       { url: "/images/logo-icon.svg", type: "image/svg+xml" },
@@ -45,16 +48,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.softstandardsinc.com",
-    siteName: "Soft Standards",
-    title: "Soft Standards | AI-Powered Marketing Agency",
-    description: "Complete marketing systems in 30 days. Brand strategy, web dev, UI/UX, AI automation & growth marketing. Pay only when it works.",
-    images: [{ url: "/images/og-default.png", width: 1200, height: 630, alt: "Soft Standards" }],
+    siteName: "Soft Standards Inc.",
+    title: "Soft Standards Inc. | AI-Powered Marketing Agency",
+    description: "AI-powered marketing systems. Brand strategy, web dev, digital marketing & automation. 150+ systems. $47M+ client revenue.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Soft Standards | AI-Powered Marketing Agency",
-    description: "Complete marketing systems in 30 days. Pay only when it works.",
-    images: ["/images/og-default.png"],
+    title: "Soft Standards Inc. | AI-Powered Marketing Agency",
+    description: "AI-powered marketing systems. Brand strategy, web dev, digital marketing & automation. 150+ systems. $47M+ client revenue.",
   },
   robots: {
     index: true,

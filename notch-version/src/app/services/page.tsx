@@ -17,16 +17,16 @@ import {
 import type { IconType } from 'react-icons';
 
 export const metadata: Metadata = {
-  title: 'Marketing Services | Web Dev, UI/UX, SEO, AI Automation | Soft Standards',
-  description: 'Six integrated marketing services: brand strategy, web development, UI/UX design, digital marketing, mobile apps, and AI automation. Built as one system, not silos. 4-week delivery.',
+  title: 'Our Services',
+  description: 'Full-stack AI marketing: brand strategy, web dev, UI/UX, ads, apps & automation.',
   keywords: ['marketing services', 'web development services', 'UI/UX design services', 'SEO services', 'AI automation services', 'brand strategy agency', 'digital marketing services'],
   openGraph: {
-    title: 'Marketing Services | Web Dev, UI/UX, SEO, AI Automation | Soft Standards',
-    description: 'Six integrated marketing services: brand strategy, web development, UI/UX design, digital marketing, mobile apps, and AI automation. Built as one system, not silos.',
+    title: 'Our Services | Soft Standards Inc.',
+    description: 'Full-stack AI marketing: brand strategy, web dev, UI/UX, ads, apps & automation.',
     type: 'website',
     url: 'https://www.softstandardsinc.com/services',
   },
-  alternates: { canonical: 'https://www.softstandardsinc.com/services' },
+  alternates: { canonical: '/services' },
 };
 
 const DexieIcon: IconType = (props) => (

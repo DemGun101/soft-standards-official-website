@@ -4,7 +4,7 @@ export default function LocalBusinessSchema() {
     "@type": "ProfessionalService",
     "@id": "https://softstandardsinc.com/#business",
     name: "Soft Standards Inc.",
-    image: "https://softstandardsinc.com/images/og-default.png",
+    image: "https://softstandardsinc.com/opengraph-image",
     url: "https://softstandardsinc.com",
     email: "contact@softstandardsinc.com",
     address: {

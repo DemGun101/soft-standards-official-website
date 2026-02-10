@@ -49,7 +49,7 @@ export default function ServiceSchema({ services = defaultServices }: { services
       name: "Soft Standards Inc.",
       url: "https://softstandardsinc.com",
     },
-    areaServed: { "@type": "Country", name: "United States" },
+    areaServed: ["US", "CA", "GB", "AU"],
   }));
 
   return (

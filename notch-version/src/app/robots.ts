@@ -6,39 +6,40 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: "/api/",
+        disallow: ["/api/", "/_next/static/", "/admin/"],
       },
       {
         userAgent: "GPTBot",
         allow: "/",
-        disallow: "/api/",
+        disallow: ["/api/", "/_next/static/", "/admin/"],
       },
       {
         userAgent: "ChatGPT-User",
         allow: "/",
-        disallow: "/api/",
+        disallow: ["/api/", "/_next/static/", "/admin/"],
       },
       {
         userAgent: "ClaudeBot",
         allow: "/",
-        disallow: "/api/",
+        disallow: ["/api/", "/_next/static/", "/admin/"],
       },
       {
         userAgent: "anthropic-ai",
         allow: "/",
-        disallow: "/api/",
+        disallow: ["/api/", "/_next/static/", "/admin/"],
       },
       {
         userAgent: "PerplexityBot",
         allow: "/",
-        disallow: "/api/",
+        disallow: ["/api/", "/_next/static/", "/admin/"],
       },
       {
         userAgent: "Google-Extended",
         allow: "/",
-        disallow: "/api/",
+        disallow: ["/api/", "/_next/static/", "/admin/"],
       },
     ],
     sitemap: "https://www.softstandardsinc.com/sitemap.xml",
+    host: "https://www.softstandardsinc.com",
   };
 }

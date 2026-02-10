@@ -3,17 +3,16 @@ import PricingContent from './PricingContent';
 import BreadcrumbSchema from '@/components/schemas/BreadcrumbSchema';
 
 export const metadata: Metadata = {
-  title: "Pricing | Performance-Based Marketing — Pay Only When It Works",
-  description: "No retainers until results. Reduced upfront build cost + 30-day proof period. Monthly optimization starts only when your KPIs are hit. Cancel anytime. See pricing tiers.",
+  title: "Pricing — Build + Prove + Grow",
+  description: "Performance-based pricing. Build your system, prove in 30 days, then grow. From $3,500.",
   keywords: ["performance-based marketing pricing", "marketing agency pricing", "pay for results marketing", "marketing system cost"],
   alternates: {
-    canonical: "https://www.softstandardsinc.com/pricing",
+    canonical: "/pricing",
   },
   openGraph: {
-    title: "Pricing | Pay Only When It Works | Soft Standards",
-    description: "Reduced upfront build. 30-day proof period. Retainer only when KPIs hit. Cancel anytime.",
+    title: "Pricing — Build + Prove + Grow | Soft Standards Inc.",
+    description: "Performance-based pricing. Build your system, prove in 30 days, then grow. From $3,500.",
     url: "https://www.softstandardsinc.com/pricing",
-    images: [{ url: "/images/og-default.png", width: 1200, height: 630 }],
   },
 };
 

@@ -17,7 +17,6 @@ export const metadata: Metadata = {
     description: '6-person AI marketing agency founded in 2022. Offices in New York and Lahore. 150+ marketing systems, $47M+ client revenue, 97% retention.',
     type: 'website',
     url: 'https://www.softstandardsinc.com/about',
-    images: [{ url: '/images/og-default.png', width: 1200, height: 630, alt: 'About Soft Standards Inc.' }],
   },
   alternates: { canonical: 'https://www.softstandardsinc.com/about' },
 };
