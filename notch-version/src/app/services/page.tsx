@@ -79,8 +79,8 @@ export default function ServicesPage() {
     <>
       <ServiceSchema />
       <HeroSection
-        title={<>Marketing Services — Web Development, UI/UX, SEO &amp; <span className="text-gradient">AI Automation</span></>}
-        subtitle="Six integrated services. One marketing system. Built in 4 weeks, not 4 months."
+        title={<>Six things we do. One goal: <span className="text-gradient">make you money.</span></>}
+        subtitle="Every service below is built to drive revenue — not just look pretty in a pitch deck."
         breadcrumbs={[{ href: '/', label: 'Home' }]}
         breadcrumbCurrent="Services"
         background="dark"
@@ -92,7 +92,6 @@ export default function ServicesPage() {
           <SectionHeader
             badge="What We Do"
             title={<>Six Integrated Services. <span className="text-gradient">One Marketing System.</span></>}
-            subtitle="Every service designed to drive measurable results — built as one system, not silos."
           />
         </RevealOnScroll>
 
@@ -102,7 +101,7 @@ export default function ServicesPage() {
               <CardIcon><LayersIcon /></CardIcon>
               <CardTitle>Brand Strategy &amp; Positioning Services</CardTitle>
               <CardDescription>
-                We define and shape brand identities that cut through the noise. From positioning and messaging to visual systems that scale, we build brands that people remember and trust.
+                We define who you are, what you stand for, and why anyone should care — then bake it into every touchpoint.
               </CardDescription>
               <ul className="mt-4 space-y-1.5 text-[0.85rem] text-gray-600">
                 <li><strong>Market Research &amp; Competitive Analysis</strong></li>
@@ -117,7 +116,7 @@ export default function ServicesPage() {
               <CardIcon><MonitorIcon /></CardIcon>
               <CardTitle>Web Development Services</CardTitle>
               <CardDescription>
-                High-performance websites built with modern tech stacks. Fast, accessible, and conversion-optimized.
+                Fast sites that convert. React, Next.js, TypeScript. No WordPress templates. No bloat.
               </CardDescription>
               <ul className="mt-3 space-y-1.5 text-[0.85rem] text-gray-600">
                 <li><strong>Custom Website Design &amp; Development</strong></li>
@@ -132,7 +131,7 @@ export default function ServicesPage() {
               <CardIcon><LogInIcon /></CardIcon>
               <CardTitle>UI/UX Design Services</CardTitle>
               <CardDescription>
-                User-centered design that delights. We craft intuitive interfaces backed by research and testing.
+                Research-backed design that reduces friction and increases conversions. We test until it works — not until it looks cool.
               </CardDescription>
               <ul className="mt-3 space-y-1.5 text-[0.85rem] text-gray-600">
                 <li><strong>User Research &amp; Wireframing</strong></li>
@@ -147,7 +146,7 @@ export default function ServicesPage() {
               <CardIcon><GlobeIcon /></CardIcon>
               <CardTitle>Digital Marketing Services</CardTitle>
               <CardDescription>
-                Data-driven campaigns that amplify reach and convert visitors into customers.
+                Google Ads, Meta Ads, email sequences, and analytics — managed and optimized weekly. You see what&apos;s working. We kill what&apos;s not.
               </CardDescription>
               <ul className="mt-3 space-y-1.5 text-[0.85rem] text-gray-600">
                 <li><strong>Search Engine Optimization (SEO)</strong></li>
@@ -163,7 +162,7 @@ export default function ServicesPage() {
               <CardIcon><SmartphoneIcon /></CardIcon>
               <CardTitle>Mobile App Development Services</CardTitle>
               <CardDescription>
-                Native and cross-platform mobile applications that deliver seamless experiences. We handle everything from concept to App Store — with performance, design, and scalability built in from day one.
+                iOS, Android, React Native, Flutter. From MVP to App Store. We handle the build, the deployment, and the optimization.
               </CardDescription>
               <ul className="mt-4 space-y-1.5 text-[0.85rem] text-gray-600">
                 <li><strong>iOS &amp; Android App Development</strong></li>
@@ -187,39 +186,6 @@ export default function ServicesPage() {
             </Card>
           </RevealOnScroll>
         </div>
-      </section>
-
-      {/* Process Timeline */}
-      <section className="py-[clamp(60px,10vw,120px)] px-[clamp(20px,5vw,80px)] max-w-[1200px] mx-auto">
-        <RevealOnScroll>
-          <SectionHeader
-            badge="How We Work"
-            title={<>Our <span className="text-gradient">Process</span></>}
-            subtitle="A proven framework that turns ideas into outcomes — methodically, transparently, and on schedule."
-          />
-        </RevealOnScroll>
-
-        <RevealOnScroll>
-          <div className="flex flex-col lg:flex-row items-start justify-center gap-0 relative px-[clamp(20px,5vw,40px)]">
-            {[
-              { num: '01', title: 'Discovery', desc: 'Deep dive into your business, audience, and goals to build the strategic foundation.' },
-              { num: '02', title: 'Strategy', desc: 'Define the roadmap, tech stack, and design direction with clear milestones.' },
-              { num: '03', title: 'Design & Build', desc: 'Iterative design sprints paired with agile development for rapid, quality output.' },
-              { num: '04', title: 'Launch & Scale', desc: 'Go live with confidence, then optimize continuously based on real performance data.' },
-            ].map((step, index) => (
-              <div key={step.num} className="flex-1 text-center relative px-4 pb-8 lg:pb-0">
-                {index < 3 && (
-                  <div className="hidden lg:block absolute top-7 left-[calc(50%+28px)] right-[calc(-50%+28px)] h-0.5 bg-gray-100 transition-colors hover:bg-purple-400" />
-                )}
-                <div className="w-14 h-14 flex items-center justify-center bg-purple-500 text-white rounded-full text-[1.1rem] font-bold mx-auto mb-4 relative z-10 transition-all hover:scale-110 hover:shadow-[0_4px_20px_rgba(124,58,237,0.3)]">
-                  {step.num}
-                </div>
-                <h4 className="text-[1.05rem] font-bold text-gray-900 mb-2">{step.title}</h4>
-                <p className="text-[0.85rem] text-gray-500 leading-[1.6]">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </RevealOnScroll>
       </section>
 
       {/* Tech Stack Marquee */}
@@ -263,10 +229,10 @@ export default function ServicesPage() {
           <div className="bg-purple-500 rounded-[36px] py-[clamp(48px,6vw,80px)] px-[clamp(24px,4vw,64px)] text-center relative overflow-hidden max-w-[1200px] mx-auto">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1)_0%,transparent_60%)] pointer-events-none" />
             <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold text-white tracking-[-0.03em] mb-3 relative">
-              Ready to Build Your Marketing System?
+              Ready to build?
             </h2>
             <p className="text-[1.05rem] text-white/80 mb-8 relative">
-              Let&apos;s talk about what we can build together.
+              Tell us what you need. We&apos;ll tell you exactly how we&apos;d do it.
             </p>
             <Link
               href="/book"

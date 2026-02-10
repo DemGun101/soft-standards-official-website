@@ -156,8 +156,8 @@ export default function PricingContent() {
     <>
       {/* Hero */}
       <HeroSection
-        title={<>Performance-Based Marketing <span className="text-gradient">Pricing</span></>}
-        subtitle="Most agencies charge you monthly and hope something works. We build your entire marketing system, prove it delivers, and only then do you pay for ongoing growth. If it doesn't work, you don't pay. Period."
+        title={<>Straightforward <span className="text-gradient">Pricing</span></>}
+        subtitle="No retainers. No hidden fees. You pay for what gets built, and you own everything when it's done."
         badge="How It Works"
         breadcrumbs={[{ href: '/', label: 'Home' }]}
         breadcrumbCurrent="Pricing"
@@ -305,8 +305,8 @@ export default function PricingContent() {
       <section className="py-[clamp(60px,10vw,120px)] px-[clamp(20px,5vw,80px)]">
         <RevealOnScroll>
           <SectionHeader
-            badge="Every System"
-            title={<>What Every Marketing System <span className="text-gradient">Includes</span></>}
+            badge="Every Project"
+            title={<>Every Project <span className="text-gradient">Includes</span></>}
           />
         </RevealOnScroll>
 
@@ -383,10 +383,10 @@ export default function PricingContent() {
           <div className="bg-purple-500 rounded-[36px] py-[clamp(48px,6vw,80px)] px-[clamp(24px,4vw,64px)] text-center relative overflow-hidden max-w-[1200px] mx-auto">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1)_0%,transparent_60%)] pointer-events-none" />
             <h2 className="text-[clamp(1.6rem,3.5vw,2.4rem)] font-extrabold text-white tracking-[-0.03em] mb-4 relative max-w-[700px] mx-auto leading-[1.2]">
-              Book a Free Growth Audit &mdash; Get an Honest Quote in 15 Minutes
+              Not sure what you need?
             </h2>
             <p className="text-[clamp(0.9rem,1.5vw,1.05rem)] text-white/80 mb-8 relative max-w-[600px] mx-auto leading-[1.7]">
-              The worst agencies are the cheapest ones. The second worst charge a lot and deliver nothing. We&apos;re neither &mdash; and we&apos;ll prove it before you ever pay a retainer.
+              Book a free call. We&apos;ll scope it out together.
             </p>
             <MagneticButton strength={0.2}>
               <Link

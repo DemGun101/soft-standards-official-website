@@ -64,8 +64,8 @@ export default function BlogContent() {
   return (
     <>
       <HeroSection
-        title={<>Marketing Blog — AI Automation, Growth Strategy & <span className="text-gradient">Web Development Insights</span></>}
-        subtitle="Thoughts on design, development, strategy, and the craft of building digital products that matter."
+        title={<>What We&apos;re Thinking</>}
+        subtitle="Lessons from building 40+ marketing systems. No fluff. Just what actually works."
         background="light"
         showScrollIndicator={false}
       />

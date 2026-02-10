@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
-import Card, { CardIcon, CardTitle, CardDescription } from '@/components/Card';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import { SectionHeader } from '@/components/Section';
-import { CheckCircleIcon, SunIcon, EyeIcon, CheckIcon, ArrowRightIcon } from '@/components/Icons';
 import HeroSection from '@/components/HeroSection';
 import BreadcrumbSchema from '@/components/schemas/BreadcrumbSchema';
 import PersonSchema from '@/components/schemas/PersonSchema';
@@ -21,18 +19,11 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.softstandardsinc.com/about' },
 };
 
-const values = [
-  { icon: <CheckCircleIcon />, title: 'Precision', desc: 'Every pixel, every line of code, every word — we sweat the details because they define the experience.' },
-  { icon: <SunIcon />, title: 'Innovation', desc: "We push boundaries with emerging tech and creative thinking — never settling for the obvious solution." },
-  { icon: <EyeIcon />, title: 'Transparency', desc: 'No black boxes. Clients see our process, our reasoning, and our metrics — open collaboration always.' },
-  { icon: <CheckIcon />, title: 'Impact', desc: 'Beautiful design is nothing without results. We measure success by the outcomes we create for our partners.' },
-];
-
 const timeline = [
-  { year: '2022', title: 'Founded', desc: 'Muhammad Furqan and Ishfaq Ahmed started Soft Standards with a simple belief: businesses deserve marketing that feels human, not automated. Our first project was a local brand refresh that turned into a long-term partnership.' },
-  { year: '2023', title: 'First Major Client', desc: 'Partnered with SpaceDome AI to build their web presence from scratch — positioning their AI agent platform for a global audience. This project put us on the map in the tech space.' },
-  { year: '2024', title: 'Team Growth', desc: 'Grew from a two-person operation to a team of six across development, design, and business development. Took on Bicycle Health and expanded into healthcare digital marketing.' },
-  { year: '2025', title: 'Scaling Up', desc: 'Crossed 150 completed marketing systems, established our AI automation practice, and began serving clients across multiple industries from our New York base.' },
+  { year: '2022', title: 'Founded', desc: 'Muhammad Furqan and Ishfaq Ahmed started Soft Standards. Two people, one belief: businesses deserve marketing that actually works.' },
+  { year: '2023', title: 'First Major Client', desc: "First major client — built SpaceDome AI's entire web presence from scratch." },
+  { year: '2024', title: 'Team Growth', desc: 'Grew to a team of six. Expanded into AI automation.' },
+  { year: '2025', title: 'Scaling Up', desc: '40+ projects delivered across the US, Canada, UK, and Australia.' },
 ];
 
 const team = [
@@ -52,28 +43,6 @@ const awards = [
   { year: '2023', name: 'Apex Ventures', body: 'Landing page & investor presentation design' },
 ];
 
-const faqs = [
-  {
-    question: 'Who founded Soft Standards Inc.?',
-    answer: 'Soft Standards Inc. was founded in 2022 by Muhammad Furqan (CEO) and Ishfaq Ahmed (CTO). They started the agency with a mission to help businesses build marketing systems that feel human, not automated.',
-  },
-  {
-    question: 'What services does Soft Standards offer?',
-    answer: 'Soft Standards offers six core services: AI Automation, Brand Strategy, Web Development, UI/UX Design, Digital Marketing, and App Development. All services are available as standalone offerings or as part of a complete done-for-you marketing system.',
-  },
-  {
-    question: 'How many projects has Soft Standards delivered?',
-    answer: 'Soft Standards has delivered over 150 marketing systems across multiple industries including technology, healthcare, e-commerce, and professional services, generating $47M+ in client revenue with a 97% client retention rate.',
-  },
-  {
-    question: 'What is Soft Standards\' approach to marketing?',
-    answer: 'Rather than offering one-off marketing tactics, Soft Standards builds complete marketing systems — brand strategy, website, ad campaigns, email automation, and CRM setup — delivered in a 30-day sprint. Clients own every asset upon completion.',
-  },
-  {
-    question: 'What results has Soft Standards achieved for clients?',
-    answer: 'Clients have seen results including 7x revenue growth in 90 days, 67% reduction in cost per lead, 4.2x conversion rate improvements, and an average ROI of 312% within the first quarter of engagement.',
-  },
-];
 
 export default function AboutPage() {
   return (
@@ -86,28 +55,10 @@ export default function AboutPage() {
       <PersonSchema name="Ishfaq Ahmed" jobTitle="CTO" />
       <PersonSchema name="Zain-ul-Abedeen" jobTitle="Business Development" />
 
-      {/* FAQPage Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: faq.answer,
-              },
-            })),
-          }),
-        }}
-      />
 
       <HeroSection
-        title={<>About Soft Standards — <span className="text-gradient">AI Marketing Agency</span> in New York &amp; Lahore</>}
-        subtitle="A close-knit team of developers, designers, and strategists who believe great digital work starts with genuinely understanding your story."
+        title={<>We&apos;re Soft Standards Inc. — <span className="text-gradient">AI Marketing Agency</span> in New York &amp; Lahore</>}
+        subtitle="Six people. Two cities. One obsession: building digital systems that actually make money for the businesses we work with."
         badge="Our Story"
         background="light"
       />
@@ -186,22 +137,20 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
           <RevealOnScroll className="lg:col-span-3">
-            <div className="bg-purple-50 rounded-[36px] p-12 text-center border border-purple-100">
-              <p className="text-[clamp(1.2rem,2.5vw,1.6rem)] font-semibold text-purple-800 leading-[1.6] max-w-[700px] mx-auto">
-                &ldquo;We exist to help businesses tell their story with honesty and craft — building digital products that connect with real people and drive real results.&rdquo;
+            <div className="bg-white rounded-[36px] p-12 text-center border border-gray-100">
+              <p className="text-[clamp(1rem,2vw,1.15rem)] text-gray-600 leading-[1.8] max-w-[700px] mx-auto">
+                Most agencies optimize for looking busy. We optimize for outcomes. We&apos;d rather build one system that generates $89K/month than send you a 40-page report about &quot;brand awareness.&quot;
               </p>
             </div>
           </RevealOnScroll>
 
-          {values.map((value, index) => (
-            <RevealOnScroll key={value.title} delay={index + 1}>
-              <Card withPurpleBar className="h-full">
-                <CardIcon>{value.icon}</CardIcon>
-                <CardTitle>{value.title}</CardTitle>
-                <CardDescription>{value.desc}</CardDescription>
-              </Card>
-            </RevealOnScroll>
-          ))}
+          <RevealOnScroll className="lg:col-span-3">
+            <div className="bg-white rounded-[36px] p-12 text-center border border-gray-100">
+              <p className="text-[clamp(1rem,2vw,1.15rem)] text-gray-600 leading-[1.8] max-w-[700px] mx-auto">
+                We&apos;re not the biggest agency. We&apos;re not trying to be. We&apos;re the team that picks up the phone, ships on time, and doesn&apos;t hide behind jargon.
+              </p>
+            </div>
+          </RevealOnScroll>
         </div>
       </section>
 
@@ -238,7 +187,6 @@ export default function AboutPage() {
           <SectionHeader
             badge="Our People"
             title={<>Meet the <span className="text-gradient">Team</span></>}
-            subtitle="Diverse minds, unified mission. Here are the people behind Soft Standards."
           />
         </RevealOnScroll>
 
@@ -281,47 +229,14 @@ export default function AboutPage() {
         </RevealOnScroll>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-[clamp(60px,10vw,120px)] px-[clamp(20px,5vw,80px)]">
-        <RevealOnScroll>
-          <SectionHeader
-            badge="Common Questions"
-            title={<>Frequently <span className="text-gradient">Asked</span></>}
-          />
-        </RevealOnScroll>
-
-        <div className="max-w-[800px] mx-auto space-y-4">
-          {faqs.map((faq, index) => (
-            <RevealOnScroll key={index} delay={(index % 3) + 1}>
-              <details className="group bg-white rounded-2xl border border-gray-100 shadow-[0_2px_12px_rgba(15,23,42,0.04)] overflow-hidden">
-                <summary className="flex items-center justify-between cursor-pointer p-6 text-left">
-                  <h4 className="text-base font-semibold text-gray-900 pr-4">{faq.question}</h4>
-                  <span className="flex-shrink-0 w-6 h-6 text-gray-400 group-open:rotate-45 transition-transform duration-200">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M12 5v14M5 12h14" />
-                    </svg>
-                  </span>
-                </summary>
-                <div className="px-6 pb-6 text-gray-500 leading-relaxed">
-                  {faq.answer}
-                </div>
-              </details>
-            </RevealOnScroll>
-          ))}
-        </div>
-      </section>
-
       {/* CTA Banner */}
       <section className="py-[clamp(60px,10vw,120px)] px-[clamp(20px,5vw,80px)]">
         <RevealOnScroll>
           <div className="bg-purple-500 rounded-[36px] py-[clamp(48px,6vw,80px)] px-[clamp(24px,4vw,64px)] text-center relative overflow-hidden max-w-[1200px] mx-auto">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1)_0%,transparent_60%)] pointer-events-none" />
-            <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold text-white tracking-[-0.03em] mb-3 relative">
+            <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold text-white tracking-[-0.03em] mb-8 relative">
               Work With Us
             </h2>
-            <p className="text-[1.05rem] text-white/80 mb-8 relative">
-              We&apos;re always looking for ambitious projects and great people.
-            </p>
             <div className="flex flex-wrap gap-4 justify-center relative">
               <Link
                 href="/book"

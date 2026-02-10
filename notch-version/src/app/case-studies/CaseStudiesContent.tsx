@@ -11,10 +11,10 @@ import CaseStudyCard from '@/components/case-studies/CaseStudyCard';
 import { serviceSections, SERVICE_FILTERS, STATS } from '@/data/caseStudies';
 
 const testimonials = [
-  { text: 'Soft Standards brought clarity to our brand at a critical moment. They understood our AI product deeply and translated that complexity into a website that actually resonates with our audience. The team is responsive, thoughtful, and genuinely invested in getting it right.', name: 'James Thornton', role: 'Founder, SpaceDome AI', avatar: '/images/case-studies/james-thornton.png' },
-  { text: 'Working with Soft Standards felt like working with people who truly cared about our mission. They helped us rethink our digital presence and the results spoke for themselves — more patients finding the help they need, faster.', name: 'Rachel Kim', role: 'VP Digital, Bicycle Health', avatar: '/images/case-studies/rachel-kim.png' },
-  { text: "They didn't just deliver a beautiful website — they listened to our story and made sure every pixel reflected who we are. The whole process was smooth, collaborative, and honestly enjoyable.", name: 'Daniel Porter', role: 'Managing Director, Meridian Consulting', avatar: '/images/case-studies/daniel-porter.png' },
-  { text: "Our e-commerce revenue jumped noticeably after the redesign. Soft Standards approached everything with care and strategy, not just aesthetics. They're partners, not vendors.", name: 'Sarah Lin', role: 'Founder, Trellis Studios', avatar: '/images/case-studies/sarah-lin.png' },
+  { text: 'Three agencies, zero results. Soft Standards rebuilt everything. Within 90 days we 7x\'d monthly revenue. Nothing else comes close.', name: 'James Thornton', role: 'Founder, SpaceDome AI', avatar: '/images/case-studies/james-thornton.png' },
+  { text: 'Healthcare isn\'t sexy for agencies. They got it. CPL dropped 67% in month one. We had to slow intake.', name: 'Rachel Kim', role: 'VP Digital, Bicycle Health', avatar: '/images/case-studies/rachel-kim.png' },
+  { text: 'They built us a machine, not a website. I finally feel like a CEO.', name: 'Daniel Porter', role: 'Managing Director, Meridian Consulting', avatar: '/images/case-studies/daniel-porter.png' },
+  { text: 'Same traffic. Same product. Better system. Conversion rate up 4.2x, revenue doubled.', name: 'Sarah Lin', role: 'Founder, Trellis Studios', avatar: '/images/case-studies/sarah-lin.png' },
 ];
 
 const clientLogos = ['Ryvato', 'Chromos', 'Hitchhyke', 'm1neral', 'GGMS', 'Kreatorz', 'SpaceDome AI', 'Bicycle Health', 'Meridian', 'Trellis', 'Apex', 'Horizon'];
@@ -30,8 +30,8 @@ export default function CaseStudiesContent() {
     <>
       {/* Hero */}
       <HeroSection
-        title={<>Our Work — Real Projects, <span className="text-gradient">Real Results</span></>}
-        subtitle="Full-stack websites, AI automations, brands, and marketing systems built for clients across multiple industries."
+        title={<>The Receipts</>}
+        subtitle="We don't talk about results. We show them."
         background="light"
         showScrollIndicator={false}
       />
@@ -184,12 +184,9 @@ export default function CaseStudiesContent() {
         <RevealOnScroll>
           <div className="bg-purple-500 rounded-[36px] py-[clamp(48px,6vw,80px)] px-[clamp(24px,4vw,64px)] text-center relative overflow-hidden max-w-[1200px] mx-auto">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1)_0%,transparent_60%)] pointer-events-none" />
-            <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold text-white tracking-[-0.03em] mb-3 relative">
-              Ready to Become the Next Case Study?
+            <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold text-white tracking-[-0.03em] mb-8 relative">
+              Your project could be next.
             </h2>
-            <p className="text-[1.05rem] text-white/80 mb-8 relative">
-              Your next project could be our next success story.
-            </p>
             <Link
               href="/book"
               className="inline-flex items-center gap-2.5 px-9 py-4 bg-white text-purple-700 rounded-full text-base font-semibold transition-all shadow-[0_4px_20px_rgba(0,0,0,0.1)] hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.15)] relative"

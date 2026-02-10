@@ -12,19 +12,19 @@ import {
 import HeroSection from '@/components/HeroSection';
 
 const cultureItems = [
-  { icon: <GlobeIcon />, title: 'Remote-First Team Across New York & Lahore', desc: "Work from anywhere. We've built a flexible, remote-friendly culture from day one. Our team spans different cities and time zones, and we've proven that great work doesn't require an office — just great people and clear communication.", span: true },
-  { icon: <SunIcon />, title: '$2,500 Annual Growth Budget', desc: 'Annual learning budgets, conference tickets, and mentorship programs. We invest in your development because when you grow, we all win.' },
-  { icon: <UsersIcon />, title: 'Real Projects, Real Impact', desc: "No rockstars, no egos. We collaborate openly, share credit generously, and win together. Every project we take on has a clear purpose and measurable outcomes." },
-  { icon: <ActivityIcon />, title: 'Impact Oriented', desc: "Work on projects that move the needle. Every project we take on has a clear purpose and measurable outcomes — no busywork." },
+  { icon: <GlobeIcon />, title: 'Remote-First', desc: "Work from wherever you do your best thinking. We care about output, not hours logged.", span: true },
+  { icon: <SunIcon />, title: 'Growth is the default.', desc: '$2,500/year for learning. Conference tickets. Mentorship. We invest in people, not just projects.' },
+  { icon: <UsersIcon />, title: 'No egos.', desc: "We share credit, collaborate openly, and win as a team. Everyone has a voice." },
+  { icon: <ActivityIcon />, title: 'Work that moves the needle.', desc: "Every project has a clear goal and measurable results. No busywork." },
 ];
 
 const benefits = [
-  { icon: <DollarIcon />, title: 'Competitive Salary', desc: 'Market-leading compensation packages with annual reviews and performance bonuses.' },
-  { icon: <HeartPulseIcon />, title: 'Health Insurance', desc: 'Comprehensive health, dental, and vision coverage for you and your family.' },
+  { icon: <DollarIcon />, title: 'Competitive Salary', desc: 'Competitive pay with annual reviews and performance bonuses.' },
+  { icon: <HeartPulseIcon />, title: 'Health Insurance', desc: 'Health, dental & vision for you and your family.' },
   { icon: <ClockIcon />, title: 'Flexible Hours', desc: 'Set your own schedule. We care about output, not when you clock in.' },
   { icon: <BookOpenIcon />, title: 'Learning Budget', desc: '$2,500 annually for courses, books, conferences, and skill development.' },
-  { icon: <MapPinIcon />, title: 'Team Retreats', desc: 'Annual company retreats in inspiring locations — fully paid, fully optional.' },
-  { icon: <BriefcaseIcon />, title: 'Latest Equipment', desc: 'Top-tier hardware and software. MacBook Pro, monitors, and any tools you need.' },
+  { icon: <MapPinIcon />, title: 'Team Retreats', desc: 'Annual team retreats — fully paid, fully optional.' },
+  { icon: <BriefcaseIcon />, title: 'Latest Equipment', desc: 'MacBook Pro, monitors, and whatever tools you need.' },
 ];
 
 const jobs = [
@@ -62,8 +62,8 @@ export default function CareersContent() {
   return (
     <>
       <HeroSection
-        title={<>Careers at Soft Standards — Remote Marketing & <span className="text-gradient">Engineering Jobs</span></>}
-        subtitle="We're a fully remote team of makers, thinkers, and problem-solvers building digital products that matter. Join us and do the best work of your career."
+        title={<>Come build things that <span className="text-gradient">matter.</span></>}
+        subtitle="Small remote team. Real products. Real businesses. No meetings about meetings."
         background="gradient"
         cta={{ href: '#open-roles', label: 'View Open Roles' }}
       />
@@ -73,8 +73,7 @@ export default function CareersContent() {
         <RevealOnScroll>
           <SectionHeader
             badge="Our Culture"
-            title={<>Why Work at an <span className="text-gradient">AI Marketing Agency</span></>}
-            subtitle="We've built a culture where great work happens naturally — and where people actually want to stay."
+            title={<>Why <span className="text-gradient">Soft Standards</span></>}
           />
         </RevealOnScroll>
 
@@ -97,7 +96,6 @@ export default function CareersContent() {
       <section className="py-[clamp(60px,10vw,120px)] px-[clamp(20px,5vw,80px)]">
         <RevealOnScroll>
           <SectionHeader
-            badge="Perks & Benefits"
             title={<>What You <span className="text-gradient">Get</span></>}
           />
         </RevealOnScroll>
@@ -231,7 +229,7 @@ export default function CareersContent() {
               Don&apos;t See Your Role? Reach Out Anyway.
             </h2>
             <p className="text-base text-gray-300 mb-8 max-w-[500px] mx-auto">
-              We&apos;re always looking for exceptional talent. Send us your CV and tell us what you&apos;d bring to the team.
+              Send us your CV and tell us what you&apos;d bring.
             </p>
             <Link
               href="mailto:contact@softstandardsinc.com?subject=Open Application"

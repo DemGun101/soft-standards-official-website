@@ -15,28 +15,28 @@ gsap.registerPlugin(ScrollTrigger);
 const testimonials = [
   {
     result: '$12K/month → $89K/month in 90 days',
-    text: "We were burning $8K/month on ads that weren't converting. I'd worked with three agencies before — all of them had excuses. Soft Standards rebuilt everything. New positioning. New website. New funnel. Within 90 days, we went from $12K to $89K in monthly revenue. The ROI isn't even close to anything I've experienced.",
+    text: "Three agencies, zero results. Soft Standards rebuilt everything. Within 90 days we 7x'd monthly revenue. Nothing else comes close.",
     name: 'James Thornton',
     role: 'Founder, SpaceDome AI',
     avatar: '/images/case-studies/james-thornton.png'
   },
   {
     result: '67% drop in cost per lead. Pipeline full for 6 months.',
-    text: "I was skeptical. We're in healthcare — it's not exactly a 'sexy' market for agencies. But they got it. They understood our patients, our mission, our constraints. More importantly, they delivered. Our cost per lead dropped 67% in the first month. We've had to slow down intake because the pipeline is too full.",
+    text: "Healthcare isn't sexy for agencies. They got it. CPL dropped 67% in month one. We had to slow intake.",
     name: 'Rachel Kim',
     role: 'VP Digital, Bicycle Health',
     avatar: '/images/case-studies/rachel-kim.png'
   },
   {
     result: 'First real marketing system in 8 years of business.',
-    text: "I've run Meridian for 8 years. Never had a marketing system that actually worked without me babysitting it. Soft Standards changed that. They didn't just build us a website — they built us a machine. Leads come in. We close them. I finally feel like a CEO instead of a marketing intern.",
+    text: "They built us a machine, not a website. I finally feel like a CEO.",
     name: 'Daniel Porter',
     role: 'Managing Director, Meridian Consulting',
     avatar: '/images/case-studies/daniel-porter.png'
   },
   {
     result: '4.2x conversion rate. E-commerce revenue doubled.',
-    text: "Our old site was pretty. It just didn't sell. They tore it apart — respectfully — and rebuilt it around conversions. Our conversion rate went up 4.2x. Revenue doubled in 60 days. Same traffic. Same product. Better system.",
+    text: "Same traffic. Same product. Better system. Conversion rate up 4.2x, revenue doubled.",
     name: 'Sarah Lin',
     role: 'Founder, Trellis Studios',
     avatar: '/images/case-studies/sarah-lin.png'
@@ -319,9 +319,9 @@ export default function HomeContent() {
             ref={heroTitleRef}
             className="text-[clamp(2.8rem,6.5vw,5rem)] font-extrabold tracking-[-0.04em] leading-[1.1] mb-6 text-gray-900"
           >
-            AI-Powered Marketing Agency —
+            We Build Marketing Systems
             <br />
-            <span className="text-gradient">Complete Systems Built in 30 Days</span>
+            <span className="text-gradient">That Sell While You Sleep</span>
           </h1>
 
           {/* Subtitle */}
@@ -329,12 +329,7 @@ export default function HomeContent() {
             ref={heroSubtitleRef}
             className="text-[clamp(1.05rem,2vw,1.25rem)] text-gray-500 max-w-[650px] mx-auto leading-relaxed mb-6"
           >
-            Brand. Website. Ads. Automation. All done-for-you in 30 days — and you only pay if it works.
-          </p>
-
-          {/* Supporting Text */}
-          <p className="hero-cta-btn text-[clamp(0.9rem,1.5vw,1rem)] text-gray-400 max-w-[600px] mx-auto leading-relaxed mb-10">
-            Most agencies charge you $10K/month to &ldquo;test things.&rdquo; We charge you once to build a system that sells for you 24/7. No retainers. No busywork. Just revenue.
+            Brand. Website. Ads. Automation. Done-for-you in 30 days — you only pay if it works.
           </p>
 
           {/* CTAs */}
@@ -420,39 +415,33 @@ export default function HomeContent() {
           <div className="story-1-visual">
             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-[0_8px_30px_rgba(15,23,42,0.06)] border border-gray-100 mb-8">
               <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8">
-                You&apos;ve tried the agencies. You&apos;ve tried the freelancers. You&apos;ve tried doing it yourself at 11pm after the kids are asleep.
+                You&apos;ve tried agencies, freelancers, and doing it yourself. You&apos;re still:
               </p>
-              <div className="space-y-6 mb-10">
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Brand Strategy That Positions You to Win</h3>
-                  <p className="text-gray-600 text-lg">We define your positioning, messaging, and identity so customers trust you before the first conversation.</p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Conversion-Optimized Web Development</h3>
-                  <p className="text-gray-600 text-lg">Fast, modern websites built to convert — not just look pretty. Every page engineered for revenue.</p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">AI Automation That Replaces Manual Work</h3>
-                  <p className="text-gray-600 text-lg">Custom AI agents, chatbots, and workflows that replace 40+ hours of manual work per week.</p>
-                </div>
-              </div>
+              <ul className="space-y-4 text-lg text-gray-700 mb-10">
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 mt-1">&#10007;</span>
+                  <span>Posting content that gets likes but not revenue</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 mt-1">&#10007;</span>
+                  <span>Running ads with no idea what&apos;s actually working</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-400 mt-1">&#10007;</span>
+                  <span>Watching competitors with worse products outpace you</span>
+                </li>
+              </ul>
             </div>
 
             {/* The real problem */}
             <div className="relative rounded-3xl overflow-hidden bg-gray-900 p-8 md:p-10 text-center shadow-[0_20px_60px_rgba(15,23,42,0.2)]">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(124,58,237,0.15),transparent_60%)]" />
               <div className="relative z-10">
-                <p className="text-gray-400 text-lg mb-4">
-                  The problem isn&apos;t you. The problem isn&apos;t even your marketing.
-                </p>
                 <p className="text-white text-2xl md:text-3xl font-bold mb-4">
-                  The problem is you don&apos;t have a <span className="text-gradient">SYSTEM.</span>
+                  The problem isn&apos;t your product or your effort. It&apos;s that you don&apos;t have a <span className="text-gradient">system.</span>
                 </p>
                 <p className="text-gray-400 text-lg">
-                  You have a collection of random tactics. A website here. Some ads there. A social post when you remember.
-                </p>
-                <p className="text-gray-500 text-base mt-4">
-                  That&apos;s not a business. <span className="text-white font-semibold">That&apos;s a hope and a prayer.</span>
+                  You have scattered tactics. We build the machine.
                 </p>
               </div>
             </div>
@@ -479,35 +468,18 @@ export default function HomeContent() {
             <span className="text-gradient">for Growth, Not Guesswork</span>
           </h2>
 
-          <div className="ai-text-2 text-left max-w-[550px] mx-auto mb-10">
-            <p className="text-gray-400 text-lg mb-6">Imagine waking up to:</p>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-white text-xl">
-                <span className="text-green-400">→</span>
-                <span>12 qualified leads in your inbox</span>
-              </li>
-              <li className="flex items-center gap-3 text-white text-xl">
-                <span className="text-green-400">→</span>
-                <span>A calendar booked with people who already want to buy</span>
-              </li>
-              <li className="flex items-center gap-3 text-white text-xl">
-                <span className="text-green-400">→</span>
-                <span>A brand so clear that customers sell themselves before the first call</span>
-              </li>
-            </ul>
+          <div className="ai-text-2 max-w-[550px] mx-auto mb-10">
+            <p className="text-gray-300 text-lg leading-relaxed">
+              Imagine waking up to 12 qualified leads in your inbox, a calendar booked with buyers who already want to say yes, and a brand so clear it sells before the first call.
+            </p>
           </div>
 
           <div className="ai-text-3">
-            <p className="text-gray-400 text-lg mb-6">
-              That&apos;s not a fantasy. That&apos;s a system. And we&apos;ve built it <span className="text-white font-bold">150+ times.</span>
-            </p>
-
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 max-w-[500px] mx-auto">
-              <p className="text-gray-500 text-sm uppercase tracking-wider mb-3">The difference?</p>
               <p className="text-gray-400 text-lg mb-2">Struggling brands <span className="text-white">market.</span></p>
-              <p className="text-lg"><span className="text-gradient font-bold">Scaling brands engineer.</span></p>
-              <p className="text-gray-500 text-base mt-4">
-                We don&apos;t do marketing. We build revenue machines — powered by AI, designed by humans, and <span className="text-green-400 font-semibold">guaranteed to perform.</span>
+              <p className="text-lg mb-4"><span className="text-gradient font-bold italic">Scaling brands engineer.</span></p>
+              <p className="text-gray-500 text-base">
+                We don&apos;t do marketing. We build revenue systems — powered by AI, designed by humans, <span className="text-green-400 font-semibold">guaranteed to perform.</span>
               </p>
             </div>
           </div>
@@ -595,14 +567,8 @@ export default function HomeContent() {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(124,58,237,0.15),transparent_60%)]" />
               <div className="relative z-10">
                 <p className="text-purple-400 text-sm font-semibold uppercase tracking-wider mb-3">After 30 Days</p>
-                <p className="text-white text-xl md:text-2xl font-bold mb-4">
-                  You own everything. Every asset. Every login. Every piece of copy.
-                </p>
-                <p className="text-gray-400 text-lg">
-                  No hostage contracts. No &ldquo;proprietary platforms&rdquo; we hold over your head.
-                </p>
-                <p className="text-white font-semibold text-lg mt-2">
-                  It&apos;s yours. <span className="text-gradient">Forever.</span>
+                <p className="text-white text-xl md:text-2xl font-bold">
+                  After 30 days, you own everything. Every asset. Every login. Every piece of copy. No hostage contracts. It&apos;s yours forever.
                 </p>
               </div>
             </div>
@@ -632,7 +598,7 @@ export default function HomeContent() {
 
             <ScrollReveal delay={0.1} className="bg-white rounded-2xl p-6 md:p-8 text-center shadow-[0_4px_24px_rgba(15,23,42,0.06)] border border-gray-100">
               <div className="text-[clamp(2rem,5vw,3.5rem)] font-extrabold text-gray-900 mb-2">
-                <span className="stat-number" data-target="312">312</span>
+                <span className="stat-number" data-target="340">340</span>
                 <span className="text-purple-500">%</span>
               </div>
               <div className="text-sm md:text-base text-gray-500 font-medium">Average ROI in 90 days</div>
@@ -795,7 +761,7 @@ export default function HomeContent() {
                   1
                 </div>
                 <p className="text-gray-400 text-lg leading-relaxed">
-                  Close this tab. Keep doing what you&apos;re doing. Hope something changes.
+                  Close this tab. Keep guessing.
                 </p>
               </div>
             </ScrollReveal>
@@ -807,18 +773,14 @@ export default function HomeContent() {
                   2
                 </div>
                 <p className="text-white text-lg leading-relaxed">
-                  Book a 15-minute call. We&apos;ll tell you exactly how we&apos;d build your system, what it would cost, and whether we&apos;re even the right fit.
+                  Book a 15-minute call. We&apos;ll show you the system, the cost, and whether we&apos;re the right fit.
                 </p>
               </div>
             </ScrollReveal>
           </div>
 
           <ScrollReveal delay={0.3} className="text-center">
-            <p className="text-gray-400 text-lg mb-2">No pitch. No pressure. Just clarity.</p>
-            <p className="text-gray-500 mb-8">
-              The worst case? You waste 15 minutes and learn something useful.<br />
-              The best case? You finally have a marketing machine that works without you.
-            </p>
+            <p className="text-gray-400 text-lg mb-8">No pitch. No pressure. Just clarity.</p>
           </ScrollReveal>
 
           <ScrollReveal delay={0.4} className="text-center">
