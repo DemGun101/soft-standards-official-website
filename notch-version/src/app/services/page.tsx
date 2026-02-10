@@ -8,6 +8,7 @@ import {
   ArrowRightIcon,
 } from '@/components/Icons';
 import HeroSection from '@/components/HeroSection';
+import ServiceSchema from '@/components/schemas/ServiceSchema';
 import {
   SiReact, SiTypescript, SiNextdotjs, SiFramer, SiGreensock,
   SiThreedotjs, SiMongodb, SiPostgresql, SiFigma, SiWebflow,
@@ -76,6 +77,7 @@ const techStack: { name: string; icon: IconType; color: string }[] = [
 export default function ServicesPage() {
   return (
     <>
+      <ServiceSchema />
       <HeroSection
         title={<>Services built for <span className="text-gradient">growth</span>.</>}
         subtitle="From strategy to execution, we deliver end-to-end digital solutions that transform businesses and create lasting impact."

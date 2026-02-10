@@ -8,6 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollReveal, Parallax, MagneticButton } from '@/components/animations';
 import { ArrowRightIcon } from '@/components/Icons';
 import SoftStandardsLogo from '@/components/SoftStandardsLogo';
+import FAQSection from '@/components/FAQSection';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -641,7 +642,7 @@ export default function HomeContent() {
       </section>
 
       {/* Results/Social Proof Section */}
-      <section data-section="receipts" className="py-20 md:py-32 px-5 md:px-10 bg-gray-50">
+      <section data-section="receipts" className="py-20 md:py-32 px-5 md:px-10 bg-gray-50" style={{ minHeight: '200px' }}>
         <div className="max-w-[1200px] mx-auto">
           <ScrollReveal className="text-center mb-16">
             <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold tracking-tight text-gray-900">
@@ -654,7 +655,7 @@ export default function HomeContent() {
             <ScrollReveal delay={0} className="bg-white rounded-2xl p-6 md:p-8 text-center shadow-[0_4px_24px_rgba(15,23,42,0.06)] border border-gray-100">
               <div className="text-[clamp(2rem,5vw,3.5rem)] font-extrabold text-gray-900 mb-2">
                 <span className="text-purple-500">$</span>
-                <span className="stat-number" data-target="47">0</span>
+                <span className="stat-number" data-target="47">47</span>
                 <span className="text-purple-500">M+</span>
               </div>
               <div className="text-sm md:text-base text-gray-500 font-medium">Revenue generated for clients</div>
@@ -662,7 +663,7 @@ export default function HomeContent() {
 
             <ScrollReveal delay={0.1} className="bg-white rounded-2xl p-6 md:p-8 text-center shadow-[0_4px_24px_rgba(15,23,42,0.06)] border border-gray-100">
               <div className="text-[clamp(2rem,5vw,3.5rem)] font-extrabold text-gray-900 mb-2">
-                <span className="stat-number" data-target="312">0</span>
+                <span className="stat-number" data-target="312">312</span>
                 <span className="text-purple-500">%</span>
               </div>
               <div className="text-sm md:text-base text-gray-500 font-medium">Average ROI in 90 days</div>
@@ -670,7 +671,7 @@ export default function HomeContent() {
 
             <ScrollReveal delay={0.2} className="bg-white rounded-2xl p-6 md:p-8 text-center shadow-[0_4px_24px_rgba(15,23,42,0.06)] border border-gray-100">
               <div className="text-[clamp(2rem,5vw,3.5rem)] font-extrabold text-gray-900 mb-2">
-                <span className="stat-number" data-target="67">0</span>
+                <span className="stat-number" data-target="67">67</span>
                 <span className="text-purple-500">%</span>
               </div>
               <div className="text-sm md:text-base text-gray-500 font-medium">Average drop in cost per lead</div>
@@ -678,12 +679,16 @@ export default function HomeContent() {
 
             <ScrollReveal delay={0.3} className="bg-white rounded-2xl p-6 md:p-8 text-center shadow-[0_4px_24px_rgba(15,23,42,0.06)] border border-gray-100">
               <div className="text-[clamp(2rem,5vw,3.5rem)] font-extrabold text-gray-900 mb-2">
-                <span className="stat-number" data-target="97">0</span>
+                <span className="stat-number" data-target="97">97</span>
                 <span className="text-purple-500">%</span>
               </div>
               <div className="text-sm md:text-base text-gray-500 font-medium">Client retention rate</div>
             </ScrollReveal>
           </div>
+
+          <noscript>
+            <style>{`.stat-number { display: inline; }`}</style>
+          </noscript>
         </div>
       </section>
 
@@ -785,6 +790,9 @@ export default function HomeContent() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* CTA Section */}
       <section id="contact" data-section="contact" className="cta-section relative py-20 md:py-32 px-5 md:px-10 bg-gray-900 overflow-hidden">

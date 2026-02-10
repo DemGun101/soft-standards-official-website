@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import HomeContent from '@/components/home/HomeContent';
 import ReviewSchema from '@/components/schemas/ReviewSchema';
+import LocalBusinessSchema from '@/components/schemas/LocalBusinessSchema';
 
 export const metadata: Metadata = {
   title: 'Soft Standards Inc. — AI-Powered Digital Marketing Agency',
@@ -26,6 +27,7 @@ export default function Home() {
   return (
     <>
       <ReviewSchema />
+      <LocalBusinessSchema />
       <HomeContent />
     </>
   );

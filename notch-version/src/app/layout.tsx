@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -14,6 +14,16 @@ const poppins = Poppins({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#1A1A2E" },
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://softstandards.net"),
   title: {
@@ -27,7 +37,6 @@ export const metadata: Metadata = {
   publisher: "Soft Standards Inc.",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
       { url: "/images/logo-icon.svg", type: "image/svg+xml" },
     ],
     apple: "/images/logo-icon.svg",
@@ -63,6 +72,12 @@ export const metadata: Metadata = {
     types: {
       "application/rss+xml": "/blog/rss.xml",
     },
+  },
+  category: "Marketing Agency",
+  classification: "Business",
+  other: {
+    "geo.region": "US-NY",
+    "geo.placename": "New York",
   },
 };
 
