@@ -921,6 +921,39 @@
       "id": "2b654f18-88be-403a-9997-edf3280dee43",
       "created_at": "2026-02-06T20:30:54.595Z",
       "updated_at": "2026-02-06T20:30:54.595Z"
+    },
+    {
+      "name": "Progress: full SEO setup for Soft Standards notch-version (Next",
+      "type": "decision",
+      "properties": {
+        "decision_id": "795e8390-522a-46e5-8b86-b7779b9d327a",
+        "project": "soft-standards",
+        "context": "Progress update",
+        "reasoning": "Progress tracking",
+        "full_decision": "Progress: full SEO setup for Soft Standards notch-version (Next"
+      },
+      "id": "dbd71903-9aee-4a2a-a382-bb7fb999154b",
+      "created_at": "2026-02-06T21:26:59.629Z",
+      "updated_at": "2026-02-06T21:26:59.629Z"
+    },
+    {
+      "name": "soft-standards",
+      "type": "project",
+      "properties": {},
+      "id": "f72477e7-1b64-44ae-9941-bd1d0ebe312f",
+      "created_at": "2026-02-06T21:26:59.632Z",
+      "updated_at": "2026-02-06T21:26:59.632Z"
+    },
+    {
+      "name": "nextjs",
+      "type": "technology",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "85046edb-cdac-43e9-863e-9c56a51a49e8",
+      "created_at": "2026-02-06T21:26:59.632Z",
+      "updated_at": "2026-02-06T21:26:59.632Z"
     }
   ],
   "edges": [
@@ -1679,8 +1712,26 @@
       "properties": {},
       "id": "e8eaa47d-3764-4ec9-97b7-b8a05490ab6a",
       "created_at": "2026-02-06T20:30:54.595Z"
+    },
+    {
+      "source": "dbd71903-9aee-4a2a-a382-bb7fb999154b",
+      "target": "f72477e7-1b64-44ae-9941-bd1d0ebe312f",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "a2c2c7d9-a7b7-48fd-9a65-5e1638d06266",
+      "created_at": "2026-02-06T21:26:59.632Z"
+    },
+    {
+      "source": "dbd71903-9aee-4a2a-a382-bb7fb999154b",
+      "target": "85046edb-cdac-43e9-863e-9c56a51a49e8",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "179d9002-69ae-40cc-86ae-2a05f069e1f0",
+      "created_at": "2026-02-06T21:26:59.633Z"
     }
   ],
   "version": "1.0.0",
-  "saved_at": "2026-02-06T20:31:24.373Z"
+  "saved_at": "2026-02-09T16:56:44.206Z"
 }
