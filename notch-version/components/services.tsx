@@ -245,7 +245,7 @@ function ServiceCard({
               );
             }, 600);
           }}
-          className="mt-5 flex cursor-pointer items-center gap-1.5 text-[13px] font-medium opacity-0 transition-all duration-500 group-hover:opacity-100"
+          className="mt-5 flex cursor-pointer items-center gap-1.5 text-[13px] font-medium opacity-100 transition-all duration-500 sm:opacity-0 sm:group-hover:opacity-100"
           style={{ color: service.color }}
         >
           <span>Ask AI about this</span>
