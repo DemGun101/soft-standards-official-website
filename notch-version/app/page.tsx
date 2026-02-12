@@ -8,10 +8,12 @@ import Services from "@/components/services";
 import Results from "@/components/results";
 import CaseStudies from "@/components/case-studies";
 import Pricing from "@/components/pricing";
+import FAQ from "@/components/faq";
 import Booking from "@/components/booking";
 import Footer from "@/components/footer";
 import ReviewSchema from "@/components/schemas/ReviewSchema";
 import LocalBusinessSchema from "@/components/schemas/LocalBusinessSchema";
+import FAQSchema from "@/components/schemas/FAQSchema";
 
 export const metadata: Metadata = {
   title:
@@ -50,6 +52,7 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       <ReviewSchema />
       <LocalBusinessSchema />
+      <FAQSchema />
       <Nav />
       <main>
         <Hero />
@@ -60,6 +63,7 @@ export default function Home() {
         <Results />
         <CaseStudies />
         <Pricing />
+        <FAQ />
         <Booking />
       </main>
       <Footer />

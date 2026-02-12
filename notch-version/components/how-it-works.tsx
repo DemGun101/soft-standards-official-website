@@ -7,12 +7,14 @@ const steps = [
   {
     number: "01",
     title: "We Build It",
-    description: "30 days. Brand, site, ads, automation. You own everything.",
+    description:
+      "30 days. Brand, site, ads, automation. You own everything.",
   },
   {
     number: "02",
     title: "We Prove It",
-    description: "System goes live. You pay nothing until it works.",
+    description:
+      "System goes live. You pay nothing until it works.",
   },
   {
     number: "03",
@@ -52,13 +54,23 @@ export default function HowItWorks() {
             <motion.div
               key={step.number}
               variants={fadeUp}
-              custom={i * 0.1}
-              className="rounded-[24px] border-t border-border-subtle bg-card p-12 transition-all duration-500 hover:bg-card-hover"
+              custom={i * 0.12}
+              className="group rounded-[24px] border-t border-border-subtle bg-card p-10 transition-all duration-500 hover:bg-card-hover"
             >
-              <span className="mb-6 block text-[56px] font-bold leading-none text-accent">
-                {step.number}
-              </span>
-              <h3 className="mb-3 text-[20px] font-semibold">{step.title}</h3>
+              {/* Number + divider */}
+              <div className="mb-8 flex items-center gap-4">
+                <span className="text-[48px] font-bold leading-none tracking-tight text-accent">
+                  {step.number}
+                </span>
+                <div className="h-[1px] flex-1 bg-border-subtle transition-colors duration-500 group-hover:bg-accent/20" />
+              </div>
+
+              {/* Title */}
+              <h3 className="mb-3 text-[20px] font-semibold tracking-[-0.01em]">
+                {step.title}
+              </h3>
+
+              {/* Description */}
               <p className="text-[15px] leading-[1.7] text-muted">
                 {step.description}
               </p>

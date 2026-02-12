@@ -12,6 +12,7 @@ const links = [
   { label: "Results", href: "#results" },
   { label: "Work", href: "#work" },
   { label: "Pricing", href: "#pricing" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Nav() {
@@ -34,7 +35,7 @@ export default function Nav() {
     el?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const logoSrc = mounted && resolvedTheme === "light" ? "/Light.jpg" : "/Dark.jpg";
+  const logoSrc = mounted && resolvedTheme === "light" ? "/Light.png" : "/Dark.png";
 
   return (
     <>
@@ -42,9 +43,9 @@ export default function Nav() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
           scrolled
-            ? "bg-overlay backdrop-blur-2xl border-b border-border-faint"
+            ? "nav-glass border-b border-white/[0.08]"
             : "bg-transparent"
         }`}
       >
@@ -56,8 +57,8 @@ export default function Nav() {
             <Image
               src={logoSrc}
               alt="Soft Standards"
-              width={44}
-              height={44}
+              width={56}
+              height={56}
             />
           </button>
 

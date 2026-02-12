@@ -8,26 +8,33 @@ export default function Hero() {
       id="hero"
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-8 pt-28 pb-12"
     >
-      {/* Background glow */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/[0.06] blur-[150px]" />
-      </div>
-
       <div className="relative z-10 mx-auto w-full max-w-[1200px]">
         <div className="mx-auto max-w-[800px] text-center">
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
-            className="mb-8 text-[clamp(2.5rem,5.5vw,4.25rem)] font-bold leading-[1.1] tracking-[-0.03em]"
-          >
-            Your marketing isn&apos;t broken.
-            <br />
-            <span className="font-serif italic font-normal text-muted">
-              You just don&apos;t have a system.
-            </span>
-          </motion.h1>
+          {/* Headline with glow anchored directly to it */}
+          <div className="relative inline-block w-full">
+            {/* Core glow — circular, centered on headline */}
+            <div
+              className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              style={{
+                width: 700,
+                height: 700,
+                borderRadius: "50%",
+                background: "radial-gradient(circle, rgba(123,97,255,0.22) 0%, rgba(123,97,255,0.08) 40%, rgba(123,97,255,0.02) 65%, transparent 80%)",
+              }}
+            />
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
+              className="relative mb-8 text-[clamp(2.5rem,5.5vw,4.25rem)] font-bold leading-[1.1] tracking-[-0.03em]"
+            >
+              Your marketing isn&apos;t broken.
+              <br />
+              <span className="font-serif italic font-normal text-muted">
+                You just don&apos;t have a system.
+              </span>
+            </motion.h1>
+          </div>
 
           {/* Subtext */}
           <motion.p
