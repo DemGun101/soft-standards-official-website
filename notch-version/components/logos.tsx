@@ -33,7 +33,7 @@ export default function Logos() {
           whileInView="visible"
           viewport={{ once: true }}
           custom={0.15}
-          className="grid grid-cols-3 gap-8 md:grid-cols-6"
+          className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-6 md:gap-8"
         >
           {clients.map((client) => (
             <div
@@ -45,7 +45,7 @@ export default function Logos() {
                 alt={client.name}
                 width={client.width}
                 height={client.height}
-                className="h-8 w-auto object-contain opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-40 dark:hover:opacity-80"
+                className="h-10 w-auto object-contain opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 sm:h-8 dark:invert dark:opacity-40 dark:hover:opacity-80"
               />
             </div>
           ))}
