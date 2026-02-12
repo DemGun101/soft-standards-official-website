@@ -307,20 +307,21 @@ export default function Hero() {
                     </h1>
                   </motion.div>
                 ) : (
-                  <motion.h1
+                  <motion.div
                     key="original-title"
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.8, ease }}
-                    className="text-[clamp(2.5rem,5.5vw,4.25rem)] font-bold leading-[1.1] tracking-[-0.03em]"
+                    transition={{ duration: 0.3 }}
                   >
-                    {ORIGINAL_TITLE_LINE1}
-                    <br />
-                    <span className="font-serif italic font-normal text-muted">
-                      {ORIGINAL_TITLE_LINE2}
-                    </span>
-                  </motion.h1>
+                    <h1
+                      className="text-[clamp(2.5rem,5.5vw,4.25rem)] font-bold leading-[1.1] tracking-[-0.03em] animate-[heroFadeIn_0.8s_ease_both]"
+                    >
+                      {ORIGINAL_TITLE_LINE1}
+                      <br />
+                      <span className="font-serif italic font-normal text-muted">
+                        {ORIGINAL_TITLE_LINE2}
+                      </span>
+                    </h1>
+                  </motion.div>
                 )}
               </AnimatePresence>
             </div>
@@ -360,22 +361,17 @@ export default function Hero() {
                   )}
                 </motion.p>
               ) : (
-                <motion.p
+                <motion.div
                   key="original-subtitle"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -15 }}
-                  transition={{
-                    duration: 0.7,
-                    delay:
-                      mode === "default" && messages.length === 0 ? 0.3 : 0,
-                  }}
-                  className="mx-auto mb-12 max-w-[480px] text-[17px] leading-[1.7] text-muted"
+                  transition={{ duration: 0.3 }}
                 >
-                  Brand. Website. Ads. Automation.
-                  <br />
-                  Built in 30 days. You only pay if it works.
-                </motion.p>
+                  <p className="mx-auto mb-12 max-w-[480px] text-[17px] leading-[1.7] text-muted animate-[heroFadeIn_0.7s_ease_0.3s_both]">
+                    Brand. Website. Ads. Automation.
+                    <br />
+                    Built in 30 days. You only pay if it works.
+                  </p>
+                </motion.div>
               )}
             </AnimatePresence>
           </div>
@@ -384,7 +380,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
           >
             <AnimatePresence mode="wait">
               {mode === "chat" ? (
@@ -648,7 +644,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.7 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
           className="mt-16 grid grid-cols-3 border-t border-border-subtle pt-8 transition-colors duration-300"
         >
           {[

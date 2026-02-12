@@ -38,7 +38,7 @@ export default function Logos() {
           {clients.map((client) => (
             <div
               key={client.name}
-              className="flex items-center justify-center py-4"
+              className="flex items-center justify-center py-4 h-[72px]"
             >
               <Image
                 src={client.logo}

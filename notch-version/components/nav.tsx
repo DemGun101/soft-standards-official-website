@@ -39,11 +39,8 @@ export default function Nav() {
 
   return (
     <>
-      <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 animate-[slideDown_0.7s_ease_both] ${
           scrolled
             ? "nav-glass border-b border-white/[0.08]"
             : "bg-transparent"
@@ -88,19 +85,19 @@ export default function Nav() {
           >
             <motion.span
               animate={mobileOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
-              className="block h-[1.5px] w-6 bg-foreground transition-colors"
+              className="block h-[1.5px] w-6 bg-foreground will-change-transform"
             />
             <motion.span
               animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
-              className="block h-[1.5px] w-6 bg-foreground transition-colors"
+              className="block h-[1.5px] w-6 bg-foreground will-change-transform"
             />
             <motion.span
               animate={mobileOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
-              className="block h-[1.5px] w-6 bg-foreground transition-colors"
+              className="block h-[1.5px] w-6 bg-foreground will-change-transform"
             />
           </button>
         </div>
-      </motion.nav>
+      </nav>
 
       <AnimatePresence>
         {mobileOpen && (

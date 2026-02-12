@@ -6,6 +6,7 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const instrumentSerif = Instrument_Serif({
@@ -13,6 +14,7 @@ const instrumentSerif = Instrument_Serif({
   weight: "400",
   style: "italic",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const viewport: Viewport = {

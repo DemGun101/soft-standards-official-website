@@ -110,10 +110,31 @@ body {
     0 4px 24px -4px rgba(0, 0, 0, 0.3);
 }
 
+/* Hero LCP fade-in — CSS animation so browser paints immediately */
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Service card hover effects */
 .service-card:hover {
   border-color: color-mix(in srgb, var(--card-color) 25%, transparent);
   box-shadow:
     0 20px 40px -12px color-mix(in srgb, var(--card-color) 15%, transparent),
     0 0 0 1px color-mix(in srgb, var(--card-color) 8%, transparent);
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }

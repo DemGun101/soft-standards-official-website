@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Nav from "@/components/nav";
 import Hero from "@/components/hero";
 import Logos from "@/components/logos";
-import ProblemSolution from "@/components/problem-solution";
-import HowItWorks from "@/components/how-it-works";
-import Services from "@/components/services";
-import Results from "@/components/results";
-import CaseStudies from "@/components/case-studies";
-import Pricing from "@/components/pricing";
-import FAQ from "@/components/faq";
-import Booking from "@/components/booking";
-import Footer from "@/components/footer";
 import ReviewSchema from "@/components/schemas/ReviewSchema";
 import LocalBusinessSchema from "@/components/schemas/LocalBusinessSchema";
 import FAQSchema from "@/components/schemas/FAQSchema";
+
+// Below-the-fold components — code-split for faster initial load
+const ProblemSolution = dynamic(() => import("@/components/problem-solution"));
+const HowItWorks = dynamic(() => import("@/components/how-it-works"));
+const Services = dynamic(() => import("@/components/services"));
+const Results = dynamic(() => import("@/components/results"));
+const CaseStudies = dynamic(() => import("@/components/case-studies"));
+const Pricing = dynamic(() => import("@/components/pricing"));
+const FAQ = dynamic(() => import("@/components/faq"));
+const Booking = dynamic(() => import("@/components/booking"));
+const Footer = dynamic(() => import("@/components/footer"));
 
 export const metadata: Metadata = {
   title:
