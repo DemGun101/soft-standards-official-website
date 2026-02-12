@@ -232,26 +232,31 @@ function ServiceCard({
           </div>
         </div>
 
-        {/* Arrow indicator */}
-        <div
-          className="mt-5 flex items-center gap-1.5 text-[13px] font-medium opacity-0 transition-all duration-500 group-hover:opacity-100"
+        {/* Ask AI about this service */}
+        <button
+          type="button"
+          onClick={() => {
+            document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" });
+            setTimeout(() => {
+              window.dispatchEvent(
+                new CustomEvent("trigger-ai-chat", {
+                  detail: `Tell me about your ${service.title} service`,
+                }),
+              );
+            }, 600);
+          }}
+          className="mt-5 flex cursor-pointer items-center gap-1.5 text-[13px] font-medium opacity-0 transition-all duration-500 group-hover:opacity-100"
           style={{ color: service.color }}
         >
-          <span>Learn more</span>
+          <span>Ask AI about this</span>
           <svg
             className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1"
-            fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
+            fill="currentColor"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-            />
+            <path d="M12 2L13.09 8.26L18 6L14.74 10.91L21 12L14.74 13.09L18 18L13.09 15.74L12 22L10.91 15.74L6 18L9.26 13.09L3 12L9.26 10.91L6 6L10.91 8.26L12 2Z" />
           </svg>
-        </div>
+        </button>
       </div>
     </motion.div>
   );

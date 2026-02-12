@@ -16,7 +16,7 @@ const pairs = [
   {
     problem: "Competitors with worse products are winning",
     fix: "Built, proven, and optimized in 30 days",
-    proof: "Trellis Studios — Conversion rate up 4.2x",
+    proof: "Hitchhyke — Conversion rate up 4.2x",
   },
 ];
 

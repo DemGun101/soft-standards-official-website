@@ -8,12 +8,25 @@ import gsap from "gsap";
 const ORIGINAL_TITLE_LINE1 = "Your marketing isn\u2019t broken.";
 const ORIGINAL_TITLE_LINE2 = "You just don\u2019t have a system.";
 
+const PLACEHOLDERS = [
+  "What problems are you facing?",
+  "How much does it cost to get started?",
+  "What results can I expect in 90 days?",
+  "Tell me about your web development",
+  "How is Soft Standards different?",
+  "What does the 30-day build include?",
+  "Do I own everything you create?",
+  "How do your AI automations work?",
+];
+
 const ease = [0.25, 0.4, 0.25, 1] as const;
 
 export default function Hero() {
   const [mode, setMode] = useState<"default" | "chat">("default");
   const [isHovered, setIsHovered] = useState(false);
   const [input, setInput] = useState("");
+  const [placeholderIdx, setPlaceholderIdx] = useState(0);
+  const [typedPlaceholder, setTypedPlaceholder] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
   const sparkleRef = useRef<SVGSVGElement>(null);
@@ -145,6 +158,55 @@ export default function Hero() {
     }
   }, [mode]);
 
+  // Typewriter effect for placeholder text
+  useEffect(() => {
+    if (mode !== "chat" || input) {
+      setTypedPlaceholder("");
+      return;
+    }
+    const target = PLACEHOLDERS[placeholderIdx];
+    let charIdx = 0;
+    setTypedPlaceholder("");
+
+    // Type each character
+    const typeId = setInterval(() => {
+      charIdx++;
+      setTypedPlaceholder(target.slice(0, charIdx));
+      if (charIdx >= target.length) {
+        clearInterval(typeId);
+      }
+    }, 45);
+
+    // After typing finishes + pause, advance to next placeholder
+    const nextId = setTimeout(() => {
+      setPlaceholderIdx((prev) => (prev + 1) % PLACEHOLDERS.length);
+    }, target.length * 45 + 2500);
+
+    return () => {
+      clearInterval(typeId);
+      clearTimeout(nextId);
+    };
+  }, [mode, input, placeholderIdx]);
+
+  // Listen for "trigger-ai-chat" events from other components (e.g. service cards)
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent<string>).detail;
+      setMode("chat");
+      setIsHovered(false);
+      // Small delay so the input mounts before we send
+      setTimeout(() => {
+        try {
+          sendMessage({ text: detail });
+        } catch {
+          // handled by onError
+        }
+      }, 100);
+    };
+    window.addEventListener("trigger-ai-chat", handler);
+    return () => window.removeEventListener("trigger-ai-chat", handler);
+  }, [sendMessage]);
+
   const handleMouseEnter = () => {
     if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
     if (mode === "default") setIsHovered(true);
@@ -274,7 +336,7 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -15 }}
                   transition={{ duration: 0.4, delay: 0.1, ease }}
-                  className="mx-auto mb-12 max-w-[540px] text-[17px] leading-[1.7] text-muted"
+                  className="mx-auto mb-12 max-w-[620px] text-[17px] leading-[1.7] text-muted"
                 >
                   {aiSubtitle}
                   {isStreaming && aiSubtitle && (
@@ -362,7 +424,7 @@ export default function Hero() {
                       value={input}
                       onChange={(e) => setInput(e.target.value)}
                       onKeyDown={onKeyDown}
-                      placeholder="Ask us anything..."
+                      placeholder={typedPlaceholder || PLACEHOLDERS[placeholderIdx].charAt(0)}
                       className="w-full rounded-[50px] border-2 border-accent bg-background px-7 py-4 pr-14 text-[15px] text-foreground shadow-[0_0_30px_rgba(123,97,255,0.15)] outline-none transition-shadow duration-300 placeholder:text-muted/60 focus:shadow-[0_0_40px_rgba(123,97,255,0.25)]"
                     />
                     <button

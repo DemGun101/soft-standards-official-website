@@ -19,7 +19,7 @@ const testimonials = [
   },
   {
     name: 'Sarah Lin',
-    role: 'Founder, Trellis Studios',
+    role: 'Founder, Hitchhyke',
     text: "Our old site was pretty. It just didn't sell. They tore it apart — respectfully — and rebuilt it around conversions. Our conversion rate went up 4.2x. Revenue doubled in 60 days. Same traffic. Same product. Better system.",
     rating: 5,
   },
