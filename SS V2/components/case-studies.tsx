@@ -87,7 +87,7 @@ export default function CaseStudies() {
               key={project.name}
               variants={fadeUp}
               custom={i * 0.08}
-              className="group flex flex-col rounded-[24px] border-t border-border-subtle bg-card p-10 transition-all duration-500 hover:bg-card-hover"
+              className="group flex flex-col rounded-[24px] border-t border-border-subtle bg-card p-10 transition-[background-color] duration-500 hover:bg-card-hover"
             >
               <div className="mb-6 flex flex-wrap gap-2">
                 {project.tags.map((tag) => (

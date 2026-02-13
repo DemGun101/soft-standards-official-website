@@ -45,7 +45,7 @@ export default function Logos() {
                 alt={client.name}
                 width={client.width}
                 height={client.height}
-                className="h-8 w-auto object-contain opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-40 dark:hover:opacity-80"
+                className="h-8 w-auto object-contain opacity-60 grayscale transition-[opacity,filter] duration-300 hover:opacity-100 hover:grayscale-0 dark:invert dark:opacity-40 dark:hover:opacity-80"
               />
             </div>
           ))}

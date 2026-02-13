@@ -76,7 +76,7 @@ export default function DetailsForm({
         <button
           type="button"
           onClick={onBack}
-          className="group flex h-10 w-10 items-center justify-center rounded-xl border border-border-subtle transition-all duration-200 hover:border-accent/40 hover:bg-accent/5"
+          className="group flex h-10 w-10 items-center justify-center rounded-xl border border-border-subtle transition-[border-color,background-color] duration-200 hover:border-accent/40 hover:bg-accent/5"
           aria-label="Back to time selection"
         >
           <svg width="16" height="16" viewBox="0 0 20 20" fill="none" className="transition-transform duration-200 group-hover:-translate-x-0.5">
@@ -105,7 +105,7 @@ export default function DetailsForm({
             <div
               className={`
                 group flex items-center gap-3 rounded-xl border px-4 py-3
-                transition-all duration-200
+                transition-[border-color,background-color,box-shadow] duration-200
                 ${focused === field.key
                   ? "border-accent bg-accent/[0.03] shadow-[0_0_0_3px_rgba(123,97,255,0.1)]"
                   : errors[field.key]
@@ -139,9 +139,10 @@ export default function DetailsForm({
             <AnimatePresence>
               {errors[field.key] && (
                 <motion.p
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
+                  initial={{ opacity: 0, scaleY: 0 }}
+                  animate={{ opacity: 1, scaleY: 1 }}
+                  exit={{ opacity: 0, scaleY: 0 }}
+                  style={{ transformOrigin: "top" }}
                   className="mt-1 text-[11px] font-medium text-danger pl-4 overflow-hidden"
                 >
                   {errors[field.key]}
@@ -156,7 +157,7 @@ export default function DetailsForm({
           <div
             className={`
               rounded-xl border px-4 py-3
-              transition-all duration-200
+              transition-[border-color,background-color,box-shadow] duration-200
               ${focused === "challenge"
                 ? "border-accent bg-accent/[0.03] shadow-[0_0_0_3px_rgba(123,97,255,0.1)]"
                 : errors.challenge
@@ -210,7 +211,7 @@ export default function DetailsForm({
         disabled={submitting}
         whileHover={!submitting ? { scale: 1.01 } : undefined}
         whileTap={!submitting ? { scale: 0.98 } : undefined}
-        className="mt-6 w-full rounded-[50px] bg-accent py-4 text-[14px] font-semibold text-white transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_40px_rgba(123,97,255,0.3)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-none"
+        className="mt-6 w-full rounded-[50px] bg-accent py-4 text-[14px] font-semibold text-white transition-[background-color,box-shadow,opacity] duration-300 hover:bg-accent-hover hover:shadow-[0_0_40px_rgba(123,97,255,0.3)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-none"
       >
         {submitting ? (
           <span className="flex items-center justify-center gap-2.5">

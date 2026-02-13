@@ -54,7 +54,7 @@ export default function CalendarGrid({
         <button
           onClick={onPrevMonth}
           disabled={!canGoPrev}
-          className="group flex h-10 w-10 items-center justify-center rounded-xl border border-border-subtle transition-all duration-200 hover:border-accent/40 hover:bg-accent/5 disabled:opacity-20 disabled:cursor-not-allowed disabled:hover:border-border-subtle disabled:hover:bg-transparent"
+          className="group flex h-10 w-10 items-center justify-center rounded-xl border border-border-subtle transition-[border-color,background-color,opacity] duration-200 hover:border-accent/40 hover:bg-accent/5 disabled:opacity-20 disabled:cursor-not-allowed disabled:hover:border-border-subtle disabled:hover:bg-transparent"
           aria-label="Previous month"
         >
           <svg width="16" height="16" viewBox="0 0 20 20" fill="none" className="transition-transform duration-200 group-hover:-translate-x-0.5">
@@ -79,7 +79,7 @@ export default function CalendarGrid({
         <button
           onClick={onNextMonth}
           disabled={!canGoNext}
-          className="group flex h-10 w-10 items-center justify-center rounded-xl border border-border-subtle transition-all duration-200 hover:border-accent/40 hover:bg-accent/5 disabled:opacity-20 disabled:cursor-not-allowed disabled:hover:border-border-subtle disabled:hover:bg-transparent"
+          className="group flex h-10 w-10 items-center justify-center rounded-xl border border-border-subtle transition-[border-color,background-color,opacity] duration-200 hover:border-accent/40 hover:bg-accent/5 disabled:opacity-20 disabled:cursor-not-allowed disabled:hover:border-border-subtle disabled:hover:bg-transparent"
           aria-label="Next month"
         >
           <svg width="16" height="16" viewBox="0 0 20 20" fill="none" className="transition-transform duration-200 group-hover:translate-x-0.5">
@@ -138,7 +138,7 @@ export default function CalendarGrid({
                   disabled={!isAvailable}
                   className={`
                     relative flex h-11 w-11 items-center justify-center rounded-xl
-                    text-[13px] font-semibold transition-all duration-200
+                    text-[13px] font-semibold transition-[background-color,color,box-shadow] duration-200
                     ${isSelected
                       ? "bg-accent text-white shadow-[0_0_20px_rgba(123,97,255,0.4)]"
                       : isAvailable

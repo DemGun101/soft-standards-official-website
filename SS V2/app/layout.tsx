@@ -89,8 +89,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Preconnect to Google Fonts (used by next/font at build time, helps during dev & edge cases) */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* DNS prefetch for external link destinations */}
+        <link rel="dns-prefetch" href="https://www.linkedin.com" />
+        <link rel="dns-prefetch" href="https://instagram.com" />
+      </head>
       <body
-        className={`${inter.variable} ${instrumentSerif.variable} antialiased bg-background text-foreground transition-colors duration-300`}
+        className={`${inter.variable} ${instrumentSerif.variable} antialiased bg-background text-foreground`}
       >
         {/* Skip to content */}
         <a

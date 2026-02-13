@@ -20,6 +20,11 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 30,
   },
 
+  experimental: {
+    optimizePackageImports: ['framer-motion'],
+    optimizeCss: true,
+  },
+
   compress: true,
   reactStrictMode: true,
   trailingSlash: false,
@@ -44,6 +49,11 @@ const nextConfig: NextConfig = {
           {
             key: "Strict-Transport-Security",
             value: "max-age=31536000; includeSubDomains; preload",
+          },
+          {
+            key: "Link",
+            value:
+              "<https://fonts.googleapis.com>; rel=preconnect, <https://fonts.gstatic.com>; rel=preconnect; crossorigin",
           },
         ],
       },

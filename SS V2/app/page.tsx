@@ -5,10 +5,10 @@ import Logos from "@/components/logos";
 import ProblemSolution from "@/components/problem-solution";
 import HowItWorks from "@/components/how-it-works";
 import Services from "@/components/services";
-import Results from "@/components/results";
-import CaseStudies from "@/components/case-studies";
-import Pricing from "@/components/pricing";
-import Booking from "@/components/booking";
+import LazyResults from "@/components/lazy/LazyResults";
+import LazyCaseStudies from "@/components/lazy/LazyCaseStudies";
+import LazyPricing from "@/components/lazy/LazyPricing";
+import LazyBooking from "@/components/lazy/LazyBooking";
 import Footer from "@/components/footer";
 import ReviewSchema from "@/components/schemas/ReviewSchema";
 import LocalBusinessSchema from "@/components/schemas/LocalBusinessSchema";
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+    <div className="min-h-screen bg-background text-foreground">
       <ReviewSchema />
       <LocalBusinessSchema />
       <Nav />
@@ -57,10 +57,10 @@ export default function Home() {
         <ProblemSolution />
         <HowItWorks />
         <Services />
-        <Results />
-        <CaseStudies />
-        <Pricing />
-        <Booking />
+        <LazyResults />
+        <LazyCaseStudies />
+        <LazyPricing />
+        <LazyBooking />
       </main>
       <Footer />
     </div>

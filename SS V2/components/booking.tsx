@@ -188,7 +188,7 @@ export default function Booking() {
             mx-auto max-w-[520px] overflow-hidden rounded-[24px]
             border-t border-border-subtle bg-card
             p-6 sm:p-8
-            transition-all duration-500
+            transition-shadow duration-500
             ${success
               ? "shadow-[0_0_80px_rgba(26,255,117,0.06)]"
               : "shadow-[0_0_60px_rgba(123,97,255,0.04)] hover:shadow-[0_0_80px_rgba(123,97,255,0.08)]"
@@ -269,10 +269,11 @@ export default function Booking() {
               <AnimatePresence>
                 {error && (
                   <motion.div
-                    initial={{ opacity: 0, height: 0, marginBottom: 0 }}
-                    animate={{ opacity: 1, height: "auto", marginBottom: 16 }}
-                    exit={{ opacity: 0, height: 0, marginBottom: 0 }}
-                    className="overflow-hidden rounded-xl border border-danger/20 bg-danger/5 px-4 py-3 text-[13px] text-danger"
+                    initial={{ opacity: 0, scaleY: 0 }}
+                    animate={{ opacity: 1, scaleY: 1 }}
+                    exit={{ opacity: 0, scaleY: 0 }}
+                    style={{ transformOrigin: "top" }}
+                    className="mb-4 overflow-hidden rounded-xl border border-danger/20 bg-danger/5 px-4 py-3 text-[13px] text-danger"
                   >
                     <span className="flex items-center gap-2">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="shrink-0">

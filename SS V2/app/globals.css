@@ -90,3 +90,14 @@ body {
   background: var(--scrollbar-thumb);
   border-radius: 2px;
 }
+
+/* GPU-composited animation hints for heavily animated sections */
+#hero,
+#how-it-works,
+#services,
+#results,
+#pricing,
+#work,
+#booking {
+  contain: layout style;
+}

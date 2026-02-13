@@ -53,7 +53,7 @@ export default function HowItWorks() {
               key={step.number}
               variants={fadeUp}
               custom={i * 0.1}
-              className="rounded-[24px] border-t border-border-subtle bg-card p-12 transition-all duration-500 hover:bg-card-hover"
+              className="rounded-[24px] border-t border-border-subtle bg-card p-12 transition-[background-color] duration-500 hover:bg-card-hover"
             >
               <span className="mb-6 block text-[56px] font-bold leading-none text-accent">
                 {step.number}

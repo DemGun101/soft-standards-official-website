@@ -42,7 +42,7 @@ export default function Nav() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500 ${
           scrolled
             ? "bg-overlay backdrop-blur-2xl border-b border-border-faint"
             : "bg-transparent"
@@ -74,7 +74,7 @@ export default function Nav() {
             <ThemeToggle />
             <button
               onClick={() => scrollTo("#booking")}
-              className="rounded-[50px] bg-accent px-6 py-2.5 text-[14px] font-medium text-white transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_24px_rgba(123,97,255,0.25)]"
+              className="rounded-[50px] bg-accent px-6 py-2.5 text-[14px] font-medium text-white transition-[background-color,box-shadow] duration-300 hover:bg-accent-hover hover:shadow-[0_0_24px_rgba(123,97,255,0.25)]"
             >
               Book a Call
             </button>

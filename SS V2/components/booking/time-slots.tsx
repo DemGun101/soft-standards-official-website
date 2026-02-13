@@ -47,7 +47,7 @@ export default function TimeSlots({
       <div className="flex items-center gap-3 mb-1">
         <button
           onClick={onBack}
-          className="group flex h-10 w-10 items-center justify-center rounded-xl border border-border-subtle transition-all duration-200 hover:border-accent/40 hover:bg-accent/5"
+          className="group flex h-10 w-10 items-center justify-center rounded-xl border border-border-subtle transition-[border-color,background-color] duration-200 hover:border-accent/40 hover:bg-accent/5"
           aria-label="Back to calendar"
         >
           <svg width="16" height="16" viewBox="0 0 20 20" fill="none" className="transition-transform duration-200 group-hover:-translate-x-0.5">
@@ -103,7 +103,7 @@ export default function TimeSlots({
                       onClick={() => onSelectSlot(slot)}
                       className={`
                         rounded-xl border py-3 text-[13px] font-semibold
-                        transition-all duration-200
+                        transition-[border-color,background-color,color,box-shadow] duration-200
                         ${isSelected
                           ? "border-accent bg-accent text-white shadow-[0_0_20px_rgba(123,97,255,0.3)]"
                           : "border-border-subtle text-foreground hover:border-accent/40 hover:bg-accent/5"
@@ -145,7 +145,7 @@ export default function TimeSlots({
                       onClick={() => onSelectSlot(slot)}
                       className={`
                         rounded-xl border py-3 text-[13px] font-semibold
-                        transition-all duration-200
+                        transition-[border-color,background-color,color,box-shadow] duration-200
                         ${isSelected
                           ? "border-accent bg-accent text-white shadow-[0_0_20px_rgba(123,97,255,0.3)]"
                           : "border-border-subtle text-foreground hover:border-accent/40 hover:bg-accent/5"
@@ -172,7 +172,7 @@ export default function TimeSlots({
         >
           <button
             onClick={onContinue}
-            className="group w-full rounded-[50px] bg-accent py-3.5 text-[14px] font-semibold text-white transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_30px_rgba(123,97,255,0.3)]"
+            className="group w-full rounded-[50px] bg-accent py-3.5 text-[14px] font-semibold text-white transition-[background-color,box-shadow] duration-300 hover:bg-accent-hover hover:shadow-[0_0_30px_rgba(123,97,255,0.3)]"
           >
             <span className="flex items-center justify-center gap-2">
               Continue

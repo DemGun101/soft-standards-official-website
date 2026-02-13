@@ -83,7 +83,7 @@ export default function Pricing() {
               key={tier.name}
               variants={fadeUp}
               custom={i * 0.12}
-              className={`relative rounded-[24px] p-10 transition-all duration-500 ${
+              className={`relative rounded-[24px] p-10 transition-[background-color,box-shadow] duration-500 ${
                 tier.popular
                   ? "border-t-2 border-accent bg-card shadow-[0_0_60px_rgba(123,97,255,0.06)]"
                   : "border-t border-border-subtle bg-card hover:bg-card-hover"
@@ -137,7 +137,7 @@ export default function Pricing() {
 
               <a
                 href="#booking"
-                className={`block w-full rounded-[50px] py-3.5 text-center text-[14px] font-semibold transition-all duration-300 ${
+                className={`block w-full rounded-[50px] py-3.5 text-center text-[14px] font-semibold transition-[background-color,border-color,box-shadow] duration-300 ${
                   tier.popular
                     ? "bg-accent text-white hover:bg-accent-hover hover:shadow-[0_0_24px_rgba(123,97,255,0.25)]"
                     : "border border-border-subtle text-foreground hover:border-accent/40 hover:bg-card-hover"

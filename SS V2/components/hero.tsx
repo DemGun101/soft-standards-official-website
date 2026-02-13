@@ -49,7 +49,7 @@ export default function Hero() {
           >
             <a
               href="#booking"
-              className="group inline-flex items-center gap-3 rounded-[50px] bg-accent px-10 py-4 text-[15px] font-semibold text-white transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_40px_rgba(123,97,255,0.3)]"
+              className="group inline-flex items-center gap-3 rounded-[50px] bg-accent px-10 py-4 text-[15px] font-semibold text-white transition-[background-color,box-shadow] duration-300 hover:bg-accent-hover hover:shadow-[0_0_40px_rgba(123,97,255,0.3)]"
             >
               Book Your Free Audit
               <svg
@@ -70,7 +70,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.7 }}
-          className="mt-16 grid grid-cols-3 border-t border-border-subtle pt-8 transition-colors duration-300"
+          className="mt-16 grid grid-cols-3 border-t border-border-subtle pt-8"
         >
           {[
             { value: "150+", label: "Systems Built" },

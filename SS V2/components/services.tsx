@@ -76,7 +76,7 @@ function ServiceCard({ service, index }: { service: typeof services[number]; ind
       custom={index * 0.08}
       onTouchStart={() => setTouched(true)}
       onTouchEnd={() => setTimeout(() => setTouched(false), 2000)}
-      className="group cursor-default rounded-[24px] border-t border-border-subtle bg-card p-10 transition-all duration-500 hover:border-accent/40 hover:bg-card-hover"
+      className="group cursor-default rounded-[24px] border-t border-border-subtle bg-card p-10 transition-[background-color,border-color] duration-500 hover:border-accent/40 hover:bg-card-hover"
     >
       <div className="mb-5 inline-flex rounded-2xl bg-accent/10 p-3.5 text-accent transition-colors duration-300 group-hover:bg-accent/20">
         {service.icon}
@@ -85,9 +85,10 @@ function ServiceCard({ service, index }: { service: typeof services[number]; ind
       <p className="text-[14px] leading-[1.7] text-muted">
         {service.description}
       </p>
-      <div className={`grid transition-[grid-template-rows] duration-300 ease-out ${touched ? "grid-rows-[1fr]" : "grid-rows-[0fr]"} group-hover:grid-rows-[1fr]`}>
+      <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out group-hover:grid-rows-[1fr]" style={touched ? { gridTemplateRows: "1fr" } : undefined}>
         <div className="overflow-hidden">
-          <p className={`pt-4 text-[13px] leading-[1.7] text-foreground/70 transition-opacity duration-300 ${touched ? "opacity-100" : "opacity-0"} group-hover:opacity-100`}>
+          <p className={`pt-4 text-[13px] leading-[1.7] text-foreground/70 transition-opacity duration-300 ${touched ? "opacity-100" : "opacity-0"} group-hover:opacity-100`}
+             style={{ contain: "layout style" }}>
             {service.detail}
           </p>
         </div>
