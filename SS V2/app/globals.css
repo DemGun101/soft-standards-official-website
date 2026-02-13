@@ -102,6 +102,12 @@ body {
   contain: layout style;
 }
 
+/* Nav slide-down animation */
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
 /* Hero entrance animations — CSS-only, no JS needed */
 @keyframes heroFadeUp {
   from { opacity: 0; transform: translateY(20px); }

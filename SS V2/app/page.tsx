@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Nav from "@/components/nav";
 import Hero from "@/components/hero";
-import Logos from "@/components/logos";
+import LazyLogos from "@/components/lazy/LazyLogos";
 import LazyProblemSolution from "@/components/lazy/LazyProblemSolution";
 import LazyHowItWorks from "@/components/lazy/LazyHowItWorks";
-import Services from "@/components/services";
+import LazyServices from "@/components/lazy/LazyServices";
 import LazyResults from "@/components/lazy/LazyResults";
 import LazyCaseStudies from "@/components/lazy/LazyCaseStudies";
 import LazyPricing from "@/components/lazy/LazyPricing";
@@ -53,10 +53,10 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <Logos />
+        <LazyLogos />
         <LazyProblemSolution />
         <LazyHowItWorks />
-        <Services />
+        <LazyServices />
         <LazyResults />
         <LazyCaseStudies />
         <LazyPricing />

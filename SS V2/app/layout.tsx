@@ -90,6 +90,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Preload LCP logo image (Dark.jpg is default before theme mounts) */}
+        <link
+          rel="preload"
+          as="image"
+          href="/_next/image?url=%2FDark.jpg&w=96&q=75"
+          fetchPriority="high"
+        />
         {/* Preconnect to Google Fonts (used by next/font at build time, helps during dev & edge cases) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

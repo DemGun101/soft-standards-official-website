@@ -38,7 +38,6 @@ export default function Nav() {
 
   return (
     <>
-      <style>{`@keyframes slideDown{from{transform:translateY(-100%)}to{transform:translateY(0)}}`}</style>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 animate-[slideDown_0.7s_cubic-bezier(0.25,0.4,0.25,1)] transition-[background-color,border-color,backdrop-filter] duration-500 ${
           scrolled
@@ -57,6 +56,8 @@ export default function Nav() {
               width={44}
               height={44}
               priority
+              fetchPriority="high"
+              sizes="44px"
             />
           </button>
 
