@@ -24,7 +24,7 @@ export default function Nav() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -38,11 +38,9 @@ export default function Nav() {
 
   return (
     <>
-      <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500 ${
+      <style>{`@keyframes slideDown{from{transform:translateY(-100%)}to{transform:translateY(0)}}`}</style>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 animate-[slideDown_0.7s_cubic-bezier(0.25,0.4,0.25,1)] transition-[background-color,border-color,backdrop-filter] duration-500 ${
           scrolled
             ? "bg-overlay backdrop-blur-2xl border-b border-border-faint"
             : "bg-transparent"
@@ -58,6 +56,7 @@ export default function Nav() {
               alt="Soft Standards"
               width={44}
               height={44}
+              priority
             />
           </button>
 
@@ -99,7 +98,7 @@ export default function Nav() {
             />
           </button>
         </div>
-      </motion.nav>
+      </nav>
 
       <AnimatePresence>
         {mobileOpen && (

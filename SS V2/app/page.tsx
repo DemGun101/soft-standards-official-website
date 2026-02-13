@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Nav from "@/components/nav";
 import Hero from "@/components/hero";
 import Logos from "@/components/logos";
-import ProblemSolution from "@/components/problem-solution";
-import HowItWorks from "@/components/how-it-works";
+import LazyProblemSolution from "@/components/lazy/LazyProblemSolution";
+import LazyHowItWorks from "@/components/lazy/LazyHowItWorks";
 import Services from "@/components/services";
 import LazyResults from "@/components/lazy/LazyResults";
 import LazyCaseStudies from "@/components/lazy/LazyCaseStudies";
@@ -54,8 +54,8 @@ export default function Home() {
       <main>
         <Hero />
         <Logos />
-        <ProblemSolution />
-        <HowItWorks />
+        <LazyProblemSolution />
+        <LazyHowItWorks />
         <Services />
         <LazyResults />
         <LazyCaseStudies />

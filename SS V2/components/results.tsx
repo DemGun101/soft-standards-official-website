@@ -99,7 +99,7 @@ export default function Results() {
               key={t.name}
               variants={fadeUp}
               custom={i * 0.12}
-              className="rounded-[24px] border-t border-border-subtle bg-card p-10 transition-colors duration-300"
+              className="rounded-[24px] border-t border-border-subtle bg-card p-10 transition-[background-color] duration-300"
             >
               <p className="mb-8 text-[18px] font-medium leading-[1.6]">
                 &ldquo;{t.quote}&rdquo;

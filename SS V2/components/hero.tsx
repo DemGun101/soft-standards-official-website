@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export default function Hero() {
   return (
     <section
@@ -15,11 +11,8 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1200px]">
         <div className="mx-auto max-w-[800px] text-center">
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
+          {/* Headline — visible immediately for LCP */}
+          <h1
             className="mb-8 text-[clamp(2.5rem,5.5vw,4.25rem)] font-bold leading-[1.1] tracking-[-0.03em]"
           >
             Your marketing isn&apos;t broken.
@@ -27,26 +20,19 @@ export default function Hero() {
             <span className="font-serif italic font-normal text-muted">
               You just don&apos;t have a system.
             </span>
-          </motion.h1>
+          </h1>
 
           {/* Subtext */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="mx-auto mb-12 max-w-[480px] text-[17px] leading-[1.7] text-muted"
+          <p
+            className="hero-fade hero-delay-1 mx-auto mb-12 max-w-[480px] text-[17px] leading-[1.7] text-muted"
           >
             Brand. Website. Ads. Automation.
             <br />
             Built in 30 days. You only pay if it works.
-          </motion.p>
+          </p>
 
           {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-          >
+          <div className="hero-fade hero-delay-2">
             <a
               href="#booking"
               className="group inline-flex items-center gap-3 rounded-[50px] bg-accent px-10 py-4 text-[15px] font-semibold text-white transition-[background-color,box-shadow] duration-300 hover:bg-accent-hover hover:shadow-[0_0_40px_rgba(123,97,255,0.3)]"
@@ -62,15 +48,12 @@ export default function Hero() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </a>
-          </motion.div>
+          </div>
         </div>
 
-        {/* Stats bar — same max-w as parent container */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.7 }}
-          className="mt-16 grid grid-cols-3 border-t border-border-subtle pt-8"
+        {/* Stats bar */}
+        <div
+          className="hero-fade hero-delay-3 mt-16 grid grid-cols-3 border-t border-border-subtle pt-8"
         >
           {[
             { value: "150+", label: "Systems Built" },
@@ -86,7 +69,7 @@ export default function Hero() {
               </p>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
