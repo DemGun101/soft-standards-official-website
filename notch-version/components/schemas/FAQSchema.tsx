@@ -1,18 +1,18 @@
 const faqs = [
   {
-    question: "How much does it cost?",
+    question: "What do I need to provide before we start?",
     answer:
-      "Plans start at $999/month. Every engagement begins with a free discovery call where we scope the project and recommend the right plan. No surprises — you'll know exactly what you're paying before we start.",
+      "Just your brand assets (logo, colors, fonts if you have them), access to your existing accounts (domain, hosting, analytics), and a 60-minute kickoff call where we align on goals. If you don't have brand assets yet, we'll create them as part of the build.",
   },
   {
-    question: 'What does "you only pay if it works" mean?',
+    question: "Do I need an existing website or can you start from scratch?",
     answer:
-      "We tie our compensation to real results. If we don't hit the agreed-upon KPIs within the first 90 days, you don't pay. We take on the risk so you don't have to.",
+      "Either works. We've launched brands from zero and rebuilt existing sites that weren't converting. If you have an existing site, we'll audit it on our discovery call and recommend whether to optimize or rebuild based on your goals.",
   },
   {
-    question: "Are there any long-term contracts?",
+    question: "What industries do you work with?",
     answer:
-      "No. All plans are month-to-month. You can cancel anytime with 30 days' notice. We keep clients because we deliver results, not because of fine print.",
+      "We've built systems for SaaS, healthcare, real estate, e-commerce, energy tech, and professional services. Our process is industry-agnostic — we adapt our strategy to your market, audience, and competitive landscape. If you're selling a product or service online, we can help.",
   },
   {
     question: "Do I own everything you build?",
@@ -20,19 +20,14 @@ const faqs = [
       "Yes — 100%. Every asset we create — websites, funnels, automations, brand materials, ad creatives — belongs to you. If you ever leave, you take everything with you.",
   },
   {
-    question: 'What does "built in 30 days" actually mean?',
-    answer:
-      "It means your complete marketing system — strategy, website, funnels, and automations — goes live within 30 calendar days of kickoff. Not a prototype. Not a draft. A fully operational system driving leads and revenue.",
-  },
-  {
     question: "How involved do I need to be?",
     answer:
       "Minimal. We need about 2–3 hours of your time in the first week for onboarding and strategy alignment. After that, we handle execution. You'll get async updates and can hop on calls whenever you want, but we won't waste your time.",
   },
   {
-    question: "What happens after the first 30 days?",
+    question: "What if I already have a marketing team?",
     answer:
-      "We shift into optimization mode. We analyze what's working, double down on winning channels, and continuously improve your system. Most clients see their best results in months 2–4 as the system compounds.",
+      "We work alongside your existing team, not against them. We handle the systems layer — the infrastructure, automations, and technical builds — while your team focuses on day-to-day content and customer relationships. Most clients find we free up 20+ hours/week for their internal team.",
   },
   {
     question: "What results can I expect?",

@@ -198,14 +198,13 @@ function BrowserCard({
               }}
             />
 
-            {/* Screenshot — starts at top, scrolls down on hover */}
-            <div className="absolute inset-0 transition-transform duration-[2s] ease-[cubic-bezier(0.25,0.4,0.25,1)] group-hover:-translate-y-[35%]">
+            {/* Screenshot — fills viewport width, scrolls down on hover */}
+            <div className="absolute inset-0 h-[250%] transition-transform duration-[2s] ease-[cubic-bezier(0.25,0.4,0.25,1)] group-hover:-translate-y-[25%]">
               <Image
                 src={project.screenshot}
                 alt={`${project.name} — built by Soft Standards`}
-                width={1200}
-                height={1553}
-                className="w-full"
+                fill
+                className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 580px"
                 quality={90}
               />
