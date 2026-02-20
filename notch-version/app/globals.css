@@ -138,3 +138,115 @@ body {
     transform: translateY(0);
   }
 }
+
+/* ─── Portfolio Section ─── */
+
+.portfolio-card {
+  position: relative;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background: var(--card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 500ms cubic-bezier(0.25, 0.4, 0.25, 1);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  box-shadow:
+    0 24px 48px -12px color-mix(in srgb, var(--accent) 12%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.dark .portfolio-card {
+  background: color-mix(in srgb, var(--card) 90%, transparent);
+}
+
+.dark .portfolio-card:hover {
+  box-shadow:
+    0 24px 48px -12px color-mix(in srgb, var(--accent) 18%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+.portfolio-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0;
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+@keyframes borderGlow {
+  0%,
+  100% {
+    border-color: var(--border-subtle);
+  }
+  15% {
+    border-color: var(--accent);
+  }
+}
+
+@keyframes floatSubtle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.portfolio-tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  color: var(--accent);
+  transition: color 200ms ease, background 200ms ease;
+}
+
+.portfolio-tag:hover {
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+.portfolio-spotlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 400ms ease;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    color-mix(in srgb, var(--accent) 8%, transparent),
+    transparent 40%
+  );
+}
+
+.group:hover .portfolio-spotlight {
+  opacity: 1;
+}
+
+.portfolio-grid-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+    color-mix(in srgb, var(--foreground) 8%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+}
+
+.dark .portfolio-grid-bg {
+  background-image: radial-gradient(
+    color-mix(in srgb, var(--foreground) 5%, transparent) 1px,
+    transparent 1px
+  );
+}

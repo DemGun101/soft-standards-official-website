@@ -13,6 +13,7 @@ const HowItWorks = dynamic(() => import("@/components/how-it-works"));
 const Services = dynamic(() => import("@/components/services"));
 const Results = dynamic(() => import("@/components/results"));
 const CaseStudies = dynamic(() => import("@/components/case-studies"));
+const Portfolio = dynamic(() => import("@/components/portfolio"));
 const Pricing = dynamic(() => import("@/components/pricing"));
 const FAQ = dynamic(() => import("@/components/faq"));
 const Booking = dynamic(() => import("@/components/booking"));
@@ -64,7 +65,7 @@ export default function Home() {
         <HowItWorks />
         <Services />
         <Results />
-        <CaseStudies />
+        <Portfolio />
         <Pricing />
         <FAQ />
         <Booking />
