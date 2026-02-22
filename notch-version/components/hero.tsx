@@ -690,7 +690,7 @@ export default function Hero() {
           className="mt-16 grid grid-cols-3 gap-2 border-t border-border-subtle pt-8 transition-colors duration-300"
         >
           {[
-            { value: "4", label: "Services Under One Roof" },
+            { value: "6", label: "Services Under One Roof" },
             { value: "1", label: "Team For Everything" },
             { value: "0", label: "Hiring Headaches" },
           ].map((stat) => (
