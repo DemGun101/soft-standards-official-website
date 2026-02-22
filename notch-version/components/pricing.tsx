@@ -53,7 +53,7 @@ const tiers = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="px-8 py-32 md:py-40">
+    <section id="pricing" className="px-5 sm:px-8 py-32 md:py-40">
       <div className="mx-auto max-w-[1200px]">
         <motion.div
           variants={fadeUp}

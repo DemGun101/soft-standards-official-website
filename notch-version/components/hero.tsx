@@ -251,7 +251,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-8 pt-28 pb-12"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-5 sm:px-8 pt-28 pb-12"
     >
       <div className="relative z-10 mx-auto w-full max-w-[1200px]">
         <div className="mx-auto max-w-[800px] text-center">
@@ -261,8 +261,8 @@ export default function Hero() {
             <div
               className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
               style={{
-                width: 700,
-                height: 700,
+                width: "min(700px, 100vw)",
+                height: "min(700px, 100vw)",
                 borderRadius: "50%",
                 background:
                   "radial-gradient(circle, rgba(123,97,255,0.22) 0%, rgba(123,97,255,0.08) 40%, rgba(123,97,255,0.02) 65%, transparent 80%)",
@@ -368,8 +368,8 @@ export default function Hero() {
                 >
                   <p className="mx-auto mb-12 max-w-[520px] text-[17px] leading-[1.7] text-muted animate-[heroFadeIn_0.7s_ease_0.3s_both]">
                     Strategy, execution, and optimization — one team
-                    <br />
-                    managing your brand, site, ads, and automation every month.
+                    <br className="hidden sm:inline" />
+                    {" "}managing your brand, site, ads, and automation every month.
                   </p>
                 </motion.div>
               )}
@@ -454,11 +454,52 @@ export default function Hero() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.3 }}
-                  className="inline-flex items-center justify-center"
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                  style={{ padding: 12 }}
+                  className="flex flex-col items-center gap-3 md:inline-flex md:flex-row"
                 >
+                  {/* Mobile: show both buttons stacked */}
+                  <div className="flex flex-col items-center gap-3 md:hidden">
+                    <a
+                      href="#booking"
+                      className="inline-flex items-center gap-2 rounded-[50px] bg-accent px-8 py-4 text-[15px] font-semibold text-white transition-colors duration-300 hover:bg-accent-hover"
+                      style={{ boxShadow: "0 0 30px rgba(123,97,255,0.15)" }}
+                    >
+                      Book a Free Strategy Call
+                      <svg
+                        className="h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </a>
+                    <button
+                      onClick={enterChatMode}
+                      className="inline-flex items-center gap-2 rounded-[50px] border border-accent/30 bg-accent/[0.08] px-6 py-3 text-[14px] font-semibold text-accent transition-colors duration-300 hover:bg-accent/[0.15]"
+                    >
+                      <svg
+                        className="h-4 w-4 shrink-0"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M12 2L13.09 8.26L18 6L14.74 10.91L21 12L14.74 13.09L18 18L13.09 15.74L12 22L10.91 15.74L6 18L9.26 13.09L3 12L9.26 10.91L6 6L10.91 8.26L12 2Z" />
+                      </svg>
+                      Ask AI Instead
+                    </button>
+                  </div>
+
+                  {/* Desktop: cell division hover pattern */}
+                  <div
+                    className="hidden md:inline-flex items-center justify-center"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                    style={{ padding: 12 }}
+                  >
                   <motion.div
                     className="relative flex items-center justify-center"
                     animate={{ gap: isHovered ? 6 : 0 }}
@@ -634,6 +675,7 @@ export default function Hero() {
                       }}
                     />
                   </motion.div>
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -645,7 +687,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-16 grid grid-cols-3 border-t border-border-subtle pt-8 transition-colors duration-300"
+          className="mt-16 grid grid-cols-3 gap-2 border-t border-border-subtle pt-8 transition-colors duration-300"
         >
           {[
             { value: "4", label: "Services Under One Roof" },
@@ -653,7 +695,7 @@ export default function Hero() {
             { value: "0", label: "Hiring Headaches" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="text-[26px] font-bold tracking-tight md:text-[32px]">
+              <p className="text-[22px] font-bold tracking-tight sm:text-[26px] md:text-[32px]">
                 {stat.value}
               </p>
               <p className="mt-1 text-[11px] tracking-[0.12em] text-muted uppercase">

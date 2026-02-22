@@ -39,13 +39,13 @@ export default function Nav() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 animate-[slideDown_0.7s_ease_both] ${
+        className={`fixed top-0 left-0 right-0 z-50 safe-top transition-all duration-700 animate-[slideDown_0.7s_ease_both] ${
           scrolled
             ? "nav-glass border-b border-white/[0.08]"
             : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex max-w-[1200px] items-center justify-between px-8 py-5">
+        <div className="mx-auto flex max-w-[1200px] items-center justify-between px-5 sm:px-8 py-4 sm:py-5">
           <button
             onClick={() => scrollTo("#hero")}
             className="flex items-center text-base font-bold tracking-tight text-foreground"
@@ -79,7 +79,7 @@ export default function Nav() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="flex flex-col gap-[5px] md:hidden"
+            className="flex flex-col gap-[5px] p-2 md:hidden"
             aria-label="Toggle menu"
           >
             <motion.span

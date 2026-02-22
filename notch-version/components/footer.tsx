@@ -41,7 +41,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border-faint px-8 py-14 transition-colors duration-300">
+    <footer className="border-t border-border-faint px-5 sm:px-8 py-14 safe-bottom transition-colors duration-300">
       <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-6 md:flex-row">
         <div className="flex items-center gap-4">
           {socials.map((social) => (

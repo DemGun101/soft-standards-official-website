@@ -48,7 +48,7 @@ const reasons = [
 
 export default function Results() {
   return (
-    <section id="results" className="px-8 py-32 md:py-40">
+    <section id="results" className="px-5 sm:px-8 py-32 md:py-40">
       <div className="mx-auto max-w-[1200px]">
         <motion.div
           variants={fadeUp}

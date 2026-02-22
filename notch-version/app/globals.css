@@ -91,6 +91,16 @@ body {
   border-radius: 2px;
 }
 
+/* Safe area insets for iOS notch / Android cutouts */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
 /* Liquid glass navbar */
 .nav-glass {
   -webkit-backdrop-filter: blur(40px) saturate(1.8);

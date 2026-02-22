@@ -233,7 +233,7 @@ function BrowserCard({
           </div>
 
           {/* Name + category */}
-          <div className="mb-2 flex items-baseline justify-between gap-4">
+          <div className="mb-2 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-4">
             <h3 className="text-[20px] font-bold tracking-[-0.02em] text-foreground">
               {project.name}
             </h3>
@@ -243,7 +243,7 @@ function BrowserCard({
           </div>
 
           {/* Result + visit link */}
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
             <div className="flex items-center gap-2">
               <div
                 className="h-1.5 w-1.5 rounded-full"
@@ -335,7 +335,7 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <section id="portfolio" className="relative px-8 py-32 md:py-40">
+    <section id="portfolio" className="relative px-5 sm:px-8 py-32 md:py-40">
       {/* Background orb */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
         <div className="h-[700px] w-[700px] rounded-full bg-accent/[0.03] blur-[120px]" />

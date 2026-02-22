@@ -51,7 +51,7 @@ const badges = [
 
 export default function Certifications() {
   return (
-    <section className="px-8 py-20">
+    <section className="px-5 sm:px-8 py-20">
       <div className="mx-auto max-w-[1200px]">
         <motion.p
           variants={fadeUp}
@@ -69,14 +69,14 @@ export default function Certifications() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          className="flex flex-nowrap items-center justify-center gap-6 md:gap-10 lg:gap-12"
+          className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-10 lg:gap-12"
         >
           {badges.map((badge, i) => (
             <motion.div
               key={badge.key}
               variants={fadeUp}
               custom={i * 0.08}
-              className="flex h-14 w-24 shrink-0 items-center justify-center md:h-16 md:w-32"
+              className="flex h-12 w-20 items-center justify-center sm:h-14 sm:w-24 md:h-16 md:w-32"
             >
               <Image
                 src={badge.src}

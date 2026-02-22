@@ -18,7 +18,7 @@ const marqueeClients = [...clients, ...clients];
 
 export default function Logos() {
   return (
-    <section className="px-8 py-20">
+    <section className="px-5 sm:px-8 py-20">
       <div className="mx-auto max-w-[1200px]">
         <motion.p
           variants={fadeIn}

@@ -22,7 +22,7 @@ const solutions = [
 
 export default function ProblemSolution() {
   return (
-    <section className="relative px-8 py-32 md:py-40">
+    <section className="relative px-5 sm:px-8 py-32 md:py-40">
       {/* Background glow */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
         <div className="h-[600px] w-[600px] rounded-full bg-accent/[0.03] blur-[120px]" />

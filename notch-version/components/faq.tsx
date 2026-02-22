@@ -55,7 +55,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="px-8 py-32 md:py-40">
+    <section id="faq" className="px-5 sm:px-8 py-32 md:py-40">
       <div className="mx-auto max-w-[1200px]">
         <div className="grid gap-16 md:grid-cols-[1fr_2fr] md:gap-20">
           {/* Left column — sticky heading */}
@@ -150,7 +150,7 @@ export default function FAQ() {
                         }}
                         className="overflow-hidden"
                       >
-                        <p className="pb-5 pr-12 text-[15px] leading-[1.7] text-muted">
+                        <p className="pb-5 pr-4 sm:pr-12 text-[15px] leading-[1.7] text-muted">
                           {faq.answer}
                         </p>
                       </motion.div>

@@ -143,7 +143,7 @@ export default function Booking() {
   const slotsForDay = selectedDayData?.slots || [];
 
   return (
-    <section id="booking" className="relative px-8 py-32 md:py-40 overflow-hidden">
+    <section id="booking" className="relative px-5 sm:px-8 py-32 md:py-40 overflow-hidden">
       {/* Background glow */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/[0.04] blur-[120px]" />
