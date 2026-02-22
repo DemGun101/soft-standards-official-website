@@ -289,7 +289,7 @@ export default function Services() {
             What We Build
           </h2>
           <p className="mx-auto max-w-md text-[17px] leading-relaxed text-muted">
-            Six services, one goal — make you money.
+            Six services. One integrated system.
           </p>
         </motion.div>
 

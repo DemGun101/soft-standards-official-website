@@ -1,56 +1,48 @@
-const testimonials = [
+const reviews = [
   {
-    name: 'James Thornton',
-    role: 'Founder, SpaceDome AI',
-    text: "We were burning $8K/month on ads that weren't converting. I'd worked with three agencies before — all of them had excuses. Soft Standards rebuilt everything. New positioning. New website. New funnel. Within 90 days, we went from $12K to $89K in monthly revenue. The ROI isn't even close to anything I've experienced.",
+    author: "GGMS",
+    body: "We were paying for four different platforms that didn\u2019t talk to each other. Soft Standards consolidated everything into one system. Our agents stopped fighting the tech and started closing deals.",
     rating: 5,
   },
   {
-    name: 'Rachel Kim',
-    role: 'VP Digital, Bicycle Health',
-    text: "I was skeptical. We're in healthcare — it's not exactly a 'sexy' market for agencies. But they got it. They understood our patients, our mission, our constraints. More importantly, they delivered. Our cost per lead dropped 67% in the first month.",
+    author: "Chromos Engine",
+    body: "From zero to a fully launched product \u2014 brand identity, website, the entire digital presence. They treated our vision like it was their own and delivered faster than we expected.",
     rating: 5,
   },
   {
-    name: 'Daniel Porter',
-    role: 'Managing Director, Meridian Consulting',
-    text: "I've run Meridian for 8 years. Never had a marketing system that actually worked without me babysitting it. Soft Standards changed that. They didn't just build us a website — they built us a machine. Leads come in. We close them.",
+    author: "ReDraw AI",
+    body: "Integrating 60+ neural network models into a seamless creative platform was no small ask. The system they built handles the complexity behind the scenes so our users never feel it.",
     rating: 5,
   },
   {
-    name: 'Sarah Lin',
-    role: 'Founder, Hitchhyke',
-    text: "Our old site was pretty. It just didn't sell. They tore it apart — respectfully — and rebuilt it around conversions. Our conversion rate went up 4.2x. Revenue doubled in 60 days. Same traffic. Same product. Better system.",
+    author: "Integrity 1st Car Pros",
+    body: "12 locations, one website that actually represents who we are. Before working with Soft Standards, our online presence didn\u2019t match the quality of our service.",
     rating: 5,
   },
 ];
 
 export default function ReviewSchema() {
   const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Soft Standards Inc.',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: String(testimonials.length),
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: testimonials.map((t) => ({
-      '@type': 'Review',
-      author: {
-        '@type': 'Person',
-        name: t.name,
-        jobTitle: t.role,
-      },
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Soft Standards Inc.",
+    url: "https://www.softstandardsinc.com",
+    review: reviews.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Organization", name: r.author },
+      reviewBody: r.body,
       reviewRating: {
-        '@type': 'Rating',
-        ratingValue: String(t.rating),
-        bestRating: '5',
+        "@type": "Rating",
+        ratingValue: r.rating,
+        bestRating: 5,
       },
-      reviewBody: t.text,
     })),
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: 5,
+      reviewCount: reviews.length,
+      bestRating: 5,
+    },
   };
 
   return (

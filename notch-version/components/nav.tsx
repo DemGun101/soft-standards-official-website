@@ -73,7 +73,7 @@ export default function Nav() {
               onClick={() => scrollTo("#booking")}
               className="rounded-[50px] bg-accent px-6 py-2.5 text-[14px] font-medium text-white transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_24px_rgba(123,97,255,0.25)]"
             >
-              Book a Call
+              Book a Free Call
             </button>
           </div>
 
@@ -127,7 +127,7 @@ export default function Nav() {
               onClick={() => scrollTo("#booking")}
               className="rounded-[50px] bg-accent px-10 py-4 text-lg font-medium text-white"
             >
-              Book a Call
+              Book a Free Call
             </motion.button>
           </motion.div>
         )}

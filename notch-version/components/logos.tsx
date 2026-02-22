@@ -5,13 +5,16 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 
 const clients = [
-  { name: "SpaceDome AI", logo: "/logos/spacedome.svg", width: 140, height: 40 },
-  { name: "Bicycle Health", logo: "/logos/bicycle-health.svg", width: 140, height: 40 },
   { name: "Ryvato", logo: "/logos/ryvato.svg", width: 120, height: 40 },
   { name: "GGMS", logo: "/logos/ggms.png", width: 100, height: 40 },
   { name: "m1neral", logo: "/logos/m1neral.png", width: 120, height: 40 },
-  { name: "Trionutrition", logo: "/logos/trionutrition.png", width: 130, height: 40 },
+  { name: "Chromos Engine", logo: "/logos/chromos.png", width: 130, height: 40 },
+  { name: "ReDraw AI", logo: "/logos/redraw.png", width: 120, height: 40 },
+  { name: "Integrity 1st", logo: "/logos/integrity.png", width: 130, height: 40 },
 ];
+
+// Duplicate for seamless loop
+const marqueeClients = [...clients, ...clients];
 
 export default function Logos() {
   return (
@@ -25,30 +28,39 @@ export default function Logos() {
           custom={0}
           className="mb-12 text-center text-[12px] tracking-[0.15em] text-muted uppercase"
         >
-          Trusted by
+          Companies we&apos;ve built for
         </motion.p>
+
+        {/* Marquee container */}
         <motion.div
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           custom={0.15}
-          className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-6 md:gap-8"
+          className="relative overflow-hidden"
         >
-          {clients.map((client) => (
-            <div
-              key={client.name}
-              className="flex items-center justify-center py-4 h-[72px]"
-            >
-              <Image
-                src={client.logo}
-                alt={client.name}
-                width={client.width}
-                height={client.height}
-                className="h-10 w-auto object-contain opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 sm:h-8 dark:invert dark:opacity-40 dark:hover:opacity-80"
-              />
-            </div>
-          ))}
+          {/* Left fade */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-background to-transparent" />
+          {/* Right fade */}
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-background to-transparent" />
+
+          <div className="flex animate-marquee">
+            {marqueeClients.map((client, i) => (
+              <div
+                key={`${client.name}-${i}`}
+                className="flex shrink-0 items-center justify-center px-8 md:px-12"
+              >
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  width={client.width}
+                  height={client.height}
+                  className="h-10 w-auto object-contain opacity-70 dark:brightness-0 dark:invert sm:h-8"
+                />
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

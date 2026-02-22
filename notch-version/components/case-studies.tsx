@@ -6,36 +6,12 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const projects = [
   {
-    name: "SpaceDome AI",
-    category: "Web Platform & Brand Identity",
-    result: "$12K → $89K/mo in 90 days",
-    tags: ["Brand", "Web Dev", "Ads"],
-    logo: "/logos/spacedome.svg",
-    url: "https://spacedome.ai",
-  },
-  {
-    name: "Bicycle Health",
-    category: "Patient Acquisition System",
-    result: "67% lower cost per lead",
-    tags: ["Digital Marketing", "Automation"],
-    logo: "/logos/bicycle-health.svg",
-    url: "https://bicyclehealth.com",
-  },
-  {
     name: "Ryvato",
     category: "Enterprise Project Management Platform",
     result: "128+ active projects managed",
     tags: ["Web Dev", "UI/UX"],
     logo: "/logos/ryvato.svg",
     url: "https://ryvato.com",
-  },
-  {
-    name: "Trionutrition",
-    category: "Health & Wellness E-Commerce Brand",
-    result: "Full brand launch & storefront build",
-    tags: ["Brand", "Web Dev", "E-Commerce"],
-    logo: "/logos/trionutrition.png",
-    url: "https://trionutrition.com",
   },
   {
     name: "m1neral",
@@ -48,10 +24,34 @@ const projects = [
   {
     name: "GGMS",
     category: "Real Estate CRM & Marketing System",
-    result: "Single platform replacing 4+ tools",
+    result: "Replaced 4+ tools with one platform",
     tags: ["Web Dev", "Automation"],
     logo: "/logos/ggms.png",
     url: "https://ggms.com",
+  },
+  {
+    name: "Chromos Engine",
+    category: "Color Intelligence AI Platform",
+    result: "Full brand and product launch",
+    tags: ["Brand", "Web Dev"],
+    logo: "/logos/chromos.png",
+    url: "https://chromosengine.com",
+  },
+  {
+    name: "ReDraw AI",
+    category: "AI Creative Tools for Artists",
+    result: "60+ neural network models integrated",
+    tags: ["Web Dev", "UI/UX"],
+    logo: "/logos/redraw.png",
+    url: "https://redraw.ai",
+  },
+  {
+    name: "Integrity 1st Car Pros",
+    category: "Automotive Service Chain",
+    result: "12 locations across Texas",
+    tags: ["Web Dev", "Brand"],
+    logo: "/logos/integrity.png",
+    url: "https://integrity1auto.com",
   },
 ];
 

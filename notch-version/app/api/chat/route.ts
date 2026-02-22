@@ -11,7 +11,7 @@ Website: softstandardsinc.com | Email: contact@softstandardsinc.com
 LinkedIn: linkedin.com/company/soft-standards-inc | Instagram: @softstandardsinc
 
 === CORE PROMISE ===
-We build complete marketing systems — Brand, Website, Ads, Automation — in 30 days. You only pay if it works. No contracts, cancel anytime, you own everything.
+We don't just build your marketing — we run it. Brand, Website, Ads, Automation — one team managing everything, every month. Your marketing department without the overhead.
 
 === STATS ===
 150+ systems built. $47M+ client revenue generated. 97% retention. Average 3-5x lead increase in 90 days. 340% average ROI. 67% average CPL reduction.
@@ -28,28 +28,26 @@ We build complete marketing systems — Brand, Website, Ads, Automation — in 3
 Starter: $999/mo — Brand strategy, conversion website, email sequences, monthly optimization.
 Growth: $1,499/mo (most popular) — Everything in Starter + ad campaigns, advanced funnels, AI chatbots, bi-weekly calls.
 Scale: Custom pricing — Everything in Growth + multi-channel ads, custom AI, priority SLA, weekly calls.
-All month-to-month. No contracts. You own everything.
+Monthly retainer. Dedicated team. You own all assets we create.
 
 === PROCESS ===
-Step 1: We Build It (30 days) — Brand, site, ads, automation. You own everything.
-Step 2: We Prove It — System goes live. You pay nothing until it works.
-Step 3: You Grow — We optimize monthly. Cancel anytime.
+Step 1: We Build It — Brand, site, ads, automation — built together as one system.
+Step 2: We Launch It — System goes live. We monitor performance from day one.
+Step 3: We Run It — Ongoing management, optimization, and reporting every month.
 
 === CLIENT RESULTS ===
-SpaceDome AI: $12K to $89K/mo in 90 days (Brand, Web, Ads)
-Bicycle Health: CPL dropped 67% in month one (Digital Marketing, Automation)
-Hitchhyke: Conversion rate up 4.2x (Web Dev, UI/UX)
+GGMS: Replaced 4+ disconnected platforms with one unified system (Web Dev, Automation)
+Chromos Engine: Full brand identity and product launch from zero (Brand, Web Dev)
+ReDraw AI: Integrated 60+ neural network models into a seamless creative platform (Web Dev, UI/UX)
+Integrity 1st Car Pros: 12 locations unified under one digital presence (Web Dev, Brand)
 Ryvato: Organic traffic up 5x in 60 days (Web Dev, UI/UX)
-Trionutrition: Full brand launch and storefront build (Brand, E-Commerce)
 m1neral: 3 specialized energy tech modules (Web Dev, UI/UX)
-GGMS: Single platform replacing 4+ tools (Web Dev, Automation)
 
 === FAQ KNOWLEDGE ===
-"You only pay if it works" = compensation tied to real KPIs. Miss targets in 90 days, you don't pay.
 Ownership: 100% of all assets (websites, funnels, automations, brand materials, ad creatives) belong to client.
-30-day build: Complete operational system, not a draft or prototype.
 Client time required: 2-3 hours in week one for onboarding. We handle execution after that.
-After 30 days: Optimization mode. Analyze, double down on winners, improve. Best results come months 2-4.
+Monthly retainer: Includes ongoing management, optimization, reporting, and dedicated team access. Best results compound over months 2-4.
+Why retainer: Marketing isn't a one-time project — it needs continuous optimization. Our retainer model means your system gets better every month.
 Discovery call: Free 30-min strategy session. Business diagnosis, no pitch deck, no pressure.
 Difference from other agencies: We build systems, not deliverables. Everything connects — positioning feeds website feeds funnel feeds automation. Compounding results, not one-off wins.
 

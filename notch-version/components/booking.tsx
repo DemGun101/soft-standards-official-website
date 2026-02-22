@@ -159,9 +159,9 @@ export default function Booking() {
             custom={0}
             className="mb-4 text-[clamp(1.75rem,4vw,2.5rem)] font-bold tracking-[-0.02em]"
           >
-            15 minutes. No pitch.{" "}
+            30 minutes. No pitch.{" "}
             <span className="font-serif italic font-normal text-muted">
-              Just clarity.
+              Just strategy.
             </span>
           </motion.h2>
           <motion.p
@@ -170,11 +170,27 @@ export default function Booking() {
             whileInView="visible"
             viewport={{ once: true }}
             custom={0.1}
-            className="mb-14 text-[16px] text-muted"
+            className="mb-4 text-[16px] text-muted"
           >
-            We&apos;ll tell you what&apos;s broken, how we&apos;d fix it, and
-            what it would cost.
+            We&apos;ll learn about your business, show you what we&apos;d build,
+            and map out next steps — whether you work with us or not.
           </motion.p>
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={0.15}
+            className="mb-14 flex items-center justify-center gap-2"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-success" />
+            </span>
+            <span className="text-[13px] font-medium text-muted">
+              We take on a limited number of projects each month
+            </span>
+          </motion.div>
         </div>
 
         {/* Booking wizard card */}

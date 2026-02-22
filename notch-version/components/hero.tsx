@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useChat } from "@ai-sdk/react";
 import gsap from "gsap";
 
-const ORIGINAL_TITLE_LINE1 = "Your marketing isn\u2019t broken.";
-const ORIGINAL_TITLE_LINE2 = "You just don\u2019t have a system.";
+const ORIGINAL_TITLE_LINE1 = "We don\u2019t just build your marketing.";
+const ORIGINAL_TITLE_LINE2 = "We run it.";
 
 const PLACEHOLDERS = [
   "What problems are you facing?",
@@ -14,7 +14,7 @@ const PLACEHOLDERS = [
   "What results can I expect in 90 days?",
   "Tell me about your web development",
   "How is Soft Standards different?",
-  "What does the 30-day build include?",
+  "How does the monthly retainer work?",
   "Do I own everything you create?",
   "How do your AI automations work?",
 ];
@@ -366,10 +366,10 @@ export default function Hero() {
                   exit={{ opacity: 0, y: -15 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <p className="mx-auto mb-12 max-w-[480px] text-[17px] leading-[1.7] text-muted animate-[heroFadeIn_0.7s_ease_0.3s_both]">
-                    Brand. Website. Ads. Automation.
+                  <p className="mx-auto mb-12 max-w-[520px] text-[17px] leading-[1.7] text-muted animate-[heroFadeIn_0.7s_ease_0.3s_both]">
+                    Strategy, execution, and optimization — one team
                     <br />
-                    Built in 30 days. You only pay if it works.
+                    managing your brand, site, ads, and automation every month.
                   </p>
                 </motion.div>
               )}
@@ -484,7 +484,7 @@ export default function Hero() {
                           boxShadow: "0 0 40px rgba(123,97,255,0.3)",
                         }}
                       >
-                        Book Your Free Audit
+                        Book a Free Strategy Call
                         <motion.svg
                           className="h-4 w-4"
                           fill="none"
@@ -648,9 +648,9 @@ export default function Hero() {
           className="mt-16 grid grid-cols-3 border-t border-border-subtle pt-8 transition-colors duration-300"
         >
           {[
-            { value: "150+", label: "Systems Built" },
-            { value: "$47M+", label: "Client Revenue" },
-            { value: "97%", label: "Retention" },
+            { value: "4", label: "Services Under One Roof" },
+            { value: "1", label: "Team For Everything" },
+            { value: "0", label: "Hiring Headaches" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <p className="text-[26px] font-bold tracking-tight md:text-[32px]">

@@ -114,7 +114,7 @@ export default function RootLayout({
               url: "https://www.softstandardsinc.com",
               logo: "https://www.softstandardsinc.com/favicon.ico",
               description:
-                "AI-powered marketing agency building complete marketing systems in 30 days. Brand strategy, web development, UI/UX, digital marketing, and AI automation.",
+                "AI-powered marketing agency managing complete marketing systems. Brand strategy, web development, UI/UX, digital marketing, and AI automation — one team, every month.",
               email: "contact@softstandardsinc.com",
               foundingDate: "2022",
               numberOfEmployees: {

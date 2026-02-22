@@ -8,12 +8,13 @@ import LocalBusinessSchema from "@/components/schemas/LocalBusinessSchema";
 import FAQSchema from "@/components/schemas/FAQSchema";
 
 // Below-the-fold components — code-split for faster initial load
+const Certifications = dynamic(() => import("@/components/certifications"));
 const ProblemSolution = dynamic(() => import("@/components/problem-solution"));
 const HowItWorks = dynamic(() => import("@/components/how-it-works"));
 const Services = dynamic(() => import("@/components/services"));
 const Results = dynamic(() => import("@/components/results"));
-const CaseStudies = dynamic(() => import("@/components/case-studies"));
 const Portfolio = dynamic(() => import("@/components/portfolio"));
+const Testimonials = dynamic(() => import("@/components/testimonials"));
 const FAQ = dynamic(() => import("@/components/faq"));
 const Booking = dynamic(() => import("@/components/booking"));
 const Footer = dynamic(() => import("@/components/footer"));
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   title:
     "Soft Standards | AI-Powered Marketing Agency | New York & Lahore",
   description:
-    "We build complete marketing systems in 30 days — brand strategy, web development, UI/UX, AI automation, and growth marketing. 150+ systems built. $47M+ in client revenue. Pay only when it works.",
+    "We don't just build your marketing — we run it. Brand strategy, web development, ads, and AI automation managed by one team, every month.",
   keywords: [
     "AI marketing agency",
     "marketing automation agency",
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     title:
       "Soft Standards | AI-Powered Marketing Agency | New York & Lahore",
     description:
-      "We build complete marketing systems in 30 days — brand strategy, web development, UI/UX, AI automation, and growth marketing. 150+ systems built. $47M+ in client revenue.",
+      "We don't just build your marketing — we run it. Brand strategy, web development, ads, and AI automation managed by one team, every month.",
     type: "website",
     url: "https://www.softstandardsinc.com/",
   },
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     title:
       "Soft Standards | AI-Powered Marketing Agency | New York & Lahore",
     description:
-      "We build complete marketing systems in 30 days — 150+ systems built, $47M+ in client revenue. Pay only when it works.",
+      "We don't just build your marketing — we run it. Brand, website, ads, and automation managed by one team, every month.",
   },
   alternates: { canonical: "https://www.softstandardsinc.com/" },
 };
@@ -61,10 +62,12 @@ export default function Home() {
         <Hero />
         <Logos />
         <ProblemSolution />
-        <HowItWorks />
+        <Certifications />
         <Services />
+        <HowItWorks />
         <Results />
         <Portfolio />
+        <Testimonials />
         <FAQ />
         <Booking />
       </main>

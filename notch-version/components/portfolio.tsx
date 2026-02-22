@@ -25,24 +25,6 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "SpaceDome AI",
-    category: "Web Platform & Brand Identity",
-    result: "$12K → $89K/mo in 90 days",
-    tags: ["Brand", "Web Dev", "Ads"],
-    url: "https://spacedome.ai",
-    color: "#8B5CF6",
-    screenshot: "/portfolio/spacedome.png",
-  },
-  {
-    name: "Bicycle Health",
-    category: "Patient Acquisition System",
-    result: "67% lower cost per lead",
-    tags: ["Digital Marketing", "Automation"],
-    url: "https://bicyclehealth.com",
-    color: "#3B82F6",
-    screenshot: "/portfolio/bicycle.png",
-  },
-  {
     name: "Ryvato",
     category: "Enterprise Project Management",
     result: "128+ active projects managed",
@@ -50,15 +32,6 @@ const projects: Project[] = [
     url: "https://ryvato.com",
     color: "#10B981",
     screenshot: "/portfolio/ryvato.png",
-  },
-  {
-    name: "Trionutrition",
-    category: "Health & Wellness E-Commerce",
-    result: "Full brand launch in 30 days",
-    tags: ["Brand", "Web Dev", "E-Commerce"],
-    url: "https://trionutrition.com",
-    color: "#F59E0B",
-    screenshot: "/portfolio/trio.png",
   },
   {
     name: "m1neral",
@@ -78,6 +51,33 @@ const projects: Project[] = [
     color: "#06B6D4",
     screenshot: "/portfolio/ggms.png",
   },
+  {
+    name: "Chromos Engine",
+    category: "Color Intelligence AI Platform",
+    result: "Full brand and product launch",
+    tags: ["Brand", "Web Dev"],
+    url: "https://chromosengine.com",
+    color: "#8B5CF6",
+    screenshot: "/portfolio/chromos.png",
+  },
+  {
+    name: "ReDraw AI",
+    category: "AI Creative Tools for Artists",
+    result: "60+ neural network models integrated",
+    tags: ["Web Dev", "UI/UX"],
+    url: "https://redraw.ai",
+    color: "#F59E0B",
+    screenshot: "/portfolio/redraw.png",
+  },
+  {
+    name: "Integrity 1st Car Pros",
+    category: "Automotive Service Chain",
+    result: "12 locations across Texas",
+    tags: ["Web Dev", "Brand"],
+    url: "https://integrity1auto.com",
+    color: "#3B82F6",
+    screenshot: "/portfolio/integrity.png",
+  },
 ];
 
 const ALL_TAGS = [
@@ -86,7 +86,6 @@ const ALL_TAGS = [
   "Web Dev",
   "UI/UX",
   "Automation",
-  "E-Commerce",
 ] as const;
 
 type FilterTag = (typeof ALL_TAGS)[number];
@@ -352,10 +351,10 @@ export default function Portfolio() {
             </span>
           </div>
           <h2 className="mb-4 text-[clamp(2rem,5vw,3.25rem)] font-bold tracking-[-0.03em]">
-            Built by Soft Standards
+            Our Work
           </h2>
           <p className="mx-auto max-w-lg text-[17px] leading-relaxed text-muted">
-            Real websites. Real systems. Hover to scroll through each project we
+            Hover to scroll through each project we
             designed, developed, and launched.
           </p>
         </div>
@@ -424,7 +423,7 @@ export default function Portfolio() {
             href="#booking"
             className="group/cta inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-[15px] font-semibold text-white transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_40px_rgba(123,97,255,0.3)]"
           >
-            Book Your Free Audit
+            Book a Free Strategy Call
             <svg
               className="h-4 w-4 transition-transform duration-300 group-hover/cta:translate-x-1"
               fill="none"

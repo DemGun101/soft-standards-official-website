@@ -1,0 +1,445 @@
+{
+  "nodes": [
+    {
+      "name": "Git: git commit -m \"$(cat <<'EOF'\nUI revamp: liquid glass navbar, hero glow, sleeker cards, transpar",
+      "type": "decision",
+      "properties": {
+        "decision_id": "861eb496-c882-44fb-8dd5-ac77ce3a8d6c",
+        "project": "notch-version",
+        "context": "Captured via hook: git",
+        "reasoning": "Auto-captured from hook-passive",
+        "full_decision": "Git: git commit -m \"$(cat <<'EOF'\nUI revamp: liquid glass navbar, hero glow, sleeker cards, transparent logos\n\n- Add liquid glass navbar effect (backdrop-blur + saturation) for frosted glass look on scroll"
+      },
+      "id": "4bbf0715-fa0c-4556-86bc-2a3c645b42df",
+      "created_at": "2026-02-12T13:21:09.099Z",
+      "updated_at": "2026-02-12T13:21:09.099Z"
+    },
+    {
+      "name": "notch-version",
+      "type": "project",
+      "properties": {},
+      "id": "b98c94f1-915d-4580-9499-4aa984b336c2",
+      "created_at": "2026-02-12T13:21:09.099Z",
+      "updated_at": "2026-02-12T13:21:09.099Z"
+    },
+    {
+      "name": "git",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "0f7cb94a-3b18-4d9a-ab42-6f73210db400",
+      "created_at": "2026-02-12T13:21:09.099Z",
+      "updated_at": "2026-02-12T13:21:09.099Z"
+    },
+    {
+      "name": "Installed package(s): ai @ai-sdk/anthropic 2>&1",
+      "type": "decision",
+      "properties": {
+        "decision_id": "490b9438-2c5f-4958-accd-be0015985f0e",
+        "project": "notch-version",
+        "context": "Captured via hook: install",
+        "reasoning": "Auto-captured from hook-passive",
+        "full_decision": "Installed package(s): ai @ai-sdk/anthropic 2>&1"
+      },
+      "id": "8b1ce3df-a38f-4e85-b1bd-d4180ef25c69",
+      "created_at": "2026-02-12T13:29:09.251Z",
+      "updated_at": "2026-02-12T13:29:09.251Z"
+    },
+    {
+      "name": "anthropic",
+      "type": "technology",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "03b3121c-4f8a-40d8-ae43-ffa27bf7b53b",
+      "created_at": "2026-02-12T13:29:09.251Z",
+      "updated_at": "2026-02-12T13:29:09.251Z"
+    },
+    {
+      "name": "Installed package(s): @ai-sdk/react 2>&1",
+      "type": "decision",
+      "properties": {
+        "decision_id": "5099abaf-e8c8-45df-9111-ddb82052bc0c",
+        "project": "notch-version",
+        "context": "Captured via hook: install",
+        "reasoning": "Auto-captured from hook-passive",
+        "full_decision": "Installed package(s): @ai-sdk/react 2>&1"
+      },
+      "id": "fed40525-b63a-4dac-97e0-9161247dc181",
+      "created_at": "2026-02-12T13:32:59.872Z",
+      "updated_at": "2026-02-12T13:32:59.872Z"
+    },
+    {
+      "name": "react",
+      "type": "technology",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "3c842817-7dbb-4c16-8f75-4d111ddfe290",
+      "created_at": "2026-02-12T13:32:59.872Z",
+      "updated_at": "2026-02-12T13:32:59.872Z"
+    },
+    {
+      "name": "Session summary: Worked on notch-version using ai, @ai-sdk/anthropic, 2>&1, anthropic, @ai-sdk/react",
+      "type": "decision",
+      "properties": {
+        "decision_id": "b6cf1c4a-1695-43e3-b02d-86e7e67811b1",
+        "project": "notch-version",
+        "context": "Auto-captured session summary",
+        "reasoning": "Session ended — auto-summarized by passive hooks",
+        "full_decision": "Session summary: Worked on notch-version using ai, @ai-sdk/anthropic, 2>&1, anthropic, @ai-sdk/react. Progress: Installed package(s): ai @ai-sdk/anthropic 2>&1. Installed package(s): @ai-sdk/react 2>&1. Lessons: - NEVER use markdown, asterisks, bullet points, dashes, or special formatting.. Touched 1 file (Topics: progress, installed, package, ai-sdk, anthropic, react, correction, never, use, markdown)"
+      },
+      "id": "cf22b8b5-ee95-4f14-8fc9-77e2aa63a2d7",
+      "created_at": "2026-02-12T13:38:07.135Z",
+      "updated_at": "2026-02-12T13:38:07.135Z"
+    },
+    {
+      "name": "markdown",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "79742fee-561f-4cf5-b474-341fdd565938",
+      "created_at": "2026-02-12T13:38:07.135Z",
+      "updated_at": "2026-02-12T13:38:07.135Z"
+    },
+    {
+      "name": "Installed package(s): gsap 2>&1",
+      "type": "decision",
+      "properties": {
+        "decision_id": "ee17362c-2410-4087-93c2-51719cc58371",
+        "project": "notch-version",
+        "context": "Captured via hook: install",
+        "reasoning": "Auto-captured from hook-passive",
+        "full_decision": "Installed package(s): gsap 2>&1"
+      },
+      "id": "97d9d226-3a6a-4cac-963c-c14999096c51",
+      "created_at": "2026-02-12T14:00:11.940Z",
+      "updated_at": "2026-02-12T14:00:11.940Z"
+    },
+    {
+      "name": "Session summary: Built AI chatbot for Soft Standards hero section (notch-version). Key decisions: Us",
+      "type": "decision",
+      "properties": {
+        "decision_id": "4c76b1b8-ba89-4e3b-9239-3844230faffd",
+        "project": "notch-version",
+        "context": "Session summary: Built AI chatbot for Soft Standards hero section (notch-version)",
+        "reasoning": "",
+        "full_decision": "Session summary: Built AI chatbot for Soft Standards hero section (notch-version). Key decisions: Used Vercel AI SDK v4 (@ai-sdk/react useChat with sendMessage + parts API, NOT ai/react which no longer exists). Used @ai-sdk/anthropic with claude-sonnet-4-5. API route uses convertToModelMessages + toUIMessageStreamResponse for the new UIMessage format. Replaced form element with div + onKeyDown to fix React 19 + AnimatePresence form submission bug causing page refresh. System prompt enforces strict 2-part format: 8-word headline + 20-word subtitle separated by blank line. Connected service cards to hero AI chat via custom DOM event \"trigger-ai-chat\". GSAP sparkle vectors on button right edge for teaser effect. Replaced Trellis Studios with Hitchhyke as prospect name."
+      },
+      "id": "5208991b-e991-47cd-be33-f30a77e326a4",
+      "created_at": "2026-02-12T14:31:44.674Z",
+      "updated_at": "2026-02-12T14:31:44.674Z"
+    },
+    {
+      "name": "api",
+      "type": "concept",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "f2b46277-c12f-46db-b1ec-07f89a5546cc",
+      "created_at": "2026-02-12T14:31:44.674Z",
+      "updated_at": "2026-02-12T14:31:44.674Z"
+    },
+    {
+      "name": "vercel",
+      "type": "technology",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "c781cd76-a8a6-41f7-8cae-d9d09bf93495",
+      "created_at": "2026-02-12T14:31:44.674Z",
+      "updated_at": "2026-02-12T14:31:44.674Z"
+    },
+    {
+      "name": "claude-",
+      "type": "person",
+      "properties": {
+        "confidence": 0.7,
+        "source": "nlp"
+      },
+      "id": "4513fce8-5024-4535-b3bc-65a8c899b7f2",
+      "created_at": "2026-02-12T14:31:44.674Z",
+      "updated_at": "2026-02-12T14:31:44.674Z"
+    },
+    {
+      "name": "Git: git commit -m \"$(cat <<'EOF'\nEnrich AI chatbot context, typewriter placeholders, and service ca",
+      "type": "decision",
+      "properties": {
+        "decision_id": "0a2ea9eb-16ac-46f4-a8d4-e767f8c68cbc",
+        "project": "notch-version",
+        "context": "Captured via hook: git",
+        "reasoning": "Auto-captured from hook-passive",
+        "full_decision": "Git: git commit -m \"$(cat <<'EOF'\nEnrich AI chatbot context, typewriter placeholders, and service card links\n\n- Expand system prompt with full company data (services, pricing, process, client results, FAQ)"
+      },
+      "id": "ed3fb352-6440-4320-9884-27e3d9ef583f",
+      "created_at": "2026-02-12T14:48:12.808Z",
+      "updated_at": "2026-02-12T14:48:12.808Z"
+    },
+    {
+      "name": "Mobile visibility lesson: Never use `opacity-0 group-hover:opacity-100` as the only way to show inte",
+      "type": "decision",
+      "properties": {
+        "decision_id": "95e23521-1061-43f6-bcc2-133056144d02",
+        "project": "notch-version",
+        "context": "Mobile visibility lesson: Never use `opacity-0 group-hover:opacity-100` as the only way to show interactive elements like buttons",
+        "reasoning": "",
+        "full_decision": "Mobile visibility lesson: Never use `opacity-0 group-hover:opacity-100` as the only way to show interactive elements like buttons. On mobile there is no hover state, so elements stay invisible. Always use mobile-first visibility: `opacity-100 sm:opacity-0 sm:group-hover:opacity-100` — visible by default, hidden-until-hover only on desktop. Don't rely on JS touch state either since mobile browsers have sticky CSS :hover that doesn't trigger JS onTouchStart. This came up with the \"Ask AI\" button on service cards in notch-version."
+      },
+      "id": "f2064dd7-7fd5-4274-873a-4a5cf7e99069",
+      "created_at": "2026-02-12T16:05:09.972Z",
+      "updated_at": "2026-02-12T16:05:09.972Z"
+    },
+    {
+      "name": "javascript",
+      "type": "technology",
+      "properties": {
+        "confidence": 1,
+        "source": "dictionary"
+      },
+      "id": "aded610e-b991-477c-8965-41327fab6962",
+      "created_at": "2026-02-12T16:05:09.972Z",
+      "updated_at": "2026-02-12T16:05:09.972Z"
+    },
+    {
+      "name": "css",
+      "type": "technology",
+      "properties": {
+        "confidence": 0.95,
+        "source": "dictionary"
+      },
+      "id": "95d879fb-c992-4735-a1c0-3d10aa73e7a8",
+      "created_at": "2026-02-12T16:05:09.972Z",
+      "updated_at": "2026-02-12T16:05:09.972Z"
+    },
+    {
+      "name": "lesson:",
+      "type": "person",
+      "properties": {
+        "confidence": 0.7,
+        "source": "nlp"
+      },
+      "id": "d8dedda6-e417-405b-82c4-f0a10e036e2b",
+      "created_at": "2026-02-12T16:05:09.972Z",
+      "updated_at": "2026-02-12T16:05:09.972Z"
+    }
+  ],
+  "edges": [
+    {
+      "source": "4bbf0715-fa0c-4556-86bc-2a3c645b42df",
+      "target": "b98c94f1-915d-4580-9499-4aa984b336c2",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "bf4dae9e-a2e1-4d70-89b1-722309be2fd2",
+      "created_at": "2026-02-12T13:21:09.099Z"
+    },
+    {
+      "source": "4bbf0715-fa0c-4556-86bc-2a3c645b42df",
+      "target": "0f7cb94a-3b18-4d9a-ab42-6f73210db400",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "c7253abd-03e7-4079-a697-3de89a726b62",
+      "created_at": "2026-02-12T13:21:09.099Z"
+    },
+    {
+      "source": "8b1ce3df-a38f-4e85-b1bd-d4180ef25c69",
+      "target": "b98c94f1-915d-4580-9499-4aa984b336c2",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "eb25d1dd-0a24-4a58-91c4-4f580cac808a",
+      "created_at": "2026-02-12T13:29:09.251Z"
+    },
+    {
+      "source": "8b1ce3df-a38f-4e85-b1bd-d4180ef25c69",
+      "target": "03b3121c-4f8a-40d8-ae43-ffa27bf7b53b",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "61a7c6d7-a25f-460d-aa34-3a7cb0405422",
+      "created_at": "2026-02-12T13:29:09.251Z"
+    },
+    {
+      "source": "fed40525-b63a-4dac-97e0-9161247dc181",
+      "target": "b98c94f1-915d-4580-9499-4aa984b336c2",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "430e5140-16dc-425a-b794-1455cf4e90f2",
+      "created_at": "2026-02-12T13:32:59.872Z"
+    },
+    {
+      "source": "fed40525-b63a-4dac-97e0-9161247dc181",
+      "target": "3c842817-7dbb-4c16-8f75-4d111ddfe290",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "9e0e2b21-3fbf-4f0f-80c2-e642f0fd53bd",
+      "created_at": "2026-02-12T13:32:59.872Z"
+    },
+    {
+      "source": "cf22b8b5-ee95-4f14-8fc9-77e2aa63a2d7",
+      "target": "b98c94f1-915d-4580-9499-4aa984b336c2",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "51a8f9e7-9533-488c-b767-d5736a86c421",
+      "created_at": "2026-02-12T13:38:07.135Z"
+    },
+    {
+      "source": "cf22b8b5-ee95-4f14-8fc9-77e2aa63a2d7",
+      "target": "03b3121c-4f8a-40d8-ae43-ffa27bf7b53b",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "88c981c4-3e62-431c-b844-316615b13e9d",
+      "created_at": "2026-02-12T13:38:07.135Z"
+    },
+    {
+      "source": "cf22b8b5-ee95-4f14-8fc9-77e2aa63a2d7",
+      "target": "3c842817-7dbb-4c16-8f75-4d111ddfe290",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "45dcce40-f55f-4790-9dc1-2fe430cda733",
+      "created_at": "2026-02-12T13:38:07.135Z"
+    },
+    {
+      "source": "cf22b8b5-ee95-4f14-8fc9-77e2aa63a2d7",
+      "target": "79742fee-561f-4cf5-b474-341fdd565938",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "029711b0-b697-4ea9-a1a6-a026d5e5cee0",
+      "created_at": "2026-02-12T13:38:07.135Z"
+    },
+    {
+      "source": "97d9d226-3a6a-4cac-963c-c14999096c51",
+      "target": "b98c94f1-915d-4580-9499-4aa984b336c2",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "56fd78bc-e0de-4a61-9a45-e21ab9df3ad2",
+      "created_at": "2026-02-12T14:00:11.940Z"
+    },
+    {
+      "source": "5208991b-e991-47cd-be33-f30a77e326a4",
+      "target": "b98c94f1-915d-4580-9499-4aa984b336c2",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "db87582a-d7c8-48cc-a9f4-aa34e014b1aa",
+      "created_at": "2026-02-12T14:31:44.674Z"
+    },
+    {
+      "source": "5208991b-e991-47cd-be33-f30a77e326a4",
+      "target": "3c842817-7dbb-4c16-8f75-4d111ddfe290",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "e837d6e0-e005-4e30-bed9-0159f851220d",
+      "created_at": "2026-02-12T14:31:44.674Z"
+    },
+    {
+      "source": "5208991b-e991-47cd-be33-f30a77e326a4",
+      "target": "f2b46277-c12f-46db-b1ec-07f89a5546cc",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "170656ce-4c4d-4120-969a-79e089e18f88",
+      "created_at": "2026-02-12T14:31:44.674Z"
+    },
+    {
+      "source": "5208991b-e991-47cd-be33-f30a77e326a4",
+      "target": "c781cd76-a8a6-41f7-8cae-d9d09bf93495",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "a5808bcb-9b4d-4fe9-aa06-7cb1e58600b1",
+      "created_at": "2026-02-12T14:31:44.674Z"
+    },
+    {
+      "source": "5208991b-e991-47cd-be33-f30a77e326a4",
+      "target": "03b3121c-4f8a-40d8-ae43-ffa27bf7b53b",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "b6ec1725-f116-43d0-abc6-b7803fe63648",
+      "created_at": "2026-02-12T14:31:44.674Z"
+    },
+    {
+      "source": "5208991b-e991-47cd-be33-f30a77e326a4",
+      "target": "4513fce8-5024-4535-b3bc-65a8c899b7f2",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "afce1836-c51d-48cd-9063-412f5cff3dcb",
+      "created_at": "2026-02-12T14:31:44.674Z"
+    },
+    {
+      "source": "ed3fb352-6440-4320-9884-27e3d9ef583f",
+      "target": "b98c94f1-915d-4580-9499-4aa984b336c2",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "bc252633-add0-4789-9cd1-57cf6c292c3b",
+      "created_at": "2026-02-12T14:48:12.808Z"
+    },
+    {
+      "source": "ed3fb352-6440-4320-9884-27e3d9ef583f",
+      "target": "0f7cb94a-3b18-4d9a-ab42-6f73210db400",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "b1d52b80-cf8a-4674-a844-2ec02072e4d6",
+      "created_at": "2026-02-12T14:48:12.809Z"
+    },
+    {
+      "source": "f2064dd7-7fd5-4274-873a-4a5cf7e99069",
+      "target": "b98c94f1-915d-4580-9499-4aa984b336c2",
+      "relationship": "decided_in",
+      "weight": 1,
+      "properties": {},
+      "id": "cb601dca-ace1-4e64-bb3f-0ad1e31666ea",
+      "created_at": "2026-02-12T16:05:09.972Z"
+    },
+    {
+      "source": "f2064dd7-7fd5-4274-873a-4a5cf7e99069",
+      "target": "aded610e-b991-477c-8965-41327fab6962",
+      "relationship": "relates_to",
+      "weight": 1,
+      "properties": {},
+      "id": "d4d728c1-d4a5-4cdd-995a-9415655da9fd",
+      "created_at": "2026-02-12T16:05:09.972Z"
+    },
+    {
+      "source": "f2064dd7-7fd5-4274-873a-4a5cf7e99069",
+      "target": "95d879fb-c992-4735-a1c0-3d10aa73e7a8",
+      "relationship": "relates_to",
+      "weight": 0.95,
+      "properties": {},
+      "id": "303f2cef-8794-456d-97fd-153d1636c64c",
+      "created_at": "2026-02-12T16:05:09.972Z"
+    },
+    {
+      "source": "f2064dd7-7fd5-4274-873a-4a5cf7e99069",
+      "target": "d8dedda6-e417-405b-82c4-f0a10e036e2b",
+      "relationship": "relates_to",
+      "weight": 0.7,
+      "properties": {},
+      "id": "98e7063f-5cca-4bc6-98a4-0edb66e10b94",
+      "created_at": "2026-02-12T16:05:09.973Z"
+    }
+  ],
+  "version": "1.0.0",
+  "saved_at": "2026-02-14T18:36:41.889Z"
+}

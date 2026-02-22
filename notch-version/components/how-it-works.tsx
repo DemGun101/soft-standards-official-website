@@ -8,18 +8,19 @@ const steps = [
     number: "01",
     title: "We Build It",
     description:
-      "30 days. Brand, site, ads, automation. You own everything.",
+      "Brand, site, ads, automation — built together as one integrated system by a single team.",
   },
   {
     number: "02",
-    title: "We Prove It",
+    title: "We Launch It",
     description:
-      "System goes live. You pay nothing until it works.",
+      "Your system goes live. We monitor performance and make sure everything is working from day one.",
   },
   {
     number: "03",
-    title: "You Grow",
-    description: "We optimize monthly. Cancel anytime.",
+    title: "We Run It",
+    description:
+      "Ongoing management, optimization, and reporting every month. Your marketing team without the overhead.",
   },
 ];
 
@@ -39,7 +40,7 @@ export default function HowItWorks() {
             How It Works
           </h2>
           <p className="font-serif text-[20px] italic text-muted">
-            Simple process. Guaranteed results.
+            Three steps. Full transparency.
           </p>
         </motion.div>
 

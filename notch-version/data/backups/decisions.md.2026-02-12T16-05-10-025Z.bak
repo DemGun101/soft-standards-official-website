@@ -1,0 +1,13 @@
+---
+created: '2026-02-12'
+updated: '2026-02-12'
+---
+### Decision: Session summary: Built AI chatbot for Soft Standards hero section (notch-version). Key decisions: Us
+
+**Date:** 2026-02-12
+**Context:** Session summary: Built AI chatbot for Soft Standards hero section (notch-version)
+**Decision:** Session summary: Built AI chatbot for Soft Standards hero section (notch-version). Key decisions: Used Vercel AI SDK v4 (@ai-sdk/react useChat with sendMessage + parts API, NOT ai/react which no longer exists). Used @ai-sdk/anthropic with claude-sonnet-4-5. API route uses convertToModelMessages + toUIMessageStreamResponse for the new UIMessage format. Replaced form element with div + onKeyDown to fix React 19 + AnimatePresence form submission bug causing page refresh. System prompt enforces strict 2-part format: 8-word headline + 20-word subtitle separated by blank line. Connected service cards to hero AI chat via custom DOM event "trigger-ai-chat". GSAP sparkle vectors on button right edge for teaser effect. Replaced Trellis Studios with Hitchhyke as prospect name.
+**Reasoning:** 
+
+---
+
